@@ -42,7 +42,7 @@ const SocialsBlock = () => (
       className="bg-cream hidden md:block p-6"
     >
       <a
-        href="mailto:info@bresciapride.it"
+        href="https://www.facebook.com/BresciaPride"
         target="_blank"
         className="grid h-full place-content-center text-3xl text-dark-blue"
       >
@@ -57,7 +57,7 @@ const SocialsBlock = () => (
       className="w-100 bg-cream hidden md:block p-6"
     >
       <a
-        href="https://www.facebook.com/BresciaPride"
+        href="mailto:info@bresciapride.it"
         target="_blank"
         className="grid h-full place-content-center text-3xl text-dark-blue"
       >

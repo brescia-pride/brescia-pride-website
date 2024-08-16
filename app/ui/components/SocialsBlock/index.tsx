@@ -1,6 +1,6 @@
 import Block from "../Block";
 
-import { SiFacebook, SiGmail, SiInstagram, SiTiktok } from "react-icons/si";
+import { SiFacebook, SiGmail, SiInstagram, SiTiktok, SiLinktree } from "react-icons/si";
 
 const SocialsBlock = () => (
   <>
@@ -64,6 +64,22 @@ const SocialsBlock = () => (
         <SiGmail />
       </a>
     </Block>
+    <Block
+      whileHover={{
+        rotate: "2.5deg",
+        scale: 1.1,
+      }}
+      className="w-100 bg-cream hidden md:block p-6"
+    >
+      <a
+        href="https://linktr.ee/bresciapride"
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-dark-blue"
+      >
+        <SiLinktree />
+      </a>
+    </Block>
+
   </>
 );
 

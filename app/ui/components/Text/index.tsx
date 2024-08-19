@@ -5,7 +5,7 @@ import { FiArrowRight } from "react-icons/fi";
 const myFont = localFont({src: "../../fonts/ST.ttf"});
 
 type BlockProps = {
-  size?: number | 4
+  size?: number
   blockClass: string;
   heading?: string;
   text: string;

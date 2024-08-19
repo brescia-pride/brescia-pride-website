@@ -1,6 +1,6 @@
 import Block from "../Block";
 
-import { SiFacebook, SiGmail, SiInstagram, SiTiktok, SiLinktree } from "react-icons/si";
+import { SiFacebook, SiGmail, SiInstagram, SiTiktok, SiLinktree, SiPaypal } from "react-icons/si";
 
 const SocialsBlock = () => (
   <>
@@ -9,7 +9,7 @@ const SocialsBlock = () => (
         rotate: "-2.5deg",
         scale: 1.1,
       }}
-      className="bg-cream hidden md:block p-6"
+      className="bg-cream p-6"
     >
       <a
         href="https://www.instagram.com/bresciapride"
@@ -24,7 +24,7 @@ const SocialsBlock = () => (
         rotate: "-2.5deg",
         scale: 1.1,
       }}
-      className="bg-cream hidden md:block p-6"
+      className="bg-cream p-6"
     >
       <a
         href="https://www.tiktok.com/@bresciapride"
@@ -39,7 +39,7 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="bg-cream hidden md:block p-6"
+      className="bg-cream p-6"
     >
       <a
         href="https://www.facebook.com/BresciaPride"
@@ -54,7 +54,7 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="w-100 bg-cream hidden md:block p-6"
+      className="w-100 bg-cream p-6"
     >
       <a
         href="mailto:info@bresciapride.it"
@@ -69,7 +69,7 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="w-100 bg-cream hidden md:block p-6"
+      className="w-100 bg-cream p-6"
     >
       <a
         href="https://linktr.ee/bresciapride"
@@ -79,7 +79,21 @@ const SocialsBlock = () => (
         <SiLinktree />
       </a>
     </Block>
-
+    <Block
+      whileHover={{
+        rotate: "2.5deg",
+        scale: 1.1,
+      }}
+      className="w-100 bg-cream p-6"
+    >
+      <a
+        href="https://www.paypal.com/paypalme/bresciapride"
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-dark-blue"
+      >
+        <SiPaypal />
+      </a>
+    </Block>
   </>
 );
 

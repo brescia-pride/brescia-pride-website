@@ -6,7 +6,7 @@ const myFont = localFont({ src: "../../fonts/ST.ttf" });
 
 const Footer = () => {
   return (
-    <Block className={`col-span-5 p-6 text-black`}>
+    <Block className={`col-span-6 p-6 text-black`}>
       <footer className={"list-none"}>
         <span><b>Comitato Brescia Pride ETS</b></span>
         <span><ul>

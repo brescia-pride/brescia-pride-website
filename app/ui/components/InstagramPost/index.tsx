@@ -32,8 +32,8 @@ const InstagramPost: FC<InstragramSlides> = ({
         </div>
     )
 
-    const slideElements = slides.map((slide) => (
-        <div className="col-span-1" key={null}>
+    const slideElements = slides.map((slide, index) => (
+        <div key={index} className="col-span-1">
         <Block>
             <Image
                 src={slide.src}

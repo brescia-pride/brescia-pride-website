@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Brescia Pride',
-  description: 'La cultura si fa insieme',
+  description: 'Ci vediamo in Piazza Vittoria il 7 settembre 2024 alle 15:00!',
 }
 
 export default function RootLayout({

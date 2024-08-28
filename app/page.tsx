@@ -24,25 +24,28 @@ export default function Homepage() {
           text="Più unite e compatte che mai, ci vogliamo far sentire, per progettare insieme una società a misura di ogni persona."
         />
         <Text
-          blockClass="bg-[#2596be] text-[#5f370d] col-span-6"
-          text="Ci vediamo in Piazza Vittoria il 7 settembre 2024 alle 15:00!"
-          link={{
-            href: "https://www.instagram.com/p/C-YFBBoNfoQ/?hl=it&img_index=1",
-            text: "Vai al programma completo",
-          }
-        }
+          blockClass="bg-[#523376] text-[#d4f3b8] col-span-6"
+          text={<b>Ci vediamo in Piazza Vittoria il 7 settembre 2024 alle 15:00!</b>}
         />
         <Text
-          blockClass="bg-[#d4f3b8] text-[#523376] col-span-3"
-          text="Vademecum Accessibilità Corteo Brescia Pride 2024"
+          blockClass="bg-[#d4f3b8] text-[#523376] col-span-2"
+          text={<span><b>Vademecum Accessibilità</b></span>}
           link={{
-            href: "https://docs.google.com/document/d/1SkDCVYLZMCDMn6iEdkS6qZnDS-TDDAMhW_sISIoLxSQ/edit?tab=t.0#heading=h.ivu3u5ulwcqw",
-            text: "Consulta il Vademecum",
+            href: "/vademecum",
+            text: "Vai al Vademecum",
           }}
         />
         <Text
-          blockClass="bg-[#523376] text-[#d4f3b8] col-span-3"
-          text="Percorso Corteo Brescia Pride 2024"
+          blockClass="bg-[#f9bfd2] text-[#a71729] col-span-2"
+          text={<span><b>Programma</b> del corteo 2024</span>}
+          link={{
+            href: "/programma",
+            text: "Vai al programma",
+          }}
+        />
+        <Text
+          blockClass="bg-[#2596be] text-[#5f370d] col-span-2"
+          text={<span><b>Percorso</b> del corteo 2024</span>}
           link={{
             href: "https://www.google.com/maps/d/u/0/viewer?mid=1zDgkFCuTgocYO202hmJGve8kp2Jblnw&ll=45.53847900000001%2C10.218770999999997&z=16",
             text: "Vai alla mappa interattiva",
@@ -78,7 +81,7 @@ export default function Homepage() {
           altText="Panel in un evento"
         />
         <Text
-          blockClass="bg-[#f9bfd2] text-[#a71729] col-span-4"
+          blockClass="bg-[#11634d] text-[#d2c2df] col-span-4"
           text="Puoi aiutarci con una donazione, anche piccola, per sostenere le nostre attività."
           link={{
             href: "https://www.paypal.com/paypalme/bresciapride",

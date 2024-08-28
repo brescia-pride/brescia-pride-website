@@ -4,14 +4,20 @@ import Image from "next/image";
 type BlockProps = {
   src: string;
   altText: string;
+  colSpan?: number;
+  showOnMobile?: boolean
 };
 
 const ImageBlock = ({
   src,
-  altText
+  altText,
+  colSpan,
+  showOnMobile,
 }: BlockProps) => {
+    let size = colSpan ? colSpan : 1
+    let hide = showOnMobile? "" : "hidden md:block"
     return (
-      <Block className="col-span-1 hidden md:block">
+      <Block className={`col-span-${size} ${hide}`}>
         <Image 
           src={src}
           alt={altText} 

@@ -63,7 +63,7 @@ export default function Homepage() {
           blockClass="bg-[#a71729] text-[#f9bfd2] col-span-5"
           text="Alla luce dei recenti avvenimenti, ci uniamo alla voce delle associazioni LGBTQIA+ e T* che da mesi denunciano il costante e preoccupante attacco alla libertà di scelta e autodeterminazione."
           link={{
-            href: "https://bresciapride.it/comunicato.pdf",
+            href: "/comunicato.pdf",
             text: "Leggi il comunicato",
           }}
         />
@@ -71,7 +71,7 @@ export default function Homepage() {
           blockClass="bg-[#5f370d] text-[#2596be] col-span-6"
           text="Siamo una realtà intersezionale, transfemminista, antifascista, gentile e autogestita."
           link={{
-            href: "https://bresciapride.it/manifesto.pdf",
+            href: "/manifesto.pdf",
             text: "Leggi il manifesto",
           }}
         />

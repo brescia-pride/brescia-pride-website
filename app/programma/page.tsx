@@ -1,14 +1,10 @@
 "use client";
 
-import React, { ReactElement } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Block from "../ui/components/Block";
-import InstagramPost from "../ui/components/InstagramPost";
 import Link from "next/link";
-import Text from "../ui/components/Text";
-import localFont from "next/font/local";
-
-const myFont = localFont({ src: "../ui/fonts/ST.ttf" });
+import BackHome from "../ui/components/BackHome";
 
 export default function Page() {
     return (
@@ -21,8 +17,9 @@ export default function Page() {
                 }}
                 className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-3 gap-4"
             >
+                <BackHome size={3} />
                 <Block className="bg-[#a71729] text-[#f9bfd2] p-6 col-span-3">
-                <h1 className={"text-4xl md:text-4xl font-medium leading-tight mb-4"}><b>Programma del corteo 2024</b></h1>
+                    <h1 className={"text-4xl md:text-4xl font-medium leading-tight mb-4"}><b>Programma del corteo 2024</b></h1>
                     <div className="text-2xl"><ul>
                         <li><b>15:00</b> - Concentramento in Piazza Vittoria</li>
                         <li><b>16:00</b> - Si parte!</li>
@@ -33,7 +30,7 @@ export default function Page() {
                     </div>
                 </Block>
                 <Block className="bg-[#2596be] text-[#5f370d] p-6 col-span-3">
-                <h1 className={"text-4xl md:text-4xl font-medium leading-tight mb-4"}><b>Interventi (in piazza Vittoria dalle 18:00 alle 20:00)</b></h1>
+                    <h1 className={"text-4xl md:text-4xl font-medium leading-tight mb-4"}><b>Interventi (in piazza Vittoria dalle 18:00 alle 20:00)</b></h1>
                     <div className="text-2xl"><ul>
                         <li>- Flash Mob di Circle Singing</li>
                         <li>- Comitato Brescia Pride</li>
@@ -55,22 +52,22 @@ export default function Page() {
                     </div>
                 </Block>
                 <Block className="bg-[#f9bfd2] text-[#a71729] p-6 col-span-3">
-                <h1 className={"text-4xl md:text-4xl font-medium leading-tight mb-4"}><b>Carri</b></h1>
+                    <h1 className={"text-4xl md:text-4xl font-medium leading-tight mb-4"}><b>Carri</b></h1>
                     <div className="text-2xl"><ul>
-                    <li><b>🌈</b> Comitato Brescia Pride</li>
-                    <li><b>🛻</b> Figli delle Stelle + Opificio Clandestino + Industrial Barbershop</li>
-                    <li><b>🛻</b> ÈliveBrescia TV + Famiglie Arcobaleno</li>
-                    <li><b>🎈</b> zona bianca + zona dedicata alle famiglie</li>
-                    <li><b>🛻</b> Sonida</li>
-                    <li><b>🛻</b> Diluvio + Granita</li>
-                    <li><b>🍉</b> spazio dedicato alla Palestina</li>
-                    <li><b>🛻</b> RedMoon + Illogic Radio + Ass. Spazio Zero + Cave Sound System</li>
-                    <li><b>🛻</b> LoveIsLove by AntoBed + Dj Simo&Mary</li>
+                        <li><b>🌈</b> Comitato Brescia Pride</li>
+                        <li><b>🛻</b> Figli delle Stelle + Opificio Clandestino + Industrial Barbershop</li>
+                        <li><b>🛻</b> ÈliveBrescia TV + Famiglie Arcobaleno</li>
+                        <li><b>🎈</b> zona bianca + zona dedicata alle famiglie</li>
+                        <li><b>🛻</b> Sonida</li>
+                        <li><b>🛻</b> Diluvio + Granita</li>
+                        <li><b>🍉</b> spazio dedicato alla Palestina</li>
+                        <li><b>🛻</b> RedMoon + Illogic Radio + Ass. Spazio Zero + Cave Sound System</li>
+                        <li><b>🛻</b> LoveIsLove by AntoBed + Dj Simo&Mary</li>
                     </ul>
                     </div>
                 </Block>
                 <Block className="bg-[#d2c2df] text-[#11634d] p-6 col-span-3">
-                <h1 className={"text-4xl md:text-4xl font-medium leading-tight mb-4"}><b>Diretta (dalle 15 alle 19:30)</b></h1>
+                    <h1 className={"text-4xl md:text-4xl font-medium leading-tight mb-4"}><b>Diretta (dalle 15 alle 19:30)</b></h1>
                     <div className="text-2xl"><span>🎥 Potrete trovare la trasmissione live dell’intera giornata direttamente sul sito web di <b><Link href="https://www.elivebrescia.tv/">ÈliveBresciaTv</Link></b>, su Facebook (con sottotitoli) o sul canale TV 181 (per la provincia di Brescia). Gli interventi dal palco saranno disponibili anche in LIS, e sarà visionabile l’interprete anche in diretta TV, social e streaming.</span>
                     </div>
                 </Block>

@@ -24,15 +24,23 @@ export default function Homepage() {
           text="Più unite e compatte che mai, ci vogliamo far sentire, per progettare insieme una società a misura di ogni persona."
         />
         <Text
-          blockClass="bg-[#523376] text-[#d4f3b8] col-span-6"
+          blockClass="bg-[#523376] text-[#d4f3b8] col-span-3"
           text={<b>Ci vediamo in Piazza Vittoria il 7 settembre 2024 alle 15:00!</b>}
         />
         <Text
-          blockClass="bg-[#d4f3b8] text-[#523376] col-span-2"
-          text={<span><b>Vademecum Accessibilità</b></span>}
+          blockClass="bg-[#f9c437] text-[#5f370d] col-span-3"
+          text={<b>Vademecum Pride 2024</b>}
           link={{
-            href: "/vademecum",
-            text: "Vai al Vademecum",
+            href: "/vademecum-generale",
+            text: "Tutte le informazioni utili sulla giornata del 7 settembre",
+          }}
+        />
+        <Text
+          blockClass="bg-[#d4f3b8] text-[#523376] col-span-2"
+          text={<span><b>Accessibilità</b></span>}
+          link={{
+            href: "/vademecum-accessibilita",
+            text: "Leggi il Vademecum sull'accessibilità con tutti i dettagli",
           }}
         />
         <Text

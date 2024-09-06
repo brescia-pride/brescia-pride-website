@@ -4,7 +4,7 @@ import React, { ReactElement } from "react";
 import { motion } from "framer-motion";
 import Block from "../ui/components/Block";
 import InstagramPost from "../ui/components/InstagramPost";
-
+import Link from "next/link";
 import Text from "../ui/components/Text";
 import localFont from "next/font/local";
 
@@ -33,7 +33,7 @@ export default function Page() {
                     </div>
                 </Block>
                 <Block className="bg-[#2596be] text-[#5f370d] p-6 col-span-3">
-                <h1 className={"text-4xl md:text-4xl font-medium leading-tight mb-4"}><b>Ospiti Post Corteo (18:00)</b></h1>
+                <h1 className={"text-4xl md:text-4xl font-medium leading-tight mb-4"}><b>Interventi (in piazza Vittoria dalle 18:00 alle 20:00)</b></h1>
                     <div className="text-2xl"><ul>
                         <li>- Flash Mob di Circle Singing</li>
                         <li>- Comitato Brescia Pride</li>
@@ -43,6 +43,14 @@ export default function Page() {
                         <li>- Sindaca del Comune di Brescia</li>
                         <li>- Flash Mob T*</li>
                         <li>- Concerto di strada Appel</li>
+                    </ul>
+                    </div>
+                    <h1 className={"text-4xl md:text-4xl font-medium leading-tight mb-4 mt-4"}><b>Presentano:</b></h1>
+                    <div className="text-2xl"><ul>
+                        <li>- <Link href="https://www.instagram.com/carramba_che_cruella/">Cruella</Link></li>
+                        <li>- <Link href="https://www.instagram.com/amy_krania/">Amy Krania</Link></li>
+                        <li>- <Link href="https://www.instagram.com/tedeschiadriana/">Adriana Tedeschi
+                        </Link></li>
                     </ul>
                     </div>
                 </Block>
@@ -61,8 +69,13 @@ export default function Page() {
                     </ul>
                     </div>
                 </Block>
+                <Block className="bg-[#d2c2df] text-[#11634d] p-6 col-span-3">
+                <h1 className={"text-4xl md:text-4xl font-medium leading-tight mb-4"}><b>Diretta (dalle 15 alle 19:30)</b></h1>
+                    <div className="text-2xl"><span>🎥 Potrete trovare la trasmissione live dell’intera giornata direttamente sul sito web di <b><Link href="https://www.elivebrescia.tv/">ÈliveBresciaTv</Link></b>, su Facebook (con sottotitoli) o sul canale TV 181 (per la provincia di Brescia). Gli interventi dal palco saranno disponibili anche in LIS, e sarà visionabile l’interprete anche in diretta TV, social e streaming.</span>
+                    </div>
+                </Block>
                 <Block className="text-[#a71729] p-6 col-span-3">
-                    <span>Seguiteci sul nostro profilo Instagram <b><a href="https://www.instagram.com/bresciapride/" className="hover:underline">@bresciapride</a></b> per tutti i dettagli!
+                    <span>Seguiteci sul nostro profilo Instagram <b><a href="https://www.instagram.com/bresciapride/" className="hover:underline">@bresciapride</a></b> o sulla nostra pagina <b><a href="https://www.facebook.com/BresciaPride">Facebook</a></b> per tutti i dettagli!
                     </span>
                 </Block>
             </motion.div>

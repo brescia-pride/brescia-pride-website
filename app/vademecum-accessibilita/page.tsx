@@ -9,16 +9,16 @@ export default function Page() {
         <a
             href="https://docs.google.com/document/d/1SkDCVYLZMCDMn6iEdkS6qZnDS-TDDAMhW_sISIoLxSQ/edit?usp=sharing"
             target="_blank"
-            className="mb-2 text-sm flex items-center hover:underline"
+            className="mb-2 text-xl flex items-center hover:underline"
         >
-            Leggi il Vademecum su Google Docs<FiArrowRight />
+            Leggi il Vademecum Accessibilità su Google Docs<FiArrowRight />
         </a>
         <a
             href="https://docs.google.com/document/d/1SkDCVYLZMCDMn6iEdkS6qZnDS-TDDAMhW_sISIoLxSQ/export?format=pdf"
             target="_blank"
-            className="text-sm flex items-center hover:underline"
+            className="text-xl flex items-center hover:underline"
         >
-            Scarica il vademecum in PDF<FiArrowRight />
+            Scarica il Vademecum Accessibilità in PDF<FiArrowRight />
         </a>
     </div>
 

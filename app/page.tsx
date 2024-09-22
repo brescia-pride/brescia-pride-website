@@ -23,73 +23,47 @@ export default function Homepage() {
           heading="Brescia Pride"
           text="Più unite e compatte che mai, ci vogliamo far sentire, per progettare insieme una società a misura di ogni persona."
         />
-        <Text
-          blockClass="bg-[#523376] text-[#d4f3b8] col-span-3"
-          text={<b>Ci vediamo in Piazza Vittoria il 7 settembre 2024 alle 15:00!</b>}
+        <ImageBlock
+          src="/images/bandiera.jpg"
+          altText="Bandiera del comitato Brescia Pride 2024."
+          link="https://drive.google.com/drive/folders/15cSWar644NARwmVX-GOSGIXCvtRCNsTl?usp=sharing"
+          linkText="Foto del corteo (07/09/2024)"
+          showOnMobile={true}
+          colSpan="col-span-2"
+        />
+        <ImageBlock
+          src="/images/prom.jpg"
+          altText="Foto di Carme durante l'evento 'The Queer Prom'."
+          link="https://drive.google.com/drive/folders/1RRWK8ad68bCFQUs2SbcO5SbLcPeZugLd?usp=sharing"
+          linkText="Foto di The Queer Prom (31/08/2024)"
+          showOnMobile={true}
+          colSpan="col-span-2"
         />
         <Text
-          blockClass="bg-[#f9c437] text-[#5f370d] col-span-3"
-          text={<b>Vademecum Pride 2024</b>}
-          link={{
-            href: "/vademecum-generale",
-            text: "Tutte le informazioni utili sulla giornata del 7 settembre",
-          }}
-        />
-        <Text
-          blockClass="bg-[#d4f3b8] text-[#523376] col-span-2"
-          text={<span><b>Accessibilità</b></span>}
-          link={{
-            href: "/vademecum-accessibilita",
-            text: "Leggi il Vademecum sull'accessibilità con tutti i dettagli",
-          }}
-        />
-        <Text
-          blockClass="bg-[#f9bfd2] text-[#a71729] col-span-2"
-          text={<span><b>Programma</b> del corteo 2024</span>}
-          link={{
-            href: "/programma",
-            text: "Vai al programma",
-          }}
-        />
-        <Text
-          blockClass="bg-[#2596be] text-[#5f370d] col-span-2"
-          text={<span><b>Percorso</b> del corteo 2024</span>}
-          link={{
-            href: "https://www.google.com/maps/d/u/0/viewer?mid=1zDgkFCuTgocYO202hmJGve8kp2Jblnw&ll=45.53847900000001%2C10.218770999999997&z=16",
-            text: "Vai alla mappa interattiva",
-          }}
-        />
-        <Text
-          blockClass="bg-[#a71729] text-[#f9bfd2] col-span-5"
-          text="Alla luce dei recenti avvenimenti, ci uniamo alla voce delle associazioni LGBTQIA+ e T* che da mesi denunciano il costante e preoccupante attacco alla libertà di scelta e autodeterminazione."
-          link={{
-            href: "/comunicato.pdf",
-            text: "Leggi il comunicato",
-          }}
-        />
-        <Text
-          blockClass="bg-[#5f370d] text-[#2596be] col-span-6"
+          blockClass="bg-[#523376] text-[#d4f3b8] col-span-2"
           text="Siamo una realtà intersezionale, transfemminista, antifascista, gentile e autogestita."
           link={{
             href: "/manifesto.pdf",
             text: "Leggi il manifesto",
           }}
         />
+        <Text
+          blockClass="bg-[#a71729] text-[#f9bfd2] col-span-4"
+          text="Alla luce dei recenti avvenimenti, ci uniamo alla voce delle associazioni LGBTQIA+ e T* che da mesi denunciano il costante e preoccupante attacco alla libertà di scelta e autodeterminazione."
+          link={{
+            href: "/comunicato.pdf",
+            text: "Leggi il comunicato",
+          }}
+        />
         <ImageBlock
-          src="/images/8.jpg"
-          altText="Il Corteo"
+          src="/images/riv-t.jpg"
+          altText="Cartello con scritto 'La rabbia di Cloe brucia ancora, rivoluzione trans in ogni scuola'."
+          colSpan="col-span-2"
+          showOnMobile={true}
         />
         <SocialsBlock />
-         <ImageBlock
-          src="/images/16.jpg"
-          altText="Disegnando le nostre mascotte"
-        />
-         <ImageBlock
-          src="/images/10.jpg"
-          altText="Panel in un evento"
-        />
         <Text
-          blockClass="bg-[#11634d] text-[#d2c2df] col-span-4"
+          blockClass="bg-[#11634d] text-[#d2c2df] col-span-6"
           text="Puoi aiutarci con una donazione, anche piccola, per sostenere le nostre attività."
           link={{
             href: "https://www.paypal.com/paypalme/bresciapride",

@@ -31,16 +31,9 @@ export default function Homepage() {
           showOnMobile={true}
           colSpan="col-span-2"
         />
-        <ImageBlock
-          src="/images/prom.jpg"
-          altText="Foto di Carme durante l'evento 'The Queer Prom'."
-          link="https://drive.google.com/drive/folders/1RRWK8ad68bCFQUs2SbcO5SbLcPeZugLd?usp=sharing"
-          linkText="Foto di The Queer Prom (31/08/2024)"
-          showOnMobile={true}
-          colSpan="col-span-2"
-        />
         <Text
-          blockClass="bg-[#523376] text-[#d4f3b8] col-span-2"
+          blockClass="bg-[#523376] text-[#d4f3b8] col-span-4"
+          heading="Manifesto"
           text="Siamo una realtà intersezionale, transfemminista, antifascista, gentile e autogestita."
           link={{
             href: "/manifesto.pdf",
@@ -48,7 +41,17 @@ export default function Homepage() {
           }}
         />
         <Text
+          blockClass="bg-[#ffc2d2] text-[#0e5bc0] col-span-6"
+          heading="Vademecum per l’accessibilità degli eventi e dei cortei"
+          text="Rendere un evento realmente accessibile e a misura di chiunque è un processo di ascolto e cura, necessario, comunitario e collettivo."
+          link={{
+            href: "https://1drv.ms/p/c/3154c23af9523fae/Ea4_Uvk6wlQggDFqAQAAAAABswCASnHi1Vg3TZNPRM4M5Q?e=OjEMoL",
+            text: "Leggi il vademecum",
+          }}
+        />
+        <Text
           blockClass="bg-[#a71729] text-[#f9bfd2] col-span-4"
+          heading="Comunicato"
           text="Alla luce dei recenti avvenimenti, ci uniamo alla voce delle associazioni LGBTQIA+ e T* che da mesi denunciano il costante e preoccupante attacco alla libertà di scelta e autodeterminazione."
           link={{
             href: "/comunicato.pdf",

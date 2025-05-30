@@ -1,50 +1,59 @@
+import { useState, useEffect } from "react";
 import Block from "../Block";
 import localFont from "next/font/local";
 import { ReactElement } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import Link from "next/link";
 
-const myFont = localFont({src: "../../fonts/ST.ttf"});
+const myFont = localFont({ src: "../../fonts/ST.ttf" });
 
-type BlockProps = {
-  size?: number | 4
+interface LinkProps {
+  href: string;
+  text: string;
+}
+
+interface BlockProps {
+  size?: number;
   blockClass: string;
   heading?: string;
   text: string | ReactElement;
-  link?: {
-    href: string;
-    text: string;
-  }
-};
+  link?: LinkProps;
+}
 
-const Text = ({
-  size,
+const Text: React.FC<BlockProps> = ({
+  size = 4,
   blockClass,
   heading,
   text,
   link
-}: BlockProps) => {
-    return (
-      <Block className={`col-span-${size} ${blockClass} p-6`}>
-      <h1 className={"text-2xl md:text-4xl font-medium leading-tight"}>
-        {
-          heading ? <span className={`font-bold mr-2 ${myFont.className}`}> {heading}</span> : null
-        }
-        {
-          text ? <span>{text}</span> : null
-        }
-        {
-          link ? <Link
+}) => {
+  const [isClient, setIsClient] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  return (
+    <Block className={`col-span-${size} ${blockClass} p-6`}>
+      <h1 className="text-xl md:text-2xl font-medium leading-tight">
+        {heading && (
+          <span className={`font-bold mr-2 ${myFont.className}`}>
+            {heading}
+          </span>
+        )}
+        {text && <p>{text}</p>}
+        {isClient && link && (
+          <Link
             href={link.href}
-            // target="_blank"
             className="mt-8 text-sm flex items-center gap-1 hover:underline"
           >
-            {link.text}<FiArrowRight />
-          </Link> : null
-        }
+            {link.text}
+            <FiArrowRight />
+          </Link>
+        )}
       </h1>
-  </Block>
-    );
+    </Block>
+  );
 };
 
 Text.displayName = "Text";

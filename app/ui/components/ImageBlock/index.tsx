@@ -1,57 +1,57 @@
-import { useState, useEffect } from "react";
+import {useEffect, useState} from "react";
 import Block from "../Block";
 import Image from "next/image";
 import Link from "next/link";
 
 interface BlockProps {
-  src: string;
-  altText: string;
-  showOnMobile?: boolean;
-  colSpan: string;
-  link?: string;
-  linkText?: string;
+    src: string;
+    altText: string;
+    showOnMobile?: boolean;
+    colSpan: string;
+    link?: string;
+    linkText?: string;
 }
 
 const ImageBlock: React.FC<BlockProps> = ({
-  src,
-  altText,
-  showOnMobile = false,
-  colSpan,
-  link,
-  linkText,
-}) => {
-  const [isClient, setIsClient] = useState<boolean>(false);
+                                              src,
+                                              altText,
+                                              showOnMobile = false,
+                                              colSpan,
+                                              link,
+                                              linkText,
+                                          }) => {
+    const [isClient, setIsClient] = useState<boolean>(false);
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
 
-  const hide: string = showOnMobile ? "" : "hidden md:block";
+    const hide: string = showOnMobile ? "" : "hidden md:block";
 
-  return (
-    <Block
-      className={`${colSpan} relative ${hide}`}
-      whileHover={{
-        rotate: "-2.5deg",
-        scale: 1.005,
-      }}
-    >
-      <Image
-        src={src}
-        alt={altText}
-        className="rounded-lg w-full h-full object-cover"
-        width={200}
-        height={100}
-      />
-      {isClient && link && linkText && (
-        <div className="absolute bottom-2 right-2 bg-black bg-opacity-90 text-white px-2 py-1 rounded">
-          <Link href={link} className="text-2xl font-semibold">
-            {linkText}
-          </Link>
-        </div>
-      )}
-    </Block>
-  );
+    return (
+        <Block
+            className={`${colSpan} relative ${hide}`}
+            whileHover={{
+                rotate: "-2.5deg",
+                scale: 1.005,
+            }}
+        >
+            <Image
+                src={src}
+                alt={altText}
+                className="rounded-lg w-full h-full object-cover"
+                width={200}
+                height={100}
+            />
+            {isClient && link && linkText && (
+                <div className="absolute bottom-2 right-2 bg-black bg-opacity-90 text-white px-2 py-1 rounded">
+                    <Link href={link} className="text-2xl font-semibold">
+                        {linkText}
+                    </Link>
+                </div>
+            )}
+        </Block>
+    );
 };
 
 ImageBlock.displayName = "ImageBlock";

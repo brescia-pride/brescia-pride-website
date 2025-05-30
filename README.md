@@ -15,7 +15,7 @@ This app is built using [Next.js](https://nextjs.org/) and [Tailwind CSS](https:
 3. Navigate into the project directory
 
    ```bash
-   $ cd brescia-pride
+   $ cd brescia-pride-website
    ```
 
 4. Install the requirements
@@ -34,13 +34,7 @@ You should now be able to access the app at [http://localhost:3000](http://local
 
 ## App Structure
 
-Currently, the app is structured as a single-page site. The entry point for the application is `app/page.tsx`, which utilizes various components and fonts located under the `app/ui/components` directory.
-
-- **Block**: The fundamental component used throughout the app to create a Bento grid-like layout.
-- **Text Block**: Used for displaying text content.
-- **Image Block**: Used for displaying images.
-- **Social Network Links Block**: Used for displaying social network links.
-
+The entry point for the application is `app/page.tsx`, which utilizes various components and fonts located under the `app/ui/components` directory.
 Additionally, the `motion` library is used for animations within the app.
 
 ## Contributing

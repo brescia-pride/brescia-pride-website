@@ -33,8 +33,7 @@ export default function ContactsPage() {
                 Scrivici!
               </h1>
               <p className="text-xl font-bold">
-                Per qualsiasi informazione, domanda o richiesta di collaborazione,
-                puoi contattarci via mail a <Link className="underline" href="mailto:info@bresciapride.it">info@bresciapride.it</Link> o tramite i canali qui sotto!
+                Per qualsiasi informazione, domanda o richiesta di collaborazione, puoi contattarci via mail a <Link className={`underline`} href="mailto:info@bresciapride.it">info@bresciapride.it</Link> o tramite i canali qui sotto!
               </p>
             </div>
           </div>
@@ -48,7 +47,7 @@ export default function ContactsPage() {
                 Supportaci!
               </h1>
               <p className="text-xl font-bold">
-                Siamo una realtà autofinanziata! Supportaci donando il 5x1000 a COMITATO BRESCIA PRIDE - Codice Fiscale 98201800178 o con una <Link className="underline" href="https://www.paypal.com/paypalme/bresciapride">donazione</Link>!
+                Siamo una realtà autofinanziata! Supportaci donando il 5x1000 a COMITATO BRESCIA PRIDE - Codice Fiscale 98201800178 o con una <Link className={`underline`} href="https://www.paypal.com/paypalme/bresciapride">donazione</Link>!
               </p>
             </div>
           </div>

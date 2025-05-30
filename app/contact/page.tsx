@@ -48,7 +48,7 @@ export default function ContactsPage() {
                 Supportaci!
               </h1>
               <p className="text-xl font-bold">
-                Siamo una realtà autofinanziata! Supportaci donando il 5x1000 a "COMITATO BRESCIA PRIDE" Codice Fiscale 98201800178 o con una <Link className="underline" href="https://www.paypal.com/paypalme/bresciapride">donazione</Link>!
+                Siamo una realtà autofinanziata! Supportaci donando il 5x1000 a COMITATO BRESCIA PRIDE - Codice Fiscale 98201800178 o con una <Link className="underline" href="https://www.paypal.com/paypalme/bresciapride">donazione</Link>!
               </p>
             </div>
           </div>

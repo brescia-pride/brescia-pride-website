@@ -1,27 +1,41 @@
+import { useState, useEffect } from "react";
 import Block from "../Block";
 import Image from "next/image";
-import Link from "next/link"; // Import Link from next/link for routing
+import Link from "next/link";
 
-type BlockProps = {
+interface BlockProps {
   src: string;
   altText: string;
   showOnMobile?: boolean;
   colSpan: string;
-  link?: string;    // Add optional link prop
-  linkText?: string; // Add optional link text prop
-};
+  link?: string;
+  linkText?: string;
+}
 
-const ImageBlock = ({
+const ImageBlock: React.FC<BlockProps> = ({
   src,
   altText,
-  showOnMobile,
+  showOnMobile = false,
   colSpan,
   link,
   linkText,
-}: BlockProps) => {
-  let hide = showOnMobile ? "" : "hidden md:block";
+}) => {
+  const [isClient, setIsClient] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const hide: string = showOnMobile ? "" : "hidden md:block";
+
   return (
-    <Block className={`${colSpan} relative ${hide}`}>
+    <Block
+      className={`${colSpan} relative ${hide}`}
+      whileHover={{
+        rotate: "-2.5deg",
+        scale: 1.005,
+      }}
+    >
       <Image
         src={src}
         alt={altText}
@@ -29,9 +43,11 @@ const ImageBlock = ({
         width={200}
         height={100}
       />
-      {link && linkText && (
-        <div className="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white px-2 py-1 rounded">
-          <Link href={link} className="text-m font-semibold">{linkText}</Link>
+      {isClient && link && linkText && (
+        <div className="absolute bottom-2 right-2 bg-black bg-opacity-90 text-white px-2 py-1 rounded">
+          <Link href={link} className="text-2xl font-semibold">
+            {linkText}
+          </Link>
         </div>
       )}
     </Block>

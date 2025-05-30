@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Brescia Pride',
-  description: 'Ci vediamo in Piazza Vittoria il 7 settembre 2024 alle 15:00!',
+  description: 'Vi aspettiamo ai nostri eventi e al corteo il 6 settembre 2025!',
 }
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="it">
-      <body 
+      <body
         className={`
         ${inter.className} 
         bg-neutral-200
@@ -24,6 +24,7 @@ export default function RootLayout({
       >
         <main className="md:max-w-7xlmx-auto
         px-2">
+          {/* Main content area */}
           {children}
         </main>
       </body>

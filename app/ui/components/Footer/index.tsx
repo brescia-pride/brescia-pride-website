@@ -1,15 +1,14 @@
 import Block from "../Block";
 import localFont from "next/font/local";
-import { FiArrowRight } from "react-icons/fi";
 
-const myFont = localFont({ src: "../../fonts/ST.ttf" });
+const myFont = localFont({src: "../../fonts/ST.ttf"});
 
 const Footer = () => {
-  return (
-    <Block className={`col-span-6 p-6 bg-lilac text-green`}>
-      <footer className={"list-none"}>
-        <span><b>Comitato Brescia Pride ETS</b></span>
-        <span><ul>
+    return (
+        <Block className={`col-span-6 p-6 bg-lilac text-green`}>
+            <footer className={"list-none"}>
+                <span><b>Comitato Brescia Pride ETS</b></span>
+                <span><ul>
           <li>
             <b>Sede legale</b>: Via F.lli Folonari 7, Brescia 25100
           </li>
@@ -21,9 +20,9 @@ const Footer = () => {
           </li>
         </ul>
         </span>
-      </footer>
-    </Block>
-  );
+            </footer>
+        </Block>
+    );
 };
 
 Footer.displayName = "Footer";

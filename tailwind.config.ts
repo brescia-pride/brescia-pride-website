@@ -20,7 +20,9 @@ const config: Config = {
         "lime": " #d4f3b8",
         "pink": " #ffc2d2",
         "red": " #a71729",
-        "blue": " #0e5bc0"     
+        "blue": " #0e5bc0",
+        "brown": "#5e3700",
+        "yellow": "#f4c338"
       },
     },
   },

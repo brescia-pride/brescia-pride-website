@@ -21,6 +21,12 @@ export default function Homepage() {
             >
                 <Header size={6}/>
                 <PrideDate/>
+                <Link href={"/contact"} className="col-span-2"><ImageBlock
+                    src="/images/votare.jpg"
+                    altText="Referendum 8-9 Giugno, non vuoi andare da solə? T* porto a votare!"
+                    showOnMobile={true}
+                    colSpan="col-span-2"
+                /></Link>
                 <Link href={"/events"} className="col-span-2"><ImageBlock
                     src="/images/giugno-eventi-0.jpg"
                     altText="Locandina degli eventi organizzati a Giugno da Brescia Pride"

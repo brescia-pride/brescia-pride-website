@@ -39,7 +39,7 @@ const PrideDate = () => {
     const [isRevealed, setIsRevealed] = useState(false);
 
     return (
-        <Block className={`col-span-2 bg-blue`}>
+        <Block className={`col-span-6 bg-blue`}>
             <div
                 className="cursor-pointer transition-all duration-300 hover:bg-blue flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden"
                 onClick={() => setIsRevealed(!isRevealed)}
@@ -48,7 +48,7 @@ const PrideDate = () => {
             >
                 {/* Background emoji pattern */}
                 <div
-                    className={`absolute inset-0 text-6xl pointer-events-none transition-opacity duration-300 ${isRevealed ? 'opacity-20' : 'opacity-0'}`}>
+                    className={`absolute inset-0 text-6xl pointer-events-none transition-opacity duration-300 ${isRevealed ? 'opacity-10' : 'opacity-0'}`}>
                     <div className="grid grid-cols-6 gap-4 h-full w-full items-center justify-items-center">
                         <span>🎉</span>
                         <span>🤫</span>

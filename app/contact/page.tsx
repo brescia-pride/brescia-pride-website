@@ -35,7 +35,7 @@ export default function ContactsPage() {
                             <p className="text-xl font-bold">
                                 Sei una persona T* o non binaria e la divisione binaria dei seggi o la paura di
                                 microaggressioni e discriminazioni ti rende votare inaccessibile o non sicuro? Andiamo
-                                insieme! Scrivici in DM o via mail la tua zona di voto e ci concorderemo con l'orario.
+                                insieme! Scrivici in DM o via mail la tua zona di voto e ci concorderemo con l&apos;orario.
                             </p>
                         </div>
                     </div>

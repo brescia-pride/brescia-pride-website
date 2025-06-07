@@ -49,8 +49,8 @@ export default function ContactsPage() {
                                 Codice Fiscale 98201800178
                             </p>
                             <p className="text-xl">
-                                Compila la sezione a "Sostegno degli enti del terzo settore iscritti nel RUNTS..." come
-                                nell'immagine.
+                                Compila la sezione a &quot;Sostegno degli enti del terzo settore iscritti nel RUNTS...&quot; come
+                                nell&apos;immagine.
                             </p>
                         </div>
                     </div>
@@ -71,10 +71,10 @@ export default function ContactsPage() {
                                     PayPal
                                 </h1>
                                 <p className="text-xl font-bold">
-                                    Clicca qui o cerca "info@bresciapride.it" direttamente da PayPal
+                                    Clicca qui o cerca &quot;info@bresciapride.it&quot; direttamente da PayPal
                                 </p>
                                 <p className="text-xl">
-                                    Scegli l'opzione "famigliari e amici".
+                                    Scegli l&apos;opzione &quot;famigliari e amici&quot;.
                                 </p>
                             </div>
                         </div>

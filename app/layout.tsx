@@ -22,8 +22,7 @@ export default function RootLayout({
         bg-neutral-200
         `}
         >
-        <main className="md:max-w-7xlmx-auto
-        px-2">
+        <main className="md:max-w-7xlmx-auto px-2">
             {/* Main content area */}
             {children}
         </main>

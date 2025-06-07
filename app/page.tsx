@@ -36,7 +36,7 @@ export default function Homepage() {
                     colSpan="col-span-2"
                 />
                 </Link>
-                <Link href={"/contact"} className="col-span-2"><ImageBlock
+                <Link href={"/sostienici"} className="col-span-2"><ImageBlock
                     src="/images/5x1000.jpg"
                     altText="Dona il 5x1000 a COMITATO BRESCIA PRIDE, Codice Fiscale: 98201800178"
                     showOnMobile={true}

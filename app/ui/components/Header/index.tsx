@@ -65,6 +65,12 @@ const Header = ({size}: BlockProps) => {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/sostienici" className="block px-4 py-2 hover:bg-gray-100"
+                                      onClick={() => setMenuOpen(false)}>
+                                    Sostienici
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/events" className="block px-4 py-2 hover:bg-gray-100"
                                       onClick={() => setMenuOpen(false)}>
                                     Eventi

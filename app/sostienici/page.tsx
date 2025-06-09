@@ -4,8 +4,8 @@ import React from "react";
 import {motion} from "framer-motion";
 import Block from "../ui/components/Block";
 import Header from "../ui/components/Header";
-import Footer from "../ui/components/Footer";
-import Link from "next/link";
+import CustomFooter from "../ui/components/CustomFooter";
+import { Link, Button } from "react-aria-components";
 import ImageBlock from "../ui/components/ImageBlock";
 import localFont from "next/font/local";
 
@@ -13,7 +13,7 @@ const myFont = localFont({src: "../ui/fonts/ST.ttf"});
 
 export default function ContactsPage() {
     return (
-        <div className="min-h-screen px-4 py-12 text-zinc-50">
+        <div className="min-h-screen px-4 py-6 text-zinc-50">
             <motion.div
                 initial="initial"
                 animate="animate"
@@ -24,7 +24,7 @@ export default function ContactsPage() {
             >
                 <Header size={6}/>
                 <Block className={`col-span-6 bg-blue`}>
-                    <div
+                    <Button
                         className="cursor-pointer transition-all duration-300 hover:bg-lime flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-lime hover:text-blue"
                     >
                         <div className="text-center relative z-10 text-shadow-lg">
@@ -35,10 +35,10 @@ export default function ContactsPage() {
                                 Aiutaci a restare un pride autofinanziato e indipendente con una donazione.
                             </p>
                         </div>
-                    </div>
+                    </Button>
                 </Block>
                 <Block className={`col-span-3 bg-pink`}>
-                    <div
+                    <Button
                         className="cursor-pointer transition-all duration-300 hover:bg-blue flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-blue hover:text-pink"
                     >
                         <div className="text-center relative z-10 text-shadow-lg">
@@ -53,7 +53,7 @@ export default function ContactsPage() {
                                 nell&apos;immagine.
                             </p>
                         </div>
-                    </div>
+                    </Button>
                 </Block>
                 <ImageBlock
                     src="/images/5-1000.png"
@@ -63,7 +63,7 @@ export default function ContactsPage() {
                 />
                 <Link className={`col-span-3`} href="https://www.paypal.com/paypalme/bresciapride">
                     <Block className={`bg-lime`}>
-                        <div
+                        <Button
                             className="cursor-pointer transition-all duration-300 hover:bg-purple flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-purple hover:text-lime"
                         >
                             <div className="text-center relative z-10 text-shadow-lg">
@@ -77,11 +77,11 @@ export default function ContactsPage() {
                                     Scegli l&apos;opzione &quot;famigliari e amici&quot;.
                                 </p>
                             </div>
-                        </div>
+                        </Button>
                     </Block>
                 </Link>
                 <Block className={`col-span-3 bg-yellow`}>
-                    <div
+                    <Button
                         className="cursor-pointer transition-all duration-300 hover:bg-brown flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-brown hover:text-yellow"
                     >
                         <div className="text-center relative z-10 text-shadow-lg">
@@ -98,9 +98,9 @@ export default function ContactsPage() {
                                 Causale: Libera donazione
                             </p>
                         </div>
-                    </div>
+                    </Button>
                 </Block>
-                <Footer/>
+                <CustomFooter/>
             </motion.div>
         </div>
     );

@@ -3,13 +3,13 @@
 import React from "react";
 import {motion} from "framer-motion";
 import Header from "../ui/components/Header";
-import Footer from "../ui/components/Footer";
+import CustomFooter from "../ui/components/CustomFooter";
 import Text from "../ui/components/Text";
 import ImageBlock from "../ui/components/ImageBlock";
 
 export default function ResourcesPage() {
     return (
-        <div className="min-h-screen px-4 py-12 text-zinc-50">
+        <div className="min-h-screen px-4 py-6 text-zinc-50">
             <motion.div
                 initial="initial"
                 animate="animate"
@@ -55,7 +55,7 @@ export default function ResourcesPage() {
                     showOnMobile={true}
                     colSpan="col-span-3"
                 />
-                <Footer/>
+                <CustomFooter/>
             </motion.div>
         </div>
     );

@@ -3,10 +3,10 @@
 import React, {useState} from "react";
 import {motion} from "framer-motion";
 import Header from "@/app/ui/components/Header";
-import Footer from "../ui/components/Footer";
+import CustomFooter from "../ui/components/CustomFooter";
 import ImageBlock from "@/app/ui/components/ImageBlock";
 import Block from "../ui/components/Block";
-import Link from "next/link";
+import { Link, Button } from "react-aria-components";
 import localFont from "next/font/local";
 
 const myFont = localFont({src: "../ui/fonts/ST.ttf"});
@@ -75,7 +75,7 @@ export default function EventsPage() {
     const [isRevealed, setIsRevealed] = useState(false);
 
     return (
-        <div className="min-h-screen px-4 py-12 text-zinc-50">
+        <div className="min-h-screen px-4 py-6 text-zinc-50">
             <motion.div
                 initial="initial"
                 animate="animate"
@@ -102,11 +102,9 @@ export default function EventsPage() {
         ))} */}
                 <Block className={`col-span-2 bg-blue`}>
                     <Link href={"/giugno-brescia-pride.pdf"}>
-                        <div
+                        <Button
                             className="cursor-pointer transition-all duration-300 hover:bg-blue flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden"
-                            onClick={() => setIsRevealed(!isRevealed)}
-                            onMouseEnter={() => setIsRevealed(true)}
-                            onMouseLeave={() => setIsRevealed(false)}
+                            onPress={() => setIsRevealed(!isRevealed)}
                         >
                             {/* Background emoji pattern */}
                             <div
@@ -127,12 +125,12 @@ export default function EventsPage() {
                                     Scarica il volantino degli eventi di Giugno!
                                 </h1>
                             </div>
-                        </div>
+                        </Button>
                     </Link>
                 </Block>
                 <Block className={`col-span-2 bg-pink`}>
                     <Link href={"https://linktr.ee/bresciapride"}>
-                        <div
+                        <Button
                             className="cursor-pointer transition-all duration-300 hover:bg-green flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-green hover:text-pink"
                         >
                             <div className="text-center relative z-10 text-shadow-xl">
@@ -143,11 +141,11 @@ export default function EventsPage() {
                                     Compila i form su LinkTree
                                 </p>
                             </div>
-                        </div>
+                        </Button>
                     </Link>
                 </Block>
                 <Block className={`col-span-2 bg-lime`}>
-                    <div
+                    <Button
                         className="cursor-pointer transition-all duration-300 hover:bg-blue flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-blue hover:text-lime"
                     >
                         <div className="text-center relative z-10 text-shadow-lg">
@@ -162,7 +160,7 @@ export default function EventsPage() {
                                 partecipare 🫶
                             </p>
                         </div>
-                    </div>
+                    </Button>
                 </Block>
                 <ImageBlock
                     src="/images/giugno-eventi-0.jpg"
@@ -182,7 +180,7 @@ export default function EventsPage() {
                     showOnMobile={true}
                     colSpan="col-span-2"
                 />
-                <Footer/>
+                <CustomFooter/>
             </motion.div>
         </div>
     );

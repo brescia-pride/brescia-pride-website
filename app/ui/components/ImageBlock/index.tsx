@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import Block from "../Block";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "react-aria-components";
 
 interface BlockProps {
     src: string;
@@ -42,6 +42,7 @@ const ImageBlock: React.FC<BlockProps> = ({
                 className="rounded-lg w-full h-full object-cover"
                 width={200}
                 height={100}
+                tabIndex={0}
             />
             {isClient && link && linkText && (
                 <div className="absolute bottom-2 right-2 bg-black bg-opacity-90 text-white px-2 py-1 rounded">

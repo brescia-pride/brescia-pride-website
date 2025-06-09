@@ -1,10 +1,10 @@
-import {ReactElement, useEffect, useState} from "react";
+import { ReactElement, useEffect, useState } from "react";
 import Block from "../Block";
 import localFont from "next/font/local";
-import {FiArrowRight} from "react-icons/fi";
-import Link from "next/link";
+import { FiArrowRight } from "react-icons/fi";
+import { Link } from "react-aria-components";
 
-const myFont = localFont({src: "../../fonts/ST.ttf"});
+const myFont = localFont({ src: "../../fonts/ST.ttf" });
 
 interface LinkProps {
     href: string;
@@ -20,12 +20,12 @@ interface BlockProps {
 }
 
 const Text: React.FC<BlockProps> = ({
-                                        size = 4,
-                                        blockClass,
-                                        heading,
-                                        text,
-                                        link
-                                    }) => {
+    size = 4,
+    blockClass,
+    heading,
+    text,
+    link
+}) => {
     const [isClient, setIsClient] = useState<boolean>(false);
 
     useEffect(() => {
@@ -34,11 +34,12 @@ const Text: React.FC<BlockProps> = ({
 
     return (
         <Block className={`col-span-${size} ${blockClass} p-6`}>
+            <div tabIndex={0}>
             <h1 className="text-xl md:text-2xl font-medium leading-tight">
                 {heading && (
                     <span className={`font-bold mr-2 ${myFont.className}`}>
-            {heading}
-          </span>
+                        {heading}
+                    </span>
                 )}
                 {text && <p>{text}</p>}
                 {isClient && link && (
@@ -47,10 +48,11 @@ const Text: React.FC<BlockProps> = ({
                         className="mt-8 text-sm flex items-center gap-1 hover:underline"
                     >
                         {link.text}
-                        <FiArrowRight/>
+                        <FiArrowRight />
                     </Link>
                 )}
             </h1>
+            </div>
         </Block>
     );
 };

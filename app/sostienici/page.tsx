@@ -23,12 +23,12 @@ export default function ContactsPage() {
                 className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
             >
                 <Header size={6}/>
-                <Block className={`col-span-6 bg-blue`}>
+                <Block className={`col-span-6 bg-purple`}>
                     <Button
-                        className="cursor-pointer transition-all duration-300 hover:bg-lime flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-lime hover:text-blue"
+                        className="cursor-default transition-all duration-300 hover:bg-pink flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-pink hover:text-purple"
                     >
                         <div className="text-center relative z-10 text-shadow-lg">
-                            <h1 className={`text-3xl font-medium leading-tight font-bold ${myFont.className}`}>
+                            <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
                                 Sostienici!
                             </h1>
                             <p className="text-xl font-bold">
@@ -39,10 +39,10 @@ export default function ContactsPage() {
                 </Block>
                 <Block className={`col-span-3 bg-pink`}>
                     <Button
-                        className="cursor-pointer transition-all duration-300 hover:bg-blue flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-blue hover:text-pink"
+                        className="cursor-default transition-all duration-300 hover:bg-red flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-red hover:text-pink"
                     >
                         <div className="text-center relative z-10 text-shadow-lg">
-                            <h1 className={`text-3xl font-medium leading-tight font-bold ${myFont.className}`}>
+                            <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
                                 5x1000
                             </h1>
                             <p className="text-xl font-bold">
@@ -62,12 +62,12 @@ export default function ContactsPage() {
                     colSpan="col-span-3"
                 />
                 <Link className={`col-span-3`} href="https://www.paypal.com/paypalme/bresciapride">
-                    <Block className={`bg-lime`}>
+                    <Block className={`bg-pink`}>
                         <Button
-                            className="cursor-pointer transition-all duration-300 hover:bg-purple flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-purple hover:text-lime"
+                            className="cursor-pointer transition-all duration-300 hover:bg-red flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-red hover:text-pink"
                         >
                             <div className="text-center relative z-10 text-shadow-lg">
-                                <h1 className={`text-3xl font-medium leading-tight font-bold ${myFont.className}`}>
+                                <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
                                     PayPal
                                 </h1>
                                 <p className="text-xl font-bold">
@@ -80,12 +80,12 @@ export default function ContactsPage() {
                         </Button>
                     </Block>
                 </Link>
-                <Block className={`col-span-3 bg-yellow`}>
+                <Block className={`col-span-3 bg-pink`}>
                     <Button
-                        className="cursor-pointer transition-all duration-300 hover:bg-brown flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-brown hover:text-yellow"
+                        className="cursor-default transition-all duration-300 hover:bg-red flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-red hover:text-pink"
                     >
                         <div className="text-center relative z-10 text-shadow-lg">
-                            <h1 className={`text-3xl font-medium leading-tight font-bold ${myFont.className}`}>
+                            <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
                                 Bonifico
                             </h1>
                             <p className="text-xl font-bold">

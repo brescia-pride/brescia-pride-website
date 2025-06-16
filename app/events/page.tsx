@@ -85,21 +85,6 @@ export default function EventsPage() {
                 className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
             >
                 <Header size={6}/>
-
-                {/* Render sorted events
-        {upcomingEvents.map((event: Event, index: number) => (
-          <Link 
-            key={event.id} 
-            href={event.href} 
-            className="col-span-2"
-          >
-            <Text 
-              heading={event.heading}
-              text={event.text}
-              blockClass={`${event.bgColor} ${event.textColor}`}
-            />
-          </Link>
-        ))} */}
                 <Block className={`col-span-2 bg-blue`}>
                     <Link href={"/giugno-brescia-pride.pdf"}>
                         <Button
@@ -121,7 +106,7 @@ export default function EventsPage() {
 
                             {/* Main content */}
                             <div className="text-center relative z-10 text-shadow-lg">
-                                <h1 className={`text-2xl font-medium leading-tight font-bold ${myFont.className} text-pink transition-all duration-300`}>
+                                <h1 className={`text-2xl font-medium leading-tight font-medium ${myFont.className} text-pink transition-all duration-300`}>
                                     Scarica il volantino degli eventi di Giugno!
                                 </h1>
                             </div>
@@ -134,7 +119,7 @@ export default function EventsPage() {
                             className="cursor-pointer transition-all duration-300 hover:bg-green flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-green hover:text-pink"
                         >
                             <div className="text-center relative z-10 text-shadow-xl">
-                                <h1 className={`text-2xl font-medium leading-tight font-bold ${myFont.className}`}>
+                                <h1 className={`text-2xl font-medium leading-tight font-medium ${myFont.className}`}>
                                     Iscriviti ai nostri eventi!
                                 </h1>
                                 <p className="text-lg md:text-xl mt-1 font-semibold">
@@ -144,12 +129,12 @@ export default function EventsPage() {
                         </Button>
                     </Link>
                 </Block>
-                <Block className={`col-span-2 bg-lime`}>
+                <Block className={`col-span-2 bg-pink`}>
                     <Button
-                        className="cursor-pointer transition-all duration-300 hover:bg-blue flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-blue hover:text-lime"
+                        className="cursor-default transition-all duration-300 hover:bg-green flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-green hover:text-pink"
                     >
                         <div className="text-center relative z-10 text-shadow-lg">
-                            <h1 className={`text-3xl font-medium leading-tight font-bold ${myFont.className}`}>
+                            <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
                                 Queercetto
                             </h1>
                             <p className="text-lg md:text-xl mt-1 font-semibold">

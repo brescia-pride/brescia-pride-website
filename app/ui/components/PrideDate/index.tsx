@@ -29,7 +29,7 @@ const PrideDate = () => {
 
                 {/* Main content */}
                 <div className="text-center relative z-10 text-shadow-lg">
-                    <h1 className={`text-2xl md:text-4xl font-medium leading-tight font-bold ${myFont.className} text-pink transition-all duration-300`}>
+                    <h1 className={`text-2xl md:text-4xl leading-tight ${myFont.className} text-pink transition-all duration-300`}>
                         {isRevealed ? "6 Settembre 2025!" : "Quando è il pride?"}
                     </h1>
                 </div>

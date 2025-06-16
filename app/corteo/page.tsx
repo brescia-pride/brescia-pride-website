@@ -48,7 +48,7 @@ export default function ContactsPage() {
                     >
                         <div className="text-center relative z-10 text-shadow-lg">
                             <p className="text-xl font-bold">
-                                Tutte le info sul corteo saranno pubblicate a breve! Tieni d'occhio questa pagina 🫶
+                                Tutte le info sul corteo saranno pubblicate a breve! Tieni d&apos;occhio questa pagina 🫶
                             </p>
                         </div>
                     </Button>

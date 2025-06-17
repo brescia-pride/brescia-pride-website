@@ -32,7 +32,7 @@ export default function ResourcesPage() {
                         className="cursor-pointer transition-all duration-300 hover:bg-purple flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-purple hover:text-pink"
                         onPress={() => router.push('/manifesto.pdf')}
                     >
-                        <div className="text-left relative z-10 text-shadow-lg">
+                        <div className="text-left relative z-10 text-shadow-lg select-text">
                             <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
                                 Manifesto 2024
                             </h1>
@@ -50,7 +50,7 @@ export default function ResourcesPage() {
                         className="cursor-pointer transition-all duration-300 hover:bg-blue flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-blue hover:text-pink"
                         onPress={() => router.push('https://1drv.ms/p/c/3154c23af9523fae/Ea4_Uvk6wlQggDFqAQAAAAABswCASnHi1Vg3TZNPRM4M5Q?e=OjEMoL')}
                     >
-                        <div className="text-left relative z-10 text-shadow-lg">
+                        <div className="text-left relative z-10 text-shadow-lg select-text">
                             <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
                                 Vademecum per l&apos;accessibilità degli eventi e dei cortei
                             </h1>
@@ -68,7 +68,7 @@ export default function ResourcesPage() {
                         className="cursor-pointer transition-all duration-300 hover:bg-green flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-green hover:text-pink"
                         onPress={() => router.push('/comunicato.pdf')}
                     >
-                        <div className="text-left relative z-10 text-shadow-lg">
+                        <div className="text-left relative z-10 text-shadow-lg select-text">
                             <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
                                 Comunicato a sostegno della comunità T* (06/07/2024)
                             </h1>

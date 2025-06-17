@@ -1,17 +1,18 @@
 "use client";
 
 import React from "react";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import Block from "../ui/components/Block";
 import Header from "../ui/components/Header";
 import CustomFooter from "../ui/components/CustomFooter";
 import { Link, Button } from "react-aria-components";
 import ImageBlock from "../ui/components/ImageBlock";
 import localFont from "next/font/local";
-
-const myFont = localFont({src: "../ui/fonts/ST.ttf"});
+import { useRouter } from "next/navigation";
+const myFont = localFont({ src: "../ui/fonts/ST.ttf" });
 
 export default function ContactsPage() {
+    const router = useRouter();
     return (
         <div className="min-h-screen px-4 py-6 text-zinc-50">
             <motion.div
@@ -22,7 +23,7 @@ export default function ContactsPage() {
                 }}
                 className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
             >
-                <Header size={6}/>
+                <Header size={6} />
                 <Block className={`col-span-6 bg-purple`}>
                     <Button
                         className="cursor-default transition-all duration-300 hover:bg-pink flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-pink hover:text-purple"
@@ -41,7 +42,7 @@ export default function ContactsPage() {
                     <Button
                         className="cursor-default transition-all duration-300 hover:bg-red flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-red hover:text-pink"
                     >
-                        <div className="text-center relative z-10 text-shadow-lg">
+                        <div className="text-center relative z-10 text-shadow-lg select-text">
                             <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
                                 5x1000
                             </h1>
@@ -61,37 +62,35 @@ export default function ContactsPage() {
                     showOnMobile={true}
                     colSpan="col-span-3"
                 />
-                <Link className={`col-span-3`} href="https://www.paypal.com/paypalme/bresciapride">
-                    <Block className={`bg-pink`}>
-                        <Button
-                            className="cursor-pointer transition-all duration-300 hover:bg-red flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-red hover:text-pink"
-                        >
-                            <div className="text-center relative z-10 text-shadow-lg">
-                                <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
-                                    PayPal
-                                </h1>
-                                <p className="text-xl font-bold">
-                                    Clicca qui o cerca &quot;info@bresciapride.it&quot; direttamente da PayPal
-                                </p>
-                                <p className="text-xl">
-                                    Scegli l&apos;opzione &quot;famigliari e amici&quot;.
-                                </p>
-                            </div>
-                        </Button>
-                    </Block>
-                </Link>
+                <Block className={`bg-pink col-span-3`}>
+                    <Button
+                        className="cursor-default transition-all duration-300 hover:bg-red flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-red hover:text-pink"
+                    >
+                        <div className="text-center relative z-10 text-shadow-lg select-text">
+                            <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
+                                PayPal
+                            </h1>
+                            <p className="text-xl font-bold">
+                                <Link className={`col-span-3 underline`} href="https://www.paypal.com/paypalme/bresciapride">Clicca qui</Link> o cerca &quot;info@bresciapride.it&quot; direttamente da PayPal
+                            </p>
+                            <p className="text-xl">
+                                Scegli l&apos;opzione &quot;famigliari e amici&quot;.
+                            </p>
+                        </div>
+                    </Button>
+                </Block>
                 <Block className={`col-span-3 bg-pink`}>
                     <Button
                         className="cursor-default transition-all duration-300 hover:bg-red flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-red hover:text-pink"
                     >
-                        <div className="text-center relative z-10 text-shadow-lg">
+                        <div className="text-center relative z-10 text-shadow-lg select-text">
                             <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
                                 Bonifico
                             </h1>
                             <p className="text-xl font-bold">
                                 Destinatario: Comitato Brescia Pride ETS
                             </p>
-                            <p className="text-xl font-bold">
+                            <p className="text-xl font-bold text-wrap">
                                 IBAN: IT4910501811200000016783060
                             </p>
                             <p className="text-xl font-bold">
@@ -100,7 +99,7 @@ export default function ContactsPage() {
                         </div>
                     </Button>
                 </Block>
-                <CustomFooter/>
+                <CustomFooter />
             </motion.div>
         </div>
     );

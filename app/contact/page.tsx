@@ -27,8 +27,8 @@ export default function ContactsPage() {
                     <Button
                         className="cursor-pointer transition-all duration-300 hover:bg-blue flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-blue hover:text-pink"
                     >
-                        <div className="text-center relative z-10 text-shadow-lg">
-                            <h1 className={`text-3xl font-medium leading-tight font-medium ${myFont.className}`}>
+                        <div className="text-center relative z-10 text-shadow-lg select-text">
+                            <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
                                 Scrivici!
                             </h1>
                             <p className="text-xl font-bold">

@@ -24,9 +24,9 @@ export default function ContactsPage() {
                 className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
             >
                 <Header size={6} />
-                <Block className={`col-span-6 bg-purple`}>
+                <Block className={`col-span-6 bg-blue`}>
                     <Button
-                        className="cursor-default transition-all duration-300 hover:bg-pink flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-pink hover:text-purple"
+                        className="cursor-default transition-all duration-300 hover:bg-pink flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-pink hover:text-blue"
                     >
                         <div className="text-center relative z-10 text-shadow-lg">
                             <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
@@ -38,9 +38,9 @@ export default function ContactsPage() {
                         </div>
                     </Button>
                 </Block>
-                <Block className={`col-span-3 bg-pink`}>
+                <Block className={`col-span-3 bg-lilac`}>
                     <Button
-                        className="cursor-default transition-all duration-300 hover:bg-red flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-red hover:text-pink"
+                        className="cursor-default transition-all duration-300 hover:bg-purple flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-purple hover:text-lilac"
                     >
                         <div className="text-center relative z-10 text-shadow-lg select-text">
                             <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
@@ -79,9 +79,9 @@ export default function ContactsPage() {
                         </div>
                     </Button>
                 </Block>
-                <Block className={`col-span-3 bg-pink`}>
+                <Block className={`col-span-3 bg-green`}>
                     <Button
-                        className="cursor-default transition-all duration-300 hover:bg-red flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-red hover:text-pink"
+                        className="cursor-default transition-all duration-300 hover:bg-pink flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-pink hover:text-green"
                     >
                         <div className="text-center relative z-10 text-shadow-lg select-text">
                             <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>

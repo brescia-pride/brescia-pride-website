@@ -67,7 +67,7 @@ export default function ContactsPage() {
                 <Block className={`col-span-2 bg-pink`}>
                     <Button
                         className="cursor-pointer transition-all duration-300 hover:bg-green flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-green hover:text-pink"
-                        onPress={() => router.push('https://forms.gle/n6kHL3WCj8C59qC18')}
+                        onPress={() => router.push('https://forms.gle/1DTLA7RiTh1of5Ap6')}
                     >
                         <div
                             className={`absolute top-1/2 -translate-y-1/2 -left-8 text-6xl pointer-events-none opacity-25`} aria-hidden="true">
@@ -93,7 +93,7 @@ export default function ContactsPage() {
                 <Block className={`col-span-2 bg-pink`}>
                     <Button
                         className="cursor-pointer transition-all duration-300 hover:bg-red flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-red hover:text-pink"
-                        onPress={() => router.push('https://forms.gle/n6kHL3WCj8C59qC18')}
+                        onPress={() => router.push('https://forms.gle/6mrePt9ocTz43snn9')}
                     >
                         <div
                             className={`absolute top-1/2 -translate-y-1/2 -left-8 text-6xl pointer-events-none opacity-25`} aria-hidden="true">

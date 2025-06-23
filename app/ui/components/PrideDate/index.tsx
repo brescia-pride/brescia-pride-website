@@ -9,7 +9,7 @@ const PrideDate = () => {
     const [isRevealed, setIsRevealed] = useState(false);
 
     return (
-        <Block className={`col-span-2 bg-blue`}>
+        <Block className={`col-span-4 bg-blue`}>
             <Button
                 className="cursor-pointer transition-all duration-300 hover:bg-blue flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden"
                 onPress={() => setIsRevealed((v) => !v)}

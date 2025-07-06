@@ -1,9 +1,9 @@
 import Block from "../Block";
 import localFont from "next/font/local";
-import { useState } from "react";
-import { Button } from "react-aria-components";
+import {useState} from "react";
+import {Button} from "react-aria-components";
 
-const myFont = localFont({ src: "../../fonts/ST.ttf" });
+const myFont = localFont({src: "../../fonts/ST.ttf"});
 
 const PrideDate = () => {
     const [isRevealed, setIsRevealed] = useState(false);
@@ -30,8 +30,11 @@ const PrideDate = () => {
                 {/* Main content */}
                 <div className="text-center relative z-10 text-shadow-lg">
                     <h1 className={`text-2xl md:text-4xl leading-tight ${myFont.className} text-pink transition-all duration-300`}>
-                        {isRevealed ? "6 Settembre 2025!" : "Quando è il pride?"}
+                        {isRevealed ? "6 Settembre 2025" : "Quando è il pride?"}
                     </h1>
+                    <p className="text-xl mt-2 transition-all duration-300 text-pink">
+                        {isRevealed ? "📍 Campo Marte" : "👆👆👆"}
+                    </p>
                 </div>
             </Button>
         </Block>

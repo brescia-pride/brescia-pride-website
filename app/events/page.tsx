@@ -6,7 +6,7 @@ import Header from "@/app/ui/components/Header";
 import CustomFooter from "../ui/components/CustomFooter";
 import ImageBlock from "@/app/ui/components/ImageBlock";
 import Block from "../ui/components/Block";
-import { Link, Button } from "react-aria-components";
+import {Link, Button} from "react-aria-components";
 import localFont from "next/font/local";
 
 const myFont = localFont({src: "../ui/fonts/ST.ttf"});
@@ -85,41 +85,13 @@ export default function EventsPage() {
                 className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
             >
                 <Header size={6}/>
-                <Block className={`col-span-2 bg-blue`}>
-                    <Link href={"/giugno-brescia-pride.pdf"}>
-                        <Button
-                            className="cursor-pointer transition-all duration-300 hover:bg-blue flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden"
-                            onPress={() => setIsRevealed(!isRevealed)}
-                        >
-                            {/* Background emoji pattern */}
-                            <div
-                                className={`absolute inset-0 text-6xl pointer-events-none transition-opacity duration-300 ${isRevealed ? 'opacity-30' : 'opacity-20'}`}>
-                                <div className="grid grid-cols-6 gap-4 h-full w-full items-center justify-items-center">
-                                    <span>📅</span>
-                                    <span>🏳️‍🌈</span>
-                                    <span>📅</span>
-                                    <span>🏳️‍🌈</span>
-                                    <span>📅</span>
-                                    <span>🏳️‍🌈</span>
-                                </div>
-                            </div>
-
-                            {/* Main content */}
-                            <div className="text-center relative z-10 text-shadow-lg">
-                                <h1 className={`text-2xl font-medium leading-tight font-medium ${myFont.className} text-pink transition-all duration-300`}>
-                                    Scarica il volantino degli eventi di Giugno!
-                                </h1>
-                            </div>
-                        </Button>
-                    </Link>
-                </Block>
-                <Block className={`col-span-2 bg-pink`}>
+                <Block className={`col-span-4 bg-pink`}>
                     <Link href={"https://linktr.ee/bresciapride"}>
                         <Button
-                            className="cursor-pointer transition-all duration-300 hover:bg-green flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-green hover:text-pink"
+                            className="cursor-pointer transition-all duration-300 hover:bg-purple flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-purple hover:text-pink"
                         >
                             <div className="text-center relative z-10 text-shadow-xl">
-                                <h1 className={`text-2xl font-medium leading-tight font-medium ${myFont.className}`}>
+                                <h1 className={`text-2xl font-medium leading-tight ${myFont.className}`}>
                                     Iscriviti ai nostri eventi!
                                 </h1>
                                 <p className="text-lg md:text-xl mt-1 font-semibold">
@@ -129,9 +101,9 @@ export default function EventsPage() {
                         </Button>
                     </Link>
                 </Block>
-                <Block className={`col-span-2 bg-pink`}>
+                <Block className={`col-span-2 bg-green`}>
                     <Button
-                        className="cursor-default transition-all duration-300 hover:bg-green flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-green hover:text-pink"
+                        className="cursor-default transition-all duration-300 hover:bg-pink flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-pink hover:text-green"
                     >
                         <div className="text-center relative z-10 text-shadow-lg">
                             <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
@@ -147,24 +119,6 @@ export default function EventsPage() {
                         </div>
                     </Button>
                 </Block>
-                <ImageBlock
-                    src="/images/giugno-eventi-0.jpg"
-                    altText="Locandina degli eventi organizzati a Giugno da Brescia Pride"
-                    showOnMobile={true}
-                    colSpan="col-span-2"
-                />
-                <ImageBlock
-                    src="/images/giugno-eventi-1.jpg"
-                    altText="Volantino degli eventi organizzati a Giugno da Brescia Pride. Il PDF è scaricabile cliccando il link 'Scarica il volantino degli eventi di Giugno!'."
-                    showOnMobile={true}
-                    colSpan="col-span-2"
-                />
-                <ImageBlock
-                    src="/images/queercetto.jpeg"
-                    altText="Queercetto. Uno spazio per persone FLINTA per giocare a calcio insieme. Tutti i mercoledì dalle 19 alle 20. Campetto a Brescia in Zona via Veneto."
-                    showOnMobile={true}
-                    colSpan="col-span-2"
-                />
                 <CustomFooter/>
             </motion.div>
         </div>

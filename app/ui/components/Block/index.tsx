@@ -2,9 +2,10 @@ import {motion, MotionProps} from "framer-motion";
 
 type BlockProps = {
     className?: string;
+    id?: string;
 } & MotionProps;
 
-const Block = ({className, ...rest}: BlockProps) => {
+const Block = ({className, id, ...rest}: BlockProps) => {
     return (
         <motion.div
             variants={{
@@ -26,6 +27,7 @@ const Block = ({className, ...rest}: BlockProps) => {
                 damping: 50,
             }}
             className={`rounded-lg border border-zinc-700 ${className}`}
+            id={id}
             {...rest}
         />
     );

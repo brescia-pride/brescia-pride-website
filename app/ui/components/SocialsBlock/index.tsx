@@ -1,6 +1,6 @@
 import Block from "../Block";
 
-import {SiFacebook, SiGmail, SiInstagram} from "react-icons/si";
+import {SiFacebook, SiTiktok, SiInstagram} from "react-icons/si";
 
 const SocialsBlock = () => (
     <>
@@ -19,21 +19,21 @@ const SocialsBlock = () => (
                 <SiInstagram/>
             </a>
         </Block>
-        {/* <Block
+        <Block
       whileHover={{
         rotate: "-2.5deg",
         scale: 1.1,
       }}
-      className="w-100 bg-cream p-6"
+            className="w-100 bg-lime p-6"
     >
       <a
         href="https://www.tiktok.com/@bresciapride"
         target="_blank"
-        className="grid h-full place-content-center text-3xl text-black"
+                className="grid h-full place-content-center text-4xl text-blue hover:text-6xl transition-all duration-300"
       >
         <SiTiktok />
       </a>
-    </Block> */}
+    </Block>
         <Block
             whileHover={{
                 rotate: "-2.5deg",
@@ -49,7 +49,7 @@ const SocialsBlock = () => (
                 <SiFacebook/>
             </a>
         </Block>
-        <Block
+        {/* <Block
             whileHover={{
                 rotate: "2.5deg",
                 scale: 1.1,
@@ -63,7 +63,7 @@ const SocialsBlock = () => (
             >
                 <SiGmail/>
             </a>
-        </Block>
+        </Block> */}
         {/* <Block
       whileHover={{
         rotate: "2.5deg",

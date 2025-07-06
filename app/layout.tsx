@@ -7,14 +7,14 @@ import Header from './ui/components/Header'
 
 const inter = Inter({
     subsets: ['latin'],
-    display: 'swap', 
+    display: 'swap',
 })
 
 export const metadata: Metadata = {
     title: 'Brescia Pride',
     description: 'Vi aspettiamo ai nostri eventi e al corteo il 6 settembre 2025!',
     keywords: 'Brescia Pride, Brescia Pride 2025, Pride',
-    authors: [{ name: 'Brescia Pride' }],
+    authors: [{name: 'Brescia Pride'}],
     openGraph: {
         title: 'Brescia Pride',
         description: 'Vi aspettiamo ai nostri eventi e al corteo il 6 settembre 2025!',
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-    children,
-}: {
+                                       children,
+                                   }: {
     children: ReactNode
 }) {
     return (

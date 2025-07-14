@@ -35,7 +35,7 @@ export default function ResourcesPage() {
                         <Block className={`col-span-3 bg-pink`}>
                             <Button
                                 className="cursor-pointer transition-all duration-300 hover:bg-red flex h-full w-full p-6 rounded-lg relative overflow-hidden text-red hover:text-pink"
-                                onPress={() => router.push('/comunicato-stampa-27-06.pdf')}
+                                onPress={() => router.push('docs/comunicato-stampa-27-06.pdf')}
                             >
                                 <div className="text-left relative z-10 text-shadow-lg select-text">
                                     <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
@@ -61,7 +61,7 @@ export default function ResourcesPage() {
                         <Block className={`col-span-3 bg-pink`}>
                             <Button
                                 className="cursor-pointer transition-all duration-300 hover:bg-red flex h-full w-full p-6 rounded-lg relative overflow-hidden text-red hover:text-pink"
-                                onPress={() => router.push('/manifesto.pdf')}
+                                onPress={() => router.push('docs/manifesto.pdf')}
                             >
                                 <div className="text-left relative z-10 text-shadow-lg select-text">
                                     <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
@@ -99,7 +99,7 @@ export default function ResourcesPage() {
                         <Block className={`col-span-3 bg-pink`}>
                             <Button
                                 className="cursor-pointer transition-all duration-300 hover:bg-green flex h-full w-full p-6 rounded-lg relative overflow-hidden text-green hover:text-pink"
-                                onPress={() => router.push('/comunicato.pdf')}
+                                onPress={() => router.push('docs/comunicato-t.pdf')}
                             >
                                 <div className="text-left relative z-10 text-shadow-lg select-text">
                                     <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>

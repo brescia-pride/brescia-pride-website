@@ -1,19 +1,20 @@
 "use client";
 
 import React from "react";
-import {motion} from "framer-motion";
-import Block from "../ui/components/Block";
 import Header from "../ui/components/Header";
 import CustomFooter from "../ui/components/CustomFooter";
-import {Link, Button} from "react-aria-components";
 import ImageBlock from "../ui/components/ImageBlock";
+import Block from "../ui/components/Block";
 import localFont from "next/font/local";
+import {motion} from "framer-motion";
 import {useRouter} from "next/navigation";
+import {Link, Button} from "react-aria-components";
 
 const myFont = localFont({src: "../ui/fonts/ST.ttf"});
 
-export default function ContactsPage() {
+export default function SostieniciPage() {
     const router = useRouter();
+
     return (
         <div className="min-h-screen px-4 py-6 text-zinc-50">
             <motion.div
@@ -26,12 +27,12 @@ export default function ContactsPage() {
             >
                 <Header size={6}/>
                 <Block className={`col-span-6 bg-blue p-4 items-center justify-center`}>
-                    <h1 className={`text-2xl md:text-4xl lg:col-span-4 font-bold text-center ${myFont.className} text-pink tracking-wider leading-tight`}>
+                    <h1 className={`text-2xl md:text-4xl font-bold text-center ${myFont.className} text-pink tracking-wider leading-tight mt-2`}>
                         Sostienici
                     </h1>
                     <p className="lg:col-span-4 text-xl font-bold mt-2 text-center text-pink">
                         Aiutaci a restare un pride autofinanziato e indipendente con una donazione.
-                    </p>
+                    </p>        
                     <div className="grid lg:grid-cols-4 gap-4 mt-4">
                         <Block className={`col-span-2 bg-lilac`}>
                             <Button
@@ -85,19 +86,19 @@ export default function ContactsPage() {
                                     <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
                                         Bonifico
                                     </h1>
-                                    <p className="text-xl font-bold">
-                                        Destinatario: Comitato Brescia Pride ETS
+                                    <p className="text-xl">
+                                        Destinatario: <b>Comitato Brescia Pride ETS</b>
                                     </p>
-                                    <p className="text-xl font-bold text-wrap">
-                                        IBAN: IT4910501811200000016783060
+                                    <p className="text-xl">
+                                        Causale: <b>Libera donazione</b>
                                     </p>
-                                    <p className="text-xl font-bold">
-                                        Causale: Libera donazione
+                                    <p className="text-lg mt-2 break-all">
+                                        IT4910501811200000016783060
                                     </p>
                                 </div>
                             </Button>
                         </Block>
-                    </div>
+                    </div>            
                 </Block>
                 <CustomFooter/>
             </motion.div>

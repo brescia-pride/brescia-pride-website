@@ -172,7 +172,7 @@ export default function ContactsPage() {
                         <Block className={`col-span-2 bg-pink`}>
                             <Button
                                 className="cursor-pointer transition-all duration-300 hover:bg-red flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-red hover:text-pink"
-                                onClick={() => router.push('comunicato-stampa-27-06.pdf')}
+                                onClick={() => router.push('docs/comunicato-stampa-27-06.pdf')}
                             >
                                 <div className="text-center relative z-10 text-shadow-lg">
                                     <h1 className={`text-xl leading-tight font-medium ${myFont.className}`}>

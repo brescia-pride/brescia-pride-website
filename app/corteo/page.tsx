@@ -49,8 +49,8 @@ export default function ContactsPage() {
                     <p className="text-xl font-bold text-center">
                        Puoi partecipare in diversi modi:
                     </p>
-                    <div className="grid lg:grid-cols-4 gap-4 mt-4">
-                        <Block className={`lg:col-span-2 bg-pink`}>
+                    <div className="grid lg:grid-cols-2 gap-4 mt-4">
+                        <Block className={`lg:col-span-1 bg-pink`}>
                             <Button
                                 className="cursor-pointer transition-all duration-300 hover:bg-purple flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-purple hover:text-pink"
                                 onPress={() => router.push('https://forms.gle/NT7ZvwKmc24Lv21n8')}
@@ -78,7 +78,7 @@ export default function ContactsPage() {
                                 </div>
                             </Button>
                         </Block>
-                        <Block className={`col-span-2 bg-pink`}>
+                        <Block className={`col-span-1 bg-pink`}>
                             <Button
                                 className="cursor-pointer transition-all duration-300 hover:bg-blue flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-blue hover:text-pink"
                                 onPress={() => router.push('https://forms.gle/1DTLA7RiTh1of5Ap6')}

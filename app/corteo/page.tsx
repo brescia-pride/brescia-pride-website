@@ -49,8 +49,8 @@ export default function ContactsPage() {
                     <p className="text-xl font-bold text-center">
                        Puoi partecipare in diversi modi:
                     </p>
-                    <div className="grid lg:grid-cols-3 gap-4 mt-4">
-                        <Block className={`lg:col-span-3 bg-pink`}>
+                    <div className="grid lg:grid-cols-4 gap-4 mt-4">
+                        <Block className={`lg:col-span-2 bg-pink`}>
                             <Button
                                 className="cursor-pointer transition-all duration-300 hover:bg-purple flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-purple hover:text-pink"
                                 onPress={() => router.push('https://forms.gle/NT7ZvwKmc24Lv21n8')}
@@ -78,35 +78,7 @@ export default function ContactsPage() {
                                 </div>
                             </Button>
                         </Block>
-                        <Block className={`col-span-1 bg-pink`}>
-                            <Button
-                                className="cursor-pointer transition-all duration-300 hover:bg-brown flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-brown hover:text-pink"
-                                onPress={() => router.push('https://forms.gle/n6kHL3WCj8C59qC18')}
-                            >
-                                <div
-                                    className={`absolute top-1/2 -translate-y-1/2 -left-8 text-6xl pointer-events-none opacity-25`}
-                                    aria-hidden="true">
-                                    <span className="align-middle">🛻</span>
-                                </div>
-                                <div
-                                    className={`absolute top-1/2 -translate-y-1/2 -right-8 text-6xl pointer-events-none opacity-25`}
-                                    aria-hidden="true">
-                                    <span className="align-middle">🛻</span>
-                                </div>
-                                <div className="text-center relative z-10 text-shadow-lg">
-                                    <h1 className={`text-2xl leading-tight font-medium ${myFont.className}`}>
-                                        CARRI
-                                    </h1>
-                                    <p className="text-xl font-bold mt-2">
-                                        Vuoi partecipare con il tuo carro?
-                                    </p>
-                                    <p className="text-xl mt-2">
-                                        Compila il form per candidarti <u>entro il 16 luglio</u>!
-                                    </p>
-                                </div>
-                            </Button>
-                        </Block>
-                        <Block className={`col-span-1 bg-pink`}>
+                        <Block className={`col-span-2 bg-pink`}>
                             <Button
                                 className="cursor-pointer transition-all duration-300 hover:bg-blue flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-blue hover:text-pink"
                                 onPress={() => router.push('https://forms.gle/1DTLA7RiTh1of5Ap6')}
@@ -127,34 +99,6 @@ export default function ContactsPage() {
                                     </h1>
                                     <p className="text-xl font-bold mt-2">
                                         Hai un food truck o uno stand gastronomico?
-                                    </p>
-                                    <p className="text-xl mt-2">
-                                        Compila il form per candidarti <u>entro il 19 luglio</u>!
-                                    </p>
-                                </div>
-                            </Button>
-                        </Block>
-                        <Block className={`col-span-1 bg-pink`}>
-                            <Button
-                                className="cursor-pointer transition-all duration-300 hover:bg-red flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-red hover:text-pink"
-                                onPress={() => router.push('https://forms.gle/6mrePt9ocTz43snn9')}
-                            >
-                                <div
-                                    className={`absolute top-1/2 -translate-y-1/2 -left-8 text-6xl pointer-events-none opacity-25`}
-                                    aria-hidden="true">
-                                    <span className="align-middle">🎨</span>
-                                </div>
-                                <div
-                                    className={`absolute top-1/2 -translate-y-1/2 -right-8 text-6xl pointer-events-none opacity-25`}
-                                    aria-hidden="true">
-                                    <span className="align-middle">🎨</span>
-                                </div>
-                                <div className="text-center relative z-10 text-shadow-lg">
-                                    <h1 className={`text-2xl leading-tight font-medium ${myFont.className}`}>
-                                        SPAZIO ESPOSITIVO
-                                    </h1>
-                                    <p className="text-xl font-bold mt-2">
-                                        Sei unə artista, creativə o artigianə queer?
                                     </p>
                                     <p className="text-xl mt-2">
                                         Compila il form per candidarti <u>entro il 19 luglio</u>!

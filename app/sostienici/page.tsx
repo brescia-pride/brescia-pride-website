@@ -93,7 +93,7 @@ export default function SostieniciPage() {
                                         Causale: <b>Libera donazione</b>
                                     </p>
                                     <p className="text-lg mt-2 break-all">
-                                        IT4910501811200000016783060
+                                        IT49I0501811200000016783060
                                     </p>
                                 </div>
                             </Button>

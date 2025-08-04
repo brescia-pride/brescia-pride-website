@@ -26,7 +26,7 @@ export default function Homepage() {
                 className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
             >
                 <Header size={6}/>
-                <Block className={`col-span-2 bg-green`}>
+                <Block className={`col-span-6 bg-green`}>
                     <Button
                         className="cursor-pointer transition-all duration-300 hover:bg-pink flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-pink hover:text-green"
                         onPress={() => router.push('/corteo')}
@@ -41,6 +41,15 @@ export default function Homepage() {
                         </div>
                     </Button>
                 </Block>
+                <Link href={"/docs/manifesto-2025.pdf"} className="col-span-2"><ImageBlock
+                    src="/images/manifesto-post.png"
+                    altText="Il Manifesto 2025 è uscito! Leggilo qui!"
+                    showOnMobile={true}
+                    linkText=""
+                    link="/docs/manifesto-2025.pdf"
+                    colSpan="col-span-2"
+                />
+                </Link>
                 <Link href={"https://forms.gle/NT7ZvwKmc24Lv21n8"} className="col-span-2"><ImageBlock
                     src="/images/call-volontari.png"
                     altText="Open call per volontar*"

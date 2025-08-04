@@ -42,7 +42,7 @@ const DonationSection = ({
                     {description}
                 </p>
             )}
-            <div className={`grid ${innerGridCols === 1 ? 'grid-cols-1' : innerGridCols === 2 ? 'grid-cols-2' : innerGridCols === 3 ? 'grid-cols-3' : 'grid-cols-4'} gap-4 mt-4`}>
+            <div className={`grid ${innerGridCols === 1 ? 'lg:grid-cols-1' : innerGridCols === 2 ? 'lg:grid-cols-2' : innerGridCols === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-4'} gap-4 mt-4`}>
                 {children}
             </div>            
         </Block>

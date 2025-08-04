@@ -1,54 +1,26 @@
-import Block from "../Block";
-
+import SocialCard from "../SocialCard";
 import {SiFacebook, SiTiktok, SiInstagram} from "react-icons/si";
 
 const SocialsBlock = () => (
     <>
-        <Block
-            whileHover={{
-                rotate: "-2.5deg",
-                scale: 1.1,
-            }}
-            className="w-100 bg-pink p-6"
-        >
-            <a
-                href="https://www.instagram.com/bresciapride"
-                target="_blank"
-                className="grid h-full place-content-center text-4xl text-red hover:text-6xl transition-all duration-300"
-            >
-                <SiInstagram/>
-            </a>
-        </Block>
-        <Block
-      whileHover={{
-        rotate: "-2.5deg",
-        scale: 1.1,
-      }}
-            className="w-100 bg-lime p-6"
-    >
-      <a
-        href="https://www.tiktok.com/@bresciapride"
-        target="_blank"
-                className="grid h-full place-content-center text-4xl text-blue hover:text-6xl transition-all duration-300"
-      >
-        <SiTiktok />
-      </a>
-    </Block>
-        <Block
-            whileHover={{
-                rotate: "-2.5deg",
-                scale: 1.1,
-            }}
-            className="w-100 bg-lilac p-6"
-        >
-            <a
-                href="https://www.facebook.com/BresciaPride"
-                target="_blank"
-                className="grid h-full place-content-center text-4xl text-green hover:text-6xl transition-all duration-300"
-            >
-                <SiFacebook/>
-            </a>
-        </Block>
+        <SocialCard
+            href="https://www.instagram.com/bresciapride"
+            icon={<SiInstagram />}
+            backgroundColor="pink"
+            iconColor="red"
+        />
+        <SocialCard
+            href="https://www.tiktok.com/@bresciapride"
+            icon={<SiTiktok />}
+            backgroundColor="lime"
+            iconColor="blue"
+        />
+        <SocialCard
+            href="https://www.facebook.com/BresciaPride"
+            icon={<SiFacebook />}
+            backgroundColor="lilac"
+            iconColor="green"
+        />
         {/* <Block
             whileHover={{
                 rotate: "2.5deg",

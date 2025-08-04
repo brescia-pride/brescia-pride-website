@@ -38,11 +38,11 @@ const DonationSection = ({
                 {title}
             </h1>
             {description && (
-                <p className={`lg:col-span-${innerGridCols} text-xl font-bold mt-2 text-center text-pink`}>
+                <p className={`lg:col-span-${colSpan} text-xl font-bold mt-2 text-center text-pink`}>
                     {description}
                 </p>
             )}
-            <div className={`grid lg:grid-cols-${innerGridCols} gap-4 mt-4`}>
+            <div className={`grid ${innerGridCols === 1 ? 'grid-cols-1' : innerGridCols === 2 ? 'grid-cols-2' : innerGridCols === 3 ? 'grid-cols-3' : 'grid-cols-4'} gap-4 mt-4`}>
                 {children}
             </div>            
         </Block>

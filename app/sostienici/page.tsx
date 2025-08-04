@@ -26,6 +26,7 @@ export default function SostieniciPage() {
                     title="Sostienici"
                     description="Aiutaci a restare un pride autofinanziato e indipendente con una donazione."
                     backgroundColor="blue"
+                    innerGridCols={2}
                 >
                     <DonationCard
                         title="5x1000"
@@ -33,7 +34,7 @@ export default function SostieniciPage() {
                         hoverColor="purple"
                         textColor="purple"
                         hoverTextColor="lilac"
-                        colSpan={2}
+                        colSpan={1}
                     >
                         <p className="text-xl font-bold">
                             Codice Fiscale 98201800178
@@ -47,7 +48,7 @@ export default function SostieniciPage() {
                         src="/images/5-1000.png"
                         altText="Esempio compilazione del 5x1000 per COMITATO BRESCIA PRIDE, Codice Fiscale: 98201800178. La sezione a sostegno degli enti del terzo settore iscritti nel RUNTS è compilata con il codice fiscale."
                         showOnMobile={true}
-                        colSpan="col-span-2"
+                        colSpan=""
                     />
                     <DonationCard
                         title="PayPal"
@@ -55,7 +56,7 @@ export default function SostieniciPage() {
                         hoverColor="red"
                         textColor="red"
                         hoverTextColor="pink"
-                        colSpan={2}
+                        colSpan={1}
                     >
                         <p className="text-xl font-bold">
                             <Link className={`col-span-3 underline`}
@@ -72,7 +73,7 @@ export default function SostieniciPage() {
                         hoverColor="pink"
                         textColor="pink"
                         hoverTextColor="green"
-                        colSpan={2}
+                        colSpan={1}
                     >
                         <p className="text-xl">
                             Destinatario: <b>Comitato Brescia Pride ETS</b>

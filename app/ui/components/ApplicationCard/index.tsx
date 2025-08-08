@@ -11,7 +11,7 @@ const myFont = localFont({ src: "../../fonts/ST.ttf" });
 type ApplicationCardProps = {
     title: string;
     description: string;
-    actionText: string;
+    actionText?: string;
     href: string;
     emoji: string;
     hoverColor: "purple" | "blue" | "red" | "green" | "pink";
@@ -25,7 +25,7 @@ type ApplicationCardProps = {
 const ApplicationCard = ({
     title,
     description,
-    actionText,
+    actionText = undefined,
     href,
     emoji,
     hoverColor,
@@ -92,9 +92,11 @@ const ApplicationCard = ({
                     <p className="text-xl font-bold mt-2">
                         {description}
                     </p>
-                    <p className="text-xl mt-2">
-                        {actionText}
-                    </p>
+                    {actionText && (
+                        <p className="text-xl mt-2">
+                            {actionText}
+                        </p>
+                    )}
                 </div>
             </Button>
         </Block>

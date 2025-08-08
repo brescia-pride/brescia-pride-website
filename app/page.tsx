@@ -27,7 +27,7 @@ export default function Homepage() {
             >
                 <Header size={6}/>
                 <Link href={"/corteo"} className="col-span-3"><ImageBlock
-                    src="/images/locandina2.jpg"
+                    src="/images/locandina.jpg"
                     altText="Locandina del Brescia Pride 2025: 6 Settembre, Esistiamo ovunque, resistiamo unitɜ. Ore 12-21 Apertura parco pride in Campo Marte; Ore 14 Inizio interventi; H 15.30 Corteo per la città"
                     showOnMobile={true}
                     linkText=""

@@ -43,6 +43,7 @@ const ImageBlock: React.FC<BlockProps> = ({
                 width={200}
                 height={100}
                 tabIndex={0}
+                quality={100}
             />
             {isClient && link && linkText && (
                 <div className="absolute bottom-2 right-2 bg-black bg-opacity-90 text-white px-2 py-1 rounded">

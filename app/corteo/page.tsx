@@ -4,7 +4,7 @@ import React from "react";
 import {motion} from "framer-motion";
 import Header from "../ui/components/Header";
 import CustomFooter from "../ui/components/CustomFooter";
-import PrideDate from "../ui/components/PrideDate";
+import ImageBlock from "../ui/components/ImageBlock";
 import InfoCard from "../ui/components/InfoCard";
 import DonationSection from "../ui/components/DonationSection";
 import ApplicationCard from "../ui/components/ApplicationCard";
@@ -23,9 +23,8 @@ export default function CorteoPage() {
                 className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
             >
                 <Header size={6}/>
-                <PrideDate/>
                 <InfoCard
-                    title=""
+                    title="Programma"
                     backgroundColor="pink"
                     hoverColor="pink"
                     textColor="red"
@@ -33,12 +32,17 @@ export default function CorteoPage() {
                     colSpan={2}
                 >
                     <p className="text-xl font-bold">
-                        Tutte le info sul corteo saranno pubblicate a breve! Tieni d&apos;occhio questa pagina
-                        🫶
+                        Ore 12-21 - Parco Pride in Campo Marte 🌳
                     </p>
+                    <p className="text-xl font-bold">
+                        Ore 14 - Inizio interventi 📢
+                    </p>                
+                    <p className="text-xl font-bold">
+                        Ore 15:30-17:30 - Corteo per la città 🏳️‍🌈🏳️‍⚧️
+                    </p>                             
                 </InfoCard>
                 <DonationSection
-                    title="Candidature"
+                    title="Partecipa al Pride 2025"
                     description="Aiutaci a realizzare il Brescia Pride! Puoi partecipare in diversi modi:"
                     backgroundColor="green"
                     colSpan={4}
@@ -85,6 +89,19 @@ export default function CorteoPage() {
                         colSpan={1}
                     />
                 </DonationSection>
+                <InfoCard
+                    title=""
+                    backgroundColor="pink"
+                    hoverColor="pink"
+                    textColor="red"
+                    hoverTextColor="red"
+                    colSpan={6}
+                >
+                    <p className="text-xl font-bold">
+                        Tutte le info sul corteo saranno pubblicate a breve! Tieni d&apos;occhio questa pagina
+                        🫶
+                    </p>
+                </InfoCard>
                 <CustomFooter/>
             </motion.div>
         </div>

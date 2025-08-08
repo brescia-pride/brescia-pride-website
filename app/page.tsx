@@ -26,15 +26,27 @@ export default function Homepage() {
                 className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
             >
                 <Header size={6}/>
-                <Block className={`col-span-6 bg-green`}>
+                <Link href={"/corteo"} className="col-span-3"><ImageBlock
+                    src="/images/locandina.jpg"
+                    altText="Locandina del Brescia Pride 2025: 6 Settembre, Esistiamo ovunque, resistiamo unitɜ. Ore 12-21 Apertura parco pride in Campo Marte; Ore 14 Inizio interventi; H 15.30 Corteo per la città"
+                    showOnMobile={true}
+                    linkText=""
+                    link="/corteo"
+                    colSpan="col-span-3"
+                />
+                </Link>
+                <Block className={`col-span-3 bg-green`}>
                     <Button
                         className="cursor-pointer transition-all duration-300 hover:bg-pink flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-pink hover:text-green"
                         onPress={() => router.push('/corteo')}
                     >
                         <div className="text-center relative">
-                            <h1 className={`text-4xl leading-tight font-medium ${myFont.className}`}>
-                                CORTEO 2025
+                            <h1 className={`text-2xl lg:text-4xl leading-tight font-medium ${myFont.className}`}>
+                                6 SETTEMBRE 2025
                             </h1>
+                            <h2 className={`text-xl lg:text-2xl leading-tight font-medium ${myFont.className}`}>
+                                Parco Pride + Corteo
+                            </h2>
                             <p className="text-xl font-bold">
                                 Clicca qui per tutte le info!
                             </p>

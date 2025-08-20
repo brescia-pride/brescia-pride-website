@@ -9,16 +9,17 @@ const myFont = localFont({ src: "../../fonts/ST.ttf" });
 
 type InfoCardProps = {
     title: string;
-    backgroundColor: "pink" | "green" | "blue" | "purple" | "lilac";
+    backgroundColor: "pink" | "green" | "blue" | "purple" | "lilac" | "red";
     hoverColor: "blue" | "red" | "green" | "pink" | "purple";
     textColor: "blue" | "red" | "green" | "pink" | "purple";
-    hoverTextColor: "pink" | "green" | "blue" | "red" | "purple";
+    hoverTextColor: "pink" | "green" | "blue" | "red" | "purple" | "red";
     colSpan?: number;
     isClickable?: boolean;
     href?: string;
     isExternal?: boolean;
     children: React.ReactNode;
     className?: string;
+    id?: string;
 };
 
 const InfoCard = ({
@@ -33,6 +34,7 @@ const InfoCard = ({
     isExternal = false,
     children,
     className = "",
+    id,
 }: InfoCardProps) => {
     const bgColorClasses = {
         pink: "bg-pink",
@@ -40,6 +42,7 @@ const InfoCard = ({
         blue: "bg-blue",
         purple: "bg-purple",
         lilac: "bg-lilac",
+        red: "bg-red",
     };
 
     const hoverColorClasses = {
@@ -67,16 +70,17 @@ const InfoCard = ({
     };
 
     const buttonContent = (
-        <Button
+        <div aria-relevant='all'
+            tabIndex={0}
             className={`cursor-${(href || isClickable) ? 'pointer' : 'default'} transition-all duration-300 ${hoverColorClasses[hoverColor]} flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden ${textColorClasses[textColor]} ${hoverTextColorClasses[hoverTextColor]}`}
         >
             <div className="text-center relative z-10 text-shadow-lg select-text">
-                <h1 className={`text-3xl leading-tight font-medium ${myFont.className}`}>
+                <h1 id={id} className={`text-3xl leading-tight font-medium ${myFont.className}`}>
                     {title}
                 </h1>
                 {children}
             </div>
-        </Button>
+        </div>
     );
 
     return (

@@ -63,6 +63,8 @@ const Header = ({size}: BlockProps) => {
                         <MenuItem className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                   onAction={() => router.push('/corteo')}>6 Settembre 2025</MenuItem>
                         <MenuItem className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                  onAction={() => router.push('/accessibilita')}>Accessibilità</MenuItem>
+                        <MenuItem className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                   onAction={() => router.push('/sostienici')}>Sostienici</MenuItem>
                         <MenuItem className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
                                   onAction={() => router.push('/events')}>Eventi</MenuItem>

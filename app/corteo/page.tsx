@@ -31,7 +31,7 @@ export default function CorteoPage() {
                     hoverColor="pink"
                     textColor="red"
                     hoverTextColor="red"
-                    colSpan={2}
+                    colSpan={3}
                 >
                     <div className="p-4">
                         <h1 className="text-xl font-bold mt-2 mb-2">📍 Campo Marte</h1>
@@ -76,61 +76,20 @@ export default function CorteoPage() {
                                     link.click();
                                     document.body.removeChild(link);
                                 }}
-                                className="flex items-center justify-center w-full px-4 py-2 bg-pink text-red hover:bg-red hover:text-pink text-lg font-bold rounded-lg transition-colors duration-200 border-2 border-red"
+                                className="flex items-center justify-center w-full px-4 py-2 bg-red text-pink hover:bg-pink hover:text-red text-lg font-bold rounded-lg transition-colors duration-200 border-2 border-red"
                             >
                                 📥 Scarica la locandina da condividere!
                             </Button>
                         </div>
                     </div>
                 </InfoCard>
-                <DonationSection
-                    title="Partecipa al Pride"
-                    description="Aiutaci a realizzare il Brescia Pride! Puoi partecipare in diversi modi:"
-                    backgroundColor="green"
-                    colSpan={4}
-                    innerGridCols={1}
-                >
-                    <ApplicationCard
-                        title="VOLONTARI3"
-                        description="Compila il form per partecipare come volontariə!"
-                        href="https://forms.gle/NT7ZvwKmc24Lv21n8"
-                        emoji="🫂"
-                        hoverColor="purple"
-                        textColor="purple"
-                        hoverTextColor="pink"
-                        isExternal={true}
-                        colSpan={1}
-                    />
-                    <ApplicationCard
-                        title="Collettivi e associazioni"
-                        description="Compila il form per aderire a Brescia Pride!"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSd0ovmwseUl8aUlGKPYdkP7iHwZ0GKN7uja_mQ1yx_KD45cVw/viewform?pli=1"
-                        emoji="🎉"
-                        hoverColor="blue"
-                        textColor="blue"
-                        hoverTextColor="pink"
-                        isExternal={true}
-                        colSpan={1}
-                    />
-                    <ApplicationCard
-                        title="Donazioni"
-                        description="Vuoi sostenerci con una donazione?"
-                        href="/sostienici"
-                        emoji="🫶"
-                        hoverColor="red"
-                        textColor="red"
-                        hoverTextColor="pink"
-                        isExternal={true}
-                        colSpan={1}
-                    />
-                </DonationSection>
                 <InfoCard
                     title="Parco Pride"
                     backgroundColor="blue"
                     hoverColor="blue"
                     textColor="pink"
                     hoverTextColor="pink"
-                    colSpan={2}
+                    colSpan={3}
                 >
                     <div className="text-xl">
                         <p className="mt-2">Il 6 settembre non sarà solo un corteo ma un&apos;intera giornata di orgoglio, comunità e lotta queer, che avrà come cuore pulsante il Parco Pride a Campo Marte</p>
@@ -147,92 +106,62 @@ export default function CorteoPage() {
                         <ul className="mt-2">
                             <li>🫂 <Link href="https://www.instagram.com/p/DMuodh_I30Y/?utm_source=ig_web_copy_link&igsh=MTQyeGs2OHlvY2JyZg==" className="underline">Spazio associazioni</Link></li>
                             <li>🩺 Area salute e prevenzione</li>
-                            <li>🤍 Zona bianca</li>
-                            <li>🎪 Market</li>
+                            <li>🤍 <Link href="/accessibilita" className="underline">Zona bianca</Link></li>
+                            <li>🎪 <Link href="https://www.instagram.com/p/DNiExLKI7S6/?utm_source=ig_web_copy_link&igsh=bmV0YjZlbDNwZ3ln" className="underline">Market</Link></li>
                             <li>🏠 OH!FicoMaEco</li>
                             <li>🧁 Foodtruck</li>
                             <li>🍹 Stonewall Bar</li>
-                            <li>🐥 Zona per piccole creature</li>
+                            <li>🐥 <Link href="https://www.instagram.com/p/DNV8A39ohNF/?utm_source=ig_web_copy_link&igsh=MXhwbTZ5Z3hkNjBvOA==" className="underline">Zona per piccole creature</Link></li>
                         </ul>
                     </div>
                 </InfoCard>
                 <InfoCard
-                    title="Diretta"
+                    title="Corteo"
                     backgroundColor="green"
                     hoverColor="green"
                     textColor="pink"
                     hoverTextColor="pink"
-                    colSpan={2}
+                    colSpan={3}
                 >
                     <div className="text-xl">
-                        <p className="mt-2 font-bold">
-                            Dalle 15 alle 18:50 segui il corteo e gli interventi dal palco in diretta:
-                        </p>
-                        <ul className="list-disc list-inside mt-2">
-                            <li>sul sito <Link href="https://www.elivebrescia.tv" className="underline">www.elivebrescia.tv</Link></li>
-                            <li>in diretta <Link href="https://www.facebook.com/elivebrescia" className="underline">Facebook</Link> e <Link href="https://www.youtube.com/@elivebresciatv365" className="underline">YouTube</Link> di Èlive (con sottotitoli)</li>
-                            <li>sul canale TV 181 (per chi è in provincia di Brescia)</li>
+                        <p className="mt-2">Dalle 15:30 partirà il corteo da Campo Marte e arriverà sempre in Campo Marte alle 17:30</p>
+                        <div className="w-full my-4">
+                            <div className="h-1 w-full bg-pink-500"></div>
+                            <div className="flex w-full">
+                                <div className="flex-1 border-t border-dashed border-pink"></div>
+                            </div>
+                        </div>
+
+                        <ul className="mt-2">
+                            <li>🗺️ <Link href="https://www.google.com/maps/d/u/0/edit?mid=1TlU5uyFT7IKSayHC6hfm80i8dWsF1sc&usp=sharing" className="underline">Mappa del corteo</Link></li>
+                            <li>🎪 <Link href="https://www.instagram.com/p/DNK0TE5oRYk/?utm_source=ig_web_copy_link&igsh=MWs3bjZwdXdjdWp4dA==" className="underline">Testa del corteo</Link></li>
+                            <li>🛻 <Link href="https://www.instagram.com/p/DNJJoEPoRTN/?utm_source=ig_web_copy_link&igsh=MXI2bTBsZ2Y2a3Vtcg==" className="underline">Carri</Link></li>
+                            <li>🤍 <Link href="/accessibilita" className="underline">Zona di decompressione</Link></li>
+                            <li>💗 <Link href="https://www.instagram.com/p/DNSgTkhMtu4/?utm_source=ig_web_copy_link&igsh=MTQ1ZmR0YTJrZWdwYw==" className="underline">Madrine</Link></li>
                         </ul>
-                        <p className="mt-2 font-bold">🧏‍♀️ La diretta includerà l&apos;interprete LIS, visibile su tutte le piattaforme.</p>
                     </div>
                 </InfoCard>
                 <InfoCard
-                    title="Carri"
-                    backgroundColor="purple"
-                    hoverColor="purple"
+                    title="Accessibilità"
+                    backgroundColor="red"
+                    hoverColor="red"
                     textColor="pink"
                     hoverTextColor="pink"
-                    colSpan={2}
+                    colSpan={3}
                 >
                     <div className="text-xl">
-                        <ul className="mt-2">
-                            <li>Centro Aritofane & Colazione da Tiffany</li>
-                            <li className="flex items-center my-2 justify-center" aria-hidden="true">
-                                <span className="text-pink-500">★</span>
-                            </li>
-                            <li>Werk! Collective</li>
-                            <li className="flex items-center my-2 justify-center" aria-hidden="true">
-                                <span className="text-pink-500">★</span>
-                            </li>
-                            <li>Èlive + Famiglie Arcobaleno</li>
-                            <li className="flex items-center my-2 justify-center" aria-hidden="true">
-                                <span className="text-pink-500">★</span>
-                            </li>
-                            <li>Figli delle stelle + Industrial Barber Shop</li>
-                            <li className="flex items-center my-2 justify-center" aria-hidden="true">
-                                <span className="text-pink-500">★</span>
-                            </li>
-                            <li>Collettivo Pirati dell&apos;Oglio + Red Moon + Non una di meno Lago di Garda - Powered By Karonte Cultural club</li>
-                            <li className="flex items-center my-2 justify-center" aria-hidden="true">
-                                <span className="text-pink-500">★</span>
-                            </li>
-                            <li>Illogic Radio</li>
-                        </ul>
+                        <p className="mt-2">
+                        Per tutte le informazioni sull&apos;accessibilità, visita la <Link href="/accessibilita" className="underline">pagina dedicata</Link>!
+                        </p>
                     </div>
                 </InfoCard>
-                <DonationSection
-                    title="Info utili"
-                    description=""
-                    backgroundColor="purple"
-                    colSpan={4}
-                    innerGridCols={1}
-                >
-                    <ResourceCard
-                        title="Comunicato stampa"
-                        description="27/06 - Brescia Pride 2025: il 6 settembre torna la manifestazione per i diritti LGBTQIA+"
-                        actionText="Leggi il comunicato"
-                        href="docs/comunicato-stampa-27-06.pdf"
-                        hoverColor="red"
-                        colSpan={1}
-                    />
-                </DonationSection>
                 <InfoCard
                     title=""
                     backgroundColor="pink"
                     hoverColor="pink"
                     textColor="red"
                     hoverTextColor="red"
-                    colSpan={2}
+                    colSpan={6}
                 >
                     <p className="text-xl font-bold">
                         Tutte le info sul corteo saranno pubblicate a breve! Tieni d&apos;occhio questa pagina

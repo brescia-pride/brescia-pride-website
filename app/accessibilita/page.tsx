@@ -64,7 +64,7 @@ export default function AccessibilitaPage() {
                                             Vademecum accessibilità
                                         </a>
                                         <span id="vademecum-desc" className="sr-only">
-                                            Guida completa all'accessibilità dell'evento con informazioni su Campo Marte, zone speciali e servizi
+                                            Guida completa all&apos;accessibilità dell&apos;evento con informazioni su Campo Marte, zone speciali e servizi
                                         </span>
                                     </li>
                                     <li>
@@ -170,7 +170,7 @@ export default function AccessibilitaPage() {
                         {/* Telegram */}
                         <section className="mt-4 scroll-mt-8" aria-labelledby="telegram-title">
                             <p className="text-center text-base sm:text-lg md:text-xl font-bold leading-relaxed max-w-4xl mx-auto">
-                                Il canale Telegram dedicato all'accessibilità sarà attivo dal 1 settembre.
+                                Il canale Telegram dedicato all&apos;accessibilità sarà attivo dal 1 settembre.
                             </p>
                             <div className="mt-4 text-center grid grid-cols-1 gap-4 max-w-4xl mx-auto">
                                 <Button
@@ -186,7 +186,7 @@ export default function AccessibilitaPage() {
                                     className="flex items-center justify-center w-full px-4 py-3 bg-pink text-purple hover:bg-purple hover:text-pink text-base sm:text-lg font-bold rounded-lg transition-colors duration-200 border-2 border-pink focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-transparent"
                                     aria-label="Entra nel canale Telegram di Brescia Pride - si apre in una nuova finestra"
                                 >
-                                    ⬇️ Scarica l'app
+                                    ⬇️ Scarica l&apos;app
                                 </Button>
                                 <Button
                                     onPress={() => {

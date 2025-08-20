@@ -48,7 +48,7 @@ export default function ResourcesPage() {
                         colSpan={3}
                     />
                     <ResourceCard
-                        title="Vademecum per l'accessibilità degli eventi e dei cortei"
+                        title="Vademecum per l&apos;accessibilità degli eventi e dei cortei"
                         description="Rendere un evento realmente accessibile e a misura di chiunque è un processo di ascolto e cura, necessario, comunitario e collettivo."
                         actionText="Consulta il Vademecum"
                         href="https://1drv.ms/p/c/3154c23af9523fae/Ea4_Uvk6wlQggDFqAQAAAAABswCASnHi1Vg3TZNPRM4M5Q?e=OjEMoL"

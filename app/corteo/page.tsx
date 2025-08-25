@@ -142,7 +142,7 @@ export default function CorteoPage() {
                     colSpan={3}
                 >
                     <div className="text-xl">
-                        <p className="mt-2">Dalle 15:30 partirà il corteo da Campo Marte e arriverà sempre in Campo Marte alle 17:30</p>
+                        <p className="mt-2">Alle 15:30 partirà il corteo da Campo Marte e arriverà sempre in Campo Marte alle 17:30</p>
                         <div className="w-full my-4">
                             <div className="h-1 w-full bg-pink-500"></div>
                             <div className="flex w-full">
@@ -157,14 +157,14 @@ export default function CorteoPage() {
                         >
                             <div className="text-base text-lg font-bold sm:text-xl text-pink">
 
-                        <ul className="mt-2 space-y-0.5">
-                            <li>🗺️ <Link href="#mappa" className="underline">Mappa del corteo</Link></li>
-                            <li>🛻 <Link href="#carri" className="underline">Carri</Link></li>
-                            <li>🎪 <Link href="https://www.instagram.com/p/DNK0TE5oRYk/?utm_source=ig_web_copy_link&igsh=MWs3bjZwdXdjdWp4dA==" className="underline">Testa del corteo</Link></li>
-                            <li>🤍 <Link href="/accessibilita" className="underline">Zona di decompressione</Link></li>
-                            <li>💗 <Link href="https://www.instagram.com/p/DNSgTkhMtu4/?utm_source=ig_web_copy_link&igsh=MTQ1ZmR0YTJrZWdwYw==" className="underline">Madrine</Link></li>
-                        </ul>
-                        </div>
+                                <ul className="mt-2 space-y-0.5">
+                                    <li>🗺️ <Link href="#mappa" className="underline">Mappa del corteo</Link></li>
+                                    <li>🛻 <Link href="#carri" className="underline">Carri</Link></li>
+                                    <li>🎪 <Link href="https://www.instagram.com/p/DNK0TE5oRYk/?utm_source=ig_web_copy_link&igsh=MWs3bjZwdXdjdWp4dA==" className="underline">Testa del corteo</Link></li>
+                                    <li>🤍 <Link href="/accessibilita" className="underline">Zona di decompressione</Link></li>
+                                    <li>💗 <Link href="https://www.instagram.com/p/DNSgTkhMtu4/?utm_source=ig_web_copy_link&igsh=MTQ1ZmR0YTJrZWdwYw==" className="underline">Madrine</Link></li>
+                                </ul>
+                            </div>
                         </nav>
                     </div>
                 </InfoCard>

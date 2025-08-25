@@ -31,10 +31,9 @@ export default function CorteoPage() {
                     hoverColor="pink"
                     textColor="red"
                     hoverTextColor="red"
-                    colSpan={3}
+                    colSpan={6}
                 >
                     <div className="p-4">
-                        <h1 className="text-xl font-bold mt-2 mb-2">📍 Campo Marte</h1>
                         <table className="w-full align-middle text-center border-spacing-5">
                             <tbody>
                                 <tr className="text-xl font-bold border-b-2 border-red">
@@ -43,24 +42,34 @@ export default function CorteoPage() {
                                         <p>21:00</p>
                                     </td>
                                     <td className="text-xl font-bold p-4 py-3 md:pl-8 md:py-4 border-l-2 border-red">
-                                        Parco Pride 🌳
+                                        Parco Pride a Campo Marte 🌳
                                     </td>
                                 </tr>
                                 <tr className="text-xl font-bold border-b-2 border-red">
                                     <td className="text-xl font-bold p-4 py-3 md:pr-8 md:py-4">
-                                        14:00
+                                        <p>14:00</p>
+                                        <p>15:30</p>
                                     </td>
                                     <td className="text-xl font-bold p-4 py-3 md:pl-8 md:py-4 border-l-2 border-red">
-                                        Inizio interventi 📢
+                                        Inizio concentramento in Campo Marte con interventi e performance 📢
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr className="text-xl font-bold border-b-2 border-red">
                                     <td className="text-xl font-bold p-4 py-3 md:pr-8 md:py-4">
                                         <p>15:30</p>
                                         <p>17:30</p>
                                     </td>
                                     <td className="text-xl font-bold p-4 py-3 md:pl-8 md:py-4 border-l-2 border-red">
                                         Corteo per la città 🏳️‍🌈🏳️‍⚧️
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="text-xl font-bold p-4 py-3 md:pr-8 md:py-4">
+                                        <p>17:30</p>
+                                        <p>21:00</p>
+                                    </td>
+                                    <td className="text-xl font-bold p-4 py-3 md:pl-8 md:py-4 border-l-2 border-red">
+                                        Interventi e performance a Campo Marte 🎤
                                     </td>
                                 </tr>
                             </tbody>
@@ -165,7 +174,7 @@ export default function CorteoPage() {
                     hoverColor="red"
                     textColor="pink"
                     hoverTextColor="pink"
-                    colSpan={3}
+                    colSpan={6}
                 >
                     <div className="text-xl">
                         <p className="mt-2">
@@ -195,6 +204,11 @@ export default function CorteoPage() {
                                 aria-label="Mappa interattiva di Google che mostra i percorsi accessibili e i servizi disponibili durante il Brescia Pride"
                                 tabIndex={0}
                             ></iframe>
+                        </div>
+                        <div className="mt-4 text-center">
+                            <Button className="flex items-center justify-center w-full px-4 py-2 bg-red text-pink hover:bg-pink hover:text-red text-lg font-bold rounded-lg transition-colors duration-200 border-2 border-red">
+                                <Link href="https://www.google.com/maps/d/u/0/embed?mid=1TlU5uyFT7IKSayHC6hfm80i8dWsF1sc&ehbc=2E312F">🗺️ Apri su Google Maps</Link>
+                            </Button>
                         </div>
                     </section>
                 </InfoCard>

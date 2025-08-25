@@ -174,6 +174,31 @@ export default function CorteoPage() {
                     </div>
                 </InfoCard>
                 <InfoCard
+                    title="Mappa"
+                    backgroundColor="pink"
+                    hoverColor="pink"
+                    textColor="red"
+                    hoverTextColor="red"
+                    colSpan={6}
+                    id="mappa"
+                >
+                    {/* Mappa */}
+                    <section id="mappa" className="mt-4 scroll-mt-8" aria-labelledby="mappa-title">
+                        <p className="text-center text-base sm:text-lg md:text-xl font-bold leading-relaxed max-w-4xl mx-auto">
+                            La mappa contiene informazioni su Campo Marte, il percorso del corteo e i servizi accessibili.
+                        </p>
+                        <div className="mt-4 text-center w-full max-w-5xl mx-auto">
+                            <iframe
+                                src="https://www.google.com/maps/d/u/0/embed?mid=1TlU5uyFT7IKSayHC6hfm80i8dWsF1sc&ehbc=2E312F"
+                                className="rounded-lg w-full h-[400px] sm:h-[500px] border-2 border-blue/30"
+                                title="Mappa accessibilità Brescia Pride con informazioni su Campo Marte, percorso corteo e servizi accessibili"
+                                aria-label="Mappa interattiva di Google che mostra i percorsi accessibili e i servizi disponibili durante il Brescia Pride"
+                                tabIndex={0}
+                            ></iframe>
+                        </div>
+                    </section>
+                </InfoCard>
+                <InfoCard
                     title="Spazio associazioni"
                     backgroundColor="pink"
                     hoverColor="pink"
@@ -293,31 +318,6 @@ export default function CorteoPage() {
                     </div>
                 </InfoCard>
                 <InfoCard
-                    title="Mappa"
-                    backgroundColor="pink"
-                    hoverColor="pink"
-                    textColor="red"
-                    hoverTextColor="red"
-                    colSpan={6}
-                    id="mappa"
-                >
-                    {/* Mappa */}
-                    <section id="mappa" className="mt-4 scroll-mt-8" aria-labelledby="mappa-title">
-                        <p className="text-center text-base sm:text-lg md:text-xl font-bold leading-relaxed max-w-4xl mx-auto">
-                            La mappa contiene informazioni su Campo Marte, il percorso del corteo e i servizi accessibili.
-                        </p>
-                        <div className="mt-4 text-center w-full max-w-5xl mx-auto">
-                            <iframe
-                                src="https://www.google.com/maps/d/u/0/embed?mid=1TlU5uyFT7IKSayHC6hfm80i8dWsF1sc&ehbc=2E312F"
-                                className="rounded-lg w-full h-[400px] sm:h-[500px] border-2 border-blue/30"
-                                title="Mappa accessibilità Brescia Pride con informazioni su Campo Marte, percorso corteo e servizi accessibili"
-                                aria-label="Mappa interattiva di Google che mostra i percorsi accessibili e i servizi disponibili durante il Brescia Pride"
-                                tabIndex={0}
-                            ></iframe>
-                        </div>
-                    </section>
-                </InfoCard>
-                <InfoCard
                     title=""
                     backgroundColor="pink"
                     hoverColor="pink"
@@ -326,9 +326,9 @@ export default function CorteoPage() {
                     colSpan={6}
                 >
                     <p className="text-xl font-bold">
-                        Tutte le info sul corteo saranno pubblicate a breve! Tieni d&apos;occhio questa pagina
-                        🫶
+                        Questa pagina è in continuo aggiornamento! Vi aspettiamo il 6 settembre! 🫶
                     </p>
+                    <p className="text-xl mt-2">Non trovi le info che cerchi? <Link href="/contact" className="underline">Contattaci!</Link></p>
                 </InfoCard>
                 <CustomFooter />
             </motion.div>

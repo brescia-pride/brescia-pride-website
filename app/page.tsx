@@ -53,21 +53,30 @@ export default function Homepage() {
                         </div>
                     </Button>
                 </Block>
+                <Block className={`col-span-2 bg-blue`}>
+                    <Button
+                        className="cursor-pointer transition-all duration-300 hover:bg-pink flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-pink hover:text-blue"
+                        onPress={() => router.push('/accessibilita')}
+                    >
+                        <div className="text-center relative">
+                            <h1 className={`text-2xl lg:text-4xl leading-tight font-medium ${myFont.className}`}>
+                                6 SETTEMBRE 2025
+                            </h1>
+                            <h2 className={`text-xl lg:text-2xl leading-tight font-medium ${myFont.className}`}>
+                                Accessibilità
+                            </h2>
+                            <p className="text-xl font-bold">
+                                Clicca qui per tutte le info!
+                            </p>
+                        </div>
+                    </Button>
+                </Block>
                 <Link href={"/docs/manifesto-2025.pdf"} className="col-span-2"><ImageBlock
                     src="/images/manifesto-post.png"
                     altText="Il Manifesto 2025 è uscito! Leggilo qui!"
                     showOnMobile={true}
                     linkText=""
                     link="/docs/manifesto-2025.pdf"
-                    colSpan="col-span-2"
-                />
-                </Link>
-                <Link href={"https://forms.gle/NT7ZvwKmc24Lv21n8"} className="col-span-2"><ImageBlock
-                    src="/images/call-volontari.png"
-                    altText="Open call per volontar*"
-                    showOnMobile={true}
-                    linkText="Abbiamo bisogno di te!"
-                    link="https://forms.gle/NT7ZvwKmc24Lv21n8"
                     colSpan="col-span-2"
                 />
                 </Link>

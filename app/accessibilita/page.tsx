@@ -190,9 +190,14 @@ export default function AccessibilitaPage() {
                                 </Button>
                                 <Button
                                     onPress={() => {
-                                        alert("Il link sarà disponibile dal 1 settembre");
-                                    }}
-                                    className="flex items-center justify-center w-full px-4 py-3 bg-pink text-purple hover:bg-purple hover:text-pink text-base sm:text-lg font-bold rounded-lg transition-colors duration-200 border-2 border-pink focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-transparent"
+                                        const link = document.createElement('a');
+                                        link.href = 'https://t.me/+ZohuOkSfvJo0Zjg0';
+                                        link.target = '_blank';
+                                        link.rel = 'noopener noreferrer';
+                                        document.body.appendChild(link);
+                                        link.click();
+                                        document.body.removeChild(link);
+                                    }}                                    className="flex items-center justify-center w-full px-4 py-3 bg-pink text-purple hover:bg-purple hover:text-pink text-base sm:text-lg font-bold rounded-lg transition-colors duration-200 border-2 border-pink focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-transparent"
                                     aria-label="Entra nel canale Telegram di Brescia Pride - si apre in una nuova finestra"
                                 >
                                     📱 Entra nel canale

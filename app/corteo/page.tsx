@@ -383,16 +383,16 @@ export default function CorteoPage() {
                 >
                     <div className="text-xl">
                         <p className="mt-2">
-                        Nel Parco Pride ci saranno <b>ASST Spedali Civili</b> e <b>Centro IST</b> con un'area vaccini e di promozione della salute sessuale. 
+                        Nel Parco Pride ci saranno <b>ASST Spedali Civili</b> e <b>Centro IST</b> con un&apos;area vaccini e di promozione della salute sessuale. 
                         </p>
-                        <p className="mt-2 font-bold">All'area vaccini ASST Spedali Civili dalle 14 alle 20 offrirà gratuitamente il vaccino HPV (Papilloma virus) e le altre vaccinazioni previste dal piano regionale.</p>
+                        <p className="mt-2 font-bold">All&apos;area vaccini ASST Spedali Civili dalle 14 alle 20 offrirà gratuitamente il vaccino HPV (Papilloma virus) e le altre vaccinazioni previste dal piano regionale.</p>
                         <ul className="mt-2">
                             <li>👉 Non è necessario prenotarsi</li>
                             <li>👉 È consigliato (ma non obbligatorio) portare la tessera sanitaria per chi ne è in possesso</li>
                             <li>👉 Le altre vaccinazioni incluse nel piano regionale saranno proposte direttamente dal personale ASST</li>
                         </ul>
                         <p className="mt-2">
-                        Nell'area associazioni troverete il <b>banchetto informativo sulla salute sessuale a cura di Brescia Checkpoint</b>, uno spazio di ascolto e accoglienza dove parlare insieme di prevenzione e benessere sessuale per tuttɜ, PrEP per proteggersi dall’HIV, Educazione all’affettività e Vaccini e Test IST (Infezioni Sessualmente Trasmissibili).
+                        Nell&apos;area associazioni troverete il <b>banchetto informativo sulla salute sessuale a cura di Brescia Checkpoint</b>, uno spazio di ascolto e accoglienza dove parlare insieme di prevenzione e benessere sessuale per tuttɜ, PrEP per proteggersi dall&apos;HIV, Educazione all&apos;affettività e Vaccini e Test IST (Infezioni Sessualmente Trasmissibili).
                         </p>
 
                         <p className="mt-2 font-bold"><Link href="https://www.instagram.com/p/DN3Rn-G0Bo0/?utm_source=ig_web_copy_link&igsh=azVlaDNmY2JlaHJh" className="underline">Più info al post di Instagram</Link>!

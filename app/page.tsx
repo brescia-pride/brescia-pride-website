@@ -26,16 +26,15 @@ export default function Homepage() {
                 className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
             >
                 <Header size={6}/>
-                <Link href={"/corteo"} className="col-span-3"><ImageBlock
-                    src="/images/locandina.jpg"
-                    altText="Locandina del Brescia Pride 2025: 6 Settembre, Esistiamo ovunque, resistiamo unitɜ. Ore 12-21 Apertura parco pride in Campo Marte; Ore 14 Inizio interventi; H 15.30 Corteo per la città"
+                <Link href={"/corteo"} className="col-span-2"><ImageBlock
+                    src="/images/locandina.png"
+                    altText="Locandina del Brescia Pride 2025: 6 Settembre, Esistiamo ovunque, resistiamo unitɜ. Ore 12-21 Apertura parco pride in Campo Marte; H 15.30 - 17:30 Corteo per la città"
                     showOnMobile={true}
-                    linkText=""
                     link="/corteo"
-                    colSpan="col-span-3"
+                    colSpan="col-span-2"
                 />
                 </Link>
-                <Block className={`col-span-3 bg-green`}>
+                <Block className={`col-span-2 bg-green`}>
                     <Button
                         className="cursor-pointer transition-all duration-300 hover:bg-pink flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-pink hover:text-green"
                         onPress={() => router.push('/corteo')}
@@ -71,6 +70,15 @@ export default function Homepage() {
                         </div>
                     </Button>
                 </Block>
+                <Link href={"https://t.me/+r1wSY4YmbJgzNTI0"} className="col-span-2"><ImageBlock
+                    src="/images/telegram.png"
+                    altText="Vuoi partecipare al Brescia Pride 2025 ma non sai con chi andare? Entra nel nostro gruppo di telegram!"
+                    showOnMobile={true}
+                    linkText="Entra nel gruppo Telegram"
+                    link="https://t.me/+r1wSY4YmbJgzNTI0"
+                    colSpan="col-span-2"
+                />
+                </Link>
                 <Link href={"/docs/manifesto-2025.pdf"} className="col-span-2"><ImageBlock
                     src="/images/manifesto-post.png"
                     altText="Il Manifesto 2025 è uscito! Leggilo qui!"

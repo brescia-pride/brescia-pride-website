@@ -124,15 +124,22 @@ export default function CorteoPage() {
                                     <li>🎪 <Link href="#market" className="underline">Market</Link></li>
                                     <li>🐥 <Link href="#zona-piccole-creature" className="underline">Zona per piccole creature</Link></li>
                                     <li>🤍 <Link href="/accessibilita" className="underline">Zona bianca e zona ad alta visibilità</Link></li>
-                                    <li>🏠 OH!FicoMaEco</li>
-                                    <li>🧁 Foodtruck</li>
-                                    <li>🍹 Stonewall Bar</li>
-                                    <li>🩺 Area salute e prevenzione</li>
+                                    <li>🏠 <Link href="https://www.ficomaeco.com/" className="underline">OH!FicoMaEco</Link></li>
+                                    <li>🧁 <Link href="#foodtruck-bar" className="underline">Foodtruck</Link></li>
+                                    <li>🍹 <Link href="#foodtruck-bar" className="underline">Stonewall Bar</Link></li>
+                                    <li>🩺 <Link href="#area-salute" className="underline">Area salute e prevenzione</Link></li>
                                 </ul>
                             </div>
                         </nav>
                     </div>
                 </InfoCard>
+                <ImageBlock
+                    src="/images/mappa-parco.png"
+                    altText="Mappa del Parco Pride"
+                    showOnMobile={true}
+                    link="/images/mappa-parco.png"
+                    colSpan="col-span-3"
+                />
                 <InfoCard
                     title="Corteo"
                     backgroundColor="green"
@@ -158,7 +165,7 @@ export default function CorteoPage() {
                             <div className="text-base text-lg font-bold sm:text-xl text-pink">
 
                                 <ul className="mt-2 space-y-0.5">
-                                    <li>🗺️ <Link href="#mappa" className="underline">Mappa del corteo</Link></li>
+                                    <li>🗺️ <Link href="#mappa" className="underline">Mappa interattiva del corteo</Link></li>
                                     <li>🛻 <Link href="#carri" className="underline">Carri</Link></li>
                                     <li>🎪 <Link href="https://www.instagram.com/p/DNK0TE5oRYk/?utm_source=ig_web_copy_link&igsh=MWs3bjZwdXdjdWp4dA==" className="underline">Testa del corteo</Link></li>
                                     <li>🤍 <Link href="/accessibilita" className="underline">Zona di decompressione</Link></li>
@@ -168,6 +175,12 @@ export default function CorteoPage() {
                         </nav>
                     </div>
                 </InfoCard>
+                <ImageBlock
+                    src="/images/mappa-corteo.png"
+                    altText="Mappa del corteo"
+                    showOnMobile={true}
+                    colSpan="col-span-3"
+                />
                 <InfoCard
                     title="Accessibilità"
                     backgroundColor="red"
@@ -183,7 +196,7 @@ export default function CorteoPage() {
                     </div>
                 </InfoCard>
                 <InfoCard
-                    title="Mappa"
+                    title="Mappa interattiva"
                     backgroundColor="pink"
                     hoverColor="pink"
                     textColor="red"
@@ -329,6 +342,63 @@ export default function CorteoPage() {
                             <li>🚚</li>
                             <li>Illogic Radio</li>
                         </ul>
+                        <p className="mt-2 font-bold"><Link href="https://www.instagram.com/p/DNJJoEPoRTN/?utm_source=ig_web_copy_link&igsh=MXI2bTBsZ2Y2a3Vtcg==" className="underline">Più info al post di Instagram</Link>!
+                        </p>
+                    </div>
+                </InfoCard>
+                <InfoCard
+                    title="Foodtruck e Drink"
+                    backgroundColor="pink"
+                    hoverColor="pink"
+                    textColor="red"
+                    hoverTextColor="red"
+                    colSpan={3}
+                    id="foodtruck-bar"
+                >
+                    <div className="text-xl">
+                        <p className="mt-2">
+                            <b>L&apos;Area Food</b> e lo <b>Stonewall Bar</b> saranno aperti tutta la giornata. Vi aspettiamo a pranzo e a cena con proposte vegane, piatti inclusivi e attenti alle intolleranze. Allo <b>Stonewall Bar</b>, realizzato insieme a Diluvio Festival, troverete drink (anche analcolici), Gaza Cola, cocktail e birra.
+                        </p>
+                        <p className="mt-2 font-bold">Saranno con noi:</p>
+                        <ul className="mt-2">
+                            <li>Drop Gelateria</li>
+                            <li>Pedalabile</li>
+                            <li>Schiaccinoteca</li>
+                            <li>Mezamì</li>
+                            <li>Agrodolci</li>
+                            <li>Labi</li>
+                        </ul>
+                        <p className="mt-2 font-bold"><Link href="https://www.instagram.com/p/DN8GINiiDEu/?utm_source=ig_web_copy_link&igsh=MTI5amd2d3g5dW9ldA==" className="underline">Più info al post di Instagram</Link>!
+                        </p>
+                    </div>
+                </InfoCard>
+                <InfoCard
+                    title="Area salute e prevenzione"
+                    backgroundColor="blue"
+                    hoverColor="blue"
+                    textColor="pink"
+                    hoverTextColor="pink"
+                    colSpan={3}
+                    id="area-salute"
+                >
+                    <div className="text-xl">
+                        <p className="mt-2">
+                        Nel Parco Pride ci saranno <b>ASST Spedali Civili</b> e <b>Centro IST</b> con un&apos;area vaccini e di promozione della salute sessuale. 
+                        </p>
+                        <p className="mt-2 font-bold">All&apos;area vaccini ASST Spedali Civili dalle 14 alle 20 offrirà gratuitamente il vaccino HPV (Papilloma virus) e le altre vaccinazioni previste dal piano regionale.</p>
+                        <ul className="mt-2">
+                            <li>👉 Non è necessario prenotarsi</li>
+                            <li>👉 È consigliato (ma non obbligatorio) portare la tessera sanitaria per chi ne è in possesso</li>
+                            <li>👉 Le altre vaccinazioni incluse nel piano regionale saranno proposte direttamente dal personale ASST</li>
+                        </ul>
+                        <p className="mt-2">
+                        Nell&apos;area associazioni troverete il <b>banchetto informativo sulla salute sessuale a cura di Brescia Checkpoint</b>, uno spazio di ascolto e accoglienza dove parlare insieme di prevenzione e benessere sessuale per tuttɜ, PrEP per proteggersi dall&apos;HIV, Educazione all&apos;affettività e Vaccini e Test IST (Infezioni Sessualmente Trasmissibili).
+                        </p>
+
+                        <p className="mt-2 font-bold"><Link href="https://www.instagram.com/p/DN3Rn-G0Bo0/?utm_source=ig_web_copy_link&igsh=azVlaDNmY2JlaHJh" className="underline">Più info al post di Instagram</Link>!
+                        </p>
+                        <p className="mt-2 font-bold"><Link href="https://www.bresciacheckpoint.it/" className="underline">Più info anche sul sito di Brescia Checkpoint</Link>!
+                        </p>
                     </div>
                 </InfoCard>
                 <InfoCard

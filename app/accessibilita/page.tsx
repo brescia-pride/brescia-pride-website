@@ -69,6 +69,18 @@ export default function AccessibilitaPage() {
                                     </li>
                                     <li>
                                         <a 
+                                            href="#trascrizioni" 
+                                            className="text-blue hover:text-blue underline focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-transparent rounded px-1 py-1 block hover:bg-blue/10 transition-colors"
+                                            aria-describedby="trascrizioni-desc"
+                                        >
+                                            Trascrizioni interventi
+                                        </a>
+                                        <span id="trascrizioni-desc" className="sr-only">
+                                            Trascrizioni interventi del Brescia Pride 2025
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a 
                                             href="#mappa" 
                                             className="text-blue hover:text-blue underline focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-transparent rounded px-1 py-1 block hover:bg-blue/10 transition-colors"
                                             aria-describedby="mappa-desc"
@@ -128,33 +140,39 @@ export default function AccessibilitaPage() {
                                     className="flex items-center justify-center w-full px-4 py-3 bg-pink text-blue hover:bg-blue hover:text-pink text-base sm:text-lg font-bold rounded-lg transition-colors duration-200 border-2 border-pink focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-transparent"
                                     aria-label="Consulta il vademecum accessibilità su Google Docs - si apre in una nuova finestra"
                                 >
-                                    🌐 Consulta su Google Docs
+                                    🌐 Leggi il vademecum su Google Docs
                                 </Button>
                             </div>
                         </section>
                     </InfoCard>
                     <InfoCard
-                        title="Mappa interattiva"
-                        backgroundColor="green"
-                        hoverColor="green"
+                        title="Trascrizioni interventi"
+                        backgroundColor="red"
+                        hoverColor="red"
                         textColor="pink"
                         hoverTextColor="pink"
                         colSpan={4}
-                        id="mappa"
+                        id="trascrizioni"
                     >
-                        {/* Mappa */}
-                        <section id="mappa" className="mt-4 scroll-mt-8" aria-labelledby="mappa-title">
-                            <p className="text-center text-base sm:text-lg md:text-xl font-bold leading-relaxed max-w-4xl mx-auto">
-                                La mappa contiene informazioni su Campo Marte, il percorso del corteo e i servizi accessibili.
-                            </p>
-                            <div className="mt-4 text-center w-full max-w-5xl mx-auto">
-                                <iframe 
-                                    src="https://www.google.com/maps/d/u/0/embed?mid=1TlU5uyFT7IKSayHC6hfm80i8dWsF1sc&ehbc=2E312F" 
-                                    className="rounded-lg w-full h-[400px] sm:h-[500px] border-2 border-blue/30"
-                                    title="Mappa accessibilità Brescia Pride con informazioni su Campo Marte, percorso corteo e servizi accessibili"
-                                    aria-label="Mappa interattiva di Google che mostra i percorsi accessibili e i servizi disponibili durante il Brescia Pride"
-                                    tabIndex={0}
-                                ></iframe>
+                        {/* Trascrizioni */}
+                        <section className="mt-4 scroll-mt-8" aria-labelledby="vademecum-title">
+                            <p className="text-center text-base sm:text-lg md:text-xl font-bold leading-relaxed max-w-4xl mx-auto">Tutti gli interventi e le performance prima e dopo il corteo sono trascritte qui!</p>
+                            <div className="mt-4 text-center grid grid-cols-1 gap-4 max-w-4xl mx-auto">
+                                <Button
+                                    onPress={() => {
+                                        const link = document.createElement('a');
+                                        link.href = 'https://docs.google.com/document/d/1626Y9Fcf5vX00BVeMsTSWmnPC5y9EGJ2faoVXgvZKH4/edit?usp=sharing';
+                                        link.target = '_blank';
+                                        link.rel = 'noopener noreferrer';
+                                        document.body.appendChild(link);
+                                        link.click();
+                                        document.body.removeChild(link);
+                                    }}
+                                    className="flex items-center justify-center w-full px-4 py-3 bg-pink text-red hover:bg-red hover:text-pink text-base sm:text-lg font-bold rounded-lg transition-colors duration-200 border-2 border-pink focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-transparent"
+                                    aria-label="Consulta il vademecum accessibilità su Google Docs - si apre in una nuova finestra"
+                                >
+                                    🌐 Leggi le trascrizioni su Google Docs
+                                </Button>
                             </div>
                         </section>
                     </InfoCard>
@@ -170,7 +188,7 @@ export default function AccessibilitaPage() {
                         {/* Telegram */}
                         <section className="mt-4 scroll-mt-8" aria-labelledby="telegram-title">
                             <p className="text-center text-base sm:text-lg md:text-xl font-bold leading-relaxed max-w-4xl mx-auto">
-                                Il canale Telegram dedicato all&apos;accessibilità sarà attivo dal 1 settembre.
+                                Il canale Telegram dedicato all&apos;accessibilità è attivo.
                             </p>
                             <div className="mt-4 text-center grid grid-cols-1 gap-4 max-w-4xl mx-auto">
                                 <Button
@@ -202,6 +220,31 @@ export default function AccessibilitaPage() {
                                 >
                                     📱 Entra nel canale
                                 </Button>
+                            </div>
+                        </section>
+                    </InfoCard>
+                    <InfoCard
+                        title="Mappa interattiva"
+                        backgroundColor="green"
+                        hoverColor="green"
+                        textColor="pink"
+                        hoverTextColor="pink"
+                        colSpan={6}
+                        id="mappa"
+                    >
+                        {/* Mappa */}
+                        <section id="mappa" className="mt-4 scroll-mt-8" aria-labelledby="mappa-title">
+                            <p className="text-center text-base sm:text-lg md:text-xl font-bold leading-relaxed max-w-4xl mx-auto">
+                                La mappa contiene informazioni su Campo Marte, il percorso del corteo e i servizi accessibili.
+                            </p>
+                            <div className="mt-4 text-center w-full max-w-5xl mx-auto">
+                                <iframe 
+                                    src="https://www.google.com/maps/d/u/0/embed?mid=1TlU5uyFT7IKSayHC6hfm80i8dWsF1sc&ehbc=2E312F" 
+                                    className="rounded-lg w-full h-[400px] sm:h-[500px] border-2 border-blue/30"
+                                    title="Mappa accessibilità Brescia Pride con informazioni su Campo Marte, percorso corteo e servizi accessibili"
+                                    aria-label="Mappa interattiva di Google che mostra i percorsi accessibili e i servizi disponibili durante il Brescia Pride"
+                                    tabIndex={0}
+                                ></iframe>
                             </div>
                         </section>
                     </InfoCard>

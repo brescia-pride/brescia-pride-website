@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import Header from "../ui/components/Header";
 import CustomFooter from "../ui/components/CustomFooter";
@@ -31,29 +32,29 @@ export default function MainifestoPage() {
           </h4>
           <p className="mt-2">
             Da sempre, il Pride è una <strong>manifestazione</strong> che ha
-            l’obiettivo di portare alla società e alle istituzioni{" "}
-            <strong>le istanze della comunità LGBTQIAPK+</strong>, denunciare le{" "}
+            l’obiettivo di portare alla società e alle istituzioni
+            <strong>le istanze della comunità LGBTQIAPK+</strong>, denunciare le
             <strong>
               diverse forme di discriminazione e marginalizzazione
-            </strong>{" "}
-            contro le quali continuiamo a lottare, e{" "}
+            </strong>
+            contro le quali continuiamo a lottare, e
             <strong>celebrare al contempo la nostra esistenza</strong>. Il Pride
             non è una festa neutra, non è folklore da vetrina, non è una parata
-            da addomesticare.{" "}
+            da addomesticare.
             <strong className="underline decoration-2">
               È rabbia, è memoria, è lotta, è rivendicazione.
             </strong>
           </p>
           <p className="mt-2">
-            Nasce dalla <strong>rivolta</strong> di chi è statə{" "}
+            Nasce dalla <strong>rivolta</strong> di chi è statə
             <strong>spintə ai margini</strong>, di chi ha dovuto difendere la
             propria identità per sopravvivere. Oggi come allora, il Pride scende
             in piazza per denunciare le <strong>violenze</strong>, l’
             <strong>omo-lesbo-bi-trans-a-fobia</strong> strutturale che ancora
             ci colpisce. Scendiamo in piazza contro l’
-            <strong>indifferenza</strong> delle istituzioni, contro leggi che{" "}
+            <strong>indifferenza</strong> delle istituzioni, contro leggi che
             <strong>non ci tutelano</strong> e contro chi vorrebbe rispedirci
-            nel <strong>silenzio</strong>. Non chiediamo permessi per esistere:{" "}
+            nel <strong>silenzio</strong>. Non chiediamo permessi per esistere:
             <strong>prendiamo lo spazio che ci spetta.</strong>
           </p>
           <p className="mt-2">
@@ -64,13 +65,13 @@ export default function MainifestoPage() {
 
           <h4 className="text-xl font-bold mt-6">La scelta del linguaggio</h4>
           <p className="mt-2">
-            La scelta del linguaggio utilizzato deriva dalla necessità di{" "}
+            La scelta del linguaggio utilizzato deriva dalla necessità di
             <strong>
               veicolare la nostra realtà e le nostre istanze con un'attenzione
               che difficilmente riscontriamo nella società civile
             </strong>
             , istituzioni, enti o media. Il linguaggio permette di plasmare la
-            realtà, di decidere cosa rendere visibile e da quale prospettiva.{" "}
+            realtà, di decidere cosa rendere visibile e da quale prospettiva.
             <strong>
               Scegliere le parole per autorappresentarsi è un atto politico
             </strong>
@@ -149,7 +150,7 @@ export default function MainifestoPage() {
 
           <h4 className="text-xl font-semibold mt-6">Antifascista</h4>
           <p className="mt-2">
-            Contribuiamo a mantenere viva la memoria della{" "}
+            Contribuiamo a mantenere viva la memoria della
             <strong>Resistenza</strong>, in particolare nella nostra città. A
             ottant’anni dalla Liberazione, ricordiamo le vittime del regime
             fascista, così come le vittime del terrorismo nero durante gli anni
@@ -259,7 +260,7 @@ export default function MainifestoPage() {
             intensivo e al consumo di prodotti di origine animale.
           </p>
 
-          {/* Sezione: Le Nostre Istanze */}
+
           <h4 className="text-center text-6xl font-bold mt-12 mb-4 __className_bd8993 pb-2">
             LE NOSTRE ISTANZE
           </h4>
@@ -419,10 +420,10 @@ export default function MainifestoPage() {
             perché poco accessibili e prevedendo che una quota di
             autofinanziamento sia dedicata al miglioramento dell’accessibilità
             dei nostri eventi e presidi. Nel fare questo ci continuiamo a
-            formare grazie al contributo di associazioni come{" "}
+            formare grazie al contributo di associazioni come
             <strong>Anda, Disabili Pirata e Disability Pride Milano</strong> con
             cui abbiamo costruito collaborazioni. Da qualche anno ci stiamo
-            impegnando a <strong>mappare alcuni luoghi della città</strong>{" "}
+            impegnando a <strong>mappare alcuni luoghi della città</strong>
             mettendo a disposizione di tuttɜ le informazioni sull’accessibilità
             di questi luoghi attraverso ad esempio l’app WeGlad. Facendo questo,
             cerchiamo anche di sensibilizzare realtà amiche sulla necessità di
@@ -430,8 +431,8 @@ export default function MainifestoPage() {
             così la <strong>cultura dell’accessibilità.</strong> Chiediamo che
             ci sia maggiore attenzione alle questioni legate all’accessibilità e
             che si lavori concretamente e in un continuo percorso di
-            decostruzione nella direzione di{" "}
-            <strong>spazi sempre più aperti alla convivenza di tuttɜ</strong>{" "}
+            decostruzione nella direzione di
+            <strong>spazi sempre più aperti alla convivenza di tuttɜ</strong>
             nei luoghi che attraversiamo dalle scuole, ai luoghi di lavoro, di
             cura e di cultura, fino alle amministrazioni pubbliche.
           </p>
@@ -449,10 +450,10 @@ export default function MainifestoPage() {
             annientano intere comunità e riducono milioni di persone alla fame e
             allo sfollamento forzato. Di fronte a queste violenze, non possiamo
             restare in silenzio. Il nostro è un grido di resistenza e
-            solidarietà, un’eco che attraversa i confini e si schiera{" "}
+            solidarietà, un’eco che attraversa i confini e si schiera
             <strong>
               al fianco di chi lotta per la libertà, la giustizia e la dignità.
-            </strong>{" "}
+            </strong>
             Non accettiamo che la guerra venga usata come strumento di potere e
             dominio, né che venga giustificata in nome della nostra comunità.
             Rifiutiamo con forza il pinkwashing sionista, che strumentalizza i
@@ -484,7 +485,7 @@ export default function MainifestoPage() {
             rispettose delle libertà altrui, l’
             <strong>
               introduzione obbligatoria dell’educazione sessuale e affettiva
-            </strong>{" "}
+            </strong>
             all’interno delle scuole di ogni ordine e grado e che questa sia
             gestita da persone competenti e formate con un approccio
             onnicomprensivo, scientifico, accogliente e in continuo
@@ -498,11 +499,11 @@ export default function MainifestoPage() {
             piacere, desideri e limiti, siano questioni che riguardano ogni
             persona, e permettono di vivere una vita personale e collettiva più
             benefica e autentica. L’educazione sessuale onnicomprensiva è
-            inoltre lo{" "}
+            inoltre lo
             <strong>
               strumento più trasformativo ed efficace che abbiamo contro la
               violenza e le discriminazioni, di genere e non solo.
-            </strong>{" "}
+            </strong>
             Per tutto questo, ci impegniamo a promuoverla e diffonderla in
             maniera formale e informale in ogni occasione e modalità possibile.
           </p>

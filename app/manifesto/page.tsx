@@ -81,8 +81,8 @@ export default function MainifestoPage() {
           <p className="mt-2">
             È un atto di <strong>cura e di giustizia</strong> che permetta a
             tuttɜ di <strong>riconoscersi ed essere riconosciutɜ</strong> in uno
-            spazio condiviso dove le parole non feriscono, ma{" "}
-            <strong>includono</strong>; dove il linguaggio non impone, ma{" "}
+            spazio condiviso dove le parole non feriscono, ma
+            <strong>includono</strong>; dove il linguaggio non impone, ma
             <strong>accoglie</strong>; dove la realtà che vogliamo non è solo
             sognata, ma <strong>nominata, costruita e vissuta insieme.</strong>
           </p>

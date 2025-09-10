@@ -1,41 +1,44 @@
 "use client";
 
 import React from "react";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import Header from "./ui/components/Header";
 import ImageBlock from "./ui/components/ImageBlock";
 import CustomFooter from "./ui/components/CustomFooter";
-import {Link} from "react-aria-components";
-import {Button} from "react-aria-components";
+import { Link } from "react-aria-components";
+import { Button } from "react-aria-components";
 import Block from "./ui/components/Block";
-import {useRouter} from "next/navigation";
+import { useRouter } from "next/navigation";
 import localFont from "next/font/local";
+import StickersContainer from "./ui/components/StickerContainers";
 
-const myFont = localFont({src: "./ui/fonts/ST.ttf"});
+const myFont = localFont({ src: "./ui/fonts/ST.ttf" });
 
 export default function Homepage() {
-    const router = useRouter();
-    return (
-        <div className="min-h-screen px-4 py-6 text-zinc-50">
-            <motion.div
-                initial="initial"
-                animate="animate"
-                transition={{
-                    staggerChildren: 0.05,
-                }}
-                className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
-            >
-                <Header size={6}/>
-                <Link href={"/corteo"} className="col-span-3"><ImageBlock
-                    src="/images/locandina.jpg"
-                    altText="Locandina del Brescia Pride 2025: 6 Settembre, Esistiamo ovunque, resistiamo unitɜ. Ore 12-21 Apertura parco pride in Campo Marte; Ore 14 Inizio interventi; H 15.30 Corteo per la città"
-                    showOnMobile={true}
-                    linkText=""
-                    link="/corteo"
-                    colSpan="col-span-3"
-                />
-                </Link>
-                <Block className={`col-span-3 bg-green`}>
+  const router = useRouter();
+  return (
+    <div className="min-h-screen px-4 py-6 text-zinc-50">
+      <motion.div
+        initial="initial"
+        animate="animate"
+        transition={{
+          staggerChildren: 0.05,
+        }}
+        className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
+      >
+        <Header size={6} />
+        <Link href={"/corteo"} className="col-span-6 z-20 ">
+          <ImageBlock
+            src="/images/locandina.jpg"
+            altText="Locandina del Brescia Pride 2025: 6 Settembre, Esistiamo ovunque, resistiamo unitɜ. Ore 12-21 Apertura parco pride in Campo Marte; Ore 14 Inizio interventi; H 15.30 Corteo per la città"
+            showOnMobile={true}
+            linkText=""
+            link="/corteo"
+            colSpan="col-span-3"
+            imageHeight="h-[350px]"
+          />
+        </Link>
+        {/* <Block className={`col-span-3 bg-green`}>
                     <Button
                         className="cursor-pointer transition-all duration-300 hover:bg-pink flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-pink hover:text-green"
                         onPress={() => router.push('/corteo')}
@@ -52,33 +55,137 @@ export default function Homepage() {
                             </p>
                         </div>
                     </Button>
-                </Block>
-                <Link href={"/docs/manifesto-2025.pdf"} className="col-span-2"><ImageBlock
-                    src="/images/manifesto-post.png"
-                    altText="Il Manifesto 2025 è uscito! Leggilo qui!"
-                    showOnMobile={true}
-                    linkText=""
-                    link="/docs/manifesto-2025.pdf"
-                    colSpan="col-span-2"
-                />
-                </Link>
-                <Link href={"https://forms.gle/NT7ZvwKmc24Lv21n8"} className="col-span-2"><ImageBlock
-                    src="/images/call-volontari.png"
-                    altText="Open call per volontar*"
-                    showOnMobile={true}
-                    linkText="Abbiamo bisogno di te!"
-                    link="https://forms.gle/NT7ZvwKmc24Lv21n8"
-                    colSpan="col-span-2"
-                />
-                </Link>
-                <Link href={"/sostienici"} className="col-span-2"><ImageBlock
-                    src="/images/5x1000.jpg"
-                    altText="Dona il 5x1000 a COMITATO BRESCIA PRIDE, Codice Fiscale: 98201800178"
-                    showOnMobile={true}
-                    colSpan="col-span-2"
-                /></Link>
-                <CustomFooter/>
-            </motion.div>
-        </div>
-    );
-};
+                </Block> */}
+        <Link href={"/docs/manifesto-2025.pdf"} className="col-span-2">
+          <ImageBlock
+            src="/images/manifesto-post.png"
+            altText="Il Manifesto 2025 è uscito! Leggilo qui!"
+            showOnMobile={true}
+            linkText=""
+            link="/docs/manifesto-2025.pdf"
+            colSpan="col-span-2"
+            imageHeight="h-[600px]"
+          />
+        </Link>
+        <Link
+          href={"https://forms.gle/NT7ZvwKmc24Lv21n8"}
+          className="col-span-2"
+        >
+          <ImageBlock
+            src="/images/img1.jpg"
+            altText="Open call per volontar*"
+            showOnMobile={true}
+            linkText=""
+            link="https://forms.gle/NT7ZvwKmc24Lv21n8"
+            colSpan="col-span-2"
+            imageHeight="h-[600px]"
+          />
+        </Link>
+        <Link href={"/sostienici"} className="col-span-2">
+          <ImageBlock
+            src="/images/5x1000.jpg"
+            altText="Dona il 5x1000 a COMITATO BRESCIA PRIDE, Codice Fiscale: 98201800178"
+            showOnMobile={true}
+            colSpan="col-span-2"
+            imageHeight="h-[600px]"
+          />
+        </Link>
+
+        <StickersContainer className="col-span-6 h-[350px] bg-pink rounded-lg" />
+        <Link href={"/events"} className="col-span-2">
+          <ImageBlock
+            src="/images/img2.jpg"
+            altText="Dona il 5x1000 a COMITATO BRESCIA PRIDE, Codice Fiscale: 98201800178"
+            showOnMobile={true}
+            colSpan="col-span-2"
+            imageHeight="h-[600px]"
+            withHoverOverlay={true}
+          />
+        </Link>
+        <Link href={"/events"} className="col-span-2">
+          <ImageBlock
+            src="/images/bandiera.jpg"
+            altText="Dona il 5x1000 a COMITATO BRESCIA PRIDE, Codice Fiscale: 98201800178"
+            showOnMobile={true}
+            colSpan="col-span-2"
+            imageHeight="h-[600px]"
+            withHoverOverlay={true}
+          />
+        </Link>
+        <Link href={"/events"} className="col-span-2">
+          <ImageBlock
+            src="/images/img3.jpg"
+            altText="Dona il 5x1000 a COMITATO BRESCIA PRIDE, Codice Fiscale: 98201800178"
+            showOnMobile={true}
+            colSpan="col-span-2"
+            imageHeight="h-[600px]"
+            withHoverOverlay={true}
+          />
+        </Link>
+        <Link href={"/events"} className="col-span-2">
+          <ImageBlock
+            src="/images/5x1000.jpg"
+            altText="Dona il 5x1000 a COMITATO BRESCIA PRIDE, Codice Fiscale: 98201800178"
+            showOnMobile={true}
+            colSpan="col-span-2"
+            imageHeight="h-[600px]"
+            withHoverOverlay={true}
+          />
+        </Link>
+        <Link href={"/events"} className="col-span-2">
+          <ImageBlock
+            src="/images/img4.jpg"
+            altText="Dona il 5x1000 a COMITATO BRESCIA PRIDE, Codice Fiscale: 98201800178"
+            showOnMobile={true}
+            colSpan="col-span-2"
+            imageHeight="h-[600px]"
+            withHoverOverlay={true}
+          />
+        </Link>
+
+        <Link href={"/events"} className="col-span-2">
+          <ImageBlock
+            src="/images/campo-marte.png"
+            altText="Dona il 5x1000 a COMITATO BRESCIA PRIDE, Codice Fiscale: 98201800178"
+            showOnMobile={true}
+            colSpan="col-span-2"
+            imageHeight="h-[600px]"
+            withHoverOverlay={true}
+          />
+        </Link>
+        <Link href={"/events"} className="col-span-2">
+          <ImageBlock
+            src="/images/img5.jpg"
+            altText="Dona il 5x1000 a COMITATO BRESCIA PRIDE, Codice Fiscale: 98201800178"
+            showOnMobile={true}
+            colSpan="col-span-2"
+            imageHeight="h-[600px]"
+            withHoverOverlay={true}
+          />
+        </Link>
+        <Link href={"/events"} className="col-span-2">
+          <ImageBlock
+            src="/images/giugno-eventi-0.png"
+            altText="Dona il 5x1000 a COMITATO BRESCIA PRIDE, Codice Fiscale: 98201800178"
+            showOnMobile={true}
+            colSpan="col-span-2"
+            imageHeight="h-[600px]"
+            withHoverOverlay={true}
+          />
+        </Link>
+        <Link href={"/events"} className="col-span-2">
+          <ImageBlock
+            src="/images/img6.jpg"
+            altText="Dona il 5x1000 a COMITATO BRESCIA PRIDE, Codice Fiscale: 98201800178"
+            showOnMobile={true}
+            colSpan="col-span-2"
+            imageHeight="h-[600px]"
+            withHoverOverlay={true}
+          />
+        </Link>
+
+        <CustomFooter />
+      </motion.div>
+    </div>
+  );
+}

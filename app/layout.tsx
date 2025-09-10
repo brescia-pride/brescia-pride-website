@@ -4,6 +4,8 @@ import './globals.css'
 import {ReactNode} from "react";
 import {motion} from "framer-motion";
 import Header from './ui/components/Header'
+import StickersContainer from './ui/components/StickerContainers';
+
 
 const inter = Inter({
     subsets: ['latin'],
@@ -28,17 +30,20 @@ export default function RootLayout({
     children: ReactNode
 }) {
     return (
-        <html lang="it">
-        <body className={`${inter.className} bg-neutral-200 min-h-screen focus-visible:outline-none`}>
-        <main
+      <html lang="it">
+        <body
+          className={`${inter.className} bg-neutral-200 min-h-screen focus-visible:outline-none`}
+        >
+          {/* <StickersContainer /> */}
+          <main
             id="main-content"
             role="main"
             className="focus:outline-none"
             tabIndex={-1}
-        >
+          >
             {children}
-        </main>
+          </main>
         </body>
-        </html>
-    )
+      </html>
+    );
 }

@@ -67,8 +67,9 @@ export default function MainifestoPage() {
           <p className="mt-2">
             La scelta del linguaggio utilizzato deriva dalla necessità di
             <strong>
-              veicolare la nostra realtà e le nostre istanze con un'attenzione
-              che difficilmente riscontriamo nella società civile
+              veicolare la nostra realtà e le nostre istanze con
+              un&apos;attenzione che difficilmente riscontriamo nella società
+              civile
             </strong>
             , istituzioni, enti o media. Il linguaggio permette di plasmare la
             realtà, di decidere cosa rendere visibile e da quale prospettiva.
@@ -81,7 +82,7 @@ export default function MainifestoPage() {
           <p className="mt-2">
             È un atto di <strong>cura e di giustizia</strong> che permetta a
             tuttɜ di <strong>riconoscersi ed essere riconosciutɜ</strong> in uno
-            spazio condiviso dove le parole non feriscono, ma
+            spazio condiviso where le parole non feriscono, ma
             <strong>includono</strong>; dove il linguaggio non impone, ma
             <strong>accoglie</strong>; dove la realtà che vogliamo non è solo
             sognata, ma <strong>nominata, costruita e vissuta insieme.</strong>
@@ -122,7 +123,6 @@ export default function MainifestoPage() {
             </li>
           </ul>
 
-          {/* Sezione: I Nostri Valori */}
           <h4 className="text-center text-6xl font-bold mt-12 mb-4 pb-2  __className_bd8993">
             I NOSTRI VALORI
           </h4>
@@ -260,7 +260,6 @@ export default function MainifestoPage() {
             intensivo e al consumo di prodotti di origine animale.
           </p>
 
-
           <h4 className="text-center text-6xl font-bold mt-12 mb-4 __className_bd8993 pb-2">
             LE NOSTRE ISTANZE
           </h4>
@@ -308,7 +307,7 @@ export default function MainifestoPage() {
             all’istruzione e a luoghi di lavoro sicuri sia tutelato con
             l’introduzione capillare della carriera alias, che vi sia una reale
             inclusione anche nello sport, e che si vada finalmente oltre la
-            legge 164, vecchia ormai di oltre quarant'anni, a favore di un
+            legge 164, vecchia ormai di oltre quarant&apos;anni, a favore di un
             modello basato sull’autodeterminazione, come avviene già in paesi
             europei come Malta, Spagna e Germania. Ogni persona trans* e non
             binaria, di qualsiasi età, merita di essere, tutelata, vedere
@@ -327,35 +326,45 @@ export default function MainifestoPage() {
             35* posto su 49° paesi in materia di uguaglianza e diritti della
             comunità LGBTQIAPK+. A gravare sul bilancio, oltre agli aumenti dei
             casi di violenza omolesbobitransfobica e i discorsi d’odio sempre
-            più diffusi, anche grazie all'avvallamento di rappresentanti
+            più diffusi, anche grazie all&apos;avvallamento di rappresentanti
             politici e alle vergognose e disumanizzanti campagne dei movimenti
             Pro-Vita/Antiscelta, sono la mancanza di una legge contro
             l’omolesbobitransafobia e la mancanza del divieto ai tentativi di
             conversione. Si tratta di pratiche prive di fondamento scientifico e
             riconosciute come torture dalle Nazioni Unite, volte a modificare o
-            reprimere l’orientamento sessuale o l'identità di genere di una
+            reprimere l’orientamento sessuale o l&apos;identità di genere di una
             persona, che spaziano dalla pressione psicologica alla vera e
             propria violenza fisica e sessuale – in Italia, non ancora
             legalmente perseguibili. Le persone intersex continuano a subire
             interventi chirurgici e medici non necessari, spesso prima che siano
             in grado di esprimere il proprio consenso libero e informato. Tali
             pratiche costituiscono una grave violazione del diritto
-            all’integrità fisica e del diritto all’autodeterminazione. Seppur
-            consapevoli che, nella situazione politica attuale, non è possibile
-            sperare in cambiamenti positivi, ribadiamo la necessità di una legge
-            antidiscriminazione che tuteli realmente tutte le soggettività della
-            comunità, che i tentativi di conversione vengano riconosciuti come
-            crimine dalle conseguenze distruttive e che le pratiche violente
-            sulle persone intersex vengano vietate. Questo è davvero essere a
-            favore della vita: permettere loro di essere sé stesse, senza
-            costrizioni, violenze e ricatti emotivi. Essere liberi di esistere
-            davvero significa anche poter vivere dignitosamente. Non c’è
-            autodeterminazione senza casa, senza lavoro stabile, senza accesso
-            alla sanità, all’istruzione, a spazi sicuri. Le persone LGBTQIAPK+
-            sono troppo spesso costrette a nascondersi nei luoghi di lavoro,
-            escluse dalle famiglie, discriminate nel sistema scolastico,
-            sanitario e abitativo. La nostra lotta è una lotta anche contro la
-            precarietà, contro l’emarginazione economica, contro le
+            all&apos;integrità fisica e del diritto all&apos;autodeterminazione.
+            Seppur consapevoli che, nella situazione politica attuale, non è
+            possibile sperare in cambiamenti positivi, ribadiamo la necessità di
+            una
+            <strong>
+              legge antidiscriminazione che tuteli realmente tutte le
+              soggettività della comunità
+            </strong>
+            , che i
+            <strong>
+              tentativi di conversione vengano riconosciuti come crimine dalle
+              conseguenze distruttive e che le pratiche violente sulle persone
+              intersex vengano vietate.
+            </strong>
+            Questo è davvero essere a favore della vita: permettere loro di
+            essere sé stesse, senza costrizioni, violenze e ricatti emotivi.
+            Essere liberi di esistere davvero significa anche poter vivere
+            dignitosamente. Non c&apos;è autodeterminazione senza
+            <strong>
+              casa, senza lavoro stabile, senza accesso alla sanità,
+              all&apos;istruzione, a spazi sicuri.
+            </strong>
+            Le persone LGBTQIAPK+ sono troppo spesso costrette a nascondersi nei
+            luoghi di lavoro, escluse dalle famiglie, discriminate nel sistema
+            scolastico, sanitario e abitativo. La nostra lotta è una lotta anche
+            contro la precarietà, contro l’emarginazione economica, contro le
             disuguaglianze. Il Pride è anche questo: rivendicare un futuro in
             cui nessunǝ sia costrettǝ a scegliere tra essere sé stessǝ e
             sopravvivere.
@@ -366,59 +375,71 @@ export default function MainifestoPage() {
           </h4>
           <p className="mt-2">
             L’Italia è tra gli ultimi Paesi europei nella tutela dei diritti
-            LGBTQIAPK+. In questo contesto rivendichiamo il pieno riconoscimento
-            giuridico e sociale di tutte le famiglie LGBTQIAPK+: quelle queer,
-            di scelta, non monogame, aromantiche o senza figliə. Famiglie
-            fondate sulla cura, sulla sicurezza e sull’autodeterminazione, che
-            vanno oltre il modello patriarcale, binario ed eteronormato. La
-            famiglia non è solo quella che ci ha generato o cresciutə: è anche
-            quella che scegliamo. La chosen family nasce dalla libera scelta,
-            non da un destino assegnato. Come Pride, riconosciamo il valore
-            politico e affettivo di queste relazioni e ne rivendichiamo la piena
-            legittimità. Chiediamo un matrimonio egualitario per tuttə,
+            LGBTQIAPK+. In questo contesto rivendichiamo il pieno
+            <strong>
+              riconoscimento giuridico e sociale di tutte le famiglie LGBTQIAPK+
+            </strong>
+            : quelle queer, di scelta, non monogame, aromantiche o senza figliə.
+            Famiglie fondate sulla cura, sulla sicurezza e
+            sull’autodeterminazione, che vanno oltre il modello patriarcale,
+            binario ed eteronormato. La famiglia non è solo quella che ci ha
+            generato o cresciutə: è anche quella che scegliamo. La
+            <strong>chosen family</strong> nasce dalla libera scelta, non da un
+            destino assegnato. Come Pride, riconosciamo il valore politico e
+            affettivo di queste relazioni e ne rivendichiamo la piena
+            legittimità. Chiediamo un
+            <strong>matrimonio egualitario per tuttə,</strong>
             superando le unioni civili che non garantiscono piena uguaglianza.
-            Serve un cambiamento strutturale che riconosca anche le comunità di
-            responsabilità, al di fuori del matrimonio. Rivendichiamo il diritto
-            alla genitorialità e ai diritti riproduttivi, con accesso paritario
-            all’adozione, alla PMA e alla stepchild adoption. Condanniamo la
-            criminalizzazione della GPA introdotta dal DDL Varchi: una legge
-            incostituzionale, discriminatoria e violenta, che colpisce
-            direttamente le famiglie queer e ostacola il riconoscimento dei
-            figliə. Ci opponiamo al “reato universale di GPA” e chiediamo
-            l’abolizione di ogni norma che neghi diritti fondamentali.
+            Serve un cambiamento strutturale che riconosca anche le
+            <strong>comunità di responsabilità</strong>, al di fuori del
+            matrimonio. Rivendichiamo il
+            <strong>
+              diritto alla genitorialità e ai diritti riproduttivi,
+            </strong>
+            con accesso paritario all’adozione, alla PMA e alla stepchild
+            adoption. Condanniamo la criminalizzazione della GPA introdotta dal
+            DDL Varchi: una legge incostituzionale, discriminatoria e violenta,
+            che colpisce direttamente le famiglie queer e ostacola il
+            riconoscimento dei figliə.
+            <strong>Ci opponiamo al “reato universale di GPA”</strong> e
+            chiediamo l’abolizione di ogni norma che neghi diritti fondamentali.
             Accogliamo con favore i segnali della Corte Costituzionale, ma non
             ci basta: servono leggi chiare, inclusive e coraggiose. Vogliamo un
-            welfare realmente universale, che riconosca e sostenga tutte le
-            forme di famiglia e comunità: queer, solidali, monogenitoriali,
-            poliamorose. Continuiamo a lottare per l’eguaglianza reale e per la
-            dignità di tutte le relazioni.
+            <strong>welfare realmente universale</strong>, che riconosca e
+            sostenga tutte le forme di famiglia e comunità: queer, solidali,
+            monogenitoriali, poliamorose. Continuiamo a lottare per
+            l’eguaglianza reale e per la dignità di tutte le relazioni.
           </p>
 
           <h4 className="text-xl font-semibold mt-6">Accessibilità</h4>
           <p className="mt-2">
             Il diritto delle persone con disabilità e neurodivergenti ad
-            autodeterminarsi non è garantito a causa del poco impegno dello
-            Stato e dei continui ritardi nell'attuazione del diritto alla vita
-            indipendente e all’assistenza personale. La concretizzazione di
-            questi diritti evita la reclusione in istituti e l’isolamento in
-            casa e agevola l’accesso alla vita sociale, allo studio e al lavoro,
-            alla cultura e tanti altri ambiti. Chiediamo per questo che lo
-            Stato, a tutti i livelli, metta a disposizione strumenti concreti e
-            finanziamenti che garantiscano l’assistenza personale e la vita
-            indipendente, perché indipendenza significa libertà di scelta,
-            significa avere e darsi la possibilità di scoprirsi, sperimentarsi,
-            capire meglio sé stessɜ in termini anche di orientamento sessuale e
-            identità di genere, significa essere liberɜ di vivere relazioni
-            (amorose, sessuali, e/o altro) e di costruire reti sociali. A
-            livello territoriale capita costantemente che gli spazi e le
-            iniziative non siano pensate a misura di tutte le persone, ma
-            secondo un’idea di corpo-mente “normale” e quindi previsto, a
-            discapito di corpimenti che non rientrano in questa idea e
-            definizione. Come Brescia Pride ci impegniamo a costruire iniziative
-            e spazi che prevedono il più possibile l’esistenza di tutte le
-            persone, decidendo talvolta di rinunciare ad alcune iniziative
-            perché poco accessibili e prevedendo che una quota di
-            autofinanziamento sia dedicata al miglioramento dell’accessibilità
+            <strong>autodeterminarsi</strong> non è garantito a causa del poco
+            impegno dello Stato e dei continui ritardi nell&apos;attuazione del
+            diritto alla vita indipendente e all’assistenza personale. La
+            concretizzazione di questi diritti evita la reclusione in istituti e
+            l’isolamento in casa e agevola l’accesso alla vita sociale, allo
+            studio e al lavoro, alla cultura e tanti altri ambiti. Chiediamo per
+            questo che lo Stato, a tutti i livelli, metta a disposizione
+            strumenti concreti e finanziamenti che garantiscano
+            <strong>l’assistenza personale e la vita indipendente</strong>,
+            perché indipendenza significa libertà di scelta, significa avere e
+            darsi la possibilità di scoprirsi, sperimentarsi, capire meglio sé
+            stessɜ in termini anche di orientamento sessuale e identità di
+            genere, significa essere liberɜ di vivere relazioni (amorose,
+            sessuali, e/o altro) e di costruire reti sociali. A livello
+            territoriale capita costantemente che gli spazi e le iniziative non
+            siano pensate a misura di tutte le persone, ma secondo un’idea di
+            corpo-mente “normale” e quindi previsto, a discapito di corpimenti
+            che non rientrano in questa idea e definizione. Come Brescia Pride
+            ci impegniamo a costruire iniziative e spazi che prevedono il più
+            possibile l’esistenza di tutte le persone, decidendo talvolta di
+            rinunciare ad alcune iniziative perché poco accessibili e prevedendo
+            che una
+            <strong>
+              quota di autofinanziamento sia dedicata al miglioramento
+              dell’accessibilità
+            </strong>
             dei nostri eventi e presidi. Nel fare questo ci continuiamo a
             formare grazie al contributo di associazioni come
             <strong>Anda, Disabili Pirata e Disability Pride Milano</strong> con

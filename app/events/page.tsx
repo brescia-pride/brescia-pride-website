@@ -28,6 +28,7 @@ export default function EventsPage() {
               altText="Evento secondario"
               showOnMobile={true}
               imageHeight="h-full"
+              colSpan="col-span-1"
             />
           </Link>
           <Link
@@ -43,6 +44,7 @@ export default function EventsPage() {
               imageHeight=""
               stretchHeight={true}
               withHoverOverlay={true}
+              colSpan="col-span-1"
               textHover={`Approfondisci 
                 su instagram`}
             />
@@ -75,8 +77,7 @@ export default function EventsPage() {
             Tutti i mercoledì alle 19!
           </p>
           <p className="text-md md:text-lg font-semibold">
-            Scrivici un DM su Instagram o una
-            mail per partecipare 🫶
+            Scrivici un DM su Instagram o una mail per partecipare 🫶
           </p>
         </InfoCard>
         <CustomFooter />

@@ -55,8 +55,6 @@ const Header = ({ size }: BlockProps) => {
         {navLinks.map((link) => (
           <NextLink key={link.href} href={link.href} passHref legacyBehavior>
             <Link
-              target={link.isExternal ? "_blank" : undefined}
-              rel={link.isExternal ? "noopener noreferrer" : undefined}
               className="text-lg font-medium hover:text-pink-300 transition-colors"
             >
               {link.label}
@@ -78,11 +76,8 @@ const Header = ({ size }: BlockProps) => {
                   key={link.href}
                   className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
                   onAction={() => {
-                    if (link.isExternal) {
-                      window.open(link.href, "_blank", "noopener,noreferrer");
-                    } else {
+                
                       router.push(link.href);
-                    }
                   }}
                 >
                   {link.label}

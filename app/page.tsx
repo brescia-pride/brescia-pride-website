@@ -26,6 +26,35 @@ export default function Homepage() {
                 className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
             >
                 <Header size={6}/>
+                <Link href={"https://www.instagram.com/p/DQ9q3UQCD0d/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="} className="col-span-2"><ImageBlock
+                    src="/images/TDOR-2025.png"
+                    altText="Presidio in Piazza Duomo il 20 Novembre alle 19"
+                    showOnMobile={true}
+                    link="v"
+                    colSpan="col-span-2"
+                />
+                </Link>
+                <Block className={`col-span-4 bg-gradient-to-r from-[#5BCEFA] to-[#F5A9B8]`}>
+                    <Button
+                        className="cursor-pointer transition-all duration-300 flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-white bg-white bg-opacity-5"
+                        onPress={() => router.push('https://www.instagram.com/p/DQ9q3UQCD0d/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==')}
+                    >
+                        <div className="text-center relative">
+                            <h1 className={`text-4xl lg:text-4xl leading-tight font-medium ${myFont.className}`}>
+                                PRESIDIO TDOR 2025
+                            </h1>
+                            <h2 className={`text-xl lg:text-2xl leading-tight font-medium ${myFont.className} mt-2`}>
+                                20 Novembre alle 19
+                            </h2>
+                            <h2 className={`text-xl lg:text-2xl leading-tight font-medium ${myFont.className} mt-2`}>
+                                Piazza Duomo (BS)
+                            </h2>
+                            <p className="text-xl font-bold mt-2">
+                                Il 20 novembre 2025 portiamo in piazza la memoria per le vittime di transfobia, la nostra rabbia per le continue violenze sociali e istituzionali, e l&apos;urgenza alla responsabilità collettiva
+                            </p>
+                        </div>
+                    </Button>
+                </Block>
                 <Link href={"/corteo"} className="col-span-2"><ImageBlock
                     src="/images/locandina.png"
                     altText="Locandina del Brescia Pride 2025: 6 Settembre, Esistiamo ovunque, resistiamo unitɜ. Ore 12-21 Apertura parco pride in Campo Marte; H 15.30 - 17:30 Corteo per la città"

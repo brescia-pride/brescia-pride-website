@@ -36,7 +36,7 @@ export default function Homepage() {
                 </Link>
                 <Block className={`col-span-4 bg-gradient-to-r from-[#5BCEFA] to-[#F5A9B8]`}>
                     <Button
-                        className="cursor-pointer transition-all duration-300 flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-white bg-white bg-opacity-5"
+                        className="cursor-pointer transition-all duration-300 flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden text-white bg-purple bg-opacity-10"
                         onPress={() => router.push('https://www.instagram.com/p/DQ9q3UQCD0d/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==')}
                     >
                         <div className="text-center relative">
@@ -46,11 +46,11 @@ export default function Homepage() {
                             <h2 className={`text-xl lg:text-2xl leading-tight font-medium ${myFont.className} mt-2`}>
                                 20 Novembre alle 19
                             </h2>
-                            <h2 className={`text-xl lg:text-2xl leading-tight font-medium ${myFont.className} mt-2`}>
+                            <h2 className={`text-xl lg:text-2xl leading-tight font-medium ${myFont.className}`}>
                                 Piazza Duomo (BS)
                             </h2>
                             <p className="text-xl font-bold mt-2">
-                                Il 20 novembre 2025 portiamo in piazza la memoria per le vittime di transfobia, la nostra rabbia per le continue violenze sociali e istituzionali, e l&apos;urgenza alla responsabilità collettiva
+                                Il 20 novembre 2025 portiamo in piazza la memoria per le vittime di transfobia, la nostra rabbia per le continue violenze sociali e istituzionali, e l&apos;urgenza alla responsabilità collettiva!
                             </p>
                         </div>
                     </Button>

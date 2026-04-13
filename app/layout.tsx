@@ -13,13 +13,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Brescia Pride",
   description:
-    "Vi aspettiamo ai nostri eventi e al corteo il 6 settembre 2025!",
-  keywords: "Brescia Pride, Brescia Pride 2025, Pride",
+    "Vi aspettiamo ai nostri eventi e al corteo il 5 settembre 2026!",
+  keywords: "Brescia Pride, Brescia Pride 2026, Pride, Corteo, Eventi Brescia, Queer Brescia, LGBTQIA+ Brescia",
   authors: [{ name: "Brescia Pride" }],
   openGraph: {
     title: "Brescia Pride",
     description:
-      "Vi aspettiamo ai nostri eventi e al corteo il 6 settembre 2025!",
+      "Vi aspettiamo ai nostri eventi e al corteo il 5 settembre 2026!",
     locale: "it_IT",
   },
 };

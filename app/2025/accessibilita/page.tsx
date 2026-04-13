@@ -14,7 +14,7 @@ import Link from "next/link";
 import localFont from "next/font/local";
 import Block from "../../ui/components/Block";
 
-const myFont = localFont({ src: "../ui/fonts/ST.ttf" });
+const myFont = localFont({ src: "../../ui/fonts/ST.ttf" });
 
 export default function AccessibilitaPage() {
   return (

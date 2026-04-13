@@ -27,7 +27,7 @@ export default function Homepage() {
       >
         <Header size={6} />
         <ImageBlock
-          src="/images/manifesto-post.png"
+          src="/images/date-2026.png"
           altText="Ci vediamo al Pride il 5 settembre 2026"
           showOnMobile={true}
           colSpan="col-span-2"

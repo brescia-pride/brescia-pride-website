@@ -1,27 +1,27 @@
 import SocialCard from "../SocialCard";
-import {SiFacebook, SiTiktok, SiInstagram} from "react-icons/si";
+import { SiFacebook, SiTiktok, SiInstagram } from "react-icons/si";
 
 const SocialsBlock = () => (
-    <>
-        <SocialCard
-            href="https://www.instagram.com/bresciapride"
-            icon={<SiInstagram />}
-            backgroundColor="pink"
-            iconColor="red"
-        />
-        <SocialCard
-            href="https://www.tiktok.com/@bresciapride"
-            icon={<SiTiktok />}
-            backgroundColor="lime"
-            iconColor="blue"
-        />
-        <SocialCard
-            href="https://www.facebook.com/BresciaPride"
-            icon={<SiFacebook />}
-            backgroundColor="lilac"
-            iconColor="green"
-        />
-        {/* <Block
+  <>
+    <SocialCard
+      href="https://www.instagram.com/bresciapride"
+      icon={<SiInstagram />}
+      backgroundColor="pink"
+      iconColor="red"
+    />
+    <SocialCard
+      href="https://www.tiktok.com/@bresciapride"
+      icon={<SiTiktok />}
+      backgroundColor="lime"
+      iconColor="blue"
+    />
+    <SocialCard
+      href="https://www.facebook.com/BresciaPride"
+      icon={<SiFacebook />}
+      backgroundColor="lilac"
+      iconColor="green"
+    />
+    {/* <Block
             whileHover={{
                 rotate: "2.5deg",
                 scale: 1.1,
@@ -36,7 +36,7 @@ const SocialsBlock = () => (
                 <SiGmail/>
             </a>
         </Block> */}
-        {/* <Block
+    {/* <Block
       whileHover={{
         rotate: "2.5deg",
         scale: 1.1,
@@ -51,7 +51,7 @@ const SocialsBlock = () => (
         <SiLinktree />
       </a>
     </Block> */}
-        {/* <Block
+    {/* <Block
       whileHover={{
         rotate: "2.5deg",
         scale: 1.1,
@@ -66,7 +66,7 @@ const SocialsBlock = () => (
         <SiPaypal />
       </a>
     </Block> */}
-    </>
+  </>
 );
 
 SocialsBlock.displayName = "SocialsBlock";

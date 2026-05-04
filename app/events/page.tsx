@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Header from "@/app/ui/components/Header";
 import CustomFooter from "../ui/components/CustomFooter";
 import InfoCard from "../ui/components/InfoCard";
-import { Link } from "react-aria-components";
+import UpcomingEventsBlock from "../ui/components/UpcomingEventsBlock";
 
 export default function EventsPage() {
   return (
@@ -19,20 +19,7 @@ export default function EventsPage() {
         className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
       >
         <Header size={6} />
-        <InfoCard
-          title="Tutti i nostri eventi sono sulla nostra pagina Instagram!"
-          backgroundColor="pink"
-          hoverColor="purple"
-          textColor="purple"
-          hoverTextColor="pink"
-          colSpan={4}
-          href="https://www.instagram.com/bresciapride/"
-          isExternal={true}
-        >
-          <p className="text-lg md:text-xl mt-1 font-semibold">
-            Vai su Instagram!
-          </p>
-        </InfoCard>
+        <UpcomingEventsBlock colSpan="col-span-4" verbosity="long" />
         <InfoCard
           title="Queercetto"
           backgroundColor="green"
@@ -45,8 +32,7 @@ export default function EventsPage() {
             Tutti i mercoledì alle 19!
           </p>
           <p className="text-md md:text-lg font-semibold">
-            Scorri in basso per la locandina e scrivici un DM su Instagram o una
-            mail per partecipare 🫶
+            Scrivici un DM su Instagram o una mail per partecipare 🫶
           </p>
         </InfoCard>
         <CustomFooter />

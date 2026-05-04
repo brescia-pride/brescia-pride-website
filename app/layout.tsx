@@ -14,7 +14,8 @@ export const metadata: Metadata = {
   title: "Brescia Pride",
   description:
     "Vi aspettiamo ai nostri eventi e al corteo il 5 settembre 2026!",
-  keywords: "Brescia Pride, Brescia Pride 2026, Pride, Corteo, Eventi Brescia, Queer Brescia, LGBTQIA+ Brescia",
+  keywords:
+    "Brescia Pride, Brescia Pride 2026, Pride, Corteo, Eventi Brescia, Queer Brescia, LGBTQIA+ Brescia",
   authors: [{ name: "Brescia Pride" }],
   openGraph: {
     title: "Brescia Pride",

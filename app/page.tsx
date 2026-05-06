@@ -36,7 +36,7 @@ export default function Homepage() {
         <UpcomingEventsBlock
           colSpan="col-span-2"
           verbosity="short"
-          pageSize={3}
+          pageSize={2}
         />
         <Link
           href={"https://forms.gle/K6iKJBiz28uDQPjt6"}
@@ -46,17 +46,20 @@ export default function Homepage() {
             src="/images/food-truck-2026.png"
             altText="Open Call Area Food per il Brescia Pride 2026"
             showOnMobile={true}
-            linkText="Vai al modulo"
+            linkText="👉 Vai al modulo"
             link="https://forms.gle/K6iKJBiz28uDQPjt6"
             colSpan="col-span-2"
           />
         </Link>
-        <Link href={"https://forms.gle/fe1SE5YSDpXCgNrY7"} className="col-span-2">
+        <Link
+          href={"https://forms.gle/fe1SE5YSDpXCgNrY7"}
+          className="col-span-2"
+        >
           <ImageBlock
             src="/images/market-2026.png"
             altText="Open Call Area Market e spazio espositivo per il Brescia Pride 2026"
             showOnMobile={true}
-            linkText="Vai al modulo"
+            linkText="👉 Vai al modulo"
             link="https://forms.gle/fe1SE5YSDpXCgNrY7"
             colSpan="col-span-2"
           />

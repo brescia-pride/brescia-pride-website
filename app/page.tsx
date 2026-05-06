@@ -51,16 +51,16 @@ export default function Homepage() {
             colSpan="col-span-2"
           />
         </Link>
-        {/* <Link href={"https://forms.gle/fe1SE5YSDpXCgNrY7"} className="col-span-2">
+        <Link href={"https://forms.gle/fe1SE5YSDpXCgNrY7"} className="col-span-2">
           <ImageBlock
-            src="/images/food-truck-2026.png"
+            src="/images/market-2026.png"
             altText="Open Call Area Market e spazio espositivo per il Brescia Pride 2026"
             showOnMobile={true}
             linkText="Vai al modulo"
             link="https://forms.gle/fe1SE5YSDpXCgNrY7"
             colSpan="col-span-2"
           />
-        </Link> */}
+        </Link>
         <Link href={"/docs/manifesto-2025.pdf"} className="col-span-2">
           <ImageBlock
             src="/images/manifesto-post.png"

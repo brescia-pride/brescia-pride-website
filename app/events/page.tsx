@@ -6,6 +6,8 @@ import Header from "@/app/ui/components/Header";
 import CustomFooter from "../ui/components/CustomFooter";
 import InfoCard from "../ui/components/InfoCard";
 import UpcomingEventsBlock from "../ui/components/UpcomingEventsBlock";
+import Calendar from "../ui/components/Calendar";
+import Block from "../ui/components/Block";
 
 export default function EventsPage() {
   return (
@@ -19,14 +21,15 @@ export default function EventsPage() {
         className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
       >
         <Header size={6} />
-        <UpcomingEventsBlock colSpan="col-span-4" verbosity="long" />
+        <Calendar />
+        <UpcomingEventsBlock colSpan="col-span-3" verbosity="long" />
         <InfoCard
           title="Queercetto"
           backgroundColor="green"
           hoverColor="pink"
           textColor="pink"
           hoverTextColor="green"
-          colSpan={2}
+          colSpan={6}
         >
           <p className="text-lg md:text-xl mt-1 font-semibold">
             Tutti i mercoledì alle 19!

@@ -39,6 +39,19 @@ export default function Homepage() {
           pageSize={2}
         />
         <Link
+          href={"https://forms.gle/GAbKGVX7uBzJo4du8"}
+          className="col-span-2"
+        >
+          <ImageBlock
+            src="/images/carri-2026.png"
+            altText="Open Call Carri per il Brescia Pride 2026"
+            showOnMobile={true}
+            linkText="👉 Vai al modulo"
+            link="https://forms.gle/GAbKGVX7uBzJo4du8"
+            colSpan="col-span-2"
+          />
+        </Link>
+        <Link
           href={"https://forms.gle/K6iKJBiz28uDQPjt6"}
           className="col-span-2"
         >
@@ -61,16 +74,6 @@ export default function Homepage() {
             showOnMobile={true}
             linkText="👉 Vai al modulo"
             link="https://forms.gle/fe1SE5YSDpXCgNrY7"
-            colSpan="col-span-2"
-          />
-        </Link>
-        <Link href={"/docs/manifesto-2025.pdf"} className="col-span-2">
-          <ImageBlock
-            src="/images/manifesto-post.png"
-            altText="Il Manifesto 2025 è uscito! Leggilo qui!"
-            showOnMobile={true}
-            linkText=""
-            link="/docs/manifesto-2025.pdf"
             colSpan="col-span-2"
           />
         </Link>

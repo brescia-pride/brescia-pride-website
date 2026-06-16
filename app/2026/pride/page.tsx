@@ -2,20 +2,17 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Header from "./ui/components/Header";
-import ImageBlock from "./ui/components/ImageBlock";
-import CustomFooter from "./ui/components/CustomFooter";
-import { Link } from "react-aria-components";
+import Header from "../../ui/components/Header";
+import CustomFooter from "../../ui/components/CustomFooter";
+import ImageBlock from "../../ui/components/ImageBlock";
+import InfoCard from "../../ui/components/InfoCard";
+import DonationSection from "../../ui/components/DonationSection";
+import ApplicationCard from "../../ui/components/ApplicationCard";
+import ResourceCard from "../../ui/components/ResourceCard";
 import { Button } from "react-aria-components";
-import Block from "./ui/components/Block";
-import UpcomingEventsBlock from "./ui/components/UpcomingEventsBlock";
-import { useRouter } from "next/navigation";
-import localFont from "next/font/local";
+import Link from "next/link";
 
-const myFont = localFont({ src: "./ui/fonts/ST.ttf" });
-
-export default function Homepage() {
-  const router = useRouter();
+export default function PridePage() {
   return (
     <div className="min-h-screen px-4 py-6 text-zinc-50">
       <motion.div
@@ -27,24 +24,6 @@ export default function Homepage() {
         className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
       >
         <Header size={6} />
-        <Link
-          href="/2026/pride"
-          className="col-span-2"
-        >
-        <ImageBlock
-          src="/images/date-2026.png"
-          altText="Ci vediamo al Pride il 5 settembre 2026"
-          showOnMobile={true}
-          colSpan="col-span-2"
-          linkText="👉 Tutte le info"
-          link="/2026/pride"
-        />
-        </Link>
-        <UpcomingEventsBlock
-          colSpan="col-span-4"
-          verbosity="short"
-          pageSize={2}
-        />
         <Link
           href={"https://forms.gle/GAbKGVX7uBzJo4du8"}
           className="col-span-2"
@@ -71,14 +50,25 @@ export default function Homepage() {
             colSpan="col-span-2"
           />
         </Link>
-        <Link href={"/sostienici"} className="col-span-2">
-          <ImageBlock
-            src="/images/5x1000.jpg"
-            altText="Dona il 5x1000 a COMITATO BRESCIA PRIDE, Codice Fiscale: 98201800178"
-            showOnMobile={true}
-            colSpan="col-span-2"
-          />
-        </Link>
+        <InfoCard
+          title=""
+          backgroundColor="pink"
+          hoverColor="pink"
+          textColor="red"
+          hoverTextColor="red"
+          colSpan={2}
+        >
+          <p className="text-xl font-bold">
+            Questa pagina è in continuo aggiornamento! Vi aspettiamo il 5
+            settembre! 🫶
+          </p>
+          <p className="text-xl mt-2">
+            Non trovi le info che cerchi?{" "}
+            <Link href="/contact" className="underline">
+              Contattaci!
+            </Link>
+          </p>
+        </InfoCard>
         <CustomFooter />
       </motion.div>
     </div>

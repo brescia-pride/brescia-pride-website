@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Header from "../ui/components/Header";
 import ImageBlock from "../ui/components/ImageBlock";
 import CustomFooter from "../ui/components/CustomFooter";
+import InfoCard from "../ui/components/InfoCard";
 import { Link, Button } from "react-aria-components";
 import Block from "../ui/components/Block";
 import { useRouter } from "next/navigation";
@@ -25,6 +26,19 @@ export default function Homepage() {
         className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
       >
         <Header size={6} />
+        <Link
+          href={"https://forms.gle/fe1SE5YSDpXCgNrY7"}
+          className="col-span-2"
+        >
+          <ImageBlock
+            src="/images/market-2026.png"
+            altText="Open Call Area Market e spazio espositivo per il Brescia Pride 2026"
+            showOnMobile={true}
+            linkText="👉 Vai al modulo"
+            link="https://forms.gle/fe1SE5YSDpXCgNrY7"
+            colSpan="col-span-2"
+          />
+        </Link>
         <Link
           href={
             "https://www.instagram.com/p/DQ9q3UQCD0d/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="
@@ -108,6 +122,21 @@ export default function Homepage() {
             colSpan="col-span-2"
           />
         </Link>
+        <InfoCard
+          title="Queercetto"
+          backgroundColor="green"
+          hoverColor="pink"
+          textColor="pink"
+          hoverTextColor="green"
+          colSpan={2}
+        >
+          <p className="text-lg md:text-xl mt-1 font-semibold">
+            Tutti i mercoledì alle 19!
+          </p>
+          <p className="text-md md:text-lg font-semibold">
+            Scrivici un DM su Instagram o una mail per partecipare 🫶
+          </p>
+        </InfoCard>
         <CustomFooter />
       </motion.div>
     </div>

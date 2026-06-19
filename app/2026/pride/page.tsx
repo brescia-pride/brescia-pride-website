@@ -25,6 +25,19 @@ export default function PridePage() {
       >
         <Header size={6} />
         <Link
+          href={"https://docs.google.com/forms/d/e/1FAIpQLScS3Z6WrGUcrYiqg5NGD2AA70S-eyLBnm9w7_t8rm9jumqymQ/viewform?usp=header"}
+          className="col-span-2"
+        >
+          <ImageBlock
+            src="/images/call-volontari.png"
+            altText="Open Call Volontary per il Brescia Pride 2026"
+            showOnMobile={true}
+            linkText="👉 Vai al modulo"
+            link="https://docs.google.com/forms/d/e/1FAIpQLScS3Z6WrGUcrYiqg5NGD2AA70S-eyLBnm9w7_t8rm9jumqymQ/viewform?usp=header"
+            colSpan="col-span-2"
+          />
+        </Link>
+        <Link
           href={"https://forms.gle/GAbKGVX7uBzJo4du8"}
           className="col-span-2"
         >
@@ -34,19 +47,6 @@ export default function PridePage() {
             showOnMobile={true}
             linkText="👉 Vai al modulo"
             link="https://forms.gle/GAbKGVX7uBzJo4du8"
-            colSpan="col-span-2"
-          />
-        </Link>
-        <Link
-          href={"https://forms.gle/K6iKJBiz28uDQPjt6"}
-          className="col-span-2"
-        >
-          <ImageBlock
-            src="/images/food-truck-2026.png"
-            altText="Open Call Area Food per il Brescia Pride 2026"
-            showOnMobile={true}
-            linkText="👉 Vai al modulo"
-            link="https://forms.gle/K6iKJBiz28uDQPjt6"
             colSpan="col-span-2"
           />
         </Link>

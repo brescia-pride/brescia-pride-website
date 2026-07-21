@@ -27,6 +27,19 @@ export default function Homepage() {
       >
         <Header size={6} />
         <Link
+          href={"https://forms.gle/GAbKGVX7uBzJo4du8"}
+          className="col-span-2"
+        >
+          <ImageBlock
+            src="/images/carri-2026.png"
+            altText="Open Call Carri per il Brescia Pride 2026"
+            showOnMobile={true}
+            linkText="👉 Vai al modulo"
+            link="https://forms.gle/GAbKGVX7uBzJo4du8"
+            colSpan="col-span-2"
+          />
+        </Link>
+        <Link
           href={"https://forms.gle/K6iKJBiz28uDQPjt6"}
           className="col-span-2"
         >

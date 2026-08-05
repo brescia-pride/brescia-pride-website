@@ -26,7 +26,7 @@ const Block = ({ className, id, ...rest }: BlockProps) => {
         stiffness: 400,
         damping: 50,
       }}
-      className={`rounded-lg border border-zinc-700 ${className}`}
+      className={`${className}`}
       id={id}
       {...rest}
     />

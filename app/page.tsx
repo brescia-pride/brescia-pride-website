@@ -1,64 +1,55 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import Header from "./ui/components/Header";
-import ImageBlock from "./ui/components/ImageBlock";
-import CustomFooter from "./ui/components/CustomFooter";
 import { Link } from "react-aria-components";
-import { Button } from "react-aria-components";
-import Block from "./ui/components/Block";
 import UpcomingEventsBlock from "./ui/components/UpcomingEventsBlock";
 import { useRouter } from "next/navigation";
 import localFont from "next/font/local";
-
+import PrideDate from "./ui/components/PrideDate";
+import Block from "./ui/components/Block";
+import ImageBlock from "./ui/components/ImageBlock";
+import InfoCard from "./ui/components/InfoCard";
 const myFont = localFont({ src: "./ui/fonts/ST.ttf" });
 
 export default function Homepage() {
   const router = useRouter();
   return (
-    <div className="min-h-screen px-4 py-6 text-zinc-50">
-      <motion.div
-        initial="initial"
-        animate="animate"
-        transition={{
-          staggerChildren: 0.05,
-        }}
-        className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
-      >
-        <Header size={6} />
-        <Link href="/2026/pride" className="col-span-2">
-          <ImageBlock
-            src="/images/date-2026.png"
-            altText="Ci vediamo al Pride il 5 settembre 2026"
-            showOnMobile={true}
-            colSpan="col-span-2"
-            linkText="👉 Tutte le info"
-            link="/2026/pride"
-          />
-        </Link>
-        <Link
-          href={
-            "https://docs.google.com/forms/d/e/1FAIpQLScS3Z6WrGUcrYiqg5NGD2AA70S-eyLBnm9w7_t8rm9jumqymQ/viewform?usp=header"
-          }
-          className="col-span-2"
-        >
-          <ImageBlock
-            src="/images/call-volontari.png"
-            altText="Open Call Volontary per il Brescia Pride 2026"
-            showOnMobile={true}
-            linkText="👉 Vai al modulo"
-            link="https://docs.google.com/forms/d/e/1FAIpQLScS3Z6WrGUcrYiqg5NGD2AA70S-eyLBnm9w7_t8rm9jumqymQ/viewform?usp=header"
-            colSpan="col-span-2"
-          />
-        </Link>
-        <UpcomingEventsBlock
-          colSpan="col-span-2"
-          verbosity="short"
-          pageSize={2}
+    <div className="flex-col md:grid md:grid-cols-6 ">
+      <PrideDate />
+      <UpcomingEventsBlock
+        colSpan="col-span-3"
+        verbosity="short"
+        pageSize={2}
+      />
+      <Block className="col-span-3 p-4">
+        <ImageBlock
+          src="/images/bandiera.jpg"
+          altText="Mappa del Parco Pride"
+          showOnMobile={true}
+          link="/images/mappa-parco.png"
+          colSpan="col-span-3"
         />
-        <CustomFooter />
-      </motion.div>
+      </Block>
+      <Block className="col-span-3 p-4">
+        <ImageBlock
+          src="/images/bandiera.jpg"
+          altText="Mappa del Parco Pride"
+          showOnMobile={true}
+          link="/images/mappa-parco.png"
+          colSpan="col-span-3"
+        />
+      </Block>
+      <Block className="col-span-3 p-4">
+        <InfoCard
+          title="Accessibilità"
+          backgroundColor="white"
+          hoverColor="pink"
+          textColor="blue"
+          hoverTextColor="blue"
+          colSpan={2}
+        >
+        </InfoCard>
+      </Block>
     </div>
   );
 }

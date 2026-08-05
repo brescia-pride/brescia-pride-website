@@ -9,10 +9,10 @@ const myFont = localFont({ src: "../../fonts/ST.ttf" });
 
 type InfoCardProps = {
   title: string;
-  backgroundColor: "pink" | "green" | "blue" | "purple" | "lilac" | "red";
-  hoverColor: "blue" | "red" | "green" | "pink" | "purple";
-  textColor: "blue" | "red" | "green" | "pink" | "purple";
-  hoverTextColor: "pink" | "green" | "blue" | "red" | "purple" | "red";
+  backgroundColor: "pink" | "green" | "blue" | "purple" | "lilac" | "red" | "lime" | "lightblue";
+  hoverColor: "blue" | "red" | "green" | "pink" | "purple" | "lime" | "lightblue";
+  textColor: "blue" | "red" | "green" | "pink" | "purple" | "lime" | "lightblue";
+  hoverTextColor: "pink" | "green" | "blue" | "red" | "purple" | "red" | "lime" | "lightblue";
   colSpan?: number;
   isClickable?: boolean;
   href?: string;
@@ -43,6 +43,8 @@ const InfoCard = ({
     purple: "bg-purple",
     lilac: "bg-lilac",
     red: "bg-red",
+    lightblue: "bg-lightblue",
+    lime: "bg-lime"
   };
 
   const hoverColorClasses = {
@@ -51,6 +53,8 @@ const InfoCard = ({
     green: "hover:bg-green",
     pink: "hover:bg-pink",
     purple: "hover:bg-purple",
+    lightblue: "hover:bg-lightblue",
+    lime: "hover:bg-lime"
   };
 
   const textColorClasses = {
@@ -59,6 +63,8 @@ const InfoCard = ({
     green: "text-green",
     pink: "text-pink",
     purple: "text-purple",
+    lightblue: "text-lightblue",
+    lime: "text-lime"
   };
 
   const hoverTextColorClasses = {
@@ -67,18 +73,20 @@ const InfoCard = ({
     blue: "hover:text-blue",
     red: "hover:text-red",
     purple: "hover:text-purple",
+    lightblue: "hover:text-lightblue",
+    lime: "hover:text-lime",
   };
 
   const buttonContent = (
     <div
       aria-relevant="all"
       tabIndex={0}
-      className={`cursor-${href || isClickable ? "pointer" : "default"} transition-all duration-300 ${hoverColorClasses[hoverColor]} flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden ${textColorClasses[textColor]} ${hoverTextColorClasses[hoverTextColor]}`}
+      className={`cursor-${href || isClickable ? "pointer" : "default"} transition-all duration-300 ${hoverColorClasses[hoverColor]} flex items-center justify-center h-full w-full p-6 relative overflow-hidden ${textColorClasses[textColor]} ${hoverTextColorClasses[hoverTextColor]}`}
     >
       <div className="text-center relative z-10 text-shadow-lg select-text">
         <h1
           id={id}
-          className={`text-3xl leading-tight font-medium ${myFont.className}`}
+          className={`text-4xl leading-tight font-medium ${myFont.className}`}
         >
           {title}
         </h1>

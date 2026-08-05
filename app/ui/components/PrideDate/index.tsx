@@ -1,45 +1,37 @@
 import Block from "../Block";
+import { Link } from "react-aria-components";
 import localFont from "next/font/local";
-import { useState } from "react";
-import { Button } from "react-aria-components";
 
 const myFont = localFont({ src: "../../fonts/ST.ttf" });
 
 const PrideDate = () => {
-  const [isRevealed, setIsRevealed] = useState(false);
-
   return (
-    <Block className={`col-span-4 bg-blue`}>
-      <Button
-        className="cursor-pointer transition-all duration-300 hover:bg-blue flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden"
-        onPress={() => setIsRevealed((v) => !v)}
-      >
-        {/* Background emoji pattern */}
-        <div
-          className={`absolute inset-0 text-6xl pointer-events-none transition-opacity duration-300 ${isRevealed ? "opacity-10" : "opacity-0"}`}
-        >
-          <div className="grid grid-cols-6 gap-4 h-full w-full items-center justify-items-center">
-            <span>🎉</span>
-            <span>🤫</span>
-            <span>🎉</span>
-            <span>🤫</span>
-            <span>🎉</span>
-            <span>🤫</span>
+    <Block
+      className={`col-span-6 bg-pink text-blue p-6 cursor-pointer transition-all duration-300 hover:bg-blue hover:text-pink relative w-full flex flex-row justify-center items-center`}
+    >
+      <Link href="/2026/pride">
+        <div className="w-50">
+          <div className="mb-4">
+            <h1
+              className={`text-2xl md:text-2xl leading-tight font-medium mr-2 hover:text-pink text-center`}
+            >
+              <p  className="text-shadow-xl">Manifestazione e corteo</p>
+              <p>
+                per i diritti <strong>LGBTQIA+</strong> e per i diritti di tuttɜ
+              </p>
+            </h1>
           </div>
-        </div>
 
-        {/* Main content */}
-        <div className="text-center relative z-10 text-shadow-lg">
-          <h1
-            className={`text-2xl md:text-4xl leading-tight ${myFont.className} text-pink transition-all duration-300`}
+          <div className="text-right">quando????</div>
+          <div
+            className={`text-4xl md:text-6xl leading-tight font-medium mr-2 transition-transform transition-colors duration-300 hover:scale-110 hover:text-pink-800 ${myFont.className} text-center`}
           >
-            {isRevealed ? "6 Settembre 2025" : "Quando è il pride?"}
-          </h1>
-          <p className="text-xl mt-2 transition-all duration-300 text-pink">
-            {isRevealed ? "📍 Campo Marte" : "👆👆👆"}
-          </p>
+            <h1 className="text-shadow-xl">5 settembre</h1>
+            <h1>Campo Marte</h1>
+          </div>
+          <div className="text-left">dove?</div>
         </div>
-      </Button>
+      </Link>
     </Block>
   );
 };

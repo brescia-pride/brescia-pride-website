@@ -49,7 +49,7 @@ const ResourceCard = ({
   return (
     <Block className={`col-span-${colSpan} bg-pink ${className}`}>
       <Button
-        className={`cursor-pointer transition-all duration-300 flex h-full w-full p-6 rounded-lg relative overflow-hidden ${hoverColorClasses[hoverColor]}`}
+        className={`cursor-pointer transition-all duration-300 flex h-full w-full p-6 relative overflow-hidden ${hoverColorClasses[hoverColor]}`}
         onPress={handlePress}
       >
         <div className="text-left relative z-10 text-shadow-lg select-text">

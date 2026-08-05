@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
-import { motion } from "framer-motion";
 import Header from "./ui/components/Header";
+import CustomFooter from "./ui/components/CustomFooter";
+import { MotionDiv } from "./ui/components/Motion";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,8 +30,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="it">
       <body
-        className={`${inter.className} bg-neutral-200 min-h-screen focus-visible:outline-none`}
+        className={`${inter.className} bg-white focus-visible:outline-none relative min-h-screen w-lg mx-auto md:max-w-7xl gap-4`}
       >
+        <Header />
+        {/* <MotionDiv> */}
         <main
           id="main-content"
           role="main"
@@ -39,6 +42,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         >
           {children}
         </main>
+        {/* </MotionDiv> */}
+        <CustomFooter />
       </body>
     </html>
   );

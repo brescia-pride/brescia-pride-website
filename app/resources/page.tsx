@@ -1,25 +1,24 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import Header from "../ui/components/Header";
-import CustomFooter from "../ui/components/CustomFooter";
-import YearSection from "../ui/components/YearSection";
 import ResourceCard from "../ui/components/ResourceCard";
+import localFont from "next/font/local";
+import Block from "../ui/components/Block";
+
+const myFont = localFont({ src: "../ui/fonts/ST.ttf" });
 
 export default function ResourcesPage() {
   return (
-    <div className="min-h-screen px-4 py-6 text-zinc-50">
-      <motion.div
-        initial="initial"
-        animate="animate"
-        transition={{
-          staggerChildren: 0.05,
-        }}
-        className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
+    <div>
+      <Block
+        className={`col-span-6 bg-white items-center justify-center`}
       >
-        <Header size={6} />
-        <YearSection year="2025" backgroundColor="green">
+        <h1
+          className={`text-2xl md:text-4xl lg:col-span-4 text-center ${myFont.className} text-blue tracking-wider leading-tight mt-4`}
+        >
+          2025
+        </h1>
+        <div className="grid grid-cols-3 mt-4">
           <ResourceCard
             title="Manifesto 2025"
             description="Esistiamo ovunque, resistiamo unitɜ."
@@ -36,8 +35,17 @@ export default function ResourcesPage() {
             hoverColor="red"
             colSpan={3}
           />
-        </YearSection>
-        <YearSection year="2024" backgroundColor="purple">
+        </div>
+      </Block>
+      <Block
+        className={`col-span-6 bg-white items-center justify-center`}
+      >
+        <h1
+          className={`text-2xl md:text-4xl lg:col-span-4 text-center ${myFont.className} text-blue tracking-wider leading-tight mt-4`}
+        >
+          2024
+        </h1>
+        <div className="grid grid-cols-3 mt-4">
           <ResourceCard
             title="Manifesto 2024"
             description="Siamo una realtà intersezionale, transfemminista, antifascista, gentile e autogestita."
@@ -63,9 +71,8 @@ export default function ResourcesPage() {
             hoverColor="green"
             colSpan={3}
           />
-        </YearSection>
-        <CustomFooter />
-      </motion.div>
+        </div>
+      </Block>
     </div>
   );
 }

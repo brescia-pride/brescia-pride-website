@@ -1,12 +1,12 @@
+"use client";
+
 import localFont from "next/font/local";
 import { Link } from "react-aria-components";
 import Block from "../Block";
 
-const myFont = localFont({ src: "../../fonts/ST.ttf" });
-
 const CustomFooter = () => {
   return (
-    <Block className={`col-span-6 p-6 bg-lilac text-green`}>
+    <Block className={`bg-white text-black p-6 border-t-4`}>
       <div className="flex w-full flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div className={"list-none"} tabIndex={0}>
           <span>
@@ -28,7 +28,7 @@ const CustomFooter = () => {
         </div>
         <Link
           href="/archive"
-          className={`shrink-0 self-end font-medium no-underline md:self-auto ${myFont.className}`}
+          className={`shrink-0 self-end font-medium md:self-auto underline`}
         >
           Archivio
         </Link>

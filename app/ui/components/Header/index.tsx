@@ -11,14 +11,10 @@ import { useRouter } from "next/navigation";
 const myFont = localFont({ src: "../../fonts/ST.ttf" });
 
 type BlockProps = {
-  size?: number | 4;
+  className: string;
 };
 
-type ColorName = {
-  color: string;
-};
-
-const Header = ({ size }: BlockProps) => {
+const Header = ({ className }: BlockProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const router = useRouter();
@@ -36,12 +32,12 @@ const Header = ({ size }: BlockProps) => {
 
   return (
     <Block
-      className={`w-full bg-${defaultBackgroundColor} text-${defaultColor} sticky text-center p-4`}
+      className={`w-full bg-${defaultBackgroundColor} text-${defaultColor} sticky text-center p-4 ${className}`}
     >
       <div className="flex justify-between items-center place-items-center">
         <Link href="/" aria-label="header">
           <h1
-            className={`text-3xl md:text-3xl leading-tight font-medium mr-2 flex-1 ${myFont.className}`}
+            className={`text-3xl md:text-5xl leading-tight font-medium mr-2 flex-1 ${myFont.className}`}
             aria-label="Brescia Pride"
           >
             Brescia Pride
@@ -66,10 +62,21 @@ const Header = ({ size }: BlockProps) => {
                 router.push("/2026/pride");
                 changeColor("blue");
                 changeBackgroundColor("lightblue");
-                toggleMenu()
+                toggleMenu();
               }}
             >
               Pride 2026
+            </MenuItem>
+            <MenuItem
+              className="cursor-pointer flex-1 transition-all duration-300 hover:bg-green hover:text-white rounded"
+              onAction={() => {
+                router.push("/2026/accessibilita");
+                changeColor("green");
+                changeBackgroundColor("lime");
+                toggleMenu();
+              }}
+            >
+              Accessibilità
             </MenuItem>
             <MenuItem
               className="cursor-pointer flex-1 transition-all duration-300 hover:bg-purple hover:text-white rounded"
@@ -77,7 +84,7 @@ const Header = ({ size }: BlockProps) => {
                 router.push("/events");
                 changeColor("purple");
                 changeBackgroundColor("lilac");
-                toggleMenu()
+                toggleMenu();
               }}
             >
               Eventi
@@ -88,7 +95,7 @@ const Header = ({ size }: BlockProps) => {
                 router.push("/sostienici");
                 changeColor("green");
                 changeBackgroundColor("lime");
-                toggleMenu()
+                toggleMenu();
               }}
             >
               Sostienici
@@ -105,7 +112,7 @@ const Header = ({ size }: BlockProps) => {
                 router.push("/resources");
                 changeColor("red");
                 changeBackgroundColor("pink");
-                toggleMenu()
+                toggleMenu();
               }}
             >
               Risorse
@@ -116,7 +123,7 @@ const Header = ({ size }: BlockProps) => {
                 router.push("/contact");
                 changeColor("blue");
                 changeBackgroundColor("lightblue");
-                toggleMenu()
+                toggleMenu();
               }}
             >
               Contatti

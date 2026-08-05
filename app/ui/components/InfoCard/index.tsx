@@ -10,6 +10,7 @@ const myFont = localFont({ src: "../../fonts/ST.ttf" });
 type InfoCardProps = {
   title: string;
   backgroundColor:
+    | "white"
     | "pink"
     | "green"
     | "blue"
@@ -19,6 +20,7 @@ type InfoCardProps = {
     | "lime"
     | "lightblue";
   hoverColor:
+    | "white"
     | "blue"
     | "red"
     | "green"
@@ -67,6 +69,7 @@ const InfoCard = ({
   id,
 }: InfoCardProps) => {
   const bgColorClasses = {
+    white: "bg-white",
     pink: "bg-pink",
     green: "bg-green",
     blue: "bg-blue",
@@ -78,6 +81,7 @@ const InfoCard = ({
   };
 
   const hoverColorClasses = {
+    white: "hover:bg-white",
     blue: "hover:bg-blue",
     red: "hover:bg-red",
     green: "hover:bg-green",

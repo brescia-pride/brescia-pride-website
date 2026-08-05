@@ -35,7 +35,6 @@ export default function AccessibilitaPage() {
         }}
         className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
       >
-        <Header size={6} />
         <InfoCard
           title="Accessibilità"
           backgroundColor="pink"

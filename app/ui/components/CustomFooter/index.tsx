@@ -4,9 +4,13 @@ import localFont from "next/font/local";
 import { Link } from "react-aria-components";
 import Block from "../Block";
 
-const CustomFooter = () => {
+type BlockProps = {
+  className?: string | "";
+};
+
+const CustomFooter = ({ className }: BlockProps) => {
   return (
-    <Block className={`bg-white text-black p-6 border-t-4`}>
+    <Block className={`bg-white text-black p-6 ${className}`}>
       <div className="flex w-full flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div className={"list-none"} tabIndex={0}>
           <span>

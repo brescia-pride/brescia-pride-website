@@ -29,20 +29,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="it">
       <body
-        className={`${inter.className} bg-white focus-visible:outline-none relative min-h-screen w-lg mx-auto md:max-w-7xl gap-4`}
+        className={`${inter.className} bg-white focus-visible:outline-none relative w-lg mx-auto md:max-w-7xl md:shadow-2xl flex flex-col justify-between min-h-screen`}
       >
-        <Header />
-        {/* <MotionDiv> */}
+        <Header className="" />
         <main
           id="main-content"
           role="main"
-          className="focus:outline-none"
+          className="focus:outline-none flex-1"
           tabIndex={-1}
         >
           {children}
         </main>
-        {/* </MotionDiv> */}
-        <CustomFooter />
+        <CustomFooter className="" />
       </body>
     </html>
   );

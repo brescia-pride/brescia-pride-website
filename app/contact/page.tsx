@@ -8,29 +8,31 @@ import SocialsBlock from "../ui/components/SocialsBlock";
 import InfoCard from "../ui/components/InfoCard";
 import DonationSection from "../ui/components/DonationSection";
 import { Link } from "react-aria-components";
+import Block from "../ui/components/Block";
+import localFont from "next/font/local";
+
+const myFont = localFont({ src: "../ui/fonts/ST.ttf" });
 
 export default function ContactsPage() {
   return (
-    <div>
-      <InfoCard
-        title="Scrivici!"
-        backgroundColor="pink"
-        hoverColor="blue"
-        textColor="blue"
-        hoverTextColor="pink"
-        colSpan={3}
-        isClickable={false}
-      >
-        <p className="text-xl font-bold">
+    <Block>
+      <Block className="p-8 bg-lightblue text-center">
+        <h1 className={`text-4xl md:text-6xl ${myFont.className} text-blue`}>
+          Contatti
+        </h1>
+        <p className="text-2xl text-blue mt-2">
           Per qualsiasi informazione, domanda o richiesta di collaborazione,
           puoi contattarci via mail a{" "}
-          <Link className={`underline`} href="mailto:info@bresciapride.it">
+          <Link
+            className={`font-bold underline`}
+            href="mailto:info@bresciapride.it"
+          >
             info@bresciapride.it
           </Link>{" "}
           o tramite i nostri canali social!
         </p>
-      </InfoCard>
+      </Block>
       <SocialsBlock />
-    </div>
+    </Block>
   );
 }

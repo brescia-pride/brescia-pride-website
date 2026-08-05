@@ -97,9 +97,9 @@ export default function Calendar() {
     });
 
   return (
-    <Block className="bg-lime flex grid md:grid-cols-2 grid-cols-1">
+    <Block className="bg-white flex grid md:grid-cols-2 grid-cols-1">
       <Block className="p-5">
-        <div className="bg-lime p-3">
+        <div className="bg-white p-3">
           <div>
             <h2
               className={`text-3xl text-center font-medium text-blue leading-tight ${myFont.className}`}
@@ -182,7 +182,7 @@ export default function Calendar() {
           </div>
         </div>
       </Block>
-      <Block className="p-5 bg-pink">
+      <Block className="p-5 bg-white">
         {selectedDate ? (
           <div className="flex-auto">
             <div>

@@ -26,11 +26,11 @@ export default function SostieniciPage() {
 
   return (
     <Block>
-      <Block className="p-8 bg-lightblue text-center">
-        <h1 className={`text-4xl md:text-6xl ${myFont.className} text-blue`}>
+      <Block className="p-8 bg-lime text-center">
+        <h1 className={`text-4xl md:text-6xl ${myFont.className} text-green`}>
           Sostienici
         </h1>
-        <p className={`lg:col-span-6 text-2xl text-blue mt-2`}>
+        <p className={`lg:col-span-6 text-2xl text-green mt-2`}>
           Brescia Pride è un pride <b>autofinanziato</b> e <b>indipendente</b>.
         </p>
       </Block>
@@ -51,7 +51,7 @@ export default function SostieniciPage() {
           </li>
         </ul>
       </Block>
-      <Block className="flex-col md:grid md:grid-cols-3">
+      <Block className="flex-col md:grid md:grid-cols-3 divide-x-4">
         <Block className="p-4 col-span-1">
           <h2 className={`text-3xl md:text-4xl ${myFont.className} text-blue`}>
             Bonifico
@@ -105,6 +105,14 @@ export default function SostieniciPage() {
             Copia il Codice Fiscale
           </Button>
         </Block>
+      </Block>
+      <Block className="p-4 col-span-1">
+        <h3 className={`lg:col-span-6 text-xl mt-2`}>
+          Non trovi quello che cerchi?{" "}
+          <Link href="/contact" className="font-bold underline">
+            Scrivici!
+          </Link>
+        </h3>
       </Block>
     </Block>
   );

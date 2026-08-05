@@ -14,14 +14,29 @@ type BlockProps = {
   size?: number | 4;
 };
 
+type ColorName = {
+  color: string;
+};
+
 const Header = ({ size }: BlockProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggle = () => setMenuOpen(!menuOpen);
   const router = useRouter();
 
+  const [defaultColor, newColor] = useState("red");
+  const [defaultBackgroundColor, newBackgroundColor] = useState("white");
+
+  function changeColor(color: string) {
+    newColor(color);
+  }
+
+  function changeBackgroundColor(color: string) {
+    newBackgroundColor(color);
+  }
+
   return (
     <Block
-      className={`w-full bg-white text-red sticky text-center p-4 border-b-4`}
+      className={`w-full bg-${defaultBackgroundColor} text-${defaultColor} sticky text-center p-4`}
     >
       <div className="flex justify-between items-center place-items-center">
         <Link href="/" aria-label="header">
@@ -44,22 +59,34 @@ const Header = ({ size }: BlockProps) => {
       </div>
       {menuOpen === true && (
         <div>
-          <Menu className="md:flex w-full text-red text-2xl mt-4 border-white">
+          <Menu className="md:flex w-full text-${defaultColor} text-2xl mt-4 border-white">
             <MenuItem
               className="cursor-pointer flex-1 transition-all duration-300 hover:bg-blue hover:text-white rounded"
-              onAction={() => router.push("/2026/pride")}
+              onAction={() => {
+                router.push("/2026/pride");
+                changeColor("blue");
+                changeBackgroundColor("lightblue");
+              }}
             >
               Pride 2026
             </MenuItem>
             <MenuItem
               className="cursor-pointer flex-1 transition-all duration-300 hover:bg-purple hover:text-white rounded"
-              onAction={() => router.push("/events")}
+              onAction={() => {
+                router.push("/events");
+                changeColor("purple");
+                changeBackgroundColor("lilac");
+              }}
             >
               Eventi
             </MenuItem>
             <MenuItem
               className="cursor-pointer flex-1 transition-all duration-300 hover:bg-green hover:text-white rounded"
-              onAction={() => router.push("/sostienici")}
+              onAction={() => {
+                router.push("/sostienici");
+                changeColor("green");
+                changeBackgroundColor("lime");
+              }}
             >
               Sostienici
             </MenuItem>
@@ -70,14 +97,22 @@ const Header = ({ size }: BlockProps) => {
               Manifesto
             </MenuItem>
             <MenuItem
-              className="cursor-pointer flex-1 transition-all duration-300 hover:bg-fuchsia hover:text-white rounded"
-              onAction={() => router.push("/resources")}
+              className="cursor-pointer flex-1 transition-all duration-300 hover:bg-red hover:text-white rounded"
+              onAction={() => {
+                router.push("/resources");
+                changeColor("red");
+                changeBackgroundColor("pink");
+              }}
             >
               Risorse
             </MenuItem>
             <MenuItem
               className="cursor-pointer flex-1 transition-all duration-300 hover:bg-blue hover:text-white rounded"
-              onAction={() => router.push("/contact")}
+              onAction={() => {
+                router.push("/contact");
+                changeColor("blue");
+                changeBackgroundColor("lightblue");
+              }}
             >
               Contatti
             </MenuItem>

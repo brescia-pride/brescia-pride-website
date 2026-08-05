@@ -6,8 +6,8 @@ import Block from "../Block";
 type SocialCardProps = {
   href: string;
   icon: React.ReactNode;
-  backgroundColor: "pink" | "lime" | "lilac" | "green" | "blue" | "cream";
-  iconColor: "red" | "blue" | "green" | "black";
+  backgroundColor: "pink" | "lime" | "lilac" | "green" | "lightblue" | "cream";
+  iconColor: "red" | "blue" | "green" | "black" | "purple";
   className?: string;
 };
 
@@ -19,12 +19,12 @@ const SocialCard = ({
   className = "",
 }: SocialCardProps) => {
   const bgColorClasses = {
-    pink: "bg-pink",
-    lime: "bg-lime",
-    lilac: "bg-lilac",
-    green: "bg-green",
-    blue: "bg-blue",
-    cream: "bg-cream",
+    pink: "hover:bg-pink",
+    lime: "hover:bg-lime",
+    lilac: "hover:bg-lilac",
+    green: "hover:bg-green",
+    lightblue: "hover:bg-lightblue",
+    cream: "hover:bg-cream",
   };
 
   const iconColorClasses = {
@@ -32,21 +32,18 @@ const SocialCard = ({
     blue: "text-blue",
     green: "text-green",
     black: "text-black",
+    purple: "text-purple",
   };
 
   return (
     <Block
-      whileHover={{
-        rotate: "-2.5deg",
-        scale: 1.1,
-      }}
       className={`w-100 ${bgColorClasses[backgroundColor]} p-6 ${className}`}
     >
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={`grid h-full place-content-center text-4xl ${iconColorClasses[iconColor]} hover:text-6xl transition-all duration-300`}
+        className={`grid h-full place-content-center text-4xl ${iconColorClasses[iconColor]}`}
       >
         {icon}
       </a>

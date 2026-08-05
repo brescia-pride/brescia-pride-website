@@ -39,7 +39,7 @@ export default function SostieniciPage() {
         </p>
         <p className="text-lg mt-2 break-all">{iban}</p>
         <Button className="rounded bg-blue text-white hover:bg-pink p-2 mt-2" onPress={() => writeClipboard()}
-        >Copia l'IBAN</Button>
+        >Copia l&apos;IBAN</Button>
         <h2 className={`text-2xl md:text-4xl ${myFont.className} text-blue mt-4`}>
           Paypal
         </h2>

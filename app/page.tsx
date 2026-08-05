@@ -40,15 +40,6 @@ export default function Homepage() {
         />
       </Block>
       <Block className="col-span-3 p-4">
-        <InfoCard
-          title="Accessibilità"
-          backgroundColor="white"
-          hoverColor="pink"
-          textColor="blue"
-          hoverTextColor="blue"
-          colSpan={2}
-        >
-        </InfoCard>
       </Block>
     </div>
   );

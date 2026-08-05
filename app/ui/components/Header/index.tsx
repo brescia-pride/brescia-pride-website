@@ -20,7 +20,7 @@ type ColorName = {
 
 const Header = ({ size }: BlockProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const toggle = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
   const router = useRouter();
 
   const [defaultColor, newColor] = useState("red");
@@ -48,7 +48,7 @@ const Header = ({ size }: BlockProps) => {
           </h1>
         </Link>
         <MenuTrigger>
-          <Button aria-label="Menu toggle" onClick={toggle}>
+          <Button aria-label="Menu toggleMenu" onClick={toggleMenu}>
             {menuOpen === false ? (
               <FiMenu className="w-9 h-9" />
             ) : (
@@ -66,6 +66,7 @@ const Header = ({ size }: BlockProps) => {
                 router.push("/2026/pride");
                 changeColor("blue");
                 changeBackgroundColor("lightblue");
+                toggleMenu()
               }}
             >
               Pride 2026
@@ -76,6 +77,7 @@ const Header = ({ size }: BlockProps) => {
                 router.push("/events");
                 changeColor("purple");
                 changeBackgroundColor("lilac");
+                toggleMenu()
               }}
             >
               Eventi
@@ -86,6 +88,7 @@ const Header = ({ size }: BlockProps) => {
                 router.push("/sostienici");
                 changeColor("green");
                 changeBackgroundColor("lime");
+                toggleMenu()
               }}
             >
               Sostienici
@@ -101,7 +104,7 @@ const Header = ({ size }: BlockProps) => {
               onAction={() => {
                 router.push("/resources");
                 changeColor("red");
-                changeBackgroundColor("pink");
+                toggleMenu()
               }}
             >
               Risorse
@@ -112,6 +115,7 @@ const Header = ({ size }: BlockProps) => {
                 router.push("/contact");
                 changeColor("blue");
                 changeBackgroundColor("lightblue");
+                toggleMenu()
               }}
             >
               Contatti

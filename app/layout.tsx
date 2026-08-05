@@ -4,7 +4,6 @@ import "./globals.css";
 import { ReactNode } from "react";
 import Header from "./ui/components/Header";
 import CustomFooter from "./ui/components/CustomFooter";
-import { MotionDiv } from "./ui/components/Motion";
 
 const inter = Inter({
   subsets: ["latin"],

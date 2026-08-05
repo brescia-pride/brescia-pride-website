@@ -5,12 +5,7 @@ import localFont from "next/font/local";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-aria-components";
 import { FiX, FiMenu } from "react-icons/fi";
-import {
-  Button,
-  MenuTrigger,
-  Menu,
-  MenuItem,
-} from "react-aria-components";
+import { Button, MenuTrigger, Menu, MenuItem } from "react-aria-components";
 import { useRouter } from "next/navigation";
 
 const myFont = localFont({ src: "../../fonts/ST.ttf" });
@@ -25,7 +20,9 @@ const Header = ({ size }: BlockProps) => {
   const router = useRouter();
 
   return (
-    <Block className={`w-full bg-white text-red sticky text-center p-4 border-b-4`}>
+    <Block
+      className={`w-full bg-white text-red sticky text-center p-4 border-b-4`}
+    >
       <div className="flex justify-between items-center place-items-center">
         <Link href="/" aria-label="header">
           <h1
@@ -37,7 +34,11 @@ const Header = ({ size }: BlockProps) => {
         </Link>
         <MenuTrigger>
           <Button aria-label="Menu toggle" onClick={toggle}>
-            {menuOpen === false ? (<FiMenu className="w-9 h-9" />) : (<FiX className="w-9 h-9" />)}
+            {menuOpen === false ? (
+              <FiMenu className="w-9 h-9" />
+            ) : (
+              <FiX className="w-9 h-9" />
+            )}
           </Button>
         </MenuTrigger>
       </div>
@@ -81,7 +82,6 @@ const Header = ({ size }: BlockProps) => {
               Contatti
             </MenuItem>
           </Menu>
-
         </div>
       )}
     </Block>

@@ -39,8 +39,7 @@ export default function Homepage() {
           colSpan="col-span-3"
         />
       </Block>
-      <Block className="col-span-3 p-4">
-      </Block>
+      <Block className="col-span-3 p-4"></Block>
     </div>
   );
 }

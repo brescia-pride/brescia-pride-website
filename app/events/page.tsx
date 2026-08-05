@@ -6,7 +6,7 @@ import Calendar from "../ui/components/Calendar";
 export default function EventsPage() {
   return (
     <div>
-        <Calendar />
+      <Calendar />
     </div>
   );
 }

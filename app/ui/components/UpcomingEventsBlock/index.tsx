@@ -43,12 +43,9 @@ const UpcomingEventsBlock = ({
         </h1>
       </Link>
       <Link href="/events">
-        <p className="text-fuchsia text-left">
-          Vai a tutti gli eventi
-        </p>
+        <p className="text-fuchsia text-left">Vai a tutti gli eventi</p>
       </Link>
       <div className="flex flex-col justify-between m-4">
-
         <div className="flex-1 flex flex-col">
           {events === null ? (
             <div className="flex flex-col gap-2">
@@ -77,7 +74,6 @@ const UpcomingEventsBlock = ({
           )}
         </div>
       </div>
-
     </Block>
   );
 };

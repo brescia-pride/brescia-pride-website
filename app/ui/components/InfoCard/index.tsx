@@ -9,10 +9,40 @@ const myFont = localFont({ src: "../../fonts/ST.ttf" });
 
 type InfoCardProps = {
   title: string;
-  backgroundColor: "pink" | "green" | "blue" | "purple" | "lilac" | "red" | "lime" | "lightblue";
-  hoverColor: "blue" | "red" | "green" | "pink" | "purple" | "lime" | "lightblue";
-  textColor: "blue" | "red" | "green" | "pink" | "purple" | "lime" | "lightblue";
-  hoverTextColor: "pink" | "green" | "blue" | "red" | "purple" | "red" | "lime" | "lightblue";
+  backgroundColor:
+    | "pink"
+    | "green"
+    | "blue"
+    | "purple"
+    | "lilac"
+    | "red"
+    | "lime"
+    | "lightblue";
+  hoverColor:
+    | "blue"
+    | "red"
+    | "green"
+    | "pink"
+    | "purple"
+    | "lime"
+    | "lightblue";
+  textColor:
+    | "blue"
+    | "red"
+    | "green"
+    | "pink"
+    | "purple"
+    | "lime"
+    | "lightblue";
+  hoverTextColor:
+    | "pink"
+    | "green"
+    | "blue"
+    | "red"
+    | "purple"
+    | "red"
+    | "lime"
+    | "lightblue";
   colSpan?: number;
   isClickable?: boolean;
   href?: string;
@@ -44,7 +74,7 @@ const InfoCard = ({
     lilac: "bg-lilac",
     red: "bg-red",
     lightblue: "bg-lightblue",
-    lime: "bg-lime"
+    lime: "bg-lime",
   };
 
   const hoverColorClasses = {
@@ -54,7 +84,7 @@ const InfoCard = ({
     pink: "hover:bg-pink",
     purple: "hover:bg-purple",
     lightblue: "hover:bg-lightblue",
-    lime: "hover:bg-lime"
+    lime: "hover:bg-lime",
   };
 
   const textColorClasses = {
@@ -64,7 +94,7 @@ const InfoCard = ({
     pink: "text-pink",
     purple: "text-purple",
     lightblue: "text-lightblue",
-    lime: "text-lime"
+    lime: "text-lime",
   };
 
   const hoverTextColorClasses = {

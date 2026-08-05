@@ -10,9 +10,7 @@ const myFont = localFont({ src: "../ui/fonts/ST.ttf" });
 export default function ResourcesPage() {
   return (
     <div>
-      <Block
-        className={`col-span-6 bg-white items-center justify-center`}
-      >
+      <Block className={`col-span-6 bg-white items-center justify-center`}>
         <h1
           className={`text-2xl md:text-4xl lg:col-span-4 text-center ${myFont.className} text-blue tracking-wider leading-tight mt-4`}
         >
@@ -37,9 +35,7 @@ export default function ResourcesPage() {
           />
         </div>
       </Block>
-      <Block
-        className={`col-span-6 bg-white items-center justify-center`}
-      >
+      <Block className={`col-span-6 bg-white items-center justify-center`}>
         <h1
           className={`text-2xl md:text-4xl lg:col-span-4 text-center ${myFont.className} text-blue tracking-wider leading-tight mt-4`}
         >
@@ -55,7 +51,7 @@ export default function ResourcesPage() {
             colSpan={3}
           />
           <ResourceCard
-            title="Vademecum per l&apos;accessibilità degli eventi e dei cortei"
+            title="Vademecum per l'accessibilità degli eventi e dei cortei"
             description="Rendere un evento realmente accessibile e a misura di chiunque è un processo di ascolto e cura, necessario, comunitario e collettivo."
             actionText="Consulta il Vademecum"
             href="https://1drv.ms/p/c/3154c23af9523fae/Ea4_Uvk6wlQggDFqAQAAAAABswCASnHi1Vg3TZNPRM4M5Q?e=OjEMoL"

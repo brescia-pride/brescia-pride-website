@@ -15,7 +15,7 @@ const PrideDate = () => {
             <h1
               className={`text-2xl md:text-2xl leading-tight font-medium mr-2 hover:text-pink text-center`}
             >
-              <p  className="text-shadow-xl">Manifestazione e corteo</p>
+              <p className="text-shadow-xl">Manifestazione e corteo</p>
               <p>
                 per i diritti <strong>LGBTQIA+</strong> e per i diritti di tuttɜ
               </p>

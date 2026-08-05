@@ -98,12 +98,9 @@ export default function PridePage() {
         colSpan={6}
       >
         <p className="text-xl font-bold w-96">
-          Questa pagina è in continuo aggiornamento! 
+          Questa pagina è in continuo aggiornamento!
         </p>
-        <p>
-
-          Vi aspettiamo il 5 settembre! 🫶
-        </p>
+        <p>Vi aspettiamo il 5 settembre! 🫶</p>
         <p className="text-xl mt-2">
           Non trovi le info che cerchi?{" "}
           <Link href="/contact" className="underline">
@@ -111,7 +108,6 @@ export default function PridePage() {
           </Link>
         </p>
       </InfoCard>
-
     </div>
   );
 }

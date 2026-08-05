@@ -6,71 +6,106 @@ import { Link } from "react-aria-components";
 import localFont from "next/font/local";
 import Block from "../ui/components/Block";
 import { Button } from "react-aria-components";
+import { useRouter } from "next/navigation";
 
 const myFont = localFont({ src: "../ui/fonts/ST.ttf" });
 
 export default function SostieniciPage() {
-  const iban = "IT49I0501811200000016783060"
+  const iban = "IT49I0501811200000016783060";
+  const codiceFiscale = "98201800178";
 
-  async function writeClipboard() {
-    await navigator.clipboard.writeText(iban)
+  async function writeIBANToClipboard() {
+    await navigator.clipboard.writeText(iban);
   }
+
+  async function writeCodiceFiscaleToClipboard() {
+    await navigator.clipboard.writeText(codiceFiscale);
+  }
+
+  const router = useRouter();
+
   return (
     <Block>
-      <div className="p-4">
-        <h1
-          className={`text-2xl md:text-4xl ${myFont.className} text-blue`}
-        >
+      <Block className="p-8 bg-lightblue text-center">
+        <h1 className={`text-4xl md:text-6xl ${myFont.className} text-blue`}>
           Sostienici
         </h1>
-        <p
-          className={`lg:col-span-6 text-xl mt-2 text-blue`}
-        >
-          Aiutaci a restare un pride autofinanziato e indipendente con una donazione.
+        <p className={`lg:col-span-6 text-2xl text-blue mt-2`}>
+          Brescia Pride è un pride <b>autofinanziato</b> e <b>indipendente</b>.
         </p>
-        <h2 className={`text-2xl md:text-4xl ${myFont.className} text-blue mt-4`}>
-          Bonifico
-        </h2>
-        <p className="text-xl">
-          Destinatario: <b>Comitato Brescia Pride ETS</b>
-        </p>
-        <p className="text-xl">
-          Causale: <b>Libera donazione</b>
-        </p>
-        <p className="text-lg mt-2 break-all">{iban}</p>
-        <Button className="rounded bg-blue text-white hover:bg-pink p-2 mt-2" onPress={() => writeClipboard()}
-        >Copia l&apos;IBAN</Button>
-        <h2 className={`text-2xl md:text-4xl ${myFont.className} text-blue mt-4`}>
-          Paypal
-        </h2>
-        <p className="text-xl font-bold">
-          <Link
-            className={`col-span-3 underline`}
-            href="https://www.paypal.com/paypalme/bresciapride"
+      </Block>
+      <Block className="p-4 col-span-1">
+        <h3 className={`lg:col-span-6 text-xl mt-2 font-bold`}>
+          Ci sono tanti modi per sostenerci:
+        </h3>
+        <ul className="list-inside text-xl list-disc">
+          <li>
+            Donazione con <b>Bonifico</b> o <b>Paypal</b>
+          </li>
+          <li>
+            Devolvendo il <b>5X1000</b>
+          </li>
+          <li>
+            Partecipando ai nostri eventi! Ci trovate sempre con un{" "}
+            <b>banchetto di autofinanziamento</b>!
+          </li>
+        </ul>
+      </Block>
+      <Block className="flex-col md:grid md:grid-cols-3">
+        <Block className="p-4 col-span-1">
+          <h2 className={`text-3xl md:text-4xl ${myFont.className} text-blue`}>
+            Bonifico
+          </h2>
+          <p className="text-xl mt-2">
+            Destinatario: <b>Comitato Brescia Pride ETS</b>
+          </p>
+          <p className="text-xl">
+            Causale: <b>Libera donazione</b>
+          </p>
+          <p className="text-lg mt-2 break-all">{iban}</p>
+          <Button
+            className="text-lg rounded bg-blue text-white hover:bg-blue/75 p-4 mt-2"
+            onPress={() => writeIBANToClipboard()}
           >
-            Clicca qui
-          </Link>{" "}
-          o cerca &quot;info@bresciapride.it&quot; direttamente da PayPal
-        </p>
-        <p className="text-xl">
-          Scegli l&apos;opzione &quot;famigliari e amici&quot;.
-        </p>
-        <h2 className={`text-2xl md:text-4xl ${myFont.className} text-blue mt-4`}>
-          5X1000
-        </h2>
-        <p className="text-xl font-bold">Codice Fiscale 98201800178</p>
-        <p className="text-xl mb-4">
-          Compila la sezione a &quot;Sostegno degli enti del terzo settore
-          iscritti nel RUNTS...&quot; come nell&apos;immagine.
-        </p>
-        <ImageBlock
-          src="/images/5-1000.png"
-          altText="Esempio compilazione del 5x1000 per COMITATO BRESCIA PRIDE, Codice Fiscale: 98201800178. La sezione a sostegno degli enti del terzo settore iscritti nel RUNTS è compilata con il codice fiscale."
-          showOnMobile={true}
-          colSpan=""
-        />
-
-      </div>
+            Copia l&apos;IBAN
+          </Button>
+        </Block>
+        <Block className="p-4 col-span-1">
+          <h2 className={`text-3xl md:text-4xl ${myFont.className} text-red`}>
+            Paypal
+          </h2>
+          <p className="text-xl">
+            Cerca <b>info@bresciapride.it</b> direttamente da PayPal. Ricordati
+            di scegliere l&apos;opzione &quot;famigliari e amici&quot;!
+          </p>
+          <Button
+            className="text-lg rounded bg-red text-white hover:bg-red/75 p-4 mt-2"
+            onPress={() =>
+              router.push("https://www.paypal.com/paypalme/bresciapride")
+            }
+          >
+            Apri Paypal
+          </Button>
+        </Block>
+        <Block className="p-4 col-span-1">
+          <h2
+            className={`text-3xl md:text-4xl ${myFont.className} text-purple`}
+          >
+            5X1000
+          </h2>
+          <p className="text-xl font-bold">Codice Fiscale 98201800178</p>
+          <p className="text-xl">
+            Compila la sezione a &quot;Sostegno degli enti del terzo settore
+            iscritti nel RUNTS...&quot;.
+          </p>
+          <Button
+            className="text-lg rounded bg-purple text-white hover:bg-purple/75 p-4 mt-2"
+            onPress={() => writeCodiceFiscaleToClipboard()}
+          >
+            Copia il Codice Fiscale
+          </Button>
+        </Block>
+      </Block>
     </Block>
   );
 }

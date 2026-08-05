@@ -104,6 +104,7 @@ const Header = ({ size }: BlockProps) => {
               onAction={() => {
                 router.push("/resources");
                 changeColor("red");
+                changeBackgroundColor("pink");
                 toggleMenu()
               }}
             >

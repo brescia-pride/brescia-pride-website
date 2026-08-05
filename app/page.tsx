@@ -16,7 +16,7 @@ export default function Homepage() {
   return (
     <div className="flex-col md:grid md:grid-cols-6 ">
       <PrideDate />
-      <UpcomingEventsBlock
+      {/* <UpcomingEventsBlock
         colSpan="col-span-3"
         verbosity="short"
         pageSize={2}
@@ -39,7 +39,7 @@ export default function Homepage() {
           colSpan="col-span-3"
         />
       </Block>
-      <Block className="col-span-3 p-4"></Block>
+      <Block className="col-span-3 p-4"></Block> */}
     </div>
   );
 }

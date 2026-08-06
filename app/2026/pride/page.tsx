@@ -71,19 +71,8 @@ export default function PridePage() {
             orgoglio, comunità e lotta queer, che avrà come cuore pulsante il{" "}
             <b>Parco Pride a Campo Marte.</b>
           </p>
-
           <p className="font-bold mt-2">
             Sarà attivo dalle 12 alle 21. Anche durante il corteo.
-          </p>
-
-          <p className="font-bold mt-2">
-            📍{" "}
-            <Link
-              href={"https://maps.app.goo.gl/ksS1JTRGJ4zJWr1s5"}
-              className="underline"
-            >
-              Campo Marte (Google Maps)
-            </Link>
           </p>
         </div>
       </Block>

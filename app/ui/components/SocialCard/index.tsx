@@ -19,12 +19,12 @@ const SocialCard = ({
   className = "",
 }: SocialCardProps) => {
   const bgColorClasses = {
-    pink: "hover:bg-pink",
-    lime: "hover:bg-lime",
-    lilac: "hover:bg-lilac",
-    green: "hover:bg-green",
-    lightblue: "hover:bg-lightblue",
-    cream: "hover:bg-cream",
+    pink: "bg-pink hover:bg-pink/75",
+    lime: "bg-lime hover:bg-lime/75",
+    lilac: "bg-lilac hover:bg-lilac/75",
+    green: "bg-green hover:bg-green/75",
+    lightblue: "bg-lightblue hover:bg-lightblue/75",
+    cream: "bg-cream hover:bg-cream/75",
   };
 
   const iconColorClasses = {

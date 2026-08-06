@@ -87,14 +87,6 @@ export default function PridePage() {
           </p>
         </div>
       </Block>
-      <Block className="p-4 col-span-1">
-        <h3 className={`lg:col-span-6 text-xl mt-2`}>
-          Non trovi quello che cerchi?{" "}
-          <Link href="/contact" className="font-bold underline">
-            Scrivici!
-          </Link>
-        </h3>
-      </Block>
     </Block>
   );
 }

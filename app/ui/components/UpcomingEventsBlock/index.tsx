@@ -35,14 +35,14 @@ const UpcomingEventsBlock = ({
 
   return (
     <Block className={`${colSpan} bg-white overflow-hidden text-fuchsia p-4`}>
-      <Link href="/events">
+      <Link href="/eventi">
         <h1
           className={`text-3xl font-medium leading-tight ${myFont.className}`}
         >
           Prossimi eventi
         </h1>
       </Link>
-      <Link href="/events">
+      <Link href="/eventi">
         <p className="text-fuchsia text-left">Vai a tutti gli eventi</p>
       </Link>
       <div className="flex flex-col justify-between m-4">

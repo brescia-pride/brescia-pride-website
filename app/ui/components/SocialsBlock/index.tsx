@@ -19,8 +19,8 @@ const SocialsBlock = () => (
     <SocialCard
       href="https://www.facebook.com/BresciaPride"
       icon={<SiFacebook />}
-      backgroundColor="lightblue"
-      iconColor="blue"
+      backgroundColor="lime"
+      iconColor="green"
     />
   </Block>
 );

@@ -613,7 +613,7 @@ export default function CorteoPage() {
           </p>
           <p className="text-xl mt-2">
             Non trovi le info che cerchi?{" "}
-            <Link href="/contact" className="underline">
+            <Link href="/contatti" className="underline">
               Contattaci!
             </Link>
           </p>

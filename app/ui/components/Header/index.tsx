@@ -55,13 +55,13 @@ const Header = ({ className }: BlockProps) => {
       </div>
       {menuOpen === true && (
         <div>
-          <Menu className="md:flex w-full text-${defaultColor} text-2xl mt-4 border-white">
+          <Menu className={`md:flex w-full text-${defaultColor} text-2xl mt-4 border-white`}>
             <MenuItem
               className="cursor-pointer flex-1 transition-all duration-300 hover:bg-blue hover:text-white rounded"
               onAction={() => {
                 router.push("/2026/pride");
-                changeColor("blue");
-                changeBackgroundColor("lightblue");
+                // changeColor("blue");
+                // changeBackgroundColor("lightblue");
                 toggleMenu();
               }}
             >
@@ -71,8 +71,8 @@ const Header = ({ className }: BlockProps) => {
               className="cursor-pointer flex-1 transition-all duration-300 hover:bg-green hover:text-white rounded"
               onAction={() => {
                 router.push("/2026/accessibilita");
-                changeColor("green");
-                changeBackgroundColor("lime");
+                // changeColor("green");
+                // changeBackgroundColor("lime");
                 toggleMenu();
               }}
             >
@@ -81,9 +81,9 @@ const Header = ({ className }: BlockProps) => {
             <MenuItem
               className="cursor-pointer flex-1 transition-all duration-300 hover:bg-purple hover:text-white rounded"
               onAction={() => {
-                router.push("/events");
-                changeColor("purple");
-                changeBackgroundColor("lilac");
+                router.push("/eventi");
+                // changeColor("purple");
+                // changeBackgroundColor("lilac");
                 toggleMenu();
               }}
             >
@@ -93,8 +93,8 @@ const Header = ({ className }: BlockProps) => {
               className="cursor-pointer flex-1 transition-all duration-300 hover:bg-green hover:text-white rounded"
               onAction={() => {
                 router.push("/sostienici");
-                changeColor("green");
-                changeBackgroundColor("lime");
+                // changeColor("green");
+                // changeBackgroundColor("lime");
                 toggleMenu();
               }}
             >
@@ -102,27 +102,27 @@ const Header = ({ className }: BlockProps) => {
             </MenuItem>
             <MenuItem
               className="cursor-pointer flex-1 transition-all duration-300 hover:bg-brown hover:text-white rounded"
-              onAction={() => router.push("docs/manifesto-2025.pdf")}
+              onAction={() => window.open("https://bresciapride.it/docs/manifesto-2025.pdf")}
             >
               Manifesto
             </MenuItem>
             <MenuItem
               className="cursor-pointer flex-1 transition-all duration-300 hover:bg-red hover:text-white rounded"
               onAction={() => {
-                router.push("/resources");
-                changeColor("red");
-                changeBackgroundColor("pink");
+                router.push("/stampa");
+                // changeColor("red");
+                // changeBackgroundColor("pink");
                 toggleMenu();
               }}
             >
-              Risorse
+              Stampa
             </MenuItem>
             <MenuItem
               className="cursor-pointer flex-1 transition-all duration-300 hover:bg-blue hover:text-white rounded"
               onAction={() => {
-                router.push("/contact");
-                changeColor("blue");
-                changeBackgroundColor("lightblue");
+                router.push("/contatti");
+                // changeColor("blue");
+                // changeBackgroundColor("lightblue");
                 toggleMenu();
               }}
             >

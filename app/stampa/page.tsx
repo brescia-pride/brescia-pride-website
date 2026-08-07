@@ -4,57 +4,61 @@ import React from "react";
 import ResourceCard from "../ui/components/ResourceCard";
 import localFont from "next/font/local";
 import Block from "../ui/components/Block";
+import { Link } from "react-aria-components";
+import { ReactNode } from "react";
 
 const myFont = localFont({ src: "../ui/fonts/ST.ttf" });
+
+type StampaBlockProps = {
+  title: string;
+  children: ReactNode;
+};
+
+const StampaBlock = ({ title, children }: StampaBlockProps) => {
+  return (
+    <Block className="col-span-6">
+      <div className="text-xl p-4">
+        <h1 className={`${myFont.className} text-4xl text-red`}>{title}</h1>
+        <div className="mt-2">{children}</div>
+      </div>
+    </Block>
+  );
+};
 
 export default function ResourcesPage() {
   return (
     <div>
       <Block className="p-8 bg-pink text-center">
         <h1 className={`text-4xl md:text-6xl ${myFont.className} text-red`}>
-          Stampa
+          Sala Stampa
         </h1>
         <p className={`lg:col-span-6 text-2xl text-red mt-2`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-          consequat mi quis pretium semper. Proin luctus orci ac neque
-          venenatis, quis commodo dolor posuere.
+          Informazioni per la stampa
         </p>
       </Block>
-      <Block className="p-4">
-        <h1 className={`${myFont.className} text-3xl text-red`}>
-          Comunicato Stampa Brescia Pride 2026
-        </h1>
-      </Block>
-      <Block className="p-4">
-        <h1 className={`${myFont.className} text-3xl text-red`}>
-          Punto stampa in Campo Marte
-        </h1>
-      </Block>
-      <Block className="p-4">
-        <h1 className={`${myFont.className} text-3xl text-red`}>
-          Contatti stampa
-        </h1>
-      </Block>
-      <Block className="p-4">
-        <h1 className={`${myFont.className} text-3xl text-red`}>
-          Vademecum Fotografico
-        </h1>
-      </Block>
-      <Block className="p-4">
-        <h1 className={`${myFont.className} text-3xl text-red`}>
-          Mappa Corteo
-        </h1>
-      </Block>
-      <Block className="p-4">
-        <h1 className={`${myFont.className} text-3xl text-red`}>
-          Mappa Campo Marte
-        </h1>
-      </Block>
-      <Block className="p-4">
-        <h1 className={`${myFont.className} text-3xl text-red`}>
-          Archivio Comunicati Stampa 
-        </h1>
-      </Block>
+      <StampaBlock title="Comunicati stampa">
+          <Link href="2026/documenti/comunicato-stampa-pride" className="underline text-red">Esempio Comunicato</Link>
+      </StampaBlock>
+      <StampaBlock title="Punto stampa in Campo Marte">
+        <p>
+          info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info 
+        </p>
+      </StampaBlock>
+      <StampaBlock title="Contatti stampa">
+        <p>
+          info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info 
+        </p>
+      </StampaBlock>
+      <StampaBlock title="Vademecum Fotografico">
+        <p>
+          info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info 
+        </p>
+      </StampaBlock>
+      <StampaBlock title="Mappa Corteo">
+        <p>
+          info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info 
+        </p>
+      </StampaBlock>
     </div>
   );
 }

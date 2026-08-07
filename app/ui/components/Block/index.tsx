@@ -27,6 +27,7 @@ const Block = ({ className, id, ...rest }: BlockProps) => {
         damping: 50,
       }}
       className={`${className}`}
+      aria-label={id}
       id={id}
       {...rest}
     />

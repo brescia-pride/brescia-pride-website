@@ -6,9 +6,26 @@ import { Link } from "react-aria-components";
 import ImageBlock from "@/app/ui/components/ImageBlock";
 import PrideDate from "@/app/ui/components/PrideDate";
 import Block from "@/app/ui/components/Block";
+import { ReactNode } from "react";
 
 import localFont from "next/font/local";
 const myFont = localFont({ src: "../../ui/fonts/ST.ttf" });
+
+type InfoBlockProps = {
+  title: string;
+  children: ReactNode;
+};
+
+const InfoBlock = ({ title, children }: InfoBlockProps) => {
+  return (
+    <Block className="col-span-6">
+      <div className="text-xl p-4">
+        <h1 className={`${myFont.className} text-4xl text-blue`}>{title}</h1>
+        <div className="mt-2">{children}</div>
+      </div>
+    </Block>
+  );
+};
 
 export default function PridePage() {
   return (
@@ -61,21 +78,59 @@ export default function PridePage() {
           </table>
         </div>
       </Block>
-      <Block className="col-span-6">
-        <div className="text-xl p-4">
-          <h1 className={`${myFont.className} text-3xl text-blue`}>
-            Parco Pride
-          </h1>
-          <p className="mt-2">
-            Il 5 settembre non sarà solo un corteo ma un&apos;intera giornata di
-            orgoglio, comunità e lotta queer, che avrà come cuore pulsante il{" "}
-            <b>Parco Pride a Campo Marte.</b>
-          </p>
-          <p className="font-bold mt-2">
-            Sarà attivo dalle 12 alle 21. Anche durante il corteo.
-          </p>
-        </div>
-      </Block>
+      <InfoBlock title="Parco Pride">
+        <p>
+          Il 5 settembre non sarà solo un corteo ma un&apos;intera giornata di
+          orgoglio, comunità e lotta queer, che avrà come cuore pulsante il{" "}
+          <b>Parco Pride a Campo Marte.</b>
+        </p>
+        <p>Sarà attivo dalle 12 alle 21. Anche durante il corteo.</p>
+      </InfoBlock>
+      <InfoBlock title="Mappa">
+        <p>
+          mappa mappa mappa mappa mappa mappa mappa mappa mappa mappa mappa
+          mappa mappa mappa mappa mappa mappa mappa mappa mappa mappa mappa
+          mappa mappa mappa mappa mappa mappa mappa mappa mappa mappa mappa
+          mappa mappa mappa mappa mappa mappa mappa mappa mappa mappa mappa
+          mappa mappa mappa mappa mappa mappa mappa mappa mappa mappa
+        </p>
+      </InfoBlock>
+      <InfoBlock title="Corteo">
+        <p>
+          info corteo info corteo info corteo info corteo info corteo info
+          corteo info corteo info corteo info corteo info corteo info corteo
+          info corteo info corteo info corteo info corteo info corteo info
+          corteo info corteo info corteo info corteo info corteo info corteo
+          info corteo info corteo info corteo info corteo info corteo info
+          corteo
+        </p>
+      </InfoBlock>
+      <InfoBlock title="Accessibilità">
+        <p>
+          info accessibilità info accessibilità info accessibilità info
+          accessibilità info accessibilità info accessibilità info accessibilità
+          info accessibilità info accessibilità info accessibilità info
+          accessibilità info accessibilità info accessibilità info accessibilità
+          info accessibilità info accessibilità info accessibilità info
+          accessibilità info accessibilità info accessibilità info accessibilità
+          info accessibilità info accessibilità info accessibilità info
+          accessibilità info accessibilità info accessibilità info accessibilità
+        </p>
+      </InfoBlock>
+      <InfoBlock title="Zone Parco">
+        <p>
+          zona associazioni, zona market, zona bimbu, zona salute, zona cibo
+        </p>
+      </InfoBlock>
+      <InfoBlock title="Carri">
+        <p>
+          carri carri carri carri carri carri carri carri carri carri carri
+          carri carri carri carri carri carri carri carri carri carri carri
+          carri carri carri carri carri carri carri carri carri carri carri
+          carri carri carri carri carri carri carri carri carri carri carri
+          carri
+        </p>
+      </InfoBlock>
     </Block>
   );
 }

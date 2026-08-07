@@ -31,10 +31,6 @@ const ImageBlock: React.FC<BlockProps> = ({
   return (
     <Block
       className={`${colSpan} relative ${hide}`}
-      whileHover={{
-        rotate: "-2.5deg",
-        scale: 1.005,
-      }}
     >
       <Image
         src={src}

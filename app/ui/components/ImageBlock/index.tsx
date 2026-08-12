@@ -29,9 +29,7 @@ const ImageBlock: React.FC<BlockProps> = ({
   const hide: string = showOnMobile ? "" : "hidden md:block";
 
   return (
-    <Block
-      className={`${colSpan} relative ${hide}`}
-    >
+    <Block className={`${colSpan} relative ${hide}`}>
       <Image
         src={src}
         alt={altText}

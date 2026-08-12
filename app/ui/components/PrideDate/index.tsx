@@ -2,7 +2,8 @@ import Block from "../Block";
 import { Link } from "react-aria-components";
 import localFont from "next/font/local";
 
-const myFont = localFont({ src: "../../fonts/ST.ttf" });
+const stFont = localFont({ src: "../../fonts/ST.ttf" });
+const wrFont = localFont({ src: "../../fonts/WR.ttf" });
 
 const PrideDate = () => {
   return (
@@ -17,19 +18,35 @@ const PrideDate = () => {
             >
               <p className="text-shadow-xl">Manifestazione e corteo</p>
               <p>
-                per i diritti <strong>LGBTQIA+</strong> e per i diritti di tuttɜ
+                per i diritti <strong className="underline">LGBTQIA+</strong> e
+                per i diritti di tuttɜ
               </p>
             </h1>
           </div>
-
-          <div className="text-right">quando????</div>
+          <div className="place-items-end">
+            <div className="flex">
+              <div className="text-4xl font-bold rotate-[320rad]">⤺</div>
+              <div className={`text-right text-4xl ${wrFont.className}`}>
+                quando?
+              </div>
+            </div>
+          </div>
           <div
-            className={`text-4xl md:text-6xl leading-tight font-medium mr-2 transition-transform transition-colors duration-300 hover:scale-110 ${myFont.className} text-center`}
+            className={`text-4xl md:text-6xl leading-tight font-medium mr-2 transition-transform transition-colors duration-300 hover:scale-110 ${stFont.className} text-center`}
           >
             <h1 className="text-shadow-xl">5 settembre</h1>
             <h1>Campo Marte</h1>
           </div>
-          <div className="text-left">dove?</div>
+          <div className="place-items-start">
+            <div className="flex">
+              <div
+                className={`text-left text-4xl ${wrFont.className} align-bottom`}
+              >
+                dove?
+              </div>
+              <div className="text-4xl font-bold rotate-[320rad]">⤻</div>
+            </div>
+          </div>
         </div>
       </Link>
     </Block>

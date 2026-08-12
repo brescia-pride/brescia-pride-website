@@ -10,6 +10,7 @@ import PrideDate from "./ui/components/PrideDate";
 import Block from "./ui/components/Block";
 import ImageBlock from "./ui/components/ImageBlock";
 import InfoCard from "./ui/components/InfoCard";
+import { Button } from "react-aria-components";
 const myFont = localFont({ src: "./ui/fonts/ST.ttf" });
 
 type HomePageBlockProps = {
@@ -42,6 +43,17 @@ export default function Homepage() {
   return (
     <div className="flex-col md:grid md:grid-cols-6">
       <PrideDate />
+
+      <Block
+        className={`col-span-6 bg-lightblue text-blue p-4 cursor-pointer transition-all duration-300 relative w-full flex flex-row justify-center items-center`}
+      >
+        <Button
+          className="text-lg rounded bg-yellow text-fuchsia hover:bg-fuchsia hover:text-yellow p-2 mt-2 font-bold transition-all duration-300 pr-4 pl-4"
+          onPress={() => router.push("/sostienici")}
+        >
+          Clicca qui per tutte le info!
+        </Button>{" "}
+      </Block>
       <HomePageBlock className="col-span-6" title="Manifesto" color="purple">
         <p>
           abstract manifesto abstract manifesto abstract manifesto abstract

@@ -38,20 +38,32 @@ export default function AccessibilitaPage() {
           Tutte le informazioni sull&apos;Accessibilità di Brescia Pride 2026
         </p>
       </Block>{" "}
-    <AccessibilitaBlock title="Vademecum">
+      <AccessibilitaBlock title="Vademecum">
         <p>
-          vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum
-          vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum
-          vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum
-          vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum
-          vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum vademecum
+          vademecum vademecum vademecum vademecum vademecum vademecum vademecum
+          vademecum vademecum vademecum vademecum vademecum vademecum vademecum
+          vademecum vademecum vademecum vademecum vademecum vademecum vademecum
+          vademecum vademecum vademecum vademecum vademecum vademecum vademecum
+          vademecum vademecum vademecum vademecum vademecum vademecum vademecum
+          vademecum vademecum vademecum vademecum vademecum vademecum vademecum
+          vademecum vademecum vademecum vademecum vademecum vademecum vademecum
+          vademecum vademecum vademecum vademecum vademecum
         </p>
-    </AccessibilitaBlock>
-    <AccessibilitaBlock title="Info">
+      </AccessibilitaBlock>
+      <AccessibilitaBlock title="Info">
         <p>
-          altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info altre info 
+          altre info altre info altre info altre info altre info altre info
+          altre info altre info altre info altre info altre info altre info
+          altre info altre info altre info altre info altre info altre info
+          altre info altre info altre info altre info altre info altre info
+          altre info altre info altre info altre info altre info altre info
+          altre info altre info altre info altre info altre info altre info
+          altre info altre info altre info altre info altre info altre info
+          altre info altre info altre info altre info altre info altre info
+          altre info altre info altre info altre info altre info altre info
+          altre info altre info altre info altre info altre info altre info
         </p>
-    </AccessibilitaBlock>
+      </AccessibilitaBlock>
     </Block>
   );
 }

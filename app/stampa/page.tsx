@@ -37,26 +37,51 @@ export default function ResourcesPage() {
         </p>
       </Block>
       <StampaBlock title="Comunicati stampa">
-          <Link href="2026/documenti/comunicato-stampa-pride" className="underline text-red">Esempio Comunicato</Link>
+        <Link
+          href="2026/documenti/comunicato-stampa-pride"
+          className="underline text-red"
+        >
+          Esempio Comunicato
+        </Link>
       </StampaBlock>
       <StampaBlock title="Punto stampa in Campo Marte">
         <p>
-          info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info 
+          info info info info info info info info info info info info info info
+          info info info info info info info info info info info info info info
+          info info info info info info info info info info info info info info
+          info info info info info info info info info info info info info info
+          info info info info info info info info info info info info info info
+          info info info info info info info info
         </p>
       </StampaBlock>
       <StampaBlock title="Contatti stampa">
         <p>
-          info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info 
+          info info info info info info info info info info info info info info
+          info info info info info info info info info info info info info info
+          info info info info info info info info info info info info info info
+          info info info info info info info info info info info info info info
+          info info info info info info info info info info info info info info
+          info info info info info info info info
         </p>
       </StampaBlock>
       <StampaBlock title="Vademecum Fotografico">
         <p>
-          info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info 
+          info info info info info info info info info info info info info info
+          info info info info info info info info info info info info info info
+          info info info info info info info info info info info info info info
+          info info info info info info info info info info info info info info
+          info info info info info info info info info info info info info info
+          info info info info info info info info
         </p>
       </StampaBlock>
       <StampaBlock title="Mappa Corteo">
         <p>
-          info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info 
+          info info info info info info info info info info info info info info
+          info info info info info info info info info info info info info info
+          info info info info info info info info info info info info info info
+          info info info info info info info info info info info info info info
+          info info info info info info info info info info info info info info
+          info info info info info info info info
         </p>
       </StampaBlock>
     </div>

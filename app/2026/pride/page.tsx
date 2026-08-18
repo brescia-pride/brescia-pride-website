@@ -1,14 +1,11 @@
 "use client";
 
 import React from "react";
-import InfoCard from "@/app/ui/components/InfoCard";
-import { Link } from "react-aria-components";
 import ImageBlock from "@/app/ui/components/ImageBlock";
 import PrideDate from "@/app/ui/components/PrideDate";
 import Block from "@/app/ui/components/Block";
 import { ReactNode } from "react";
 import { useRouter } from "next/navigation";
-import { Button } from "react-aria-components";
 import localFont from "next/font/local";
 const myFont = localFont({ src: "../../ui/fonts/ST.ttf" });
 

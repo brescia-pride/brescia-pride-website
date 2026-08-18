@@ -1,12 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import Header from "../ui/components/Header";
-import ImageBlock from "../ui/components/ImageBlock";
-import CustomFooter from "../ui/components/CustomFooter";
-import InfoCard from "../ui/components/InfoCard";
-import { Link, Button } from "react-aria-components";
 import Block from "../ui/components/Block";
 import { useRouter } from "next/navigation";
 import localFont from "next/font/local";
@@ -63,7 +57,7 @@ export default function ArchivePage() {
             colSpan={3}
           />
           <ResourceCard
-            title="Vademecum per l&apos;accessibilità degli eventi e dei cortei"
+            title="Vademecum per l'accessibilità degli eventi e dei cortei"
             description="Rendere un evento realmente accessibile e a misura di chiunque è un processo di ascolto e cura, necessario, comunitario e collettivo."
             actionText="Consulta il Vademecum"
             href="https://1drv.ms/p/c/3154c23af9523fae/Ea4_Uvk6wlQggDFqAQAAAAABswCASnHi1Vg3TZNPRM4M5Q?e=OjEMoL"

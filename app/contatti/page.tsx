@@ -1,12 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import Header from "../ui/components/Header";
-import CustomFooter from "../ui/components/CustomFooter";
 import SocialsBlock from "../ui/components/SocialsBlock";
-import InfoCard from "../ui/components/InfoCard";
-import DonationSection from "../ui/components/DonationSection";
 import { Link } from "react-aria-components";
 import Block from "../ui/components/Block";
 import localFont from "next/font/local";

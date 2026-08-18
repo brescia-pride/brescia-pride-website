@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import ResourceCard from "../ui/components/ResourceCard";
 import localFont from "next/font/local";
 import Block from "../ui/components/Block";
 import { Link } from "react-aria-components";

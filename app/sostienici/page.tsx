@@ -5,7 +5,6 @@ import localFont from "next/font/local";
 import Block from "../ui/components/Block";
 import { Button } from "react-aria-components";
 import { useRouter } from "next/navigation";
-import ColoredButton from "../ui/components/ColoredButton";
 
 const myFont = localFont({ src: "../ui/fonts/ST.ttf" });
 

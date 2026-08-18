@@ -46,13 +46,13 @@ const SocialCard = ({
       rel="noopener noreferrer"
       className={`${bgColorClasses[backgroundColor]} p-6 ${className} flex flex-col ${iconColorClasses[iconColor]}`}
     >
-        <div className="grid h-full place-content-center">
-          <p className="text-4xl">{icon}</p>
-        </div>
-        <div className="flex flex-col justify-center items-center mt-4">
-          <h1 className="font-bold text-xl md:text-2xl">{title}</h1>
-          {/* <p className="mt-2 text-center">{desc}</p> */}
-        </div>
+      <div className="grid h-full place-content-center">
+        <p className="text-4xl">{icon}</p>
+      </div>
+      <div className="flex flex-col justify-center items-center mt-4">
+        <h1 className="font-bold text-xl md:text-2xl">{title}</h1>
+        {/* <p className="mt-2 text-center">{desc}</p> */}
+      </div>
     </Link>
   );
 };

@@ -1,10 +1,6 @@
 "use client";
 
 import React from "react";
-import InfoCard from "@/app/ui/components/InfoCard";
-import { Link } from "react-aria-components";
-import ImageBlock from "@/app/ui/components/ImageBlock";
-import PrideDate from "@/app/ui/components/PrideDate";
 import Block from "@/app/ui/components/Block";
 import { ReactNode } from "react";
 import { Button } from "react-aria-components";
@@ -109,8 +105,7 @@ export default function AccessibilitaPage() {
             <Button
               onPress={() => {
                 const link = document.createElement("a");
-                link.href =
-                  "https://docs.google.com/document/d/1E3ca0TeJyxbq1PNPytZIA5U-RnvwsFPk/edit?usp=sharing&ouid=105357298467072128512&rtpof=true&sd=true";
+                link.href = "";
                 link.target = "_blank";
                 link.rel = "noopener noreferrer";
                 document.body.appendChild(link);

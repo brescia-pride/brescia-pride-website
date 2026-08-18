@@ -109,7 +109,7 @@ export default function StampaPage() {
       </StampaBlock>
       <StampaBlock title="Punto stampa in Campo Marte" id="punto-stampa">
         <p>
-          Presso l&apos;<b>Info Point</b> all'ingresso principale di Campo Marte
+          Presso l&apos;<b>Info Point</b> all&apos;ingresso principale di Campo Marte
           (via Ugo Foscolo)
         </p>
         <p className="mt-2">

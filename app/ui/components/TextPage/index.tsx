@@ -11,13 +11,16 @@ const myFont = localFont({ src: "../../fonts/ST.ttf" });
 type BlockProps = {
   title: string;
   children: ReactNode;
+  textColor: string;
 };
 
-const TextPage = ({ title, children }: BlockProps) => {
+const TextPage = ({ title, children, textColor }: BlockProps) => {
   return (
     <Block>
       <Block className="p-8 bg-lilac text-center">
-        <h1 className={`text-4xl md:text-6xl ${myFont.className} text-purple`}>
+        <h1
+          className={`text-4xl md:text-6xl ${myFont.className} text-${textColor}`}
+        >
           {title}
         </h1>
       </Block>

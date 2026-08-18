@@ -35,6 +35,9 @@ const InfoBlock = ({
 
 export default function PridePage() {
   const navLiClassName = "mt-2 pl-2 pr-2 transition-all duration-300 hover:bg-blue hover:text-white focus:bg-blue focus:text-white rounded-sm focus:outline-hidden bg-blue/10 md:text-2xl"
+
+  const mapLink = "https://www.google.com/maps/d/embed?mid=1O2B1Lx5s24EurtaQwao7pj_fskY9SkI&hl=it&ehbc=2E312F&ll=45.5473838155007%2C10.21575269747692&z=18"
+
   return (
     <Block aria-label="pride" className="grid md:grid-cols-6 grid-cols-1">
       <PrideDate showButton={false} />
@@ -65,6 +68,14 @@ export default function PridePage() {
                   </a>
                   <span id="corteo-desc" className="sr-only">
                     Informazioni sul Corteo
+                  </span>
+                </li>
+                <li className={navLiClassName}>
+                  <a href="#mappa" aria-describedby="mappa-desc">
+                    Mappa
+                  </a>
+                  <span id="mappa-desc" className="sr-only">
+                    Mappa del Parco Pride e del Corteo
                   </span>
                 </li>
                 <li className={navLiClassName}>
@@ -213,11 +224,18 @@ export default function PridePage() {
           colSpan=""
         />
       </div>
-      {/* <InfoBlock title="Accessibilità">
-        <p>
-          Clicca <Link href="/2026/accessibilita" className="underline text-blue">qui</Link> per tutte le informazioni di accessibilità.
-        </p>
-      </InfoBlock> */}
+      <InfoBlock title="Mappa" id="mappa">
+        <p>Sulla mappa interattiva sono segnalati:</p>
+        <ul className="list-disc list-inside mt-2">
+          <li>Campo Marte</li>
+          <li>Percorso del corteo</li>
+          <li>Zona di decompressione in Piazza Vittoria</li>
+          <li>Servizi igienici accessibili, con foto e descrizione</li>
+          <li>Fontanelle e punti acqua</li>
+        </ul>
+        <p className="mt-2">Clicca <Link className="underline text-blue font-bold" href={mapLink}>qui</Link> o sul simbolo <b>⛶</b> in alto a destra per aprire la mappa su Google Maps!</p>
+        <iframe src={mapLink} className="w-full h-150 mt-4"></iframe>
+      </InfoBlock>
       <InfoBlock title="Come arrivare" id="come-arrivare">
         <ul>
           <li>

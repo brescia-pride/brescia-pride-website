@@ -1,12 +1,11 @@
 "use client";
 
 import React from "react";
-import ImageBlock from "../ui/components/ImageBlock";
-import { Link } from "react-aria-components";
 import localFont from "next/font/local";
 import Block from "../ui/components/Block";
 import { Button } from "react-aria-components";
 import { useRouter } from "next/navigation";
+import ColoredButton from "../ui/components/ColoredButton";
 
 const myFont = localFont({ src: "../ui/fonts/ST.ttf" });
 
@@ -63,29 +62,33 @@ export default function SostieniciPage() {
             Causale: <b>Libera donazione</b>
           </p>
           <p className="text-lg mt-2 break-all">{iban}</p>
-          <Button
-            className="text-lg rounded bg-blue text-white hover:bg-blue/75 p-4 mt-2"
-            onPress={() => writeIBANToClipboard()}
-          >
-            Copia l&apos;IBAN
-          </Button>
+          <div className="flex flex-col">
+            <Button
+              className="p-2 pr-4 pl-4 mt-2 font-bold transition-all duration-300 cursor-pointer rounded-sm bg-pink text-blue hover:bg-blue hover:text-pink"
+              onPress={() => writeIBANToClipboard()}
+            >
+              Copia l&apos;IBAN
+            </Button>
+          </div>
         </Block>
         <Block className="p-4 col-span-1">
-          <h2 className={`text-3xl md:text-4xl ${myFont.className} text-red`}>
+          <h2 className={`text-3xl md:text-4xl ${myFont.className} text-brown`}>
             Paypal
           </h2>
           <p className="text-xl">
             Cerca <b>info@bresciapride.it</b> direttamente da PayPal. Ricordati
             di scegliere l&apos;opzione &quot;famigliari e amici&quot;!
           </p>
-          <Button
-            className="text-lg rounded bg-red text-white hover:bg-red/75 p-4 mt-2"
-            onPress={() =>
-              router.push("https://www.paypal.com/paypalme/bresciapride")
-            }
-          >
-            Apri Paypal
-          </Button>
+          <div className="flex flex-col">
+            <Button
+              className="p-2 pr-4 pl-4 mt-2 font-bold transition-all duration-300 cursor-pointer rounded-sm bg-lightblue text-brown hover:bg-brown hover:text-lightblue"
+              onPress={() =>
+                router.push("https://www.paypal.com/paypalme/bresciapride")
+              }
+            >
+              Apri Paypal
+            </Button>
+          </div>
         </Block>
         <Block className="p-4 col-span-1">
           <h2
@@ -98,12 +101,14 @@ export default function SostieniciPage() {
             Compila la sezione a &quot;Sostegno degli enti del terzo settore
             iscritti nel RUNTS...&quot;.
           </p>
-          <Button
-            className="text-lg rounded bg-purple text-white hover:bg-purple/75 p-4 mt-2"
-            onPress={() => writeCodiceFiscaleToClipboard()}
-          >
-            Copia il Codice Fiscale
-          </Button>
+          <div className="flex flex-col">
+            <Button
+              className="p-2 pr-4 pl-4 mt-2 font-bold transition-all duration-300 cursor-pointer rounded-sm bg-lime text-purple hover:bg-purple hover:text-lime"
+              onPress={() => writeCodiceFiscaleToClipboard()}
+            >
+              Copia il Codice Fiscale
+            </Button>
+          </div>
         </Block>
       </Block>
     </Block>

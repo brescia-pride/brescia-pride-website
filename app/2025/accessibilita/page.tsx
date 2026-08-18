@@ -22,7 +22,7 @@ export default function AccessibilitaPage() {
       {/* Skip Link for keyboard navigation */}
       <a
         href="#indice"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-blue text-pink px-4 py-2 rounded-lg font-bold focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-blue text-pink px-4 py-2 rounded-lg font-bold focus:outline-hidden focus:ring-2 focus:ring-blue focus:ring-offset-2"
       >
         Salta al contenuto principale
       </a>
@@ -55,7 +55,7 @@ export default function AccessibilitaPage() {
                 <li>
                   <a
                     href="#vademecum"
-                    className="text-blue hover:text-blue underline focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-transparent rounded px-1 py-1 block hover:bg-blue/10 transition-colors"
+                    className="text-blue hover:text-blue underline focus:outline-hidden focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-transparent rounded-sm px-1 py-1 block hover:bg-blue/10 transition-colors"
                     aria-describedby="vademecum-desc"
                   >
                     Vademecum accessibilità
@@ -68,7 +68,7 @@ export default function AccessibilitaPage() {
                 <li>
                   <a
                     href="#trascrizioni"
-                    className="text-blue hover:text-blue underline focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-transparent rounded px-1 py-1 block hover:bg-blue/10 transition-colors"
+                    className="text-blue hover:text-blue underline focus:outline-hidden focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-transparent rounded-sm px-1 py-1 block hover:bg-blue/10 transition-colors"
                     aria-describedby="trascrizioni-desc"
                   >
                     Trascrizioni interventi
@@ -80,7 +80,7 @@ export default function AccessibilitaPage() {
                 <li>
                   <a
                     href="#mappa"
-                    className="text-blue hover:text-blue underline focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-transparent rounded px-1 py-1 block hover:bg-blue/10 transition-colors"
+                    className="text-blue hover:text-blue underline focus:outline-hidden focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-transparent rounded-sm px-1 py-1 block hover:bg-blue/10 transition-colors"
                     aria-describedby="mappa-desc"
                   >
                     Mappa interattiva
@@ -93,7 +93,7 @@ export default function AccessibilitaPage() {
                 <li>
                   <a
                     href="#telegram"
-                    className="text-blue hover:text-blue underline focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-transparent rounded px-1 py-1 block hover:bg-blue/10 transition-colors"
+                    className="text-blue hover:text-blue underline focus:outline-hidden focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-transparent rounded-sm px-1 py-1 block hover:bg-blue/10 transition-colors"
                     aria-describedby="telegram-desc"
                   >
                     Canale Telegram
@@ -150,7 +150,7 @@ export default function AccessibilitaPage() {
                   link.click();
                   document.body.removeChild(link);
                 }}
-                className="flex items-center justify-center w-full px-4 py-3 bg-pink text-blue hover:bg-blue hover:text-pink text-base sm:text-lg font-bold rounded-lg transition-colors duration-200 border-2 border-pink focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-transparent"
+                className="flex items-center justify-center w-full px-4 py-3 bg-pink text-blue hover:bg-blue hover:text-pink text-base sm:text-lg font-bold rounded-lg transition-colors duration-200 border-2 border-pink focus:outline-hidden focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-transparent"
                 aria-label="Consulta il vademecum accessibilità su Google Docs - si apre in una nuova finestra"
               >
                 🌐 Leggi il vademecum su Google Docs
@@ -188,7 +188,7 @@ export default function AccessibilitaPage() {
                   link.click();
                   document.body.removeChild(link);
                 }}
-                className="flex items-center justify-center w-full px-4 py-3 bg-pink text-red hover:bg-red hover:text-pink text-base sm:text-lg font-bold rounded-lg transition-colors duration-200 border-2 border-pink focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-transparent"
+                className="flex items-center justify-center w-full px-4 py-3 bg-pink text-red hover:bg-red hover:text-pink text-base sm:text-lg font-bold rounded-lg transition-colors duration-200 border-2 border-pink focus:outline-hidden focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-transparent"
                 aria-label="Consulta il vademecum accessibilità su Google Docs - si apre in una nuova finestra"
               >
                 🌐 Leggi le trascrizioni su Google Docs
@@ -224,7 +224,7 @@ export default function AccessibilitaPage() {
                   link.click();
                   document.body.removeChild(link);
                 }}
-                className="flex items-center justify-center w-full px-4 py-3 bg-pink text-purple hover:bg-purple hover:text-pink text-base sm:text-lg font-bold rounded-lg transition-colors duration-200 border-2 border-pink focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-transparent"
+                className="flex items-center justify-center w-full px-4 py-3 bg-pink text-purple hover:bg-purple hover:text-pink text-base sm:text-lg font-bold rounded-lg transition-colors duration-200 border-2 border-pink focus:outline-hidden focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-transparent"
                 aria-label="Entra nel canale Telegram di Brescia Pride - si apre in una nuova finestra"
               >
                 ⬇️ Scarica l&apos;app
@@ -239,7 +239,7 @@ export default function AccessibilitaPage() {
                   link.click();
                   document.body.removeChild(link);
                 }}
-                className="flex items-center justify-center w-full px-4 py-3 bg-pink text-purple hover:bg-purple hover:text-pink text-base sm:text-lg font-bold rounded-lg transition-colors duration-200 border-2 border-pink focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-transparent"
+                className="flex items-center justify-center w-full px-4 py-3 bg-pink text-purple hover:bg-purple hover:text-pink text-base sm:text-lg font-bold rounded-lg transition-colors duration-200 border-2 border-pink focus:outline-hidden focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-transparent"
                 aria-label="Entra nel canale Telegram di Brescia Pride - si apre in una nuova finestra"
               >
                 📱 Entra nel canale

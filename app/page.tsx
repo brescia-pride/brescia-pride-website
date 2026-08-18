@@ -3,7 +3,6 @@
 import React from "react";
 import { ReactNode } from "react";
 import { Link } from "react-aria-components";
-import UpcomingEventsBlock from "./ui/components/UpcomingEventsBlock";
 import { useRouter } from "next/navigation";
 import localFont from "next/font/local";
 import PrideDate from "./ui/components/PrideDate";
@@ -11,6 +10,7 @@ import Block from "./ui/components/Block";
 import ImageBlock from "./ui/components/ImageBlock";
 import InfoCard from "./ui/components/InfoCard";
 import { Button } from "react-aria-components";
+import UpcomingEventsBlock from "./ui/components/UpcomingEventsBlock";
 const myFont = localFont({ src: "./ui/fonts/ST.ttf" });
 
 type HomePageBlockProps = {
@@ -42,19 +42,8 @@ export default function Homepage() {
   const router = useRouter();
   return (
     <div className="flex-col md:grid md:grid-cols-6">
-      <PrideDate />
-
-      <Block
-        className={`col-span-6 bg-lightblue text-blue p-4 cursor-pointer transition-all duration-300 relative w-full flex flex-row justify-center items-center`}
-      >
-        <Button
-          className="text-lg rounded bg-yellow text-fuchsia hover:bg-fuchsia hover:text-yellow p-2 mt-2 font-bold transition-all duration-300 pr-4 pl-4"
-          onPress={() => router.push("/sostienici")}
-        >
-          Clicca qui per tutte le info!
-        </Button>{" "}
-      </Block>
-      <HomePageBlock className="col-span-6" title="Manifesto" color="purple">
+      <PrideDate showButton={true} />
+      {/* <HomePageBlock className="col-span-6" title="Manifesto" color="purple">
         <p>
           abstract manifesto abstract manifesto abstract manifesto abstract
           manifesto abstract manifesto abstract manifesto abstract manifesto
@@ -64,44 +53,14 @@ export default function Homepage() {
           manifesto abstract manifesto abstract manifesto abstract manifesto
           abstract manifesto abstract manifesto abstract manifesto
         </p>
+      </HomePageBlock> */}
+      <HomePageBlock
+        className="col-span-6"
+        title="Prossimi eventi"
+        color="fuchsia"
+      >
+        <UpcomingEventsBlock />
       </HomePageBlock>
-      <Block className="col-span-2 p-4">
-        <ImageBlock
-          src="/images/bandiera.jpg"
-          altText="Mappa del Parco Pride"
-          showOnMobile={true}
-          link="/images/mappa-parco.png"
-          colSpan="col-span-3"
-        />
-      </Block>
-      <HomePageBlock className="col-span-4" title="Eventi" color="green">
-        <p>
-          eventi eventi eventi eventi eventi eventi eventi eventi eventi eventi
-          eventi eventi eventi eventi eventi eventi eventi eventi eventi eventi
-          eventi eventi eventi eventi eventi eventi eventi eventi eventi eventi
-          eventi eventi eventi eventi eventi eventi eventi eventi eventi eventi
-          eventi eventi eventi eventi eventi eventi eventi eventi eventi eventi
-          eventi eventi eventi eventi eventi eventi eventi eventi eventi eventi
-          eventi eventi eventi eventi eventi eventi eventi eventi eventi eventi
-          eventi eventi eventi eventi eventi eventi eventi eventi eventi eventi
-          eventi eventi
-        </p>
-      </HomePageBlock>
-      {/* <UpcomingEventsBlock
-        colSpan="col-span-3"
-        verbosity="short"
-        pageSize={2}
-      />
-      <Block className="col-span-3 p-4">
-        <ImageBlock
-          src="/images/bandiera.jpg"
-          altText="Mappa del Parco Pride"
-          showOnMobile={true}
-          link="/images/mappa-parco.png"
-          colSpan="col-span-3"
-        />
-      </Block>
-      <Block className="col-span-3 p-4"></Block> */}
     </div>
   );
 }

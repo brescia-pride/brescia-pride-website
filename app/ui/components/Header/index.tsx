@@ -60,7 +60,7 @@ const Header = ({ className }: BlockProps) => {
           aria-label="Menù principale"
         >
           <MenuItem
-            className="cursor-pointer flex-1 transition-all duration-300 hover:bg-blue hover:text-white rounded"
+            className="cursor-pointer flex-1 transition-all duration-300 hover:bg-blue hover:text-white focus:bg-blue focus:text-white rounded-sm focus:outline-hidden"
             aria-label="Pride"
             onAction={() => {
               router.push("/2026/pride");
@@ -71,8 +71,8 @@ const Header = ({ className }: BlockProps) => {
           >
             Pride
           </MenuItem>
-          <MenuItem
-            className="cursor-pointer flex-1 transition-all duration-300 hover:bg-green hover:text-white rounded"
+          {/* <MenuItem
+            className="cursor-pointer flex-1 transition-all duration-300 hover:bg-green hover:text-white focus:bg-green focus:text-white rounded-sm focus:outline-hidden"
             aria-label="Accessibilità"
             onAction={() => {
               router.push("/2026/accessibilita");
@@ -82,9 +82,9 @@ const Header = ({ className }: BlockProps) => {
             }}
           >
             Accessibilità
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem
-            className="cursor-pointer flex-1 transition-all duration-300 hover:bg-purple hover:text-white rounded"
+            className="cursor-pointer flex-1 transition-all duration-300 hover:bg-purple hover:text-white focus:bg-purple focus:text-white rounded-sm focus:outline-hidden"
             aria-label="Eventi"
             onAction={() => {
               router.push("/eventi");
@@ -96,7 +96,7 @@ const Header = ({ className }: BlockProps) => {
             Eventi
           </MenuItem>
           <MenuItem
-            className="cursor-pointer flex-1 transition-all duration-300 hover:bg-green hover:text-white rounded"
+            className="cursor-pointer flex-1 transition-all duration-300 hover:bg-green hover:text-white focus:bg-green focus:text-white rounded-sm focus:outline-hidden"
             aria-label="Sostienici"
             onAction={() => {
               router.push("/sostienici");
@@ -108,7 +108,7 @@ const Header = ({ className }: BlockProps) => {
             Sostienici
           </MenuItem>
           <MenuItem
-            className="cursor-pointer flex-1 transition-all duration-300 hover:bg-brown hover:text-white rounded"
+            className="cursor-pointer flex-1 transition-all duration-300 hover:bg-brown hover:text-white focus:bg-brown focus:text-white rounded-sm focus:outline-hidden"
             aria-label="Manifesto"
             onAction={() =>
               window.open("https://bresciapride.it/docs/manifesto-2025.pdf")
@@ -116,8 +116,8 @@ const Header = ({ className }: BlockProps) => {
           >
             Manifesto
           </MenuItem>
-          <MenuItem
-            className="cursor-pointer flex-1 transition-all duration-300 hover:bg-red hover:text-white rounded"
+          {/* <MenuItem
+            className="cursor-pointer flex-1 transition-all duration-300 hover:bg-red hover:text-white focus:bg-red focus:text-white rounded-sm focus:outline-hidden"
             aria-label="Sala Stampa"
             onAction={() => {
               router.push("/stampa");
@@ -127,9 +127,9 @@ const Header = ({ className }: BlockProps) => {
             }}
           >
             Stampa
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem
-            className="cursor-pointer flex-1 transition-all duration-300 hover:bg-blue hover:text-white rounded"
+            className="cursor-pointer flex-1 transition-all duration-300 hover:bg-blue hover:text-white focus:bg-blue focus:text-white rounded-sm focus:outline-hidden"
             aria-label="Contatti"
             onAction={() => {
               router.push("/contatti");
@@ -141,7 +141,7 @@ const Header = ({ className }: BlockProps) => {
             Contatti
           </MenuItem>
           <MenuItem
-            className="cursor-pointer flex-1 transition-all duration-300 hover:bg-blue hover:text-white rounded"
+            className="cursor-pointer flex-1 transition-all duration-300 hover:bg-red hover:text-white focus:bg-red focus:text-white rounded-sm focus:outline-hidden"
             aria-label="Archivio"
             onAction={() => {
               router.push("/archivio");

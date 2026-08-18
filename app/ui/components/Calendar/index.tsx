@@ -157,17 +157,12 @@ export default function Calendar() {
                         setSelectedDate(isSelected ? null : dateKey)
                       }
                       className={`aspect-square flex flex-col items-center justify-center rounded-full cursor-pointer text-sm relative transition-colors duration-150
-                ${isSelected ? "bg-blue text-white font-bold" : isToday ? "bg-[#378ADD] text-white font-bold" : "text-gray-700 font-normal"}
-                ${!isSelected && !isToday && "hover:bg-blue/[0.12]"}
+                ${isSelected ? "bg-blue text-white font-bold" : isToday ? "border border-blue border-2 font-bold" : "text-gray-700 font-normal"}
+                ${hasEvents ? "bg-purple font-bold text-white" : ""}
               `}
                       style={{ cursor: hasEvents ? "pointer" : "default" }}
                     >
                       {day}
-                      {hasEvents && (
-                        <div
-                          className={`absolute bottom-[10%] w-[6px] h-[6px] rounded-full ${isSelected || isToday ? "bg-white" : "bg-blue"}`}
-                        />
-                      )}
                     </div>
                   );
                 })}
@@ -207,7 +202,7 @@ export default function Calendar() {
                       key={ev.id}
                       event={ev}
                       verbosity={"long"}
-                      className="text-blue"
+                      className="text-blue rounded-sm p-4 bg-blue/5 hover:bg-blue/20"
                     />
                   ))}
                 </ul>
@@ -215,9 +210,15 @@ export default function Calendar() {
             </div>
           </div>
         ) : (
-          <div className="">
-            <span className="text-blue font-bold text-xl lg:text-2xl text-center">
-              Seleziona i giorni con il puntino blu!
+          <div className="text-black/75">
+            <span className="font-bold text-xl lg:text-2xl text-center">
+              Seleziona i giorni con il&nbsp;
+            </span>
+            <span className="font-bold text-purple text-xl lg:text-2xl text-center">
+              puntino viola ⬤&nbsp;
+            </span>
+            <span className="font-bold text-xl lg:text-2xl text-center">
+              per vedere gli eventi!
             </span>
           </div>
         )}

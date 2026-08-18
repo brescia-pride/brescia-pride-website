@@ -1,10 +1,10 @@
 "use client";
 
-import localFont from "next/font/local";
-import { Link } from "react-aria-components";
 import Block from "../Block";
+import { Link } from "react-aria-components";
 import { Button } from "react-aria-components";
 import { useRouter } from "next/navigation";
+import ColoredButton from "../ColoredButton";
 
 type BlockProps = {
   className?: string | "";
@@ -22,12 +22,13 @@ const CustomFooter = ({ className }: BlockProps) => {
           <span className="font-bold">Non hai trovato quello che cercavi?</span>
         </div>
         <div className="flex flex-col">
-          <Button
-            className="text-lg rounded bg-red text-white hover:bg-red/75 p-2 mt-2"
-            onPress={() => router.push("/contatti")}
-          >
-            Scrivici!
-          </Button>
+          <ColoredButton
+            text="Scrivici"
+            textColor="red"
+            bgColor="pink"
+            id="link-a-contatti"
+            href="/contatti"
+          />
         </div>
       </Block>
       <Block className="md:col-span-1 md:p-4">
@@ -35,12 +36,13 @@ const CustomFooter = ({ className }: BlockProps) => {
           <span className="font-bold">Sostienici con una donazione!</span>
         </div>
         <div className="flex flex-col">
-          <Button
-            className="text-lg rounded bg-red text-white hover:bg-red/75 p-2 mt-2"
-            onPress={() => router.push("/sostienici")}
-          >
-            Sostienici
-          </Button>
+          <ColoredButton
+            text="Sostienici"
+            textColor="red"
+            bgColor="pink"
+            id="link-a-sostienici"
+            href="/sostienici"
+          />
         </div>
       </Block>
       <Block className="md:col-span-1 md:p-4">

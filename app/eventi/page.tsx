@@ -16,8 +16,7 @@ export default function EventsPage() {
           Eventi
         </h1>
         <p className={`lg:col-span-6 text-2xl text-purple mt-2`}>
-          <b>Organizziamo eventi tutto l&apos;anno</b>, non solo la giornata del
-          Pride!
+          <b>Organizziamo eventi tutto l&apos;anno!</b>
         </p>
         <p className={`lg:col-span-6 text-2xl text-purple mt-2`}>
           Tieni d&apos;occhio questa pagina e le nostre pagine{" "}

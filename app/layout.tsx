@@ -29,13 +29,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="it">
       <body
-        className={`${inter.className} bg-white focus-visible:outline-none relative w-lg mx-auto md:max-w-7xl md:shadow-2xl flex flex-col justify-between min-h-screen`}
+        className={`${inter.className} focus-visible:outline-hidden relative flex flex-col justify-between min-h-screen mx-auto md:max-w-7xl md:shadow-2xl`}
       >
         <Header className="" />
         <main
           id="main-content"
           role="main"
-          className="focus:outline-none flex-1"
+          className="focus:outline-hidden flex-1 bg-white"
           tabIndex={-1}
         >
           {children}

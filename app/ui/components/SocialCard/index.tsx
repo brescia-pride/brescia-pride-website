@@ -2,13 +2,15 @@
 
 import React from "react";
 import Block from "../Block";
-
+import { Link } from "react-aria-components";
 type SocialCardProps = {
   href: string;
   icon: React.ReactNode;
   backgroundColor: "pink" | "lime" | "lilac" | "green" | "lightblue" | "cream";
   iconColor: "red" | "blue" | "green" | "black" | "purple";
   className?: string;
+  title: string;
+  desc: string;
 };
 
 const SocialCard = ({
@@ -17,6 +19,8 @@ const SocialCard = ({
   backgroundColor,
   iconColor,
   className = "",
+  title,
+  desc,
 }: SocialCardProps) => {
   const bgColorClasses = {
     pink: "bg-pink hover:bg-pink/75",
@@ -36,18 +40,20 @@ const SocialCard = ({
   };
 
   return (
-    <Block
-      className={`w-100 ${bgColorClasses[backgroundColor]} p-6 ${className}`}
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`${bgColorClasses[backgroundColor]} p-6 ${className} flex flex-col ${iconColorClasses[iconColor]}`}
     >
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`grid h-full place-content-center text-4xl ${iconColorClasses[iconColor]}`}
-      >
-        {icon}
-      </a>
-    </Block>
+        <div className="grid h-full place-content-center">
+          <p className="text-4xl">{icon}</p>
+        </div>
+        <div className="flex flex-col justify-center items-center mt-4">
+          <h1 className="font-bold text-xl md:text-2xl">{title}</h1>
+          {/* <p className="mt-2 text-center">{desc}</p> */}
+        </div>
+    </Link>
   );
 };
 

@@ -7,21 +7,24 @@ import Block from "@/app/ui/components/Block";
 import { ReactNode } from "react";
 import { useRouter } from "next/navigation";
 import localFont from "next/font/local";
+import { Link } from "react-aria-components";
 const myFont = localFont({ src: "../../ui/fonts/ST.ttf" });
 
 type InfoBlockProps = {
   title: string;
   children: ReactNode;
   className?: string;
+  id: string;
 };
 
 const InfoBlock = ({
   title,
   children,
+  id,
   className = "col-span-6",
 }: InfoBlockProps) => {
   return (
-    <Block className={className}>
+    <Block className={className} id={id}>
       <div className="text-xl p-4">
         <h1 className={`${myFont.className} text-4xl text-blue`}>{title}</h1>
         <div className="mt-2">{children}</div>
@@ -31,13 +34,67 @@ const InfoBlock = ({
 };
 
 export default function PridePage() {
-  const router = useRouter();
-
+  const navLiClassName = "mt-2 pl-2 pr-2 transition-all duration-300 hover:bg-blue hover:text-white focus:bg-blue focus:text-white rounded-sm focus:outline-hidden bg-blue/10 md:text-2xl"
   return (
-    <Block aria-label="pride" className="flex grid md:grid-cols-6 grid-cols-1">
+    <Block aria-label="pride" className="grid md:grid-cols-6 grid-cols-1">
       <PrideDate showButton={false} />
       <Block className="col-span-6">
-        <div className="p-4">
+        <InfoBlock title="Indice" className="text-blue" id="indice">
+          <nav id="indice" role="navigation" aria-labelledby="toc-heading">
+            <div className="text-blue font-bold">
+              <ul role="list" className="md:flex justify-between">
+                <li className={navLiClassName}>
+                  <a href="#programma" aria-describedby="programma-desc">
+                    Programma
+                  </a>
+                  <span id="programma-desc" className="sr-only">
+                    Programma della giornata del pride
+                  </span>
+                </li>
+                <li className={navLiClassName}>
+                  <a href="#parco-pride" aria-describedby="parco-pride-desc">
+                    Parco Pride
+                  </a>
+                  <span id="parco-pride-desc" className="sr-only">
+                    Informazioni sul Parco Pride in Campo Marte
+                  </span>
+                </li>
+                <li className={navLiClassName}>
+                  <a href="#corteo" aria-describedby="corteo-desc">
+                    Corteo
+                  </a>
+                  <span id="corteo-desc" className="sr-only">
+                    Informazioni sul Corteo
+                  </span>
+                </li>
+                <li className={navLiClassName}>
+                  <a
+                    href="#come-arrivare"
+                    aria-describedby="come-arrivare-desc"
+                  >
+                    Come arrivare
+                  </a>
+                  <span id="come-arrivare-desc" className="sr-only">
+                    Informazioni su come arrivare a Campo Marte
+                  </span>
+                </li>
+                <li className={navLiClassName}>
+                  <a
+                    href="#parcheggi-riservati"
+                    aria-describedby="parcheggi-riservati-desc"
+                  >
+                    Modulo parcheggi riservati
+                  </a>
+                  <span id="parcheggi-riservati-desc" className="sr-only">
+                    Link al modulo da compilare per prenotare un parcheggio per
+                    persone con disabilità
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </InfoBlock>
+        <div className="p-4" id="programma">
           <h1 className={`${myFont.className} text-3xl text-blue`}>
             Programma
           </h1>
@@ -83,7 +140,7 @@ export default function PridePage() {
           </table>
         </div>
       </Block>
-      <InfoBlock title="Parco Pride">
+      <InfoBlock title="Parco Pride" id="parco-pride">
         <p>
           Il 5 settembre non sarà solo un corteo ma un&apos;intera giornata di
           orgoglio, comunità e lotta queer, che avrà come cuore pulsante il{" "}
@@ -107,7 +164,7 @@ export default function PridePage() {
           colSpan=""
         />
       </div>
-      <InfoBlock title="Corteo">
+      <InfoBlock title="Corteo" id="corteo">
         <p>
           Il corteo{" "}
           <b>
@@ -115,7 +172,7 @@ export default function PridePage() {
           </b>
           . Il percorso è in piano ed è lungo circa <b>3 chilometri</b>.
         </p>
-        <p className="mt-2">
+        <div className="mt-2">
           <b>Lungo il corteo ci saranno</b>:
           <ul className="list-disc list-inside mt-2">
             <li>
@@ -138,7 +195,7 @@ export default function PridePage() {
               <b>Carro raccolta differenziata</b> in fondo al corteo
             </li>
           </ul>
-        </p>
+        </div>
       </InfoBlock>
       <div className="col-span-6 md:grid md:grid-cols-2 gap-2 p-4 -mt-2">
         <ImageBlock
@@ -161,7 +218,7 @@ export default function PridePage() {
           Clicca <Link href="/2026/accessibilita" className="underline text-blue">qui</Link> per tutte le informazioni di accessibilità.
         </p>
       </InfoBlock> */}
-      <InfoBlock title="Come arrivare">
+      <InfoBlock title="Come arrivare" id="come-arrivare">
         <ul>
           <li>
             <b>Bici</b>: postazione bicimia Da Vinci
@@ -176,9 +233,15 @@ export default function PridePage() {
             <b>Parcheggi</b>: intorno a Campo Marte e grande parcheggio gratuito
             IVECO a 15 mminuti a piedi
           </li>
-          <li>
+          <li id="parcheggi-riservati">
             <b>Parcheggi riservati</b>: a disposizione di persone con
-            disabilità, compila il modulo
+            disabilità,{" "}
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd_-vos8-GszHIRm7sEj8ETz6PZXmEuGAUpQcNxLsjyK2ks7g/viewform"
+              className="underline text-blue font-bold"
+            >
+              compila il modulo a questo link
+            </Link>
           </li>
         </ul>
       </InfoBlock>

@@ -2,13 +2,15 @@
 
 import React from "react";
 import Block from "../Block";
-
+import { Link } from "react-aria-components";
 type SocialCardProps = {
   href: string;
   icon: React.ReactNode;
-  backgroundColor: "pink" | "lime" | "lilac" | "green" | "blue" | "cream";
-  iconColor: "red" | "blue" | "green" | "black";
+  backgroundColor: "pink" | "lime" | "lilac" | "green" | "lightblue" | "cream";
+  iconColor: "red" | "blue" | "green" | "black" | "purple";
   className?: string;
+  title: string;
+  desc: string;
 };
 
 const SocialCard = ({
@@ -17,14 +19,16 @@ const SocialCard = ({
   backgroundColor,
   iconColor,
   className = "",
+  title,
+  desc,
 }: SocialCardProps) => {
   const bgColorClasses = {
-    pink: "bg-pink",
-    lime: "bg-lime",
-    lilac: "bg-lilac",
-    green: "bg-green",
-    blue: "bg-blue",
-    cream: "bg-cream",
+    pink: "bg-pink hover:bg-pink/75",
+    lime: "bg-lime hover:bg-lime/75",
+    lilac: "bg-lilac hover:bg-lilac/75",
+    green: "bg-green hover:bg-green/75",
+    lightblue: "bg-lightblue hover:bg-lightblue/75",
+    cream: "bg-cream hover:bg-cream/75",
   };
 
   const iconColorClasses = {
@@ -32,25 +36,24 @@ const SocialCard = ({
     blue: "text-blue",
     green: "text-green",
     black: "text-black",
+    purple: "text-purple",
   };
 
   return (
-    <Block
-      whileHover={{
-        rotate: "-2.5deg",
-        scale: 1.1,
-      }}
-      className={`w-100 ${bgColorClasses[backgroundColor]} p-6 ${className}`}
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`${bgColorClasses[backgroundColor]} p-6 ${className} flex flex-col ${iconColorClasses[iconColor]}`}
     >
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`grid h-full place-content-center text-4xl ${iconColorClasses[iconColor]} hover:text-6xl transition-all duration-300`}
-      >
-        {icon}
-      </a>
-    </Block>
+      <div className="grid h-full place-content-center">
+        <p className="text-4xl">{icon}</p>
+      </div>
+      <div className="flex flex-col justify-center items-center mt-4">
+        <h1 className="font-bold text-xl md:text-2xl">{title}</h1>
+        {/* <p className="mt-2 text-center">{desc}</p> */}
+      </div>
+    </Link>
   );
 };
 

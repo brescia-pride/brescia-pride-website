@@ -1,64 +1,66 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import Header from "./ui/components/Header";
-import ImageBlock from "./ui/components/ImageBlock";
-import CustomFooter from "./ui/components/CustomFooter";
+import { ReactNode } from "react";
 import { Link } from "react-aria-components";
-import { Button } from "react-aria-components";
-import Block from "./ui/components/Block";
-import UpcomingEventsBlock from "./ui/components/UpcomingEventsBlock";
 import { useRouter } from "next/navigation";
 import localFont from "next/font/local";
-
+import PrideDate from "./ui/components/PrideDate";
+import Block from "./ui/components/Block";
+import ImageBlock from "./ui/components/ImageBlock";
+import InfoCard from "./ui/components/InfoCard";
+import { Button } from "react-aria-components";
+import UpcomingEventsBlock from "./ui/components/UpcomingEventsBlock";
 const myFont = localFont({ src: "./ui/fonts/ST.ttf" });
+
+type HomePageBlockProps = {
+  title: string;
+  color: string;
+  className: string;
+  children: ReactNode;
+};
+
+const HomePageBlock = ({
+  title,
+  className,
+  color,
+  children,
+}: HomePageBlockProps) => {
+  return (
+    <Block className={className}>
+      <div className="text-xl p-4">
+        <h1 className={`${myFont.className} text-4xl text-${color}`}>
+          {title}
+        </h1>
+        <div className="mt-2">{children}</div>
+      </div>
+    </Block>
+  );
+};
 
 export default function Homepage() {
   const router = useRouter();
   return (
-    <div className="min-h-screen px-4 py-6 text-zinc-50">
-      <motion.div
-        initial="initial"
-        animate="animate"
-        transition={{
-          staggerChildren: 0.05,
-        }}
-        className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
+    <div className="flex-col md:grid md:grid-cols-6">
+      <PrideDate showButton={true} />
+      {/* <HomePageBlock className="col-span-6" title="Manifesto" color="purple">
+        <p>
+          abstract manifesto abstract manifesto abstract manifesto abstract
+          manifesto abstract manifesto abstract manifesto abstract manifesto
+          abstract manifesto abstract manifesto abstract manifesto abstract
+          manifesto abstract manifesto abstract manifesto abstract manifesto
+          abstract manifesto abstract manifesto abstract manifesto abstract
+          manifesto abstract manifesto abstract manifesto abstract manifesto
+          abstract manifesto abstract manifesto abstract manifesto
+        </p>
+      </HomePageBlock> */}
+      <HomePageBlock
+        className="col-span-6"
+        title="Prossimi eventi"
+        color="fuchsia"
       >
-        <Header size={6} />
-        <Link href="/2026/pride" className="col-span-2">
-          <ImageBlock
-            src="/images/date-2026.png"
-            altText="Ci vediamo al Pride il 5 settembre 2026"
-            showOnMobile={true}
-            colSpan="col-span-2"
-            linkText="👉 Tutte le info"
-            link="/2026/pride"
-          />
-        </Link>
-        <Link
-          href={
-            "https://docs.google.com/forms/d/e/1FAIpQLScS3Z6WrGUcrYiqg5NGD2AA70S-eyLBnm9w7_t8rm9jumqymQ/viewform?usp=header"
-          }
-          className="col-span-2"
-        >
-          <ImageBlock
-            src="/images/call-volontari.png"
-            altText="Open Call Volontary per il Brescia Pride 2026"
-            showOnMobile={true}
-            linkText="👉 Vai al modulo"
-            link="https://docs.google.com/forms/d/e/1FAIpQLScS3Z6WrGUcrYiqg5NGD2AA70S-eyLBnm9w7_t8rm9jumqymQ/viewform?usp=header"
-            colSpan="col-span-2"
-          />
-        </Link>
-        <UpcomingEventsBlock
-          colSpan="col-span-2"
-          verbosity="short"
-          pageSize={2}
-        />
-        <CustomFooter />
-      </motion.div>
+        <UpcomingEventsBlock />
+      </HomePageBlock>
     </div>
   );
 }

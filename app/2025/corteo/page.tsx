@@ -23,7 +23,6 @@ export default function CorteoPage() {
         }}
         className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
       >
-        <Header size={6} />
         <InfoCard
           title="Programma"
           backgroundColor="pink"
@@ -614,7 +613,7 @@ export default function CorteoPage() {
           </p>
           <p className="text-xl mt-2">
             Non trovi le info che cerchi?{" "}
-            <Link href="/contact" className="underline">
+            <Link href="/contatti" className="underline">
               Contattaci!
             </Link>
           </p>

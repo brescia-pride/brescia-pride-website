@@ -14,7 +14,7 @@ type ResourceCardProps = {
   description: string;
   actionText: string;
   href: string;
-  hoverColor: "red" | "blue" | "green";
+  hoverColor: "purple" | "blue" | "green";
   isExternal?: boolean;
   colSpan?: number;
   className?: string;
@@ -33,9 +33,9 @@ const ResourceCard = ({
   const router = useRouter();
 
   const hoverColorClasses = {
-    red: "hover:bg-red text-red hover:text-pink",
-    blue: "hover:bg-blue text-blue hover:text-pink",
-    green: "hover:bg-green text-green hover:text-pink",
+    purple: "hover:bg-lilac text-purple hover:text-purple",
+    blue: "hover:bg-lightblue text-blue hover:text-blue",
+    green: "hover:bg-lime text-green hover:text-green",
   };
 
   const handlePress = () => {
@@ -47,19 +47,19 @@ const ResourceCard = ({
   };
 
   return (
-    <Block className={`col-span-${colSpan} bg-pink ${className}`}>
+    <Block className={`col-span-${colSpan} bg-white ${className}`}>
       <Button
-        className={`cursor-pointer transition-all duration-300 flex h-full w-full p-6 rounded-lg relative overflow-hidden ${hoverColorClasses[hoverColor]}`}
+        className={`cursor-pointer transition-all duration-300 flex h-full w-full p-4 relative overflow-hidden ${hoverColorClasses[hoverColor]} rounded-lg`}
         onPress={handlePress}
       >
-        <div className="text-left relative z-10 text-shadow-lg select-text">
-          <h1
-            className={`text-3xl leading-tight font-medium ${myFont.className}`}
-          >
+        <div className="text-left relative z-10 select-text">
+          <h1 className={`text-2xl md:text-3xl leading-tight font-bold`}>
             {title}
           </h1>
-          <p className="text-xl font-bold mt-2">{description}</p>
-          <p className="text-lg font-bold underline mt-2 flex items-center">
+          <p className="text-xl text-black font-semi-bold mt-2">
+            {description}
+          </p>
+          <p className="text-lg text-black underline mt-2 flex items-center">
             {actionText} <FiArrowRight />
           </p>
         </div>

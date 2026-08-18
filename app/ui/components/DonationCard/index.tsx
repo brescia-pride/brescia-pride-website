@@ -9,7 +9,7 @@ const myFont = localFont({ src: "../../fonts/ST.ttf" });
 
 type DonationCardProps = {
   title: string;
-  backgroundColor: "lilac" | "pink" | "green";
+  backgroundColor: "white" | "pink" | "green";
   hoverColor: "purple" | "red" | "pink";
   textColor: "purple" | "red" | "pink";
   hoverTextColor: "lilac" | "pink" | "green";
@@ -29,7 +29,7 @@ const DonationCard = ({
   className = "",
 }: DonationCardProps) => {
   const bgColorClasses = {
-    lilac: "bg-lilac",
+    white: "bg-white",
     pink: "bg-pink",
     green: "bg-green",
   };
@@ -57,9 +57,9 @@ const DonationCard = ({
       className={`${bgColorClasses[backgroundColor]} col-span-${colSpan} ${className}`}
     >
       <Button
-        className={`cursor-default transition-all duration-300 ${hoverColorClasses[hoverColor]} flex items-center justify-center h-full w-full p-6 rounded-lg relative overflow-hidden ${textColorClasses[textColor]} ${hoverTextColorClasses[hoverTextColor]}`}
+        className={`cursor-default transition-all duration-300 ${hoverColorClasses[hoverColor]} flex h-full w-full p-6 relative overflow-hidden ${textColorClasses[textColor]} ${hoverTextColorClasses[hoverTextColor]}`}
       >
-        <div className="text-center relative z-10 text-shadow-lg select-text">
+        <div className="relative z-10 text-shadow-lg select-text">
           <h1
             className={`text-3xl leading-tight font-medium ${myFont.className}`}
           >

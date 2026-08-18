@@ -5,7 +5,8 @@ import Block from "../Block";
 import localFont from "next/font/local";
 import type { NotionEvent } from "@/app/api/events/route";
 import EventBlock from "../EventBlock";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+import ColoredButton from "../ColoredButton";
 
 const myFont = localFont({ src: "../../fonts/ST.ttf" });
 
@@ -16,8 +17,8 @@ type Props = {
 };
 
 const UpcomingEventsBlock = ({
-  colSpan = "col-span-2",
-  verbosity = "short",
+  colSpan = "col-span-3",
+  verbosity = "long",
   pageSize,
 }: Props) => {
   const [events, setEvents] = useState<NotionEvent[] | null>(null);
@@ -33,49 +34,49 @@ const UpcomingEventsBlock = ({
       .catch(() => setEvents([]));
   }, [pageSize]);
 
-  return (
-    <Block className={`${colSpan} bg-purple overflow-hidden`}>
-      <div className="flex flex-col h-full p-5 gap-3">
-        <Link href="/events">
-          <h2
-            className={`text-3xl text-center font-medium text-pink leading-tight ${myFont.className}`}
-          >
-            Prossimi eventi
-          </h2>
-        </Link>
+  const eventsColSpan =
+    events === null ? 2 : events.length > 2 ? 2 : events.length;
+  const router = useRouter();
 
-        {events === null ? (
-          <div className="flex flex-col gap-2 mt-1">
-            {[0, 1, 2, 3].map((i) => (
-              <div key={i} className="animate-pulse flex flex-col gap-1">
-                <div className="h-4 bg-pink/20 rounded w-3/4" />
-                <div className="h-3 bg-pink/10 rounded w-1/3" />
+  return (
+    <Block className={`${colSpan} bg-white overflow-hidden text-fuchsia`}>
+      <div className="flex flex-col justify-between">
+        <div className="flex-1 flex flex-col">
+          {events === null ? (
+            <div className="flex flex-col gap-2">
+              {[0, 1, 2, 3].map((i) => (
+                <div key={i} className="animate-pulse flex flex-col gap-1">
+                  <div className="h-4 bg-fuchsia/20 rounded-sm" />
+                  <div className="h-3 bg-fuchsia/10 rounded-sm w-2/3" />
+                </div>
+              ))}
+            </div>
+          ) : events.length === 0 ? (
+            <p className="text-fuchsia/70">Nessun evento in programma</p>
+          ) : (
+            <div>
+              <ul className={`grid md:grid-cols-${eventsColSpan} gap-4`}>
+                {events.map((event) => (
+                  <EventBlock
+                    key={event.id}
+                    event={event}
+                    verbosity={verbosity}
+                    className="text-fuchsia rounded-sm p-4 bg-fuchsia/5 hover:bg-fuchsia/20"
+                  />
+                ))}
+              </ul>
+              <div className="flex flex-row justify-center items-center p-4">
+                <ColoredButton
+                  text="Vai a tutti gli eventi!"
+                  textColor="blue"
+                  bgColor="lime"
+                  id="link-a-eventi"
+                  href="/eventi"
+                />
               </div>
-            ))}
-          </div>
-        ) : events.length === 0 ? (
-          <p className="text-pink/70 text-sm mt-1">
-            Nessun evento in programma
-          </p>
-        ) : (
-          <ul className="flex flex-col gap-4 mt-1">
-            {events.map((event) => (
-              <EventBlock
-                key={event.id}
-                event={event}
-                verbosity={verbosity}
-                className="bg-pink text-purple p-4"
-              />
-            ))}
-          </ul>
-        )}
-        {verbosity === "short" && (
-          <Link href="/events" className="flex relative bottom-0 right-0 mt-2">
-            <span className={`text-xl text-pink ${myFont.className}`}>
-              👉 Vai a tutti gli eventi
-            </span>
-          </Link>
-        )}
+            </div>
+          )}
+        </div>
       </div>
     </Block>
   );

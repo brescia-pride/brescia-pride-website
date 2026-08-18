@@ -29,13 +29,7 @@ const ImageBlock: React.FC<BlockProps> = ({
   const hide: string = showOnMobile ? "" : "hidden md:block";
 
   return (
-    <Block
-      className={`${colSpan} relative ${hide}`}
-      whileHover={{
-        rotate: "-2.5deg",
-        scale: 1.005,
-      }}
-    >
+    <Block className={`${colSpan} relative ${hide}`}>
       <Image
         src={src}
         alt={altText}
@@ -46,7 +40,7 @@ const ImageBlock: React.FC<BlockProps> = ({
         quality={100}
       />
       {isClient && link && linkText && (
-        <div className="absolute bottom-2 right-2 bg-black bg-opacity-90 text-white px-2 py-1 rounded">
+        <div className="absolute bottom-2 right-2 bg-black bg-opacity-90 text-white px-2 py-1 rounded-sm">
           <Link href={link} className="text-2xl font-semibold">
             {linkText}
           </Link>

@@ -34,16 +34,16 @@ const DonationSection = ({
 
   return (
     <Block
-      className={`col-span-${colSpan} ${bgColorClasses[backgroundColor]} p-4 items-center justify-center ${className}`}
+      className={`col-span-${colSpan} ${bgColorClasses[backgroundColor]} items-center justify-center ${className}`}
     >
       <h1
-        className={`text-2xl md:text-4xl font-bold text-center ${myFont.className} text-pink tracking-wider leading-tight mt-2`}
+        className={`text-2xl md:text-4xl text-center ${myFont.className} text-pink tracking-wider leading-tight mt-4`}
       >
         {title}
       </h1>
       {description && (
         <p
-          className={`lg:col-span-${colSpan} text-xl font-bold mt-2 text-center text-pink`}
+          className={`lg:col-span-${colSpan} text-xl mt-2 text-center text-pink`}
         >
           {description}
         </p>

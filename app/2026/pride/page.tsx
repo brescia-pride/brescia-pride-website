@@ -1,147 +1,250 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import Header from "../../ui/components/Header";
-import CustomFooter from "../../ui/components/CustomFooter";
-import ImageBlock from "../../ui/components/ImageBlock";
-import InfoCard from "../../ui/components/InfoCard";
-import DonationSection from "../../ui/components/DonationSection";
-import ApplicationCard from "../../ui/components/ApplicationCard";
-import ResourceCard from "../../ui/components/ResourceCard";
-import { Button } from "react-aria-components";
-import Link from "next/link";
+import ImageBlock from "@/app/ui/components/ImageBlock";
+import PrideDate from "@/app/ui/components/PrideDate";
+import Block from "@/app/ui/components/Block";
+import { ReactNode } from "react";
+import { useRouter } from "next/navigation";
+import localFont from "next/font/local";
+import { Link } from "react-aria-components";
+const myFont = localFont({ src: "../../ui/fonts/ST.ttf" });
+
+type InfoBlockProps = {
+  title: string;
+  children: ReactNode;
+  className?: string;
+  id: string;
+};
+
+const InfoBlock = ({
+  title,
+  children,
+  id,
+  className = "col-span-6",
+}: InfoBlockProps) => {
+  return (
+    <Block className={className} id={id}>
+      <div className="text-xl p-4">
+        <h1 className={`${myFont.className} text-4xl text-blue`}>{title}</h1>
+        <div className="mt-2">{children}</div>
+      </div>
+    </Block>
+  );
+};
 
 export default function PridePage() {
+  const navLiClassName = "mt-2 pl-2 pr-2 transition-all duration-300 hover:bg-blue hover:text-white focus:bg-blue focus:text-white rounded-sm focus:outline-hidden bg-blue/10 md:text-2xl"
   return (
-    <div className="min-h-screen px-4 py-6 text-zinc-50">
-      <motion.div
-        initial="initial"
-        animate="animate"
-        transition={{
-          staggerChildren: 0.05,
-        }}
-        className="mx-auto flex flex-col md:grid md:max-w-6xl md:grid-flow-dense md:grid-cols-6 gap-4"
-      >
-        <Header size={6} />
-        <InfoCard
-          title="Programma"
-          backgroundColor="pink"
-          hoverColor="pink"
-          textColor="red"
-          hoverTextColor="red"
-          colSpan={4}
-        >
-          <div className="p-4">
-            <table className="w-full align-middle text-center border-spacing-5">
-              <tbody>
-                <tr className="text-xl font-bold border-b-2 border-red">
-                  <td className="text-xl font-bold p-4 py-3 md:pr-8 md:py-4">
-                    <p>12:00</p>
-                    <p>21:00</p>
-                  </td>
-                  <td className="text-xl font-bold p-4 py-3 md:pl-8 md:py-4 border-l-2 border-red">
-                    Parco Pride a Campo Marte 🌳
-                  </td>
-                </tr>
-                <tr className="text-xl font-bold border-b-2 border-red">
-                  <td className="text-xl font-bold p-4 py-3 md:pr-8 md:py-4">
-                    <p>14:30</p>
-                    <p>15:30</p>
-                  </td>
-                  <td className="text-xl font-bold p-4 py-3 md:pl-8 md:py-4 border-l-2 border-red">
-                    Concentramento in Campo Marte con interventi e performance
-                    📢
-                  </td>
-                </tr>
-                <tr className="text-xl font-bold border-b-2 border-red">
-                  <td className="text-xl font-bold p-4 py-3 md:pr-8 md:py-4">
-                    <p>15:30</p>
-                    <p>18:00</p>
-                  </td>
-                  <td className="text-xl font-bold p-4 py-3 md:pl-8 md:py-4 border-l-2 border-red">
-                    Corteo per la città 🏳️‍🌈🏳️‍⚧️
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-xl font-bold p-4 py-3 md:pr-8 md:py-4">
-                    <p>18:00</p>
-                    <p>21:00</p>
-                  </td>
-                  <td className="text-xl font-bold p-4 py-3 md:pl-8 md:py-4 border-l-2 border-red">
-                    Interventi e performance a Campo Marte 🎤
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </InfoCard>
-        <Link
-          href={
-            "https://docs.google.com/forms/d/e/1FAIpQLScS3Z6WrGUcrYiqg5NGD2AA70S-eyLBnm9w7_t8rm9jumqymQ/viewform?usp=header"
-          }
-          className="col-span-2"
-        >
-          <ImageBlock
-            src="/images/call-volontari.png"
-            altText="Open Call Volontary per il Brescia Pride 2026"
-            showOnMobile={true}
-            linkText="👉 Vai al modulo"
-            link="https://docs.google.com/forms/d/e/1FAIpQLScS3Z6WrGUcrYiqg5NGD2AA70S-eyLBnm9w7_t8rm9jumqymQ/viewform?usp=header"
-            colSpan="col-span-2"
-          />
-        </Link>
-        <InfoCard
-          title="Parco Pride"
-          backgroundColor="blue"
-          hoverColor="blue"
-          textColor="pink"
-          hoverTextColor="pink"
-          colSpan={3}
-        >
-          <div className="text-xl">
-            <p className="mt-2">
-              Il 5 settembre non sarà solo un corteo ma un&apos;intera giornata
-              di orgoglio, comunità e lotta queer, che avrà come cuore pulsante
-              il <b>Parco Pride a Campo Marte</b>
-            </p>
-
-            <p className="font-bold mt-2">
-              Sarà attivo dalle 12 alle 21. Anche durante il corteo.
-            </p>
-
-            <p className="font-bold mt-2">
-              📍{" "}
-              <Link
-                href={"https://maps.app.goo.gl/ksS1JTRGJ4zJWr1s5"}
-                className="underline"
-              >
-                Campo Marte (Google Maps)
-              </Link>
-            </p>
-          </div>
-        </InfoCard>
-        <InfoCard
-          title=""
-          backgroundColor="pink"
-          hoverColor="pink"
-          textColor="red"
-          hoverTextColor="red"
-          colSpan={3}
-        >
-          <p className="text-xl font-bold">
-            Questa pagina è in continuo aggiornamento! Vi aspettiamo il 5
-            settembre! 🫶
-          </p>
-          <p className="text-xl mt-2">
-            Non trovi le info che cerchi?{" "}
-            <Link href="/contact" className="underline">
-              Contattaci!
+    <Block aria-label="pride" className="grid md:grid-cols-6 grid-cols-1">
+      <PrideDate showButton={false} />
+      <Block className="col-span-6">
+        <InfoBlock title="Indice" className="text-blue" id="indice">
+          <nav id="indice" role="navigation" aria-labelledby="toc-heading">
+            <div className="text-blue font-bold">
+              <ul role="list" className="md:flex justify-between">
+                <li className={navLiClassName}>
+                  <a href="#programma" aria-describedby="programma-desc">
+                    Programma
+                  </a>
+                  <span id="programma-desc" className="sr-only">
+                    Programma della giornata del pride
+                  </span>
+                </li>
+                <li className={navLiClassName}>
+                  <a href="#parco-pride" aria-describedby="parco-pride-desc">
+                    Parco Pride
+                  </a>
+                  <span id="parco-pride-desc" className="sr-only">
+                    Informazioni sul Parco Pride in Campo Marte
+                  </span>
+                </li>
+                <li className={navLiClassName}>
+                  <a href="#corteo" aria-describedby="corteo-desc">
+                    Corteo
+                  </a>
+                  <span id="corteo-desc" className="sr-only">
+                    Informazioni sul Corteo
+                  </span>
+                </li>
+                <li className={navLiClassName}>
+                  <a
+                    href="#come-arrivare"
+                    aria-describedby="come-arrivare-desc"
+                  >
+                    Come arrivare
+                  </a>
+                  <span id="come-arrivare-desc" className="sr-only">
+                    Informazioni su come arrivare a Campo Marte
+                  </span>
+                </li>
+                <li className={navLiClassName}>
+                  <a
+                    href="#parcheggi-riservati"
+                    aria-describedby="parcheggi-riservati-desc"
+                  >
+                    Modulo parcheggi riservati
+                  </a>
+                  <span id="parcheggi-riservati-desc" className="sr-only">
+                    Link al modulo da compilare per prenotare un parcheggio per
+                    persone con disabilità
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </InfoBlock>
+        <div className="p-4" id="programma">
+          <h1 className={`${myFont.className} text-3xl text-blue`}>
+            Programma
+          </h1>
+          <table className="w-full align-middle text-center border-spacing-5 mt-4">
+            <tbody>
+              <tr className="text-xl font-bold border-b-2 border-blue">
+                <td className="text-xl font-bold p-4 py-3 md:pr-8 md:py-4">
+                  <p>12:00</p>
+                  <p>21:00</p>
+                </td>
+                <td className="text-xl font-bold p-4 py-3 md:pl-8 md:py-4 border-l-2 border-blue">
+                  Parco Pride a Campo Marte 🌳
+                </td>
+              </tr>
+              <tr className="text-xl font-bold border-b-2 border-blue">
+                <td className="text-xl font-bold p-4 py-3 md:pr-8 md:py-4">
+                  <p>14:30</p>
+                  <p>15:30</p>
+                </td>
+                <td className="text-xl font-bold p-4 py-3 md:pl-8 md:py-4 border-l-2 border-blue">
+                  Concentramento in Campo Marte con interventi e performance 📢
+                </td>
+              </tr>
+              <tr className="text-xl font-bold border-b-2 border-blue">
+                <td className="text-xl font-bold p-4 py-3 md:pr-8 md:py-4">
+                  <p>15:30</p>
+                  <p>18:00</p>
+                </td>
+                <td className="text-xl font-bold p-4 py-3 md:pl-8 md:py-4 border-l-2 border-blue">
+                  Corteo per la città 🏳️‍🌈🏳️‍⚧️
+                </td>
+              </tr>
+              <tr>
+                <td className="text-xl font-bold p-4 py-3 md:pr-8 md:py-4">
+                  <p>18:00</p>
+                  <p>21:00</p>
+                </td>
+                <td className="text-xl font-bold p-4 py-3 md:pl-8 md:py-4 border-l-2 border-blue">
+                  Interventi e performance a Campo Marte 🎤
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </Block>
+      <InfoBlock title="Parco Pride" id="parco-pride">
+        <p>
+          Il 5 settembre non sarà solo un corteo ma un&apos;intera giornata di
+          orgoglio, comunità e lotta queer, che avrà come cuore pulsante il{" "}
+          <b>Parco Pride a Campo Marte.</b> Sarà attivo <b>dalle 12 alle 21</b>,
+          anche durante il corteo.
+        </p>
+      </InfoBlock>
+      <div className="col-span-6 md:grid md:grid-cols-2 gap-2 p-4 -mt-2">
+        <ImageBlock
+          src="/images/parco-3.png"
+          altText="Mappa del Parco Pride"
+          showOnMobile={true}
+          link="/images/parco-3.png"
+          colSpan=""
+        />
+        <ImageBlock
+          src="/images/parco-4.png"
+          altText="Mappa del Corteo Pride"
+          showOnMobile={true}
+          link="/images/parco-4.png"
+          colSpan=""
+        />
+      </div>
+      <InfoBlock title="Corteo" id="corteo">
+        <p>
+          Il corteo{" "}
+          <b>
+            partirà da Campo Marte alle 15.30 e tornerà a Campo Marte alle 17.30
+          </b>
+          . Il percorso è in piano ed è lungo circa <b>3 chilometri</b>.
+        </p>
+        <div className="mt-2">
+          <b>Lungo il corteo ci saranno</b>:
+          <ul className="list-disc list-inside mt-2">
+            <li>
+              <b>Acqua</b> a disposizione di tuttə su ogni carro
+            </li>
+            <li>
+              <b>Zona bianca mobile</b> presidiata
+            </li>
+            <li>
+              <b>Zona decompressione</b> in Piazza Vittoria a metà percorso
+            </li>
+            <li>
+              <b>Bagni e servizi accessibili</b> segnati sulla mappa interattiva
+            </li>
+            <li>
+              <b>Gruppo accessibilità e cura</b> nella zona bianca mobile e di
+              decompressione
+            </li>
+            <li>
+              <b>Carro raccolta differenziata</b> in fondo al corteo
+            </li>
+          </ul>
+        </div>
+      </InfoBlock>
+      <div className="col-span-6 md:grid md:grid-cols-2 gap-2 p-4 -mt-2">
+        <ImageBlock
+          src="/images/corteo-3.png"
+          altText="Mappa del Parco Pride"
+          showOnMobile={true}
+          link="/images/corteo-3.png"
+          colSpan=""
+        />
+        <ImageBlock
+          src="/images/corteo-4.png"
+          altText="Mappa del Corteo Pride"
+          showOnMobile={true}
+          link="/images/corteo-4.png"
+          colSpan=""
+        />
+      </div>
+      {/* <InfoBlock title="Accessibilità">
+        <p>
+          Clicca <Link href="/2026/accessibilita" className="underline text-blue">qui</Link> per tutte le informazioni di accessibilità.
+        </p>
+      </InfoBlock> */}
+      <InfoBlock title="Come arrivare" id="come-arrivare">
+        <ul>
+          <li>
+            <b>Bici</b>: postazione bicimia Da Vinci
+          </li>
+          <li>
+            <b>Metro</b>: fermata San Faustino (7 minuti a piedi)
+          </li>
+          <li>
+            <b>Bus</b>: linee 13 e 15 (3 minuti a piedi)
+          </li>
+          <li>
+            <b>Parcheggi</b>: intorno a Campo Marte e grande parcheggio gratuito
+            IVECO a 15 mminuti a piedi
+          </li>
+          <li id="parcheggi-riservati">
+            <b>Parcheggi riservati</b>: a disposizione di persone con
+            disabilità,{" "}
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd_-vos8-GszHIRm7sEj8ETz6PZXmEuGAUpQcNxLsjyK2ks7g/viewform"
+              className="underline text-blue font-bold"
+            >
+              compila il modulo a questo link
             </Link>
-          </p>
-        </InfoCard>
-        <CustomFooter />
-      </motion.div>
-    </div>
+          </li>
+        </ul>
+      </InfoBlock>
+    </Block>
   );
 }

@@ -97,119 +97,132 @@ export default function Calendar() {
     });
 
   return (
-    <Block className="col-span-3 bg-lime p-5">
-      <div className="col-span-2">
-        <h2
-          className={`text-3xl text-center font-medium text-blue leading-tight ${myFont.className}`}
-        >
-          CALENDARIO
-        </h2>
-      </div>
-      <div className="mx-auto p-4 font-inherit">
-        <div className="flex justify-between items-center mb-4">
-          <button
-            onClick={prevMonth}
-            aria-label="Mese precedente"
-            className="px-3 py-1 bg-blue text-white border-none rounded-md cursor-pointer text-base leading-none"
-          >
-            ‹
-          </button>
-          <h2 className="text-lg font-bold capitalize text-blue m-0">
-            {monthName} {year}
-          </h2>
-          <button
-            onClick={nextMonth}
-            aria-label="Mese successivo"
-            className="px-3 py-1 bg-blue text-white border-none rounded-md cursor-pointer text-base leading-none"
-          >
-            ›
-          </button>
-        </div>
-
-        {/* Day-of-week headers */}
-        <div className="grid grid-cols-7 gap-1 text-center text-sm font-semibold text-blue mb-2">
-          {daysOfWeek.map((day) => (
-            <div key={day}>{day}</div>
-          ))}
-        </div>
-
-        {/* Day grid */}
-        <div className="grid grid-cols-7 gap-1">
-          {Array.from({ length: firstDayOfMonth }).map((_, i) => (
-            <div key={`empty-${i}`} className="aspect-square" />
-          ))}
-
-          {Array.from({ length: daysInMonth }).map((_, index) => {
-            const day = index + 1;
-            const dateKey = `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
-            const dayEvents = eventsByDate[dateKey] ?? [];
-            const isToday = dateKey === todayKey;
-            const isSelected = dateKey === selectedDate;
-            const hasEvents = dayEvents.length > 0;
-
-            return (
-              <div
-                key={day}
-                onClick={() => setSelectedDate(isSelected ? null : dateKey)}
-                className={`aspect-square flex flex-col items-center justify-center rounded-full cursor-pointer text-sm relative transition-colors duration-150
-                ${isSelected ? "bg-blue text-white font-bold" : isToday ? "bg-[#378ADD] text-white font-bold" : "text-gray-700 font-normal"}
-                ${!isSelected && !isToday && "hover:bg-blue/[0.12]"}
-              `}
-                style={{ cursor: hasEvents ? "pointer" : "default" }}
-              >
-                {day}
-                {hasEvents && (
-                  <div
-                    className={`absolute bottom-[10%] w-[6px] h-[6px] rounded-full ${isSelected || isToday ? "bg-white" : "bg-blue"}`}
-                  />
-                )}
+    <Block className="bg-white flex grid md:grid-cols-2 grid-cols-1">
+      <Block className="p-5">
+        <div className="bg-white p-3">
+          <div>
+            <h2
+              className={`text-3xl text-center font-medium text-blue leading-tight ${myFont.className}`}
+            >
+              CALENDARIO
+            </h2>
+          </div>
+          <div className="mx-auto p-4 font-inherit flex">
+            <div className="flex-auto w-96">
+              <div className="flex justify-between items-center mb-4">
+                <button
+                  onClick={prevMonth}
+                  aria-label="Mese precedente"
+                  className="px-3 py-1 bg-blue text-white border-none rounded-md cursor-pointer text-base leading-none"
+                >
+                  ‹
+                </button>
+                <h2 className="text-lg font-bold capitalize text-blue m-0">
+                  {monthName} {year}
+                </h2>
+                <button
+                  onClick={nextMonth}
+                  aria-label="Mese successivo"
+                  className="px-3 py-1 bg-blue text-white border-none rounded-md cursor-pointer text-base leading-none"
+                >
+                  ›
+                </button>
               </div>
-            );
-          })}
-        </div>
 
-        {!selectedDate && (
-          <div className="mt-4">
-            <span className="text-blue font-bold text-xl lg:text-2xl text-center">
-              Seleziona i giorni con il puntino blu per vedere gli eventi!
+              {/* Day-of-week headers */}
+              <div className="grid grid-cols-7 gap-1 text-center text-sm font-semibold text-blue mb-2">
+                {daysOfWeek.map((day) => (
+                  <div key={day}>{day}</div>
+                ))}
+              </div>
+
+              {/* Day grid */}
+              <div className="grid grid-cols-7 gap-1">
+                {Array.from({ length: firstDayOfMonth }).map((_, i) => (
+                  <div key={`empty-${i}`} className="aspect-square" />
+                ))}
+
+                {Array.from({ length: daysInMonth }).map((_, index) => {
+                  const day = index + 1;
+                  const dateKey = `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+                  const dayEvents = eventsByDate[dateKey] ?? [];
+                  const isToday = dateKey === todayKey;
+                  const isSelected = dateKey === selectedDate;
+                  const hasEvents = dayEvents.length > 0;
+
+                  return (
+                    <div
+                      key={day}
+                      onClick={() =>
+                        setSelectedDate(isSelected ? null : dateKey)
+                      }
+                      className={`aspect-square flex flex-col items-center justify-center rounded-full cursor-pointer text-sm relative transition-colors duration-150
+                ${isSelected ? "bg-blue text-white font-bold" : isToday ? "border border-blue border-2 font-bold" : "text-gray-700 font-normal"}
+                ${hasEvents ? "bg-purple font-bold text-white" : ""}
+              `}
+                      style={{ cursor: hasEvents ? "pointer" : "default" }}
+                    >
+                      {day}
+                    </div>
+                  );
+                })}
+              </div>
+              {/* Loading indicator */}
+              {isLoading && (
+                <p className="text-center text-blue/50 text-sm mt-4">
+                  Caricamento eventi…
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      </Block>
+      <Block className="p-5 bg-white">
+        {selectedDate ? (
+          <div className="flex-auto">
+            <div>
+              <p className="text-blue text-xl lg:text-2xl mb-4">
+                Data selezionata:{" "}
+                <b>
+                  {toDateObj(selectedDate).toLocaleDateString("it-IT", {
+                    weekday: "long",
+                    day: "numeric",
+                    month: "long",
+                  })}
+                </b>
+              </p>
+              {selectedEvents.length === 0 ? (
+                <p className="text-blue font-bold text-xl lg:text-2xl">
+                  Nessun evento.
+                </p>
+              ) : (
+                <ul className="list-none p-0 m-0 flex flex-col gap-2.5">
+                  {selectedEvents.map((ev) => (
+                    <EventBlock
+                      key={ev.id}
+                      event={ev}
+                      verbosity={"long"}
+                      className="text-blue rounded-sm p-4 bg-blue/5 hover:bg-blue/20"
+                    />
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
+        ) : (
+          <div className="text-black/75">
+            <span className="font-bold text-xl lg:text-2xl text-center">
+              Seleziona i giorni con il&nbsp;
+            </span>
+            <span className="font-bold text-purple text-xl lg:text-2xl text-center">
+              puntino viola ⬤&nbsp;
+            </span>
+            <span className="font-bold text-xl lg:text-2xl text-center">
+              per vedere gli eventi!
             </span>
           </div>
         )}
-
-        {/* Loading indicator */}
-        {isLoading && (
-          <p className="text-center text-blue/50 text-sm mt-4">
-            Caricamento eventi…
-          </p>
-        )}
-
-        {/* Selected day event list */}
-        {selectedDate && (
-          <div className="mt-5">
-            <p className="text-md text-blue font-bold mb-2 capitalize">
-              {toDateObj(selectedDate).toLocaleDateString("it-IT", {
-                weekday: "long",
-                day: "numeric",
-                month: "long",
-              })}
-            </p>
-            {selectedEvents.length === 0 ? (
-              <p className="text-sm text-blue">Nessun evento.</p>
-            ) : (
-              <ul className="list-none p-0 m-0 flex flex-col gap-2.5">
-                {selectedEvents.map((ev) => (
-                  <EventBlock
-                    key={ev.id}
-                    event={ev}
-                    verbosity={"long"}
-                    className="bg-blue text-lime p-4"
-                  />
-                ))}
-              </ul>
-            )}
-          </div>
-        )}
-      </div>
+      </Block>
     </Block>
   );
 }

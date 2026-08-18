@@ -1,12 +1,7 @@
 @import 'tailwindcss';
+@source "./**/*.{ts,tsx}";
 
 @theme {
-  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
-  --background-image-gradient-conic: conic-gradient(
-    from 180deg at 50% 50%,
-    var(--tw-gradient-stops)
-  );
-
   --color-green: #11634d;
   --color-lilac: #d2c2df;
   --color-purple: #55338b;
@@ -15,9 +10,9 @@
   --color-red: #c3114b;
   --color-blue: #1e6184;
   --color-brown: #5e3700;
-  --color-yellow: #f5f4c4;
   --color-fuchsia: #ca1382;
   --color-lightblue: #c4dcf3;
+  --color-yellow: #f5f4c4;
 }
 
 /*

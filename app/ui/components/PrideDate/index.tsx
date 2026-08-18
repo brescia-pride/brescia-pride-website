@@ -64,8 +64,8 @@ const PrideDate = ({ showButton = false }: PrideDateProps) => {
           >
             <ColoredButton
               text="Clicca qui per tutte le info!"
-              textColor="fuchsia"
-              bgColor="yellow"
+              bgColor="lime"
+              textColor="blue"
               id="link-a-pride-info"
               href="/2026/pride"
             />

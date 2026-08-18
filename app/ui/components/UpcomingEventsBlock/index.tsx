@@ -68,8 +68,8 @@ const UpcomingEventsBlock = ({
               <div className="flex flex-row justify-center items-center p-4">
                 <ColoredButton
                   text="Vai a tutti gli eventi!"
-                  textColor="fuchsia"
-                  bgColor="yellow"
+                  textColor="blue"
+                  bgColor="lime"
                   id="link-a-eventi"
                   href="/eventi"
                 />

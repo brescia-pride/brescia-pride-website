@@ -13,7 +13,7 @@ const SocialsBlock = () => (
       iconColor="red"
     />
     <SocialCard
-      title="Tiktok"
+      title="TikTok"
       desc="@bresciapride"
       href="https://www.tiktok.com/@bresciapride"
       icon={<SiTiktok />}

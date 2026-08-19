@@ -69,7 +69,7 @@ const Header = ({ className }: BlockProps) => {
           >
             Pride
           </MenuItem>
-          {/* <MenuItem
+          <MenuItem
             className="cursor-pointer flex-1 transition-all duration-300 hover:bg-green hover:text-white focus:bg-green focus:text-white rounded-sm focus:outline-hidden"
             aria-label="Accessibilità"
             onAction={() => {
@@ -80,7 +80,7 @@ const Header = ({ className }: BlockProps) => {
             }}
           >
             Accessibilità
-          </MenuItem> */}
+          </MenuItem>
           <MenuItem
             className="cursor-pointer flex-1 transition-all duration-300 hover:bg-purple hover:text-white focus:bg-purple focus:text-white rounded-sm focus:outline-hidden"
             aria-label="Eventi"

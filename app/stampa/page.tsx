@@ -38,6 +38,9 @@ export default function StampaPage() {
         <h1 className={`text-4xl md:text-6xl ${myFont.className} text-purple`}>
           Sala Stampa
         </h1>
+        <p className={`lg:col-span-6 text-2xl text-purple mt-2`}>
+          Questa pagina è ancora in costruzione!
+        </p>
       </Block>
       <StampaBlock title="Indice" id="indice">
         <nav id="indice" role="navigation" aria-labelledby="toc-heading">
@@ -100,24 +103,27 @@ export default function StampaPage() {
         </nav>
       </StampaBlock>
       <StampaBlock title="Comunicati stampa" id="comunicati-stampa">
-        <Link
+        <div></div>
+        {/* <Link
           href="2026/documenti/comunicato-stampa-pride"
           className="underline text-purple"
         >
           Esempio Comunicato
-        </Link>
+        </Link> */}
       </StampaBlock>
       <StampaBlock title="Punto stampa in Campo Marte" id="punto-stampa">
-        <p>
+        <div></div>
+        {/* <p>
           Presso l&apos;<b>Info Point</b> all&apos;ingresso principale di Campo Marte
           (via Ugo Foscolo)
         </p>
         <p className="mt-2">
           Per interviste recarsi presso XXXX dalle ore XX alle ore YY
-        </p>
+        </p> */}
       </StampaBlock>
       <StampaBlock title="Contatti stampa" id="contatti-stampa">
-        <ul className="list-disc list-inside">
+        <div></div>
+        {/* <ul className="list-disc list-inside">
           <li>
             XXX YYY,{" "}
             <Link
@@ -145,10 +151,11 @@ export default function StampaPage() {
               ufficiostampa@bresciapride.it
             </Link>
           </li>
-        </ul>
+        </ul> */}
       </StampaBlock>
       <StampaBlock title="Vademecum Fotografico" id="vademecum-fotografico">
-        <p>
+        <div></div>
+        {/* <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -156,7 +163,7 @@ export default function StampaPage() {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        </p> */}
       </StampaBlock>
       <StampaBlock title="Mappa Corteo" id="mappa">
         <iframe src={mapLink} className="w-full h-150 mt-4"></iframe>

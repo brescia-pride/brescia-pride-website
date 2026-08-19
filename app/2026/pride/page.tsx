@@ -34,9 +34,11 @@ const InfoBlock = ({
 };
 
 export default function PridePage() {
-  const navLiClassName = "mt-2 pl-2 pr-2 transition-all duration-300 hover:bg-blue hover:text-white focus:bg-blue focus:text-white rounded-sm focus:outline-hidden bg-blue/10 md:text-2xl"
+  const navLiClassName =
+    "mt-2 p-1 pl-2 pr-2 transition-all duration-300 hover:bg-blue hover:text-white focus:bg-blue focus:text-white rounded-sm focus:outline-hidden bg-blue/10 md:text-2xl flex flex-col justify-center md:items-center";
 
-  const mapLink = "https://www.google.com/maps/d/embed?mid=1O2B1Lx5s24EurtaQwao7pj_fskY9SkI&hl=it&ehbc=2E312F&ll=45.5473838155007%2C10.21575269747692&z=18"
+  const mapLink =
+    "https://www.google.com/maps/d/embed?mid=1O2B1Lx5s24EurtaQwao7pj_fskY9SkI&hl=it&ehbc=2E312F&ll=45.5473838155007%2C10.21575269747692&z=18";
 
   return (
     <Block aria-label="pride" className="grid md:grid-cols-6 grid-cols-1">
@@ -45,7 +47,10 @@ export default function PridePage() {
         <InfoBlock title="Indice" className="text-blue" id="indice">
           <nav id="indice" role="navigation" aria-labelledby="toc-heading">
             <div className="text-blue font-bold">
-              <ul role="list" className="md:flex justify-between">
+              <ul
+                role="list"
+                className="md:flex justify-between gap-2 md:text-center"
+              >
                 <li className={navLiClassName}>
                   <a href="#programma" aria-describedby="programma-desc">
                     Programma
@@ -233,7 +238,14 @@ export default function PridePage() {
           <li>Servizi igienici accessibili, con foto e descrizione</li>
           <li>Fontanelle e punti acqua</li>
         </ul>
-        <p className="mt-2">Clicca <Link className="underline text-blue font-bold" href={mapLink}>qui</Link> o sul simbolo <b>⛶</b> in alto a destra per aprire la mappa su Google Maps!</p>
+        <p className="mt-2">
+          Clicca{" "}
+          <Link className="underline text-blue font-bold" href={mapLink}>
+            qui
+          </Link>{" "}
+          o sul simbolo <b>⛶</b> in alto a destra per aprire la mappa su Google
+          Maps!
+        </p>
         <iframe src={mapLink} className="w-full h-150 mt-4"></iframe>
       </InfoBlock>
       <InfoBlock title="Come arrivare" id="come-arrivare">

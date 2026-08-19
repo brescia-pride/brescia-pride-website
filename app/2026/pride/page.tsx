@@ -91,7 +91,7 @@ export default function PridePage() {
                     Accessibilità
                   </a>
                   <span id="accessibilità-desc" className="sr-only">
-                    Informazioni sll'accessibilità
+                    Informazioni sull&apos;accessibilità
                   </span>
                 </li>                <li className={navLiClassName}>
                   <a
@@ -259,7 +259,7 @@ export default function PridePage() {
         <iframe src={mapLink} className="w-full h-150 mt-4"></iframe>
       </InfoBlock>
       <InfoBlock title="Accessibilità" id="accessibilità">
-        <p>Tutte le informazioni sull'<b>accessibilità</b> di Brescia Pride 2026 sono nella <Link
+        <p>Tutte le informazioni sull&apos;<b>accessibilità</b> di Brescia Pride 2026 sono nella <Link
           href="/2026/accessibilita"
           className="underline text-blue font-bold"
         >

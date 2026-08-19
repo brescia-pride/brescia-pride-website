@@ -85,6 +85,16 @@ export default function PridePage() {
                 </li>
                 <li className={navLiClassName}>
                   <a
+                    href="#accessibilità"
+                    aria-describedby="accessibilità-desc"
+                  >
+                    Accessibilità
+                  </a>
+                  <span id="accessibilità-desc" className="sr-only">
+                    Informazioni sll'accessibilità
+                  </span>
+                </li>                <li className={navLiClassName}>
+                  <a
                     href="#come-arrivare"
                     aria-describedby="come-arrivare-desc"
                   >
@@ -248,8 +258,20 @@ export default function PridePage() {
         </p>
         <iframe src={mapLink} className="w-full h-150 mt-4"></iframe>
       </InfoBlock>
+      <InfoBlock title="Accessibilità" id="accessibilità">
+        <p>Tutte le informazioni sull'<b>accessibilità</b> di Brescia Pride 2026 sono nella <Link
+          href="/2026/accessibilita"
+          className="underline text-blue font-bold"
+        >
+          pagina dedicata
+        </Link>
+        </p>
+      </InfoBlock>
       <InfoBlock title="Come arrivare" id="come-arrivare">
         <ul>
+          <li>
+            <b>A piedi dalla stazione</b>: circa 30 minuti (2km)
+          </li>
           <li>
             <b>Bici</b>: postazione bicimia Da Vinci
           </li>
@@ -257,20 +279,19 @@ export default function PridePage() {
             <b>Metro</b>: fermata San Faustino (7 minuti a piedi)
           </li>
           <li>
-            <b>Bus</b>: linee 13 e 15 (3 minuti a piedi)
+            <b>Bus</b>: linee 2, 11, 13 e 15
           </li>
           <li>
-            <b>Parcheggi</b>: intorno a Campo Marte e grande parcheggio gratuito
-            IVECO a 15 mminuti a piedi
+            <b>Parcheggi</b>: gratuiti e a pagamento intorno a Campo Marte e grande parcheggio gratuito IVECO a 15 minuti a piedi
           </li>
           <li id="parcheggi-riservati">
             <b>Parcheggi riservati</b>: a disposizione di persone con
-            disabilità,{" "}
+            disabilità in via Ugo Foscolo,{" "}
             <Link
               href="https://docs.google.com/forms/d/e/1FAIpQLSd_-vos8-GszHIRm7sEj8ETz6PZXmEuGAUpQcNxLsjyK2ks7g/viewform"
               className="underline text-blue font-bold"
             >
-              compila il modulo a questo link
+              compila il modulo a questo link per prenotare un parcheggio
             </Link>
           </li>
         </ul>

@@ -41,7 +41,7 @@ export default function AccessibilitaPage() {
           Accessibilità
         </h1>
         <p className={`lg:col-span-6 text-2xl text-green mt-2`}>
-          Tutte le informazioni sull&apos;Accessibilità di Brescia Pride 2026
+          Tutte le informazioni sull&apos;accessibilità di Brescia Pride 2026
         </p>
       </Block>{" "}
       <AccessibilitaBlock title="Indice" id="indice">

@@ -296,7 +296,7 @@ export default function StampaPage() {
           Chiediamo di raccogliere il consenso prima di realizzare primi piani o
           ritratti riconoscibili, e di rispettare sempre un rifiuto, anche se
           espresso a scatto già avvenuto. Le persone che indossano un adesivo di
-          colore [X] con la scritta ""NO PHOTO"", recuperabile all&apos;infopoint, al
+          colore [X] con la scritta &quot;NO PHOTO&quot;, recuperabile all&apos;infopoint, al
           media corner o nella zona bianca, hanno scelto di non essere
           fotografate: ove possibile, ti chiediamo di non riprenderle e di
           escluderle dalle inquadrature.

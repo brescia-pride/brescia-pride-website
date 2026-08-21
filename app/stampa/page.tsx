@@ -349,7 +349,7 @@ export default function StampaPage() {
         </h2>
         <p>
           Le parole che usiamo per raccontare una comunità non sono neutre. Possono contribuire a riconoscere le persone oppure rafforzare stereotipi e discriminazioni.
-          Per questo consigliamo di consultare la Carta Arcobaleno, la prima carta deontologica italiana dedicata all&apos;informazione sulle persone LGBTQIA+, promossa dall’Ordine dei Giornalisti del Piemonte insieme al Coordinamento Torino Pride e presentata nel maggio 2026.
+          Per questo consigliamo di consultare la Carta Arcobaleno, la prima carta deontologica italiana dedicata all&apos;informazione sulle persone LGBTQIA+, promossa dall&apos;Ordine dei Giornalisti del Piemonte insieme al Coordinamento Torino Pride e presentata nel maggio 2026.
         </p>
         <p>
           Qui abbiamo raccolto alcune delle indicazioni che ci capita più spesso di condividere con giornalistə e redazioni.
@@ -359,7 +359,7 @@ export default function StampaPage() {
           Parla di persone, non di categorie
         </h2>
         <p>
-          Espressioni come “il gay”, “la trans” o “gli omosessuali” riducono una persona a una sola caratteristica.
+          Espressioni come &quot;il gay&quot;, &quot;la trans&quot; o &quot;gli omosessuali&quot; riducono una persona a una sola caratteristica.
           Meglio scrivere, per esempio:
 
           persona gay · donna lesbica · uomo trans · persona transgender · persona non binaria
@@ -373,7 +373,7 @@ export default function StampaPage() {
         <p>
           Per parlare di una persona trans* o non binaria si utilizzano il nome e i pronomi che la persona usa per sé, indipendentemente da ciò che compare sui documenti.
           Usare il precedente nome anagrafico di una persona trans* si chiama deadnaming, mentre utilizzare pronomi, genere o appellativi che non le corrispondono viene definito misgendering.
-          Sono pratiche da evitare anche quando si utilizzano fotografie, articoli o materiali d’archivio.
+          Sono pratiche da evitare anche quando si utilizzano fotografie, articoli o materiali d&apos;archivio.
           Se non sai quali pronomi usare, chiedere è sempre la soluzione più semplice.
         </p>
         <h2 className="mt-2 mb-2 font-bold text-purple"> 
@@ -387,14 +387,14 @@ export default function StampaPage() {
         </p>
         <p>
 
-          Meglio evitare termini come “confessa” o “ammette”, perché suggeriscono che ci sia qualcosa di sbagliato o di cui vergognarsi.
+          Meglio evitare termini come &quot;confessa&quot; o &quot;ammette&quot;, perché suggeriscono che ci sia qualcosa di sbagliato o di cui vergognarsi.
         </p>
         <p>
 
-          L’outing, invece, avviene quando queste informazioni vengono rese pubbliche da altre persone senza consenso.
+          L&apos;outing, invece, avviene quando queste informazioni vengono rese pubbliche da altre persone senza consenso.
           Orientamento sessuale e identità di genere sono dati personali: non vanno resi pubblici senza consenso, salvo che siano già pubblicamente noti e realmente rilevanti per la notizia.
           Chiediti sempre: è rilevante per la notizia?
-          L’orientamento sessuale o l’identità di genere di una persona vanno citati solo quando sono pertinenti al fatto raccontato.
+          L&apos;orientamento sessuale o l&apos;identità di genere di una persona vanno citati solo quando sono pertinenti al fatto raccontato.
           Se non aggiungono informazioni utili alla comprensione della notizia, è meglio non specificarli.
         </p>
         <h2 className="mt-2 mb-2 font-bold text-purple"> 
@@ -402,8 +402,8 @@ export default function StampaPage() {
           Orientamento sessuale e identità di genere sono cose diverse
         </h2>
         <p>
-          L’orientamento sessuale riguarda l’attrazione affettiva e/o sessuale verso altre persone.
-          L’identità di genere riguarda invece il modo in cui una persona percepisce e definisce il proprio genere.
+          L&apos;orientamento sessuale riguarda l&apos;attrazione affettiva e/o sessuale verso altre persone.
+          L&apos;identità di genere riguarda invece il modo in cui una persona percepisce e definisce il proprio genere.
         </p>
         <h2 className="mt-2 mb-2 font-bold text-purple"> 
           Quando parli di famiglie
@@ -411,18 +411,18 @@ export default function StampaPage() {
         <p>
           Una famiglia con due madri o due padri può essere definita famiglia omogenitoriale oppure, quando non è necessario specificarne la composizione, semplicemente famiglia.
           Per indicare la pratica attraverso cui una persona porta avanti una gravidanza per conto di altre persone, il termine descrittivo è gestazione per altri (GPA).
-          L’espressione “utero in affitto” è invece fortemente connotata e non neutra.
+          L&apos;espressione &quot;utero in affitto&quot; è invece fortemente connotata e non neutra.
         </p>
         <h2 className="mt-2 mb-2 font-bold text-purple"> 
-          Si dice Pride, non “gay pride”
+          Si dice Pride, non &quot;gay pride&quot;
         </h2>
         <p>
-          Il Pride non riguarda soltanto le persone gay, ma l’intera comunità LGBTQIA+.
+          Il Pride non riguarda soltanto le persone gay, ma l&apos;intera comunità LGBTQIA+.
           Per questo oggi è preferibile parlare di:
 
           Pride · corteo del Pride · manifestazione del Pride · Brescia Pride (nel nostro caso specifico)
 
-          L’espressione “gay pride” è ormai poco utilizzata e restituisce solo una parte della comunità rappresentata.
+          L&apos;espressione &quot;gay pride&quot; è ormai poco utilizzata e restituisce solo una parte della comunità rappresentata.
         </p>
         <h2 className="mt-2 mb-2 font-bold text-purple"> 
           E lo schwa?
@@ -430,7 +430,7 @@ export default function StampaPage() {
         <p>
           Nei materiali di Brescia Pride utilizziamo anche lo schwa (ə) quando vogliamo rivolgerci a persone di ogni genere.
           È una nostra scelta editoriale: non chiediamo alle testate di adottarla.
-          Chi preferisce evitarlo può utilizzare tranquillamente formule inclusive già presenti nell’italiano, per esempio:
+          Chi preferisce evitarlo può utilizzare tranquillamente formule inclusive già presenti nell&apos;italiano, per esempio:
 
           le persone partecipanti · chi partecipa · il pubblico · le persone presenti
 
@@ -441,7 +441,7 @@ export default function StampaPage() {
         </h2>
         <p>
           Carta Arcobaleno
-          La carta deontologica dedicata a un’informazione rispettosa e consapevole sulle persone LGBTQIA+, promossa dall’Ordine dei Giornalisti del Piemonte insieme al Coordinamento Torino Pride.
+          La carta deontologica dedicata a un&apos;informazione rispettosa e consapevole sulle persone LGBTQIA+, promossa dall&apos;Ordine dei Giornalisti del Piemonte insieme al Coordinamento Torino Pride.
           Contiene dieci principi operativi e un glossario essenziale pensati per il lavoro quotidiano nelle redazioni.
           [Scarica il PDF]
         </p>
@@ -456,7 +456,7 @@ export default function StampaPage() {
         </h2>
         <p>
           Scrivici.
-          Se non sai quale termine usare, come presentare una persona o se un’informazione sia rilevante per l’articolo, siamo a disposizione per un confronto.
+          Se non sai quale termine usare, come presentare una persona o se un&apos;informazione sia rilevante per l&apos;articolo, siamo a disposizione per un confronto.
         </p>
       </StampaBlock>
       <StampaBlock title="Contatti stampa" id="contatti-stampa">

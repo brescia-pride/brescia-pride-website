@@ -3,7 +3,7 @@
 import React from "react";
 import localFont from "next/font/local";
 import Block from "../ui/components/Block";
-import { Link } from "react-aria-components";
+import { Button, Link } from "react-aria-components";
 import { ReactNode } from "react";
 
 const myFont = localFont({ src: "../ui/fonts/ST.ttf" });
@@ -11,6 +11,12 @@ const myFont = localFont({ src: "../ui/fonts/ST.ttf" });
 type StampaBlockProps = {
   title: string;
   children: ReactNode;
+  id: string;
+};
+
+type indexLiProps = {
+  title: string;
+  desc: string;
   id: string;
 };
 
@@ -25,9 +31,27 @@ const StampaBlock = ({ title, children, id }: StampaBlockProps) => {
   );
 };
 
-export default function StampaPage() {
+const IndexLiBlock = ({ title, id, desc }: indexLiProps) => {
   const navLiClassName =
-    "mt-2 p-1 pl-2 pr-2 transition-all duration-300 hover:bg-purple hover:text-white focus:bg-purple focus:text-white rounded-sm focus:outline-hidden bg-purple/10 md:text-2xl flex flex-col justify-center md:items-center";
+    "mt-2 p-1 pl-2 pr-2 transition-all duration-300 hover:bg-purple hover:text-white focus:bg-purple focus:text-white rounded-sm focus:outline-hidden bg-purple/10 md:text-2xl flex flex-col justify-center md:items-center w-full text-purple";
+
+  return (
+    <Link
+      className={navLiClassName}
+      href={`#${id}`}
+      aria-describedby={`${id}-desc`}
+    >
+      {title}
+      <span id={`${id}-desc`} className="sr-only">
+        {desc}
+      </span>
+    </Link>
+  );
+};
+
+export default function StampaPage() {
+  const downloadButtonClassName =
+    "p-2 font-bold transition-all duration-300 cursor-pointer rounded-sm text-purple bg-lilac col-span-1 w-full";
 
   const mapLink =
     "https://www.google.com/maps/d/embed?mid=1O2B1Lx5s24EurtaQwao7pj_fskY9SkI&hl=it&ehbc=2E312F&ll=45.5473838155007%2C10.21575269747692&z=18";
@@ -39,134 +63,417 @@ export default function StampaPage() {
           Sala Stampa
         </h1>
         <p className={`lg:col-span-6 text-2xl text-purple mt-2`}>
-          Questa pagina è ancora in costruzione!
+          Questa pagina raccoglie i{" "}
+          <b>
+            materiali per giornalistə, fotografə e operatorə che seguono il
+            Brescia Pride 2026
+          </b>
+          .
+        </p>
+        <p className="mt-2 text-purple text-lg">
+          Qui si possono trovare{" "}
+          <b>
+            comunicati, contatti utili, mappe e indicazioni per raccontare la
+            giornata del 5 settembre nel rispetto degli spazi e delle persone
+            che li attraversano
+          </b>
+          . Per accrediti, richieste di intervista o materiali aggiuntivi è
+          possibile scrivere a{" "}
+          <Link className="underline">ufficiostampa@bresciapride.it</Link>,
+          mettendo in copia{" "}
+          <Link className="underline">info@bresciapride.it</Link>.
         </p>
       </Block>
       <StampaBlock title="Indice" id="indice">
         <nav id="indice" role="navigation" aria-labelledby="toc-heading">
-          <div className="text-purple font-bold">
+          <div className="font-bold">
+            <h1 className="text-2xl">Prima del 5 settembre</h1>
             <ul
               role="list"
               className="md:flex justify-between gap-2 md:text-center"
             >
-              <li className={navLiClassName}>
-                <a
-                  href="#comunicati-stampa"
-                  aria-describedby="comunicati-stampa-desc"
-                >
-                  Comunicati
-                </a>
-                <span id="comunicati-stampa-desc" className="sr-only">
-                  Lista dei comunicati stampa
-                </span>
-              </li>
-              <li className={navLiClassName}>
-                <a href="#punto-stampa" aria-describedby="punto-stampa-desc">
-                  Punto stampa
-                </a>
-                <span id="punto-stampa-desc" className="sr-only">
-                  Dove si trova il punto stampa in Campo Marte
-                </span>
-              </li>
-              <li className={navLiClassName}>
-                <a
-                  href="#contatti-stampa"
-                  aria-describedby="contatti-stampa-desc"
-                >
-                  Contatti stampa
-                </a>
-                <span id="contatti-stampa-desc" className="sr-only">
-                  Contatti stampa di Brescia Pride
-                </span>
-              </li>
-              <li className={navLiClassName}>
-                <a
-                  href="#vademecum-fotografico"
-                  aria-describedby="vademecum-fotografico-desc"
-                >
-                  Vademecum fotografico
-                </a>
-                <span id="vademecum-fotografico-desc" className="sr-only">
-                  Vademecum fotografico per stampa
-                </span>
-              </li>
-              <li className={navLiClassName}>
-                <a href="#mappa" aria-describedby="mappa-desc">
-                  Mappa corteo
-                </a>
-                <span id="mappa-desc" className="sr-only">
-                  Mappa di Brescia Pride e del corteo
-                </span>
-              </li>
+              <IndexLiBlock
+                title="Comunicati"
+                id="comunicati-stampa"
+                desc="Lista dei comunicati stampa"
+              />
+              <IndexLiBlock
+                title="Accrediti"
+                id="accrediti"
+                desc="Informazioni su accredito stampa"
+              />
+              <IndexLiBlock
+                title="Materiali e Press Kit"
+                id="materiali"
+                desc="Lista dei materiali utili"
+              />
+            </ul>
+          </div>
+          <div className="font-bold mt-4">
+            <h1 className="text-2xl">Il giorno del corteo</h1>
+            <ul
+              role="list"
+              className="md:flex justify-between gap-2 md:text-center"
+            >
+              <IndexLiBlock
+                title="Punto stampa"
+                id="punto-stampa"
+                desc="Informazioni sul punto stampa in Campo Marte"
+              />
+              <IndexLiBlock
+                title="Vademecum fotografico"
+                id="vademecum-fotografico"
+                desc="Vademecum fotografico per stampa"
+              />
+              <IndexLiBlock
+                title="Mappa corteo"
+                id="mappa"
+                desc="Mappa di Brescia Pride, del parco e del corteo"
+              />
+            </ul>
+          </div>
+          <div className="font-bold mt-4">
+            <h1 className="text-2xl">Per approfondire</h1>
+            <ul
+              role="list"
+              className="md:flex justify-between gap-2 md:text-center"
+            >
+              <IndexLiBlock
+                title="Brescia Pride in numeri"
+                id="numeri"
+                desc="Brescia Pride in numeri"
+              />
+              <IndexLiBlock
+                title="Guida al linguaggio"
+                id="linguaggio"
+                desc="Guida al linguaggio"
+              />
+              <IndexLiBlock
+                title="Contatti"
+                id="contatti-stampa"
+                desc="Contatti stampa"
+              />
             </ul>
           </div>
         </nav>
       </StampaBlock>
       <StampaBlock title="Comunicati stampa" id="comunicati-stampa">
-        <div></div>
-        {/* <Link
-          href="2026/documenti/comunicato-stampa-pride"
-          className="underline text-purple"
-        >
-          Esempio Comunicato
-        </Link> */}
+        <div className="flex flex-col md:grid md:grid-cols-6 gap-4 justify-between">
+          <Link
+            href="2026/documenti/comunicato-stampa-pride"
+            className="col-span-4"
+          >
+            <b>31 Agosto 2026</b> - Il 5 settembre Brescia Pride torna in piazza
+            e porta al Comune tre proposte di politiche pubbliche per la città
+          </Link>
+          <Button className={downloadButtonClassName}>Leggi online</Button>
+          <Button className={downloadButtonClassName}>Scarica PDF</Button>
+        </div>
       </StampaBlock>
-      <StampaBlock title="Punto stampa in Campo Marte" id="punto-stampa">
-        <div></div>
-        {/* <p>
-          Presso l&apos;<b>Info Point</b> all&apos;ingresso principale di Campo Marte
-          (via Ugo Foscolo)
+      <StampaBlock title="Accrediti Stampa" id="accrediti">
+        <p>
+          <b>
+            L&apos;accredito è gratuito ed è suggerito a giornalistə, fotografə
+            e operatorə
+          </b>{" "}
+          che intendono seguire la manifestazione del 5 settembre.{" "}
+          <Link className="underline font-bold text-purple cursor-pointer">
+            Compila il modulo online
+          </Link>{" "}
+          o direttamente in Campo Marte per ritirare il pass al Media Corner.
         </p>
         <p className="mt-2">
-          Per interviste recarsi presso XXXX dalle ore XX alle ore YY
-        </p> */}
+          Con l&apos;accredito ci confermi di aver letto il vademecum
+          fotografico: non pone limiti al racconto della giornata, ma raccoglie
+          alcune accortezze che aiutano a rendere la piazza un posto sereno per
+          chi la attraversa.
+        </p>
       </StampaBlock>
-      <StampaBlock title="Contatti stampa" id="contatti-stampa">
-        <div></div>
-        {/* <ul className="list-disc list-inside">
-          <li>
-            XXX YYY,{" "}
-            <Link
-              className="text-purple underline"
-              href="mailto:ufficiostampa@bresciapride.it"
-            >
-              ufficiostampa@bresciapride.it
-            </Link>
-          </li>
-          <li>
-            XXX YYY,{" "}
-            <Link
-              className="text-purple underline"
-              href="mailto:ufficiostampa@bresciapride.it"
-            >
-              ufficiostampa@bresciapride.it
-            </Link>
-          </li>
-          <li>
-            XXX YYY,{" "}
-            <Link
-              className="text-purple underline"
-              href="mailto:ufficiostampa@bresciapride.it"
-            >
-              ufficiostampa@bresciapride.it
-            </Link>
-          </li>
-        </ul> */}
+      <StampaBlock title="Materiali e press kit" id="materiali">
+        <p>
+          In questa sezione è possibile trovare alcuni materiali utilizzabili
+          per la copertura giornalistica del Brescia Pride 2026.
+        </p>
+        <h2 className="mt-2 mb-2 font-bold text-purple">Fotografie</h2>
+        <p>
+          Immagini ad alta risoluzione delle edizioni precedenti e della
+          manifestazione 2026. Il credito al fotografə è indicato nel nome di
+          ciascun file e chiediamo agli utilizzatori di riportarlo in
+          didascalia.
+        </p>
+        <Button className={`${downloadButtonClassName} mt-2`}>Scarica</Button>
+        <h2 className="mt-2 mb-2 font-bold text-purple">Logo e manifesto</h2>
+        <p>
+          Logo del Comitato Brescia Pride ETS e manifesto ufficiale della
+          settima edizione, in formato vettoriale e ad alta risoluzione.
+        </p>
+        <Button className={`${downloadButtonClassName} mt-2`}>Scarica</Button>
+        <h2 className="mt-2 mb-2 font-bold text-purple">Scheda del Comitato</h2>
+        <p>
+          Sintesi su chi siamo, cosa facciamo durante l'anno e i dati principali
+          della manifestazione, utile per box e approfondimenti.
+        </p>
+        <Button className={`${downloadButtonClassName} mt-2`}>Scarica</Button>
+        <h2 className="mt-2 mb-2 font-bold text-purple">Condizioni d'uso</h2>
+        <p>
+          I materiali possono essere utilizzati liberamente per la copertura
+          giornalistica del Brescia Pride, mantenendo il credito al fotografə.
+          Non è consentito modificarli o utilizzarli in contesti diversi. Per
+          usi differenti scrivici a{" "}
+          <Link
+            href="mailto:ufficiostampa@bresciapride.it"
+            className="text-purple underline"
+          >
+            ufficiostampa@bresciapride.it
+          </Link>{" "}
+          mantenendo in copia{" "}
+          <Link
+            href="mailto:info@bresciapride.it"
+            className="text-purple underline"
+          >
+            info@bresciapride.it
+          </Link>
+        </p>
+        <p className="mt-2">
+          Dopo il 5 settembre pubblicheremo in questa sezione una selezione di
+          fotografie della giornata: se ti serve materiale in tempi rapidi per
+          la chiusura, contattaci direttamente.
+        </p>
+      </StampaBlock>
+      <StampaBlock title="Punto stampa in Campo Marte" id="punto-stampa">
+        <p>
+          Durante la giornata del 5 settembre il Media Corner, situato sul lato
+          (destro o sinistro? TBD) del palco in Campo Marte (via Ugo Foscolo), è
+          il riferimento per la stampa. Al Media Corner sarà possibile
+          accreditarsi, ottenere informazioni sul programma e sulle aree del
+          Parco Pride.
+        </p>
+        <h2 className="mt-2 mb-2 font-bold text-purple">
+          Interviste e dichiarazioni
+        </h2>
+        <p>
+          Dalle ore 13.30 alle 15.00 sarà possibile rivolgersi al Media Corner
+          per interviste e riprese, prima della partenza del corteo. Fuori da
+          questa fascia oraria è possibile concordare un momento rivolgendosi a{" "}
+          <Link href="#contatti-stampa" className="text-purple underline">
+            Elisa
+          </Link>
+          , responsabile delle relazioni con i media, compatibilmente con le
+          esigenze organizzative della giornata.
+        </p>
+        <h2 className="mt-2 mb-2 font-bold text-purple">
+          Orari della giornata
+        </h2>
+        <ul>
+          <li>ore 12:00 apertura del Parco Pride</li>
+          <li>ore 14:30 primi interventi e performance</li>
+          <li>ore 17:30 rientro a Campo Marte</li>
+          <li>ore 18:00-21:00 interventi, performance e musica</li>
+        </ul>
       </StampaBlock>
       <StampaBlock title="Vademecum Fotografico" id="vademecum-fotografico">
-        <div></div>
-        {/* <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p> */}
+        <p>
+          Il Pride è uno spazio pubblico, ma non tutte le persone che vi
+          partecipano hanno fatto coming out, e per alcune essere riconoscibili
+          in una fotografia può avere conseguenze concrete sul lavoro, in
+          famiglia o nel proprio contesto d'origine. Ti chiediamo di tenerne
+          conto: raccontare la manifestazione e proteggere chi la attraversa non
+          sono obiettivi in conflitto.
+        </p>
+        <h2 className="mt-2 mb-2 font-bold text-purple">
+          Aree in cui non è consentito riprendere persone riconoscibili
+        </h2>
+        <p>
+          La Zona Bianca di decompressione e l'Area Salute & Prevenzione sono
+          spazi in cui le persone si trovano in condizioni di particolare
+          vulnerabilità: chi si vaccina, chi chiede informazioni sulla salute
+          sessuale o chi ha bisogno di allontanarsi dalla folla non può
+          ritrovarsi in un servizio giornalistico. In queste aree sono possibili
+          riprese di contesto solo se nessuna persona è identificabile.
+        </p>
+        <h2 className="mt-2 mb-2 font-bold text-purple">Consenso</h2>
+        <p>
+          Chiediamo di raccogliere il consenso prima di realizzare primi piani o
+          ritratti riconoscibili, e di rispettare sempre un rifiuto, anche se
+          espresso a scatto già avvenuto. Le persone che indossano un adesivo di
+          colore [X] con la scritta ""NO PHOTO"", recuperabile all'infopoint, al
+          media corner o nella zona bianca, hanno scelto di non essere
+          fotografate: ove possibile, ti chiediamo di non riprenderle e di
+          escluderle dalle inquadrature.
+        </p>
+        <h2 className="mt-2 mb-2 font-bold text-purple">Persone minorenni</h2>
+        <p>
+          Non è consentito realizzare fotografie o riprese di persone minorenni
+          riconoscibili senza il consenso di chi ne ha la responsabilità
+          genitoriale.
+        </p>
+        <h2 className="mt-2 mb-2 font-bold text-purple">Nel dubbio</h2>
+        <p>
+          Lə volontariə con (segno distintivo?) e le persone presenti all'Info
+          Point sono a disposizione per chiarimenti durante tutta la giornata.
+        </p>
       </StampaBlock>
       <StampaBlock title="Mappa Corteo" id="mappa">
         <iframe src={mapLink} className="w-full h-150 mt-4"></iframe>
+      </StampaBlock>
+      <StampaBlock title="Brescia Pride in numeri" id="numeri">
+        <p>
+          Dati utili per chi racconta la manifestazione. Per riferimenti aggiornati o approfondimenti contattaci!
+        </p>
+        <p>
+          7 edizioni dal 2017
+        </p>
+        <p>
+          15000 persone hanno partecipato al corteo nel 2025
+        </p>
+        <p>
+          [X] associazioni e realtà del territorio presenti nel Parco Pride
+        </p>
+        <p>
+          [X] carri e spezzoni nel corteo
+        </p>
+        <p>
+          circa 300* persone volontarie coinvolte nell'organizzazione della giornata
+          205 comuni compongono la provincia di Brescia, la più estesa della Lombardia. Di questi, [x] patrocinano l'edizione 2026
+        </p>
+        <p>
+          [inserire eventuale dato economico se vogliamo]
+        </p>
+        <p>
+          Brescia Pride è completamente autofinanziato: non riceve sponsorizzazioni e si sostiene con donazioni, autofinanziamento e il lavoro volontario di chi lo organizza.
+        </p>
+      </StampaBlock>
+      <StampaBlock title="Guida al linguaggio" id="linguaggio">
+        <h2 className="mt-2 mb-2 font-bold text-purple"> 
+          Come raccontarci
+        </h2>
+        <p>
+          Le parole che usiamo per raccontare una comunità non sono neutre. Possono contribuire a riconoscere le persone oppure rafforzare stereotipi e discriminazioni.
+          Per questo consigliamo di consultare la Carta Arcobaleno, la prima carta deontologica italiana dedicata all'informazione sulle persone LGBTQIA+, promossa dall’Ordine dei Giornalisti del Piemonte insieme al Coordinamento Torino Pride e presentata nel maggio 2026.
+        </p>
+        <p>
+          Qui abbiamo raccolto alcune delle indicazioni che ci capita più spesso di condividere con giornalistə e redazioni.
+          Se qualcosa non è chiaro, scrivici: meglio una domanda prima della pubblicazione che una rettifica dopo.
+        </p>
+        <h2 className="mt-2 mb-2 font-bold text-purple"> 
+          Parla di persone, non di categorie
+        </h2>
+        <p>
+          Espressioni come “il gay”, “la trans” o “gli omosessuali” riducono una persona a una sola caratteristica.
+          Meglio scrivere, per esempio:
+
+          persona gay · donna lesbica · uomo trans · persona transgender · persona non binaria
+        </p>
+        <p>
+          Anche transessuale è un termine oggi poco utilizzato nel linguaggio comune e legato soprattutto a un contesto medico. Quando non è necessario specificare altro, persona trans* o persona transgender sono le formule da preferire.
+        </p>
+        <h2 className="mt-2 mb-2 font-bold text-purple"> 
+          Usa il nome e i pronomi corretti
+        </h2>
+        <p>
+          Per parlare di una persona trans* o non binaria si utilizzano il nome e i pronomi che la persona usa per sé, indipendentemente da ciò che compare sui documenti.
+          Usare il precedente nome anagrafico di una persona trans* si chiama deadnaming, mentre utilizzare pronomi, genere o appellativi che non le corrispondono viene definito misgendering.
+          Sono pratiche da evitare anche quando si utilizzano fotografie, articoli o materiali d’archivio.
+          Se non sai quali pronomi usare, chiedere è sempre la soluzione più semplice.
+        </p>
+        <h2 className="mt-2 mb-2 font-bold text-purple"> 
+          Coming out e outing non sono la stessa cosa
+        </h2>
+        <p>
+          Il coming out è la scelta di una persona di raccontare il proprio orientamento sessuale o la propria identità di genere.
+          Per descriverlo si possono usare formule come:
+
+          ha fatto coming out · ha dichiarato · ha raccontato
+        </p>
+        <p>
+
+          Meglio evitare termini come “confessa” o “ammette”, perché suggeriscono che ci sia qualcosa di sbagliato o di cui vergognarsi.
+        </p>
+        <p>
+
+          L’outing, invece, avviene quando queste informazioni vengono rese pubbliche da altre persone senza consenso.
+          Orientamento sessuale e identità di genere sono dati personali: non vanno resi pubblici senza consenso, salvo che siano già pubblicamente noti e realmente rilevanti per la notizia.
+          Chiediti sempre: è rilevante per la notizia?
+          L’orientamento sessuale o l’identità di genere di una persona vanno citati solo quando sono pertinenti al fatto raccontato.
+          Se non aggiungono informazioni utili alla comprensione della notizia, è meglio non specificarli.
+        </p>
+        <h2 className="mt-2 mb-2 font-bold text-purple"> 
+
+          Orientamento sessuale e identità di genere sono cose diverse
+        </h2>
+        <p>
+          L’orientamento sessuale riguarda l’attrazione affettiva e/o sessuale verso altre persone.
+          L’identità di genere riguarda invece il modo in cui una persona percepisce e definisce il proprio genere.
+        </p>
+        <h2 className="mt-2 mb-2 font-bold text-purple"> 
+          Quando parli di famiglie
+        </h2>
+        <p>
+          Una famiglia con due madri o due padri può essere definita famiglia omogenitoriale oppure, quando non è necessario specificarne la composizione, semplicemente famiglia.
+          Per indicare la pratica attraverso cui una persona porta avanti una gravidanza per conto di altre persone, il termine descrittivo è gestazione per altri (GPA).
+          L’espressione “utero in affitto” è invece fortemente connotata e non neutra.
+        </p>
+        <h2 className="mt-2 mb-2 font-bold text-purple"> 
+          Si dice Pride, non “gay pride”
+        </h2>
+        <p>
+          Il Pride non riguarda soltanto le persone gay, ma l’intera comunità LGBTQIA+.
+          Per questo oggi è preferibile parlare di:
+
+          Pride · corteo del Pride · manifestazione del Pride · Brescia Pride (nel nostro caso specifico)
+
+          L’espressione “gay pride” è ormai poco utilizzata e restituisce solo una parte della comunità rappresentata.
+        </p>
+        <h2 className="mt-2 mb-2 font-bold text-purple"> 
+          E lo schwa?
+        </h2>
+        <p>
+          Nei materiali di Brescia Pride utilizziamo anche lo schwa (ə) quando vogliamo rivolgerci a persone di ogni genere.
+          È una nostra scelta editoriale: non chiediamo alle testate di adottarla.
+          Chi preferisce evitarlo può utilizzare tranquillamente formule inclusive già presenti nell’italiano, per esempio:
+
+          le persone partecipanti · chi partecipa · il pubblico · le persone presenti
+
+          Ciò che chiediamo è soprattutto di rispettare il nome, il genere e i pronomi delle persone citate.
+        </p>
+        <h2 className="mt-2 mb-2 font-bold text-purple"> 
+          Per approfondire
+        </h2>
+        <p>
+          Carta Arcobaleno
+          La carta deontologica dedicata a un’informazione rispettosa e consapevole sulle persone LGBTQIA+, promossa dall’Ordine dei Giornalisti del Piemonte insieme al Coordinamento Torino Pride.
+          Contiene dieci principi operativi e un glossario essenziale pensati per il lavoro quotidiano nelle redazioni.
+          [Scarica il PDF]
+        </p>
+        <p>
+          Glossario LGBTQIA+
+          Il glossario del Coordinamento Torino Pride raccoglie e spiega i termini legati a orientamento sessuale, identità di genere, espressione di genere e comunità LGBTQIA+.
+          Può essere consultato rapidamente quando serve verificare un termine prima della pubblicazione.
+          [Consulta il glossario]
+        </p>
+        <h2 className="mt-2 mb-2 font-bold text-purple"> 
+          Hai un dubbio?
+        </h2>
+        <p>
+          Scrivici.
+          Se non sai quale termine usare, come presentare una persona o se un’informazione sia rilevante per l’articolo, siamo a disposizione per un confronto.
+        </p>
+      </StampaBlock>
+      <StampaBlock title="Contatti stampa" id="contatti-stampa">
+        <p>
+          <b>Elisa (she/they) – Referente ufficio stampa – </b>
+          <Link
+            href="mailto:ufficiostampa@bresciapride.it"
+            className="text-purple underline"
+          >
+            ufficiostampa@bresciapride.it
+          </Link>
+        </p>
+
+        <p className="mt-2">
+          Per richieste urgenti nella giornata del 5 settembre: contattare il
+          +XX XXX XXXXXXX tramite chat Whatsapp
+        </p>
       </StampaBlock>
     </div>
   );

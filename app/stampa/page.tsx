@@ -210,11 +210,11 @@ export default function StampaPage() {
         <Button className={`${downloadButtonClassName} mt-2`}>Scarica</Button>
         <h2 className="mt-2 mb-2 font-bold text-purple">Scheda del Comitato</h2>
         <p>
-          Sintesi su chi siamo, cosa facciamo durante l'anno e i dati principali
+          Sintesi su chi siamo, cosa facciamo durante l&apos;anno e i dati principali
           della manifestazione, utile per box e approfondimenti.
         </p>
         <Button className={`${downloadButtonClassName} mt-2`}>Scarica</Button>
-        <h2 className="mt-2 mb-2 font-bold text-purple">Condizioni d'uso</h2>
+        <h2 className="mt-2 mb-2 font-bold text-purple">Condizioni d&apos;uso</h2>
         <p>
           I materiali possono essere utilizzati liberamente per la copertura
           giornalistica del Brescia Pride, mantenendo il credito al fotografə.
@@ -276,7 +276,7 @@ export default function StampaPage() {
           Il Pride è uno spazio pubblico, ma non tutte le persone che vi
           partecipano hanno fatto coming out, e per alcune essere riconoscibili
           in una fotografia può avere conseguenze concrete sul lavoro, in
-          famiglia o nel proprio contesto d'origine. Ti chiediamo di tenerne
+          famiglia o nel proprio contesto d&apos;origine. Ti chiediamo di tenerne
           conto: raccontare la manifestazione e proteggere chi la attraversa non
           sono obiettivi in conflitto.
         </p>
@@ -284,7 +284,7 @@ export default function StampaPage() {
           Aree in cui non è consentito riprendere persone riconoscibili
         </h2>
         <p>
-          La Zona Bianca di decompressione e l'Area Salute & Prevenzione sono
+          La Zona Bianca di decompressione e l&apos;Area Salute & Prevenzione sono
           spazi in cui le persone si trovano in condizioni di particolare
           vulnerabilità: chi si vaccina, chi chiede informazioni sulla salute
           sessuale o chi ha bisogno di allontanarsi dalla folla non può
@@ -296,7 +296,7 @@ export default function StampaPage() {
           Chiediamo di raccogliere il consenso prima di realizzare primi piani o
           ritratti riconoscibili, e di rispettare sempre un rifiuto, anche se
           espresso a scatto già avvenuto. Le persone che indossano un adesivo di
-          colore [X] con la scritta ""NO PHOTO"", recuperabile all'infopoint, al
+          colore [X] con la scritta ""NO PHOTO"", recuperabile all&apos;infopoint, al
           media corner o nella zona bianca, hanno scelto di non essere
           fotografate: ove possibile, ti chiediamo di non riprenderle e di
           escluderle dalle inquadrature.
@@ -309,7 +309,7 @@ export default function StampaPage() {
         </p>
         <h2 className="mt-2 mb-2 font-bold text-purple">Nel dubbio</h2>
         <p>
-          Lə volontariə con (segno distintivo?) e le persone presenti all'Info
+          Lə volontariə con (segno distintivo?) e le persone presenti all&apos;Info
           Point sono a disposizione per chiarimenti durante tutta la giornata.
         </p>
       </StampaBlock>
@@ -333,8 +333,8 @@ export default function StampaPage() {
           [X] carri e spezzoni nel corteo
         </p>
         <p>
-          circa 300* persone volontarie coinvolte nell'organizzazione della giornata
-          205 comuni compongono la provincia di Brescia, la più estesa della Lombardia. Di questi, [x] patrocinano l'edizione 2026
+          circa 300* persone volontarie coinvolte nell&apos;organizzazione della giornata
+          205 comuni compongono la provincia di Brescia, la più estesa della Lombardia. Di questi, [x] patrocinano l&apos;edizione 2026
         </p>
         <p>
           [inserire eventuale dato economico se vogliamo]
@@ -349,7 +349,7 @@ export default function StampaPage() {
         </h2>
         <p>
           Le parole che usiamo per raccontare una comunità non sono neutre. Possono contribuire a riconoscere le persone oppure rafforzare stereotipi e discriminazioni.
-          Per questo consigliamo di consultare la Carta Arcobaleno, la prima carta deontologica italiana dedicata all'informazione sulle persone LGBTQIA+, promossa dall’Ordine dei Giornalisti del Piemonte insieme al Coordinamento Torino Pride e presentata nel maggio 2026.
+          Per questo consigliamo di consultare la Carta Arcobaleno, la prima carta deontologica italiana dedicata all&apos;informazione sulle persone LGBTQIA+, promossa dall’Ordine dei Giornalisti del Piemonte insieme al Coordinamento Torino Pride e presentata nel maggio 2026.
         </p>
         <p>
           Qui abbiamo raccolto alcune delle indicazioni che ci capita più spesso di condividere con giornalistə e redazioni.

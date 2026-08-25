@@ -35,7 +35,7 @@ const UpcomingEventsBlock = ({
   }, [pageSize]);
 
   const eventsColSpan =
-    events === null ? 2 : events.length > 2 ? 2 : events.length;
+    events === null ? 2 : events.length > 2 ? 3 : events.length;
   const router = useRouter();
 
   return (

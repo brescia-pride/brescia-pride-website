@@ -109,7 +109,7 @@ const Header = ({ className }: BlockProps) => {
             className="cursor-pointer flex-1 transition-all duration-300 hover:bg-brown hover:text-white focus:bg-brown focus:text-white rounded-sm focus:outline-hidden"
             aria-label="Manifesto"
             onAction={() =>
-              window.open("https://bresciapride.it/docs/manifesto-2025.pdf")
+              window.open("/docs/manifesto-2026.pdf")
             }
           >
             Manifesto

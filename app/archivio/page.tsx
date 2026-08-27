@@ -1,11 +1,35 @@
 "use client";
 
 import React from "react";
+import { ReactNode } from "react";
 import Block from "../ui/components/Block";
 import { useRouter } from "next/navigation";
 import localFont from "next/font/local";
 import ResourceCard from "../ui/components/ResourceCard";
 const myFont = localFont({ src: "../ui/fonts/ST.ttf" });
+
+type ArchivioBlockProps = {
+  title: string;
+  children: ReactNode;
+  id: string;
+  className?: string;
+};
+
+const ArchivioBlock = ({
+  title,
+  children,
+  id,
+  className = ""
+}: ArchivioBlockProps) => {
+  return (
+    <Block className={`col-span-6 ${className}`} id={id}>
+      <div className="text-xl p-4">
+        <h1 className={`${myFont.className} text-4xl text-red`}>{title}</h1>
+        <div className="mt-2 grid grid-cols-1 gap-4">{children}</div>
+      </div>
+    </Block>
+  );
+};
 
 export default function ArchivePage() {
   const router = useRouter();
@@ -16,65 +40,86 @@ export default function ArchivePage() {
           Archivio
         </h1>
       </Block>
-      <Block className={`bg-white items-center justify-center`}>
-        <h1
-          className={`text-4xl ${myFont.className} text-red tracking-wider leading-tight p-4`}
-        >
-          2025
-        </h1>
-        <div className="grid grid-cols-3">
+      <ArchivioBlock title="2026" id="2025">
+        <div className="grid grid-cols-1 gap-4">
+          <ResourceCard
+            title="Manifesto 2026"
+            description="Esistiamo ovunque, resistiamo unitɜ."
+            actionText="Apri in PDF"
+            href="docs/manifesto-2026.pdf"
+            hoverColor="green"
+            colSpan={3}
+          />
+          <ResourceCard
+            title="Comunicato stampa 01/09/2026"
+            description="Il 5 settembre Brescia Pride torna in piazza
+              e porta al Comune tre proposte di politiche pubbliche per la città"
+            actionText="Leggi il comunicato (Online)"
+            href="/2026/documenti/01-09-2026"
+            pdfPath="/test"
+            hoverColor="purple"
+            colSpan={3}
+          />
+          <ResourceCard
+            title="Comunicato stampa 27/08/2026"
+            description="Dall&apos;1 al 3 settembre BLABLAQUEER: tre giorni di talk, incontri e mostre al MO.CA verso il Brescia Pride"
+            actionText="Leggi il comunicato (Online)"
+            href="/2026/documenti/27-08-2026"
+            pdfPath="/test"
+            hoverColor="purple"
+            colSpan={3}
+          />
+        </div>
+      </ArchivioBlock>
+      <ArchivioBlock title="2025" id="2025">
+        <div className="grid grid-cols-1 gap-4">
           <ResourceCard
             title="Manifesto 2025"
             description="Esistiamo ovunque, resistiamo unitɜ."
-            actionText="Leggi il manifesto"
+            actionText="Apri in PDF"
             href="docs/manifesto-2025.pdf"
-            hoverColor="blue"
+            hoverColor="green"
             colSpan={3}
           />
           <ResourceCard
             title="Comunicato Stampa 27/06/2025"
             description="Brescia Pride 2025: il 6 settembre torna la manifestazione per i diritti LGBTQIA+"
-            actionText="Leggi il comunicato"
+            actionText="Apri in PDF"
             href="docs/comunicato-stampa-27-06.pdf"
             hoverColor="purple"
             colSpan={3}
           />
         </div>
-      </Block>
-      <Block className={`col-span-6 bg-white items-center justify-center`}>
-        <h1
-          className={`text-4xl ${myFont.className} text-red tracking-wider leading-tight p-4`}
-        >
-          2024
-        </h1>
-        <div className="grid grid-cols-3">
+      </ArchivioBlock>
+      <ArchivioBlock title="2024" id="2025">
+        <div className="grid grid-cols-1 gap-4">
           <ResourceCard
             title="Manifesto 2024"
             description="Siamo una realtà intersezionale, transfemminista, antifascista, gentile e autogestita."
-            actionText="Leggi il manifesto"
+            actionText="Apri in PDF"
             href="docs/manifesto-2024.pdf"
-            hoverColor="purple"
+            hoverColor="green"
             colSpan={3}
           />
           <ResourceCard
             title="Vademecum per l&apos;accessibilità degli eventi e dei cortei"
             description="Rendere un evento realmente accessibile e a misura di chiunque è un processo di ascolto e cura, necessario, comunitario e collettivo."
-            actionText="Consulta il Vademecum"
+            actionText="Consulta il Vademecum (Online)"
             href="https://1drv.ms/p/c/3154c23af9523fae/Ea4_Uvk6wlQggDFqAQAAAAABswCASnHi1Vg3TZNPRM4M5Q?e=OjEMoL"
             hoverColor="blue"
             isExternal={true}
             colSpan={3}
           />
           <ResourceCard
-            title="Comunicato a sostegno della comunità T* (06/07/2024)"
+            title="Comunicato a sostegno della comunità T* 06/07/2024"
             description="Alla luce dei recenti avvenimenti, ci uniamo alla voce delle associazioni LGBTQIA+ e T* che da mesi denunciano il costante e preoccupante attacco alla libertà di scelta e autodeterminazione."
-            actionText="Leggi il comunicato"
+            actionText="Apri in PDF"
             href="docs/comunicato-t.pdf"
-            hoverColor="green"
+            hoverColor="purple"
             colSpan={3}
           />
         </div>
-      </Block>
+      </ArchivioBlock>
     </div>
     // <div className="min-h-screen px-4 py-6 text-zinc-50">
     //   <Link href={"https://forms.gle/GAbKGVX7uBzJo4du8"} className="col-span-2">

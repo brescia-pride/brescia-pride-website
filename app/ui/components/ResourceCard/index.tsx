@@ -14,6 +14,7 @@ type ResourceCardProps = {
   description: string;
   actionText: string;
   href: string;
+  pdfPath?: string;
   hoverColor: "purple" | "blue" | "green";
   isExternal?: boolean;
   colSpan?: number;
@@ -25,18 +26,28 @@ const ResourceCard = ({
   description,
   actionText,
   href,
+  pdfPath,
   hoverColor,
   isExternal = false,
   colSpan = 3,
   className = "",
 }: ResourceCardProps) => {
   const router = useRouter();
+  const buttonColSpan = href && pdfPath ? 1 : 2
 
   const hoverColorClasses = {
-    purple: "hover:bg-lilac text-purple hover:text-purple",
-    blue: "hover:bg-lightblue text-blue hover:text-blue",
-    green: "hover:bg-lime text-green hover:text-green",
+    purple: "bg-lilac/50 text-purple hover:text-purple",
+    blue: "bg-lightblue/50 text-blue hover:text-blue",
+    green: "bg-lime/50 text-green hover:text-green",
   };
+
+  const buttonHoverColorClasses = {
+    purple: "bg-lilac hover:bg-purple text-purple hover:text-lilac",
+    blue: "bg-lightblue hover:bg-blue text-blue hover:text-lightblue",
+    green: "bg-lime hover:bg-green text-green hover:text-lime",
+  };
+
+  const buttonClassName = `p-4 font-bold transition-all duration-300 cursor-pointer rounded-xl ${buttonHoverColorClasses[hoverColor]} col-span-${buttonColSpan} w-full`
 
   const handlePress = () => {
     if (isExternal) {
@@ -47,23 +58,19 @@ const ResourceCard = ({
   };
 
   return (
-    <Block className={`col-span-${colSpan} bg-white ${className}`}>
-      <Button
-        className={`cursor-pointer transition-all duration-300 flex h-full w-full p-4 relative overflow-hidden ${hoverColorClasses[hoverColor]} rounded-lg`}
-        onPress={handlePress}
+    <Block className={`col-span-${colSpan} flex flex-col md:grid md:grid-cols-6 gap-4 justify-betwee rounded-xl p-4 ${className} ${hoverColorClasses[hoverColor]}`}>
+      <div
+        className={`h-full w-full relative overflow-hidden col-span-4`}
       >
-        <div className="text-left relative z-10 select-text">
-          <h1 className={`text-2xl md:text-3xl leading-tight font-bold`}>
-            {title}
-          </h1>
-          <p className="text-xl text-black font-semi-bold mt-2">
-            {description}
-          </p>
-          <p className="text-lg text-black underline mt-2 flex items-center">
-            {actionText} <FiArrowRight />
-          </p>
-        </div>
-      </Button>
+        <h1 className={`text-2xl leading-tight font-bold`}>
+          {title}
+        </h1>
+        <p className="text-xl text-black font-semi-bold mt-2">
+          {description}
+        </p>
+      </div>
+      {href && <Button className={buttonClassName} onPress={handlePress}>{actionText}</Button>}
+      {pdfPath && <Button className={buttonClassName} onPress={handlePress}>Apri in PDF</Button>}
     </Block>
   );
 };

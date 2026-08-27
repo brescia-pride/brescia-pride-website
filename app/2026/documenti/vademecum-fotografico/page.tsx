@@ -11,7 +11,7 @@ export default function Comunicato() {
     const subtitle = ""
 
     const titleClassName = `font-bold text-2xl mt-2 text-${mainColor}`;
-    const subtitleClassName = `font-bold text-xl mt-2 text-${mainColor}`;
+    const subtitleClassName = `font-bold text-2xl mt-2 text-${mainColor}`;
     const textClassName = "text-xl mt-2";
 
     const content = (
@@ -40,18 +40,14 @@ export default function Comunicato() {
             <p className={textClassName}>
                 <b>Chiediamo di raccogliere il consenso prima di realizzare primi piani o
                 ritratti riconoscibili, e di rispettare sempre un rifiuto, anche se
-                espresso a scatto già avvenuto.</b> Le persone che indossano un adesivo di
-                colore [X] con la scritta &quot;NO PHOTO&quot;, recuperabile all&apos;infopoint, al
-                media corner o nella zona bianca, hanno scelto di non essere
-                fotografate: ove possibile, ti chiediamo di non riprenderle e di
-                escluderle dalle inquadrature.
+                espresso a scatto già avvenuto.</b> Le persone che indossano un adesivo di colore rosso, rappresentante una macchina fotografica barrata con la scritta &quot;NO PHOTO&quot;; &quot;NO VIDEO&quot; recuperabile all&apos;Infopoint, al Media Corner o nella Zona Bianca, hanno scelto di non essere fotografate: ove possibile, ti chiediamo di non riprenderle e di escluderle dalle inquadrature.
             </p>
             <h2 className={subtitleClassName}>
                 Persone minorenni</h2>
             <p className={textClassName}>
-                Non è consentito realizzare fotografie o riprese di persone minorenni
+                <b>Non è consentito realizzare fotografie o riprese di persone minorenni
                 riconoscibili senza il consenso di chi ne ha la responsabilità
-                genitoriale.
+                genitoriale</b>.
             </p>
             <h2 className={subtitleClassName}>
                 Nel dubbio</h2>

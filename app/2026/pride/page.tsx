@@ -43,7 +43,7 @@ export default function PridePage() {
   return (
     <Block aria-label="pride" className="grid md:grid-cols-6 grid-cols-1">
       <PrideDate showButton={false} />
-      <InfoBlock title="Indice" className="text-blue" id="indice">
+      <InfoBlock title="Indice" className="text-blue bg-lightblue/30 border-b-2" id="indice">
         <nav id="indice" role="navigation" aria-labelledby="toc-heading">
           <div className="text-blue font-bold">
             <ul

@@ -42,7 +42,7 @@ export default function Homepage() {
   return (
     <div className="flex-col md:grid md:grid-cols-6">
       <PrideDate showButton={true} />
-      <ImageBlock src="/images/Locandina MO.CA blu_upd 24 ago.png" colSpan="col-span-3 p-4" altText="locandina blablaqueer" showOnMobile={true}></ImageBlock>
+      <ImageBlock src="/images/Locandina MO.CA blu_27 ago.png" colSpan="col-span-3 p-4" altText="locandina blablaqueer" showOnMobile={true}></ImageBlock>
       <HomePageBlock className="col-span-3" title="Blablaqueer: Aspettando Brescia Pride" color="blue">
         <p className="font-bold md:text-3xl">
           Dall&apos;1 al 3 settembre, riempiamo <Link href="https://morettocavour.com/" className="underline text-blue">MO.CA - Centro per le Nuove Culture</Link> di talk, incontri e momenti di comunità per prepararci al Brescia Pride 2026 con ancora più consapevolezza e prospettive condivise.

@@ -54,7 +54,7 @@ export default function StampaPage() {
   const router = useRouter()
 
   const downloadButtonClassName =
-    "p-2 font-bold transition-all duration-300 cursor-pointer rounded-sm text-purple bg-lilac col-span-1 w-full hover:bg-lime hover:text-2xl";
+    "p-4 font-bold transition-all duration-300 cursor-pointer rounded-sm text-purple bg-purple/10 col-span-1 w-full hover:bg-lime hover:text-2xl";
 
   const linkClassName = "underline font-bold text-purple cursor-pointer"
 
@@ -79,7 +79,7 @@ export default function StampaPage() {
           </b>
           .
         </p>
-        <p className="mt-2 text-purple text-lg">
+        {/* <p className="mt-2 text-purple text-lg">
           Qui si possono trovare{" "}
           <b>
             comunicati, contatti utili, mappe e indicazioni per raccontare la
@@ -91,7 +91,7 @@ export default function StampaPage() {
           <Link className="underline">ufficiostampa@bresciapride.it</Link>,
           mettendo in copia{" "}
           <Link className="underline">info@bresciapride.it</Link>.
-        </p>
+        </p> */}
       </Block>
       <StampaBlock title="Indice" id="indice">
         <nav id="indice" role="navigation" aria-labelledby="toc-heading">
@@ -125,19 +125,19 @@ export default function StampaPage() {
               className="md:flex justify-between gap-2 md:text-center"
             >
               <IndexLiBlock
+                title="Programma"
+                id="programma"
+                desc="Link alla pagina principale di Brescia Pride, con informazioni del parco e del corteo"
+              />
+              <IndexLiBlock
                 title="Punto stampa e interviste"
                 id="punto-stampa"
                 desc="Informazioni sul punto stampa in Campo Marte"
               />
               <IndexLiBlock
-                title="Vademecum fotografico"
-                id="vademecum-fotografico"
-                desc="Vademecum fotografico per stampa"
-              />
-              <IndexLiBlock
-                title="Mappa corteo"
-                id="mappa"
-                desc="Mappa di Brescia Pride, del parco e del corteo"
+                title="Contatti"
+                id="contatti-stampa"
+                desc="Contatti stampa"
               />
             </ul>
           </div>
@@ -156,11 +156,6 @@ export default function StampaPage() {
                 title="Guida al linguaggio"
                 id="linguaggio"
                 desc="Guida al linguaggio"
-              />
-              <IndexLiBlock
-                title="Contatti"
-                id="contatti-stampa"
-                desc="Contatti stampa"
               />
             </ul>
           </div>
@@ -185,17 +180,19 @@ export default function StampaPage() {
             e operatorə
           </b>{" "}
           che intendono seguire la manifestazione del 5 settembre.{" "}
-          <Link className="underline font-bold text-purple cursor-pointer">
-            Compila il modulo online
-          </Link>{" "}
-          o direttamente in Campo Marte per ritirare il pass al Media Corner.
         </p>
-        <p className="mt-2">
-          <b>Con l&apos;accredito ci confermi di aver letto il <Link href="#vademecum-fotografico" className={linkClassName}>vademecum
-            fotografico</Link></b>: non pone limiti al racconto della giornata, ma raccoglie
+        <div className="flex flex-col md:grid md:grid-cols-6 gap-4 justify-between mt-4">
+        <p className="col-span-4">
+          Per accreditarti compila il modulo online o direttamente in Campo Marte per ritirare il pass al Media Corner.
+        </p>
+        <Button className={`${downloadButtonClassName} col-span-2`} onPress={() => router.push("/2026/documenti/31082026")}>Compila il modulo</Button>
+        <p className="col-span-4">
+          Con l&apos;accredito ci confermi di aver letto il vademecum fotografico: non pone limiti al racconto della giornata, ma raccoglie
           alcune accortezze che aiutano a rendere la piazza un posto sereno per
           chi la attraversa.
         </p>
+        <Button className={`${downloadButtonClassName} col-span-2`} onPress={() => router.push("2026/documenti/vademecum-fotografico")}>Leggi il Vademecum</Button>
+        </div>
       </StampaBlock>
       <StampaBlock title="Materiali e press kit" id="materiali">
         <p>
@@ -258,6 +255,15 @@ export default function StampaPage() {
           la chiusura, contattaci direttamente.
         </p>
       </StampaBlock>
+      <StampaBlock title="Programma della giornata" id="programma">
+        <p>Tutte le informazioni sulla giornata del 5 settembre (programma e orari, mappa del parco e del corteo, ecc...) sono nella <Link
+          href="/2026/pride"
+          className="underline text-purple font-bold"
+        >
+          pagina dedicata
+        </Link>
+        </p>
+      </StampaBlock>
       <StampaBlock title="Punto stampa in Campo Marte" id="punto-stampa">
         <p>
           <b>Durante la giornata del 5 settembre il Media Corner, situato sul lato destro del palco in Campo Marte, è
@@ -288,53 +294,21 @@ export default function StampaPage() {
           <li>ore 18:00-21:00 interventi, performance e musica</li>
         </ul>
       </StampaBlock>
-      <StampaBlock title="Vademecum Fotografico" id="vademecum-fotografico">
+      <StampaBlock title="Contatti stampa" id="contatti-stampa">
         <p>
-          Il Pride è uno spazio pubblico, ma non tutte le persone che vi
-          partecipano hanno fatto coming out, e per alcune essere riconoscibili
-          in una fotografia può avere conseguenze concrete sul lavoro, in
-          famiglia o nel proprio contesto d&apos;origine. Ti chiediamo di tenerne
-          conto: raccontare la manifestazione e proteggere chi la attraversa non
-          sono obiettivi in conflitto.
+          <b>Elisa (she/they) – Referente ufficio stampa – </b>
+          <Link
+            href="mailto:ufficiostampa@bresciapride.it"
+            className="text-purple underline"
+          >
+            ufficiostampa@bresciapride.it
+          </Link>
         </p>
-        <h2 className={headingTwoClassName}>
-          Aree in cui non è consentito riprendere persone riconoscibili
-        </h2>
-        <p>
-          La Zona Bianca di decompressione e l&apos;Area Salute & Prevenzione sono
-          spazi in cui le persone si trovano in condizioni di particolare
-          vulnerabilità: chi si vaccina, chi chiede informazioni sulla salute
-          sessuale o chi ha bisogno di allontanarsi dalla folla non può
-          ritrovarsi in un servizio giornalistico. In queste aree sono possibili
-          riprese di contesto solo se nessuna persona è identificabile.
+
+        <p className="mt-2">
+          Per richieste urgenti nella giornata del 5 settembre: contattare il
+          +XX XXX XXXXXXX tramite chat Whatsapp
         </p>
-        <h2 className={headingTwoClassName}>
-          Consenso</h2>
-        <p>
-          Chiediamo di raccogliere il consenso prima di realizzare primi piani o
-          ritratti riconoscibili, e di rispettare sempre un rifiuto, anche se
-          espresso a scatto già avvenuto. Le persone che indossano un adesivo di
-          colore [X] con la scritta &quot;NO PHOTO&quot;, recuperabile all&apos;infopoint, al
-          media corner o nella zona bianca, hanno scelto di non essere
-          fotografate: ove possibile, ti chiediamo di non riprenderle e di
-          escluderle dalle inquadrature.
-        </p>
-        <h2 className={headingTwoClassName}>
-          Persone minorenni</h2>
-        <p>
-          Non è consentito realizzare fotografie o riprese di persone minorenni
-          riconoscibili senza il consenso di chi ne ha la responsabilità
-          genitoriale.
-        </p>
-        <h2 className={headingTwoClassName}>
-          Nel dubbio</h2>
-        <p>
-          Lə volontariə con (segno distintivo?) e le persone presenti all&apos;Info
-          Point sono a disposizione per chiarimenti durante tutta la giornata.
-        </p>
-      </StampaBlock>
-      <StampaBlock title="Mappa Corteo" id="mappa">
-        <iframe src={mapLink} className="w-full h-150 mt-4"></iframe>
       </StampaBlock>
       <StampaBlock title="Brescia Pride in numeri" id="numeri">
         <p>
@@ -481,22 +455,6 @@ export default function StampaPage() {
         <p>
           Scrivici.
           Se non sai quale termine usare, come presentare una persona o se un&apos;informazione sia rilevante per l&apos;articolo, siamo a disposizione per un confronto.
-        </p>
-      </StampaBlock>
-      <StampaBlock title="Contatti stampa" id="contatti-stampa">
-        <p>
-          <b>Elisa (she/they) – Referente ufficio stampa – </b>
-          <Link
-            href="mailto:ufficiostampa@bresciapride.it"
-            className="text-purple underline"
-          >
-            ufficiostampa@bresciapride.it
-          </Link>
-        </p>
-
-        <p className="mt-2">
-          Per richieste urgenti nella giornata del 5 settembre: contattare il
-          +XX XXX XXXXXXX tramite chat Whatsapp
         </p>
       </StampaBlock>
     </div>

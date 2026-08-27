@@ -13,6 +13,7 @@ type StampaBlockProps = {
   title: string;
   children: ReactNode;
   id: string;
+  className?: string;
 };
 
 type indexLiProps = {
@@ -21,9 +22,9 @@ type indexLiProps = {
   id: string;
 };
 
-const StampaBlock = ({ title, children, id }: StampaBlockProps) => {
+const StampaBlock = ({ title, children, id, className = "" }: StampaBlockProps) => {
   return (
-    <Block className="col-span-6" id={id}>
+    <Block className={`${className} col-span-6`} id={id}>
       <div className="text-xl p-4">
         <h1 className={`${myFont.className} text-4xl text-purple`}>{title}</h1>
         <div className="mt-2">{children}</div>
@@ -93,7 +94,7 @@ export default function StampaPage() {
           <Link className="underline">info@bresciapride.it</Link>.
         </p> */}
       </Block>
-      <StampaBlock title="Indice" id="indice">
+      <StampaBlock title="Indice" id="indice" className="bg-lilac/30 border-b-2">
         <nav id="indice" role="navigation" aria-labelledby="toc-heading">
           <div className="font-bold">
             <h1 className="text-2xl">Prima del 5 settembre</h1>
@@ -182,16 +183,16 @@ export default function StampaPage() {
           che intendono seguire la manifestazione del 5 settembre.{" "}
         </p>
         <div className="flex flex-col md:grid md:grid-cols-6 gap-4 justify-between mt-4">
-        <p className="col-span-4">
-          Per accreditarti compila il modulo online o direttamente in Campo Marte per ritirare il pass al Media Corner.
-        </p>
-        <Button className={`${downloadButtonClassName} col-span-2`} onPress={() => router.push("/2026/documenti/31082026")}>Compila il modulo</Button>
-        <p className="col-span-4">
-          Con l&apos;accredito ci confermi di aver letto il vademecum fotografico: non pone limiti al racconto della giornata, ma raccoglie
-          alcune accortezze che aiutano a rendere la piazza un posto sereno per
-          chi la attraversa.
-        </p>
-        <Button className={`${downloadButtonClassName} col-span-2`} onPress={() => router.push("2026/documenti/vademecum-fotografico")}>Leggi il Vademecum</Button>
+          <p className="col-span-4">
+            Per accreditarti compila il modulo online o direttamente in Campo Marte per ritirare il pass al Media Corner.
+          </p>
+          <Button className={`${downloadButtonClassName} col-span-2`} onPress={() => router.push("/2026/documenti/31082026")}>Compila il modulo</Button>
+          <p className="col-span-4">
+            Con l&apos;accredito ci confermi di aver letto il vademecum fotografico: non pone limiti al racconto della giornata, ma raccoglie
+            alcune accortezze che aiutano a rendere la piazza un posto sereno per
+            chi la attraversa.
+          </p>
+          <Button className={`${downloadButtonClassName} col-span-2`} onPress={() => router.push("2026/documenti/vademecum-fotografico")}>Leggi il Vademecum</Button>
         </div>
       </StampaBlock>
       <StampaBlock title="Materiali e press kit" id="materiali">
@@ -199,42 +200,10 @@ export default function StampaPage() {
           In questa sezione è possibile trovare alcuni materiali utilizzabili
           per la copertura giornalistica del Brescia Pride 2026.
         </p>
-        <h2 className={headingTwoClassName}>
-          Fotografie
-        </h2>
-        <p>
-          Immagini ad alta risoluzione delle edizioni precedenti e della
-          manifestazione 2026. Il credito al fotografə è indicato nel nome di
-          ciascun file e chiediamo agli utilizzatori di riportarlo in
-          didascalia.
-        </p>
-        <Button className={`${downloadButtonClassName} mt-2`}>Scarica da Google Drive</Button>
-        <h2 className={headingTwoClassName}>
-          Logo e manifesto
-        </h2>
-        <p>
-          Logo del Comitato Brescia Pride ETS e manifesto ufficiale della
-          settima edizione, in formato vettoriale e ad alta risoluzione.
-        </p>
-        <Button className={`${downloadButtonClassName} mt-2`}>Scarica da Google Drive</Button>
-        <h2 className={headingTwoClassName}>
-          Scheda del Comitato
-        </h2>
-        <p>
-          Sintesi su chi siamo, cosa facciamo durante l&apos;anno e i dati principali
-          della manifestazione, utile per box e approfondimenti.
-        </p>
-        <Button className={`${downloadButtonClassName} mt-2`}>Consulta la scheda</Button>
-        <h2 className={headingTwoClassName}>
-          Condizioni d&apos;uso
-        </h2>
-        <p>
+        <p className="mt-2">
           I materiali possono essere utilizzati liberamente per la copertura
           giornalistica del Brescia Pride, mantenendo il credito al fotografə.
-          Non è consentito modificarli o utilizzarli in contesti diversi.
-        </p>
-        <p className="mt-2">
-          Per usi differenti scrivici a{" "}
+          Non è consentito modificarli o utilizzarli in contesti diversi. Per usi differenti scrivici a{" "}
           <Link
             href="mailto:ufficiostampa@bresciapride.it"
             className={linkClassName}
@@ -254,15 +223,46 @@ export default function StampaPage() {
           fotografie della giornata: se ti serve materiale in tempi rapidi per
           la chiusura, contattaci direttamente.
         </p>
+        <h2 className={headingTwoClassName}>
+          Fotografie
+        </h2>
+        <div className="flex flex-col md:grid md:grid-cols-6 gap-4 justify-between">
+          <p
+            className="col-span-4"
+          >
+            Immagini ad alta risoluzione delle edizioni precedenti e della
+            manifestazione 2026. Il credito al fotografə è indicato nel nome di
+            ciascun file e chiediamo agli utilizzatori di riportarlo in
+            didascalia.
+          </p>
+          <Button className={`${downloadButtonClassName} col-span-2`}>Scarica da Google Drive</Button>
+        </div>
+        <h2 className={headingTwoClassName}>
+          Logo e manifesto
+        </h2>
+        <div className="flex flex-col md:grid md:grid-cols-6 gap-4 justify-between">
+          <p
+            className="col-span-4"
+          >          Logo del Comitato Brescia Pride ETS e manifesto ufficiale della
+            settima edizione, in formato vettoriale e ad alta risoluzione.
+          </p>
+          <Button className={`${downloadButtonClassName} col-span-2`}>Scarica da Google Drive</Button>
+        </div>
+        <h2 className={headingTwoClassName}>
+          Scheda del Comitato
+        </h2>
+        <div className="flex flex-col md:grid md:grid-cols-6 gap-4 justify-between">
+          <p
+            className="col-span-4"
+          >
+            Sintesi su chi siamo, cosa facciamo durante l&apos;anno e i dati principali
+            della manifestazione, utile per box e approfondimenti.
+          </p>
+          <Button className={`${downloadButtonClassName} col-span-2`}>Consulta la scheda</Button>
+        </div>
       </StampaBlock>
       <StampaBlock title="Programma della giornata" id="programma">
-        <p>Tutte le informazioni sulla giornata del 5 settembre (programma e orari, mappa del parco e del corteo, ecc...) sono nella <Link
-          href="/2026/pride"
-          className="underline text-purple font-bold"
-        >
-          pagina dedicata
-        </Link>
-        </p>
+          <Button className={`${downloadButtonClassName} col-span-2`}>Tutte le informazioni sulla giornata del 5 settembre (programma e orari, mappa del parco e del corteo, ecc...) sono qui!</Button>
       </StampaBlock>
       <StampaBlock title="Punto stampa in Campo Marte" id="punto-stampa">
         <p>
@@ -271,7 +271,7 @@ export default function StampaPage() {
           accreditarsi, ottenere informazioni sul programma e sulle aree del
           Parco Pride.
         </p>
-        <h2 className="mt-2 mb-2 font-bold text-purple">
+        <h2 className={headingTwoClassName}>
           Interviste e dichiarazioni
         </h2>
         <p>
@@ -284,15 +284,6 @@ export default function StampaPage() {
           , responsabile delle relazioni con i media, compatibilmente con le
           esigenze organizzative della giornata.
         </p>
-        <h2 className="mt-2 mb-2 font-bold text-purple">
-          Orari della giornata
-        </h2>
-        <ul>
-          <li>ore 12:00 apertura del Parco Pride</li>
-          <li>ore 14:30 primi interventi e performance</li>
-          <li>ore 17:30 rientro a Campo Marte</li>
-          <li>ore 18:00-21:00 interventi, performance e musica</li>
-        </ul>
       </StampaBlock>
       <StampaBlock title="Contatti stampa" id="contatti-stampa">
         <p>

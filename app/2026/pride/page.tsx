@@ -24,7 +24,7 @@ const InfoBlock = ({
   className = "col-span-6",
 }: InfoBlockProps) => {
   return (
-    <Block className={className} id={id}>
+    <Block className={`${className} col-span-6`} id={id}>
       <div className="text-xl p-4">
         <h1 className={`${myFont.className} text-4xl text-blue`}>{title}</h1>
         <div className="mt-2">{children}</div>
@@ -43,87 +43,84 @@ export default function PridePage() {
   return (
     <Block aria-label="pride" className="grid md:grid-cols-6 grid-cols-1">
       <PrideDate showButton={false} />
-      <Block className="col-span-6">
-        <InfoBlock title="Indice" className="text-blue" id="indice">
-          <nav id="indice" role="navigation" aria-labelledby="toc-heading">
-            <div className="text-blue font-bold">
-              <ul
-                role="list"
-                className="md:flex justify-between gap-2 md:text-center"
-              >
-                <li className={navLiClassName}>
-                  <a href="#programma" aria-describedby="programma-desc">
-                    Programma
-                  </a>
-                  <span id="programma-desc" className="sr-only">
-                    Programma della giornata del pride
-                  </span>
-                </li>
-                <li className={navLiClassName}>
-                  <a href="#parco-pride" aria-describedby="parco-pride-desc">
-                    Parco Pride
-                  </a>
-                  <span id="parco-pride-desc" className="sr-only">
-                    Informazioni sul Parco Pride in Campo Marte
-                  </span>
-                </li>
-                <li className={navLiClassName}>
-                  <a href="#corteo" aria-describedby="corteo-desc">
-                    Corteo
-                  </a>
-                  <span id="corteo-desc" className="sr-only">
-                    Informazioni sul Corteo
-                  </span>
-                </li>
-                <li className={navLiClassName}>
-                  <a href="#mappa" aria-describedby="mappa-desc">
-                    Mappa
-                  </a>
-                  <span id="mappa-desc" className="sr-only">
-                    Mappa del Parco Pride e del Corteo
-                  </span>
-                </li>
-                <li className={navLiClassName}>
-                  <a
-                    href="#accessibilità"
-                    aria-describedby="accessibilità-desc"
-                  >
-                    Accessibilità
-                  </a>
-                  <span id="accessibilità-desc" className="sr-only">
-                    Informazioni sull&apos;accessibilità
-                  </span>
-                </li>                <li className={navLiClassName}>
-                  <a
-                    href="#come-arrivare"
-                    aria-describedby="come-arrivare-desc"
-                  >
-                    Come arrivare
-                  </a>
-                  <span id="come-arrivare-desc" className="sr-only">
-                    Informazioni su come arrivare a Campo Marte
-                  </span>
-                </li>
-                <li className={navLiClassName}>
-                  <a
-                    href="#parcheggi-riservati"
-                    aria-describedby="parcheggi-riservati-desc"
-                  >
-                    Modulo parcheggi riservati
-                  </a>
-                  <span id="parcheggi-riservati-desc" className="sr-only">
-                    Link al modulo da compilare per prenotare un parcheggio per
-                    persone con disabilità
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </InfoBlock>
+      <InfoBlock title="Indice" className="text-blue" id="indice">
+        <nav id="indice" role="navigation" aria-labelledby="toc-heading">
+          <div className="text-blue font-bold">
+            <ul
+              role="list"
+              className="md:flex justify-between gap-2 md:text-center"
+            >
+              <li className={navLiClassName}>
+                <a href="#programma" aria-describedby="programma-desc">
+                  Programma
+                </a>
+                <span id="programma-desc" className="sr-only">
+                  Programma della giornata del pride
+                </span>
+              </li>
+              <li className={navLiClassName}>
+                <a href="#parco-pride" aria-describedby="parco-pride-desc">
+                  Parco Pride
+                </a>
+                <span id="parco-pride-desc" className="sr-only">
+                  Informazioni sul Parco Pride in Campo Marte
+                </span>
+              </li>
+              <li className={navLiClassName}>
+                <a href="#corteo" aria-describedby="corteo-desc">
+                  Corteo
+                </a>
+                <span id="corteo-desc" className="sr-only">
+                  Informazioni sul Corteo
+                </span>
+              </li>
+              <li className={navLiClassName}>
+                <a href="#mappa" aria-describedby="mappa-desc">
+                  Mappa
+                </a>
+                <span id="mappa-desc" className="sr-only">
+                  Mappa del Parco Pride e del Corteo
+                </span>
+              </li>
+              <li className={navLiClassName}>
+                <a
+                  href="#accessibilità"
+                  aria-describedby="accessibilità-desc"
+                >
+                  Accessibilità
+                </a>
+                <span id="accessibilità-desc" className="sr-only">
+                  Informazioni sull&apos;accessibilità
+                </span>
+              </li>                <li className={navLiClassName}>
+                <a
+                  href="#come-arrivare"
+                  aria-describedby="come-arrivare-desc"
+                >
+                  Come arrivare
+                </a>
+                <span id="come-arrivare-desc" className="sr-only">
+                  Informazioni su come arrivare a Campo Marte
+                </span>
+              </li>
+              <li className={navLiClassName}>
+                <a
+                  href="#parcheggi-riservati"
+                  aria-describedby="parcheggi-riservati-desc"
+                >
+                  Modulo parcheggi riservati
+                </a>
+                <span id="parcheggi-riservati-desc" className="sr-only">
+                  Link al modulo da compilare per prenotare un parcheggio per
+                  persone con disabilità
+                </span>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </InfoBlock>
+      <InfoBlock className="col-span-6" title="Programma" id="programma">
         <div className="p-4" id="programma">
-          <h1 className={`${myFont.className} text-3xl text-blue`}>
-            Programma
-          </h1>
           <table className="w-full align-middle text-center border-spacing-5 mt-4">
             <tbody>
               <tr className="text-xl font-bold border-b-2 border-blue">
@@ -165,7 +162,7 @@ export default function PridePage() {
             </tbody>
           </table>
         </div>
-      </Block>
+      </InfoBlock>
       <InfoBlock title="Parco Pride" id="parco-pride">
         <p>
           Il 5 settembre non sarà solo un corteo ma un&apos;intera giornata di
@@ -174,7 +171,7 @@ export default function PridePage() {
           anche durante il corteo.
         </p>
       </InfoBlock>
-      <div className="col-span-6 md:grid md:grid-cols-2 gap-2 p-4 -mt-2">
+      <div className="col-span-6 md:grid md:grid-cols-2 gap-2 p-4">
         <ImageBlock
           src="/images/parco-3.png"
           altText="Mappa del Parco Pride"
@@ -190,7 +187,7 @@ export default function PridePage() {
           colSpan=""
         />
       </div>
-      <InfoBlock title="Corteo" id="corteo">
+      <InfoBlock title="Corteo" id="corteo" className="col-span-6">
         <p>
           Il corteo{" "}
           <b>
@@ -223,7 +220,7 @@ export default function PridePage() {
           </ul>
         </div>
       </InfoBlock>
-      <div className="col-span-6 md:grid md:grid-cols-2 gap-2 p-4 -mt-2">
+      <div className="col-span-6 md:grid md:grid-cols-2 gap-2 p-4">
         <ImageBlock
           src="/images/corteo-3.png"
           altText="Mappa del Parco Pride"
@@ -258,7 +255,7 @@ export default function PridePage() {
         </p>
         <iframe src={mapLink} className="w-full h-150 mt-4"></iframe>
       </InfoBlock>
-      <InfoBlock title="Accessibilità" id="accessibilità">
+      <InfoBlock title="Accessibilità" id="accessibilità" className=" col-span-6">
         <p>Tutte le informazioni sull&apos;<b>accessibilità</b> di Brescia Pride 2026 sono nella <Link
           href="/2026/accessibilita"
           className="underline text-blue font-bold"

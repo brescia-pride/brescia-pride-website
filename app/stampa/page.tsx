@@ -293,7 +293,15 @@ export default function StampaPage() {
         <h2 className={headingTwoClassName}>
           Vademecum Fotografico
         </h2>
-        <Button className={`${downloadButtonClassName} col-span-2`} onPress={() => router.push("/2026/documenti/vademecum-fotografico")}>Leggi il Vademecum Fotografico</Button>
+        <p className="mt-2">
+            <b>Il Pride è uno spazio pubblico, ma non tutte le persone che vi
+            partecipano hanno fatto coming out, e per alcune essere riconoscibili
+            in una fotografia può avere conseguenze concrete sul lavoro, in
+            famiglia o nel proprio contesto d&apos;origine.</b> Ti chiediamo di tenerne
+            conto: raccontare la manifestazione e proteggere chi la attraversa non
+            sono obiettivi in conflitto.
+        </p>
+        <Button className={`${downloadButtonClassName} col-span-2 mt-2`} onPress={() => router.push("/2026/documenti/vademecum-fotografico")}>Leggi il Vademecum Fotografico</Button>
       </StampaBlock>
       <StampaBlock title="Contatti stampa" id="contatti-stampa" className="bg-red/20">
         <p>
@@ -315,7 +323,7 @@ export default function StampaPage() {
         <p>
           Dati utili per chi racconta la manifestazione.
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-2 wrap-break-word">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4 wrap-break-word">
           <div className={numeriBlockClassName}>
             <p><b>7 edizioni</b></p>
             <p>dal 2017</p>
@@ -340,7 +348,7 @@ export default function StampaPage() {
             <p><b>4 comuni</b></p>
             <p>della provincia di Brescia patrocinano l&apos;edizione 2026</p>
           </div>
-          <div className={`${numeriBlockClassName} md:col-span-3`}>
+          <div className={`${numeriBlockClassName} col-span-2 md:col-span-3`}>
             <p><b>Nessuno sponsor</b></p>
             <p className="">
               Brescia Pride è completamente autofinanziato: non riceve sponsorizzazioni e si sostiene con donazioni, autofinanziamento e il lavoro volontario di chi lo organizza.

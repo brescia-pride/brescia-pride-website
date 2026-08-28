@@ -52,7 +52,7 @@ export default function Comunicato() {
             <h2 className={subtitleClassName}>
                 Nel dubbio</h2>
             <p className={textClassName}>
-                Lə volontariə con (segno distintivo?) e le persone presenti all&apos;Info
+                Lɜ volontariɜ e le persone presenti all&apos;Info
                 Point sono a disposizione per chiarimenti durante tutta la giornata.
             </p>
         </div>

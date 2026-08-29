@@ -58,7 +58,8 @@ const ComunicatoBlock = ({ date, title, link, pdfPath, router, linkAction = "Leg
       {link && <Button className={`col-span-${colSpan} ${downloadButtonClassName}`} onPress={() => router.push(link)}>{linkAction}</Button>}
       {pdfPath && <Button className={`col-span-${colSpan} ${downloadButtonClassName}`} onPress={() => {
         const link = document.createElement("a");
-        link.download = pdfPath;
+        link.href = pdfPath;
+        link.download = pdfPath.substring(6)
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -94,9 +95,6 @@ export default function StampaPage() {
 
   const numeriBlockClassName = "p-4 rounded bg-lilac text-center content-center transition-all duration-300 hover:bg-lime text-purple focus:bg-lime"
 
-  const mapLink =
-    "https://www.google.com/maps/d/embed?mid=1O2B1Lx5s24EurtaQwao7pj_fskY9SkI&hl=it&ehbc=2E312F&ll=45.5473838155007%2C10.21575269747692&z=18";
-
   return (
     <div>
       <Block className="p-8 bg-lilac text-center">
@@ -125,11 +123,6 @@ export default function StampaPage() {
                 id="comunicati-stampa"
                 desc="Lista dei comunicati stampa"
               />
-              {/* <IndexLiBlock
-                title="Accrediti"
-                id="accrediti"
-                desc="Informazioni su accredito stampa"
-              /> */}
               <IndexLiBlock
                 title="Materiali e Press Kit"
                 id="materiali"
@@ -187,12 +180,14 @@ export default function StampaPage() {
             title="Il 5 settembre Brescia Pride torna in piazza
               e porta al Comune tre proposte di politiche pubbliche per la città"
             link="/2026/documenti/01-09-2026"
+            pdfPath="/docs/comunicato-stampa-01-09-2026.pdf"
             router={router}
           />
           <ComunicatoBlock
             date="27 agosto 2026"
             title="Dall&apos;1 al 3 settembre BLABLAQUEER: tre giorni di talk, incontri e mostre al MO.CA verso il Brescia Pride"
             link="/2026/documenti/27-08-2026"
+            pdfPath="/docs/comunicato-stampa-27-08-2026.pdf"
             router={router}
           />
           <ComunicatoBlock
@@ -204,27 +199,6 @@ export default function StampaPage() {
           />
         </div>
       </StampaBlock>
-      {/* <StampaBlock title="Accrediti Stampa" id="accrediti">
-        <p>
-          <b>
-            L&apos;accredito è gratuito ed è suggerito a giornalistə, fotografə
-            e operatorə
-          </b>{" "}
-          che intendono seguire la manifestazione del 5 settembre.{" "}
-        </p>
-        <div className="flex flex-col md:grid md:grid-cols-6 gap-4 justify-between mt-4">
-          <p className="col-span-4">
-            Per accreditarti compila il modulo online o direttamente in Campo Marte per ritirare il pass al Media Corner.
-          </p>
-          <Button className={`${downloadButtonClassName} col-span-2`} onPress={() => router.push("/2026/documenti/31082026")}>Compila il modulo</Button>
-          <p className="col-span-4">
-            Con l&apos;accredito ci confermi di aver letto il vademecum fotografico: non pone limiti al racconto della giornata, ma raccoglie
-            alcune accortezze che aiutano a rendere la piazza un posto sereno per
-            chi la attraversa.
-          </p>
-          <Button className={`${downloadButtonClassName} col-span-2`} onPress={() => router.push("2026/documenti/vademecum-fotografico")}>Leggi il Vademecum</Button>
-        </div>
-      </StampaBlock> */}
       <StampaBlock title="Materiali e press kit" id="materiali">
         <p>
           In questa sezione è possibile trovare alcuni materiali utilizzabili
@@ -294,29 +268,26 @@ export default function StampaPage() {
           Vademecum Fotografico
         </h2>
         <p className="mt-2">
-            <b>Il Pride è uno spazio pubblico, ma non tutte le persone che vi
+          <b>Il Pride è uno spazio pubblico, ma non tutte le persone che vi
             partecipano hanno fatto coming out, e per alcune essere riconoscibili
             in una fotografia può avere conseguenze concrete sul lavoro, in
             famiglia o nel proprio contesto d&apos;origine.</b> Ti chiediamo di tenerne
-            conto: raccontare la manifestazione e proteggere chi la attraversa non
-            sono obiettivi in conflitto.
+          conto: raccontare la manifestazione e proteggere chi la attraversa non
+          sono obiettivi in conflitto.
         </p>
         <Button className={`${downloadButtonClassName} col-span-2 mt-2`} onPress={() => router.push("/2026/documenti/vademecum-fotografico")}>Leggi il Vademecum Fotografico</Button>
       </StampaBlock>
-      <StampaBlock title="Contatti stampa" id="contatti-stampa" className="bg-red/20">
+      <StampaBlock title="Contatti stampa" id="contatti-stampa">
         <p>
-          <b>Elisa (she/they) – Referente ufficio stampa – </b>
+          <b>Elisa (she/they) – Referente ufficio stampa </b>
+        </p>
+        <p className="mt-2">
           <Link
             href="mailto:ufficiostampa@bresciapride.it"
             className="text-purple underline"
           >
             ufficiostampa@bresciapride.it
           </Link>
-        </p>
-
-        <p className="mt-2">
-          Per richieste urgenti nella giornata del 5 settembre: contattare il
-          +XX XXX XXXXXXX tramite chat Whatsapp
         </p>
       </StampaBlock>
       <StampaBlock title="Brescia Pride in numeri" id="numeri">
@@ -344,9 +315,10 @@ export default function StampaPage() {
             <p><b>200 persone volontarie</b></p>
             <p>coinvolte nell&apos;organizzazione della giornata</p>
           </div>
-          <div className={`${numeriBlockClassName} bg-red/30`}>
+          <div className={`${numeriBlockClassName}`}>
             <p><b>4 comuni</b></p>
             <p>della provincia di Brescia patrocinano l&apos;edizione 2026</p>
+            <p>(in aggiornamento)</p>
           </div>
           <div className={`${numeriBlockClassName} col-span-2 md:col-span-3`}>
             <p><b>Nessuno sponsor</b></p>
@@ -374,11 +346,10 @@ export default function StampaPage() {
           Parla di persone, non di categorie
         </h2>
         <p>
-          Espressioni come &quot;il gay&quot;, &quot;la trans&quot; o &quot;gli omosessuali&quot; riducono una persona a una sola caratteristica.
-          Meglio scrivere, per esempio: <b>persona gay, donna lesbica, uomo trans, persona transgender, persona non binaria</b>.
+          Nel linguaggio giornalistico sarebbe meglio evitare espressioni che rischiano di ridurre una persona a una sola caratteristica.
         </p>
         <p className="mt-2">
-          Anche transessuale è un termine oggi poco utilizzato nel linguaggio comune e legato soprattutto a un contesto medico. Quando non è necessario specificare altro, <b>persona trans* o persona transgender</b> sono le formule da preferire.
+          Usa le parole che descrivono l'orientamento sessuale e l'identità di genere come aggettivi e non come sostantivi: <b>persona gay, donna lesbica, uomo trans, persona transgender, persona non binaria</b>.
         </p>
         <h2 className={headingTwoClassName}>
           Usa il nome e i pronomi corretti
@@ -387,7 +358,7 @@ export default function StampaPage() {
           Per parlare di una persona trans* o non binaria si utilizzano il <b>nome e i pronomi che la persona usa per sé, indipendentemente da ciò che compare sui documenti</b>.
         </p>
         <p className="mt-2">
-          Usare il precedente nome anagrafico di una persona trans* si chiama <b>deadnaming</b>, mentre utilizzare pronomi, genere o appellativi che non le corrispondono viene definito misgendering.
+          Usare il precedente nome anagrafico di una persona trans* si chiama <b>deadnaming</b>, mentre utilizzare pronomi, genere o appellativi che non le corrispondono viene definito <b>misgendering</b>.
         </p>
         <p className="mt-2">
           Sono pratiche da evitare anche quando si utilizzano fotografie, articoli o materiali d&apos;archivio.
@@ -400,7 +371,7 @@ export default function StampaPage() {
           Il <b>coming out è la scelta di una persona di raccontare il proprio orientamento sessuale o la propria identità di genere</b>.
           Per descriverlo si possono usare formule come:
 
-          ha fatto coming out, ha dichiarato, ha raccontato
+          ha fatto coming out, ha dichiarato, ha raccontato.
         </p>
         <p className="mt-2">
           Meglio evitare termini come &quot;confessa&quot; o &quot;ammette&quot;, perché suggeriscono che ci sia qualcosa di sbagliato o di cui vergognarsi.
@@ -419,9 +390,9 @@ export default function StampaPage() {
         <h2 className={headingTwoClassName}>
           Orientamento sessuale e identità di genere sono cose diverse
         </h2>
-        <p className="font-bold">
-          L&apos;orientamento sessuale riguarda l&apos;attrazione affettiva e/o sessuale verso altre persone.
-          L&apos;identità di genere riguarda invece il modo in cui una persona percepisce e definisce il proprio genere.
+        <p>
+          L&apos;<b>orientamento sessuale</b> riguarda l&apos;attrazione affettiva e/o sessuale verso altre persone.
+          L&apos;<b>identità di genere</b> riguarda invece il modo in cui una persona percepisce e definisce il proprio genere.
         </p>
         <h2 className={headingTwoClassName}>
           Quando parli di famiglie
@@ -438,9 +409,7 @@ export default function StampaPage() {
         </h2>
         <p>
           Il Pride non riguarda soltanto le persone gay, ma l&apos;intera comunità LGBTQIA+.
-          Per questo oggi è preferibile parlare di:
-
-          Pride, corteo del Pride, manifestazione del Pride, Brescia Pride (nel nostro caso specifico).
+          Per questo oggi è preferibile parlare di: <b>Pride, corteo del Pride, manifestazione del Pride, Brescia Pride</b> (nel nostro caso specifico).
 
           L&apos;espressione &quot;gay pride&quot; è ormai poco utilizzata e restituisce solo una parte della comunità rappresentata.
         </p>

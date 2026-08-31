@@ -136,7 +136,7 @@ export default function AccessibilitaPage() {
                 link.click();
                 document.body.removeChild(link);
               }}
-              className="p-2 pr-4 pl-4 mt-2 font-bold transition-all duration-300 cursor-pointer rounded-sm bg-green/10 text-green hover:bg-green hover:text-white text-lg w-full"
+              className="p-2 pr-4 pl-4 mt-2 font-bold transition-all duration-300 cursor-pointer rounded-sm bg-green/10 text-green hover:bg-green hover:text-white text-lg w-full flex flex-col justify-center md:items-center"
               aria-label="Consulta il vademecum accessibilità su Google Docs - si apre in una nuova finestra"
             >
               Leggi il vademecum su Google Docs
@@ -150,7 +150,7 @@ export default function AccessibilitaPage() {
                 link.click();
                 document.body.removeChild(link);
               }}
-              className="p-2 pr-4 pl-4 mt-2 font-bold transition-all duration-300 cursor-pointer rounded-sm bg-green/10 text-green hover:bg-green hover:text-white text-lg w-full"
+              className="p-2 pr-4 pl-4 mt-2 font-bold transition-all duration-300 cursor-pointer rounded-sm bg-green/10 text-green hover:bg-green hover:text-white text-lg w-full flex flex-col justify-center md:items-center"
               aria-label="Scarica il Vademecum in PDF"
             >
               Scarica il Vademecum in PDF

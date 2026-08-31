@@ -316,7 +316,7 @@ export default function StampaPage() {
             <p>coinvolte nell&apos;organizzazione della giornata</p>
           </div>
           <div className={`${numeriBlockClassName}`}>
-            <p><b>4 comuni</b></p>
+            <p><b>7 comuni</b></p>
             <p>della provincia di Brescia patrocinano l&apos;edizione 2026</p>
             <p>(in aggiornamento)</p>
           </div>

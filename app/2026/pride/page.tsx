@@ -92,7 +92,8 @@ export default function PridePage() {
                 <span id="accessibilità-desc" className="sr-only">
                   Informazioni sull&apos;accessibilità
                 </span>
-              </li>                <li className={navLiClassName}>
+              </li>
+              <li className={navLiClassName}>
                 <a
                   href="#come-arrivare"
                   aria-describedby="come-arrivare-desc"
@@ -120,7 +121,7 @@ export default function PridePage() {
         </nav>
       </InfoBlock>
       <InfoBlock className="col-span-6" title="Programma" id="programma">
-        <div className="p-4" id="programma">
+        <div className="p-4 rounded-xl bg-lightblue/50" id="programma">
           <table className="w-full align-middle text-center border-spacing-5 mt-4">
             <tbody>
               <tr className="text-xl font-bold border-b-2 border-blue">
@@ -170,23 +171,13 @@ export default function PridePage() {
           <b>Parco Pride a Campo Marte.</b> Sarà attivo <b>dalle 12 alle 21</b>,
           anche durante il corteo.
         </p>
+        <div className="mt-2">
+          <img
+            src="/images/map-color-a2.png"
+            aria-label="Mappa del parco Pride"
+          />
+        </div>
       </InfoBlock>
-      <div className="col-span-6 md:grid md:grid-cols-2 gap-2 p-4">
-        <ImageBlock
-          src="/images/parco-3.png"
-          altText="Mappa del Parco Pride"
-          showOnMobile={true}
-          link="/images/parco-3.png"
-          colSpan=""
-        />
-        <ImageBlock
-          src="/images/parco-4.png"
-          altText="Mappa del Corteo Pride"
-          showOnMobile={true}
-          link="/images/parco-4.png"
-          colSpan=""
-        />
-      </div>
       <InfoBlock title="Corteo" id="corteo" className="col-span-6">
         <p>
           Il corteo{" "}
@@ -220,7 +211,7 @@ export default function PridePage() {
           </ul>
         </div>
       </InfoBlock>
-      <div className="col-span-6 md:grid md:grid-cols-2 gap-2 p-4">
+      <div className="col-span-6 grid grid-cols-1 md:grid-cols-2 gap-2 p-4">
         <ImageBlock
           src="/images/corteo-3.png"
           altText="Mappa del Parco Pride"

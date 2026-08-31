@@ -279,7 +279,7 @@ export default function StampaPage() {
       </StampaBlock>
       <StampaBlock title="Contatti stampa" id="contatti-stampa">
         <p>
-          <b>Elisa (she/they) – Referente ufficio stampa </b>
+          <b>Elisa (she/they) – Referente ufficio stampa </b> - +39 338 1844082
         </p>
         <p className="mt-2">
           <Link

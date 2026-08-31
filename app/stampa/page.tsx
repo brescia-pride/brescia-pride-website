@@ -349,7 +349,7 @@ export default function StampaPage() {
           Nel linguaggio giornalistico sarebbe meglio evitare espressioni che rischiano di ridurre una persona a una sola caratteristica.
         </p>
         <p className="mt-2">
-          Usa le parole che descrivono l'orientamento sessuale e l'identità di genere come aggettivi e non come sostantivi: <b>persona gay, donna lesbica, uomo trans, persona transgender, persona non binaria</b>.
+          Usa le parole che descrivono l&apos;orientamento sessuale e l&apos;identità di genere come aggettivi e non come sostantivi: <b>persona gay, donna lesbica, uomo trans, persona transgender, persona non binaria</b>.
         </p>
         <h2 className={headingTwoClassName}>
           Usa il nome e i pronomi corretti

@@ -56,7 +56,7 @@ export default function ArchivePage() {
               e porta al Comune tre proposte di politiche pubbliche per la città"
             actionText="Leggi il comunicato (Online)"
             href="/2026/documenti/01-09-2026"
-            pdfPath="/test"
+            pdfPath="docs/comunicato-stampa-01-09-2026.pdf"
             hoverColor="purple"
             colSpan={3}
           />
@@ -65,7 +65,7 @@ export default function ArchivePage() {
             description="Dall&apos;1 al 3 settembre BLABLAQUEER: tre giorni di talk, incontri e mostre al MO.CA verso il Brescia Pride"
             actionText="Leggi il comunicato (Online)"
             href="/2026/documenti/27-08-2026"
-            pdfPath="/test"
+            pdfPath="docs/comunicato-stampa-27-08-2026.pdf"
             hoverColor="purple"
             colSpan={3}
           />

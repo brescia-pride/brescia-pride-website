@@ -49,6 +49,10 @@ const ResourceCard = ({
 
   const buttonClassName = `p-4 font-bold transition-all duration-300 cursor-pointer rounded-xl ${buttonHoverColorClasses[hoverColor]} col-span-${buttonColSpan} w-full`
 
+  const handleOpenPdf = () => {
+      window.open(pdfPath, "_blank");
+  };
+
   const handlePress = () => {
     if (isExternal) {
       window.open(href, "_blank");
@@ -70,7 +74,7 @@ const ResourceCard = ({
         </p>
       </div>
       {href && <Button className={buttonClassName} onPress={handlePress}>{actionText}</Button>}
-      {pdfPath && <Button className={buttonClassName} onPress={handlePress}>Apri in PDF</Button>}
+      {pdfPath && <Button className={buttonClassName} onPress={handleOpenPdf}>Apri in PDF</Button>}
     </Block>
   );
 };

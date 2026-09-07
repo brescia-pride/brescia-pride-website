@@ -31,7 +31,7 @@ export default function Comunicato() {
       <p className={subtitleClassName}>A proposito di Brescia Pride</p>
       <p className={textClassName}>Il Comitato Brescia Pride ETS è una realtà autogestita e indipendente, composta da persone che si impegnano per il riconoscimento e la tutela dei diritti delle persone LGBTQIA+ nel territorio bresciano. Transfemminista, queer, intersezionale, laico, antifascista, antirazzista, autofinanziato e attento alla sostenibilità sociale e ambientale, il Comitato organizza l&apos;omonima manifestazione pubblica annuale e numerose iniziative culturali, educative e sociali durante tutto l&apos;anno, valorizzando la rete di realtà, collettivi ed enti alleati e contribuendo alla costruzione di una società più giusta, laica e plurale. Il progetto si fonda su valori di autodeterminazione, antidiscriminazione e giustizia sociale, ed è aperto alla partecipazione di chiunque condivida questi principi.</p>
       <p className={subtitleClassName}>Per ulteriori informazioni e contatti stampa</p>
-      <p className={textClassName}><b>Elisa Belussi, she/they</b></p>
+      <p className={textClassName}><b>Elisa, she/they</b></p>
       <p className={textClassName}><a href="mailto:ufficiostampa@bresciapride.it" className="underline text-blue">ufficiostampa@bresciapride.it</a> - <a href="mailto:info@bresciapride.it" className="underline text-blue">info@bresciapride.it</a>
       </p>
       <p className={textClassName}>      <em>Materiali fotografici, logo e mappa dei servizi disponibili su richiesta.</em>
